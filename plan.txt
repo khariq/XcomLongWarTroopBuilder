@@ -1,0 +1,9 @@
+1) json data files
+2) angular controller
+3) standard classes
+4) MECs
+5) Psi Troops
+6) calculated stats
+7) items
+8) link to builds
+9) 

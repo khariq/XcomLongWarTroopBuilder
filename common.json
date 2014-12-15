@@ -1,0 +1,190 @@
+{
+	"ranks" : [
+		{
+			"name" : "Specialist",
+			"img_src" : "http://ufopaedia.org/images/thumb/6/6a/RANK_SQUADDIE.png/32px-RANK_SQUADDIE.png"
+		},
+		{
+			"name" : "Lance Corporal",
+			"img_src" : "http://ufopaedia.org/images/thumb/f/f2/RANK_CORPORAL.png/32px-RANK_CORPORAL.png"
+		},
+		{
+			"name" : "Corporal",
+			"img_src" : "http://ufopaedia.org/images/thumb/3/33/RANK_SERGEANT.png/32px-RANK_SERGEANT.png"
+		},
+		{
+			"name" : "Sergeant",
+			"img_src" : "http://ufopaedia.org/images/thumb/c/cc/RANK_LIEUTENANT.png/32px-RANK_LIEUTENANT.png"
+		},
+		{
+			"name" : "Tech Sergeant",
+			"img_src" : "http://ufopaedia.org/images/thumb/7/79/RANK_CAPTAIN.png/32px-RANK_CAPTAIN.png"
+		},
+		{
+			"name" : "Gunnery Sergeant",
+			"img_src" : "http://ufopaedia.org/images/thumb/e/ee/RANK_MAJOR.png/32px-RANK_MAJOR.png"
+		},
+		{
+			"name" : "Master Sergeant",
+			"img_src" : "http://ufopaedia.org/images/thumb/9/9d/RANK_COLONEL.png/32px-RANK_COLONEL.png"
+		},
+	],
+	
+	"perks" : [
+		"run_and_gun" : {
+			"img_src" : "http://ufopaedia.org/images/thumb/8/87/ASSAULT_RUNGUN.png/32px-ASSAULT_RUNGUN.png"
+			"title" : "Run & Gun",
+			"description" : "Allows firing or Overwatch after Dashing on the turn Run and Gun is activated. 2 turn cooldown.",
+			"aim_bonus" : 0,
+			"will_bonus" : 0,
+			"mobility_bonus" : 0
+		},
+		"flush" : {
+			"img_src" : "http://ufopaedia.org/images/thumb/e/e2/ASSAULT_FLUSH.png/32px-ASSAULT_FLUSH.png",
+			"title" : "Flush",
+			"description" : "Fire a shot that causes enemies to run out of cover. The shot is easy to hit with, but does reduced damage.",
+			"aim_bonus" : 2,
+			"will_bonus" : 0,
+			"mobility_bonus" : 0
+		},
+		"close_combat_specialist" : {
+			"img_src" : "http://ufopaedia.org/images/thumb/a/ac/ASSAULT_CLOSECOMBAT.png/32px-ASSAULT_CLOSECOMBAT.png",
+			"title" : "Close Combat Specialist",
+			"description" : "Confers a reaction shot against any enemy who closes to within 4 tiles. Does not require Overwatch. Warning: Will activate even if unit is concealed.",
+			"aim_bonus" : 0,
+			"will_bonus" : 0,
+			"mobility_bonus" : 0
+		},
+		"steadfast" : {
+			"img_src" : "http://ufopaedia.org/images/thumb/5/5f/Defenders_Medal_1_%28EU2012%29.png/32px-Defenders_Medal_1_%28EU2012%29.png",
+			"title" : "Steadfast",
+			"description" : "Never panic as a result of getting wounded, allies panicking, allies getting wounded or killed, or the intimidation ability.",
+			"aim_bonus" : 0,
+			"will_bonus" : 5,
+			"mobility_bonus" : 0
+		},
+		"gunslinger" : {
+			"img_src" : "http://ufopaedia.org/images/thumb/8/8c/SNIPER_GUNSLINGER.png/32px-SNIPER_GUNSLINGER.png",
+			"title" : "Gunslinger",
+			"description" : "Confers +1 damage with sidearms and negates the long-range accuracy penalty when shooting beyond 14 meters.",
+			"aim_bonus" : 1,
+			"will_bonus" : 0,
+			"mobility_bonus" : 0
+		},
+		"tactical_sense" : {
+			"img_src" : "http://ufopaedia.org/images/thumb/a/a6/ASSAULT_TACTICALSENSE.png/32px-ASSAULT_TACTICALSENSE.png",
+			"title" : "Tactical Sense",
+			"description" : "Confers +5 Defense per enemy in sight (max +20).",
+			"aim_bonus" : 0,
+			"will_bonus" : 0,
+			"mobility_bonus" : 0
+		},
+		"aggression" : {
+			"img_src" : "http://ufopaedia.org/images/thumb/4/40/ASSAULT_AGGRESSION.png/32px-ASSAULT_AGGRESSION.png",
+			"title" : "Aggression",
+			"description" : "Confers +10% critical chance per enemy in sight (max +30%).",
+			"aim_bonus" : 0,
+			"will_bonus" : 1,
+			"mobility_bonus" : 0
+		},
+		"hit_and_run" : {
+			"img_src" : "http://ufopaedia.org/images/thumb/3/31/ALIEN_LEAP.png/32px-ALIEN_LEAP.png",
+			"title" : "Hit and Run",
+			"description" : "",
+			"aim_bonus" : 0,
+			"will_bonus" : 0,
+			"mobility_bonus" : 0
+		},
+		"close_encounters" : {
+			"img_src" : "http://ufopaedia.org/images/thumb/2/2a/ASSAULT_CLOSEPERSONAL.png/32px-ASSAULT_CLOSEPERSONAL.png",
+			"title" : "Close Encounters",
+			"description" : "",
+			"aim_bonus" : 0,
+			"will_bonus" : 5,
+			"mobility_bonus" : 0
+		},
+		"rapid_fire" : {
+			"img_src" : "http://ufopaedia.org/images/thumb/7/70/ASSAULT_RAPIDFIRE.png/32px-ASSAULT_RAPIDFIRE.png",
+			"title" : "Rapid Fire",
+			"description" : "",
+			"aim_bonus" : 0,
+			"will_bonus" : 0,
+			"mobility_bonus" : 0
+		},
+		"extra_conditioning" : {
+			"img_src" : "http://ufopaedia.org/images/thumb/b/b7/ASSAULT_EXTRACONDITIONING.png/32px-ASSAULT_EXTRACONDITIONING.png",
+			"title" : "Extra Conditioning",
+			"description" : "",
+			"aim_bonus" : 2,
+			"will_bonus" : 2,
+			"mobility_bonus" : 1
+		},
+		"killer_instinct" : {
+			"img_src" : "http://ufopaedia.org/images/thumb/b/bb/ASSAULT_KILLERINSTINCT.png/32px-ASSAULT_KILLERINSTINCT.png",
+			"title" : "Killer Instinct",
+			"description" : "",
+			"aim_bonus" : 0,
+			"will_bonus" : 0,
+			"mobility_bonus" : 0
+		},
+		"ranger" : {
+			"img_src" : "http://ufopaedia.org/images/thumb/9/91/ALIEN_CANNONFIRE.png/32px-ALIEN_CANNONFIRE.png",
+			"title" : "Ranger",
+			"description" : "",
+			"aim_bonus" : 2,
+			"will_bonus" : 0,
+			"mobility_bonus" : 0
+		},
+		"will_to_survive" : {
+			"img_src" : "http://ufopaedia.org/images/thumb/d/d8/HEAVY_WILLTOSURVIVE.png/32px-HEAVY_WILLTOSURVIVE.png",
+			"title" : "Will To Survive",
+			"description" : "",
+			"aim_bonus" : 0,
+			"will_bonus" : 3,
+			"mobility_bonus" : 0
+		},
+		"bring_em_on" :{
+			"img_src" : "http://ufopaedia.org/images/thumb/c/c2/ASSAULT_BRINGTHEMON.png/32px-ASSAULT_BRINGTHEMON.png",
+			"title" : "Bring 'Em On",
+			"description" : "",
+			"aim_bonus" : 0,
+			"will_bonus" : 0,
+			"mobility_bonus" : 0
+		},
+		"sprinter" : {
+			"img_src" : "http://ufopaedia.org/images/thumb/c/ce/SUPPORT_SPRINTER.png/32px-SUPPORT_SPRINTER.png",
+			"title" : "Sprinter",
+			"description" : "",
+			"aim_bonus" : 0,
+			"will_bonus" : 0,
+			"mobility_bonus" : 4
+		},
+		"vital_point_targeting" : {
+			"img_src" : "http://ufopaedia.org/images/thumb/7/7f/MEC_VITAL_POINT_TARGETING.png/32px-MEC_VITAL_POINT_TARGETING.png",
+			"title" : "Vital Point Targeting",
+			"description" : "",
+			"aim_bonus" : 2,
+			"will_bonus" : 0,
+			"mobility_bonus" : 0
+		},
+		"resilience" : {
+			"img_src" : "http://ufopaedia.org/images/thumb/2/2e/ASSAULT_RESILLIENCE.png/32px-ASSAULT_RESILLIENCE.png",
+			"title" : "Resilience",
+			"description" : "",
+			"aim_bonus" : 0,
+			"will_bonus" : 0,
+			"mobility_bonus" : 0
+		},
+		"lightning_reflexes" : {
+			"img_src" : "http://ufopaedia.org/images/thumb/9/90/ASSAULT_LIGHTNINGREFLEXES.png/32px-ASSAULT_LIGHTNINGREFLEXES.png",
+			"title" : "Lightning Reflexes",
+			"description" : "",
+			"aim_bonus" : 0,
+			"will_bonus" : 0,
+			"mobility_bonus" : 0
+		}
+	]
+	
+	"items" : {}
+	
+}
