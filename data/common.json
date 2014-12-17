@@ -1,4 +1,12 @@
 {
+    "classes" : [
+        {
+            "id" : "assault",
+            "name" : "Assault",
+            "spec" : "assault.json",
+            "icon_src" : "http://ufopaedia.org/images/5/57/CLASS_ASSAULT.png"
+        }
+    ],
 	"ranks" : [
 		{
 			"name" : "Specialist",
@@ -29,7 +37,83 @@
 			"img_src" : "http://ufopaedia.org/images/thumb/9/9d/RANK_COLONEL.png/32px-RANK_COLONEL.png"
 		},
 	],
-	
+
+	"primary_weapons" : [
+	    {
+	        "type" : "carbines",
+	        "weapons" : [
+	            {
+	                "id" : "assault_carbine",
+	                "name" : "Assault Carbine",
+	                "min_damage" : 2,
+	                "max_damage" : 4,
+	                "crit_chance" : 5,
+	                "crit_damage_min" : 4,
+	                "crit_damage_max" : 5,
+	                "aim_mod" : 7,
+	                "mobility_mod" : 1,
+	                "ammo" : 3,
+	                "steady" : 1
+	            },
+	            {
+	                "id" : "laser_carbine",
+	                "namettingse" : "Laser Carbine",
+	                "min_damage" : 3,
+	                "max_damage" : 5,
+	                "crit_chance" : 5,
+	                "crit_damage_min" : 5,
+	                "crit_damage_max" : 7,
+	                "aim_mod" : 15,
+	                "mobility_mod" : 1,
+	                "ammo" : 3,
+	                "steady" : 1
+	            },
+	            {
+	                "id" : "gauss_carbine",
+	                "name" : "Gauss Carbine",
+	                "min_damage" : 4,
+	                "max_damage" : 6,
+	                "crit_chance" : 5,
+	                "crit_damage_min" : 6,
+	                "crit_damage_max" : 9,
+	                "aim_mod" : 7,
+	                "mobility_mod" : 1,
+	                "ammo" : 4,
+	                "steady" : 1
+	            },
+	            {
+	                "id" : "pulse_carbine",
+	                "name" : "Pulse Carbine",
+	                "min_damage" : 4,
+	                "max_damage" : 8,
+	                "crit_chance" : 15,
+	                "crit_damage_min" : 8,
+	                "crit_damage_max" : 11,
+	                "aim_mod" : 7,
+	                "mobility_mod" : 1,
+	                "ammo" : 3,
+	                "steady" : 1
+	            },
+	            {
+	                "id" : "plasma_carbine",
+	                "name" : "Plasma Carbine",
+	                "min_damage" : 5,
+	                "max_damage" : 9,
+	                "crit_chance" : 5,
+	                "crit_damage_min" : 9,
+	                "crit_damage_max" : 12,
+	                "aim_mod" : 7,
+	                "mobility_mod" : 1,
+	                "ammo" : 3,
+	                "steady" : 1
+	            },
+	        ]
+	    },
+
+
+
+	],
+
 	"perks" : [
 		"run_and_gun" : {
 			"img_src" : "http://ufopaedia.org/images/thumb/8/87/ASSAULT_RUNGUN.png/32px-ASSAULT_RUNGUN.png"
