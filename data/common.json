@@ -22,42 +22,50 @@
 			"id" : "assault",
 			"name" : "Assault",
 			"spec" : "assault.json",
+			"mec_name" : "Marauder",
 			"icon_src" : "http://ufopaedia.org/images/5/57/CLASS_ASSAULT.png"
 		},
 		{
 			"id" : "infantry",
 			"name" : "Infantry",
+			"mec_name" : "Valkyrie",
 			"icon_src" : "http://ufopaedia.org/images/5/57/CLASS_ASSAULT.png"
 		},
 		{
 			"id" : "Rocketeer",
 			"name" : "Rocketeer",
+			"mec_name" : "Archer",
 			"icon_src" : "http://ufopaedia.org/images/5/57/CLASS_ASSAULT.png"
 		},
 		{
 			"id" : "Gunner",
 			"name" : "Gunner",
+			"mec_name" : "Goliath",
 			"icon_src" : "http://ufopaedia.org/images/5/57/CLASS_ASSAULT.png"
 		},
 		{
 			"id" : "Sniper",
 			"name" : "Sniper",
+			"mec_name" : "Jaeger",
 			"spec" : "Sniper.json",
 			"icon_src" : "http://ufopaedia.org/images/5/57/CLASS_ASSAULT.png"
 		},
 		{
 			"id" : "Scout",
 			"name" : "Scout",
+			"mec_name" : "Pathfinder",
 			"icon_src" : "http://ufopaedia.org/images/5/57/CLASS_ASSAULT.png"
 		},
 		{
 			"id" : "Medic",
 			"name" : "Medic",
+			"mec_name" : "Guardian",
 			"icon_src" : "http://ufopaedia.org/images/5/57/CLASS_ASSAULT.png"
 		},
 		{
 			"id" : "Engineer",
 			"name" : "Engineer",
+			"mec_name" : "Shogun",
 			"icon_src" : "http://ufopaedia.org/images/5/57/CLASS_ASSAULT.png"
 		}
 	], 
@@ -109,7 +117,7 @@
 				},
 				{
 					"id" : "laser_carbine",
-					"namettingse" : "Laser Carbine",
+					"name" : "Laser Carbine",
 					"min_damage" : 3,
 					"max_damage" : 5,
 					"crit_chance" : 5,

@@ -14,8 +14,8 @@
 </head>
 <body>
 
-	<div class="container-fluid" role="tabpanel" ng-controller="navController">
-		<ul class="nav nav-tabs nav-justified" role="tablist" id="classMenu">
+	<div class="container-fluid" ng-controller="navController">
+		<ul class="nav nav-tabs nav-justified" id="classMenu">
 			<li role="presentation" ng-repeat="item in menuItems">
 				<a href="#{{item.id}}" data-toggle="tab" aria-controls="{{item.id}}" role="tab">
 					{{item.name}}
@@ -44,9 +44,9 @@
 										{{item.name}} Talents
 									</h4>
 								</div>
-								<div class="panel-body container container-fluid">
+								<div class="panel-body container container-fluid" ng-controller="classController">
 									<div class="panel-body container container-fluid">
-										<div class="row">
+										<div class="row" >
 											<div class="col-md-2">
 												<img src="http://ufopaedia.org/images/thumb/6/6a/RANK_SQUADDIE.png/32px-RANK_SQUADDIE.png" /> Specialist
 											</div>
@@ -65,9 +65,38 @@
 							</div>
 						</div>
 						<div class="col-md-2">
-							<table>
+							<table class="table table-collapse table-hover table-striped">
 								<tr>
-								
+									<td>HP</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>Will</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>Mobility</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>Aim</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>Psi XP</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>EXP</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>Def</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>DR</td>
+									<td></td>
 								</tr>
 							</table>
 						</div>
@@ -81,17 +110,6 @@
 	<script src="scripts/app.js" type="text/javascript"></script>
     <script src="scripts/Controllers/navController.js" type="text/javascript"></script>
 	<script src="scripts/Controllers/buildController.js" type="text/javascript"></script>
-    
-	<script type="text/javascript">
-		$(document).ready(function(){
-			$('#classMenu a').click(function(e) {
-				e.preventDefault();
-				$(this).tab('show');
-			});
-			
-			$('#classMenu a:first').tab('show');
-			
-		});
-	</script>
+    <script src="scripts/Controllers/classController.js" type="text/javascript"></script>
 	
 </html>
