@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="org.webjars:angularjs:1.2.15" type="repository">
+    <properties maven-id="org.webjars:angularjs:1.2.15" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/angularjs-1.2.15.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -21,7 +21,6 @@
 		{
 			"id" : "assault",
 			"name" : "Assault",
-			"spec" : "assault.json",
 			"mec_name" : "Marauder",
 			"icon_src" : "http://ufopaedia.org/images/5/57/CLASS_ASSAULT.png"
 		},

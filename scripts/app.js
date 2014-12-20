@@ -28,7 +28,7 @@ xcomApp.factory('DataService', function($http, $q) {
 		self.getClassJson = function(className) {
 			var deferred = $q.defer();
 			if (self.classJson == null || self.classJson[className] == null) {
-				$http.get('data/' + className + '.js')
+				$http.get('data/' + className + '.json')
 						.success(function(data) { 
 							self.classJson[className] = data; 
 							deferred.resolve(data); 
@@ -53,15 +53,23 @@ xcomApp.controller('navController', function($scope, $http, DataService) {
 		function(commonJson) { //success
 			$scope.menuItems = commonJson.classes;
 			$scope.tabs = commonJson.tabs;
-			
-			
-			
+
 		},
 		function(commonJson) {
 		
 		}
 	);
 
+	$scope.showClass = function(id) {
+		DataService.getClassJson(id).then( 
+			function(classJson) {
+				alert(classJson);
+			})
+		,
+		function(classJson) {
+
+		}
+	}
 	
 });
 

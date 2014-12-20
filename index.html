@@ -14,99 +14,22 @@
 </head>
 <body>
 
+	<div class="container-fluid" style="background-color: #282828; height: 20px; top: 0; left: 0;">
+
+	</div>
 	<div class="container-fluid" ng-controller="navController">
 		<ul class="nav nav-tabs nav-justified" id="classMenu">
 			<li role="presentation" ng-repeat="item in menuItems">
-				<a href="#{{item.id}}" data-toggle="tab" aria-controls="{{item.id}}" role="tab">
+				<a href="#{{item.id}}" data-toggle="tab" aria-controls="{{item.id}}" role="tab" ng-click="showClass({{item.id}})" >
 					{{item.name}}
 				</a>
 			</li>
 		</ul>
-		<br/>
-		<div class="tab-content">
-			<div role="tabpanel" class="tab-pane" id="{{item.id}}" ng-repeat="item in menuItems">
-				<div class="container container-fluid">
-					
-					<div class="row">
-						<div class="col-md-2">
-							<ul class="nav nav-pills nav-stacked" role="tablist">
-								<li role="presentation" ng-repeat="tab in tabs">
-									<a href="#{{tab.id}}" data-toggle="tab" aria-controls="{{tab.id}}" role="tab">
-										{{tab.name}}
-									</a>
-								</li>
-							</ul>
-						</div>
-						<div class="col-md-8">
-							<div class="panel panel-primary">
-								<div class="panel-heading">
-									<h4 class="panel-title">
-										{{item.name}} Talents
-									</h4>
-								</div>
-								<div class="panel-body container container-fluid" ng-controller="classController">
-									<div class="panel-body container container-fluid">
-										<div class="row" >
-											<div class="col-md-2">
-												<img src="http://ufopaedia.org/images/thumb/6/6a/RANK_SQUADDIE.png/32px-RANK_SQUADDIE.png" /> Specialist
-											</div>
-											
-											<div class="col-md-4">
-												<button type="button" class="btn btn-default btn-block btn-small">
-													<span><img src="http://ufopaedia.org/images/thumb/8/87/ASSAULT_RUNGUN.png/32px-ASSAULT_RUNGUN.png" /></span>
-													Run &amp; Gun
-												</button>
-
-											</div>
-										</div>
-
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-2">
-							<table class="table table-collapse table-hover table-striped">
-								<tr>
-									<td>HP</td>
-									<td></td>
-								</tr>
-								<tr>
-									<td>Will</td>
-									<td></td>
-								</tr>
-								<tr>
-									<td>Mobility</td>
-									<td></td>
-								</tr>
-								<tr>
-									<td>Aim</td>
-									<td></td>
-								</tr>
-								<tr>
-									<td>Psi XP</td>
-									<td></td>
-								</tr>
-								<tr>
-									<td>EXP</td>
-									<td></td>
-								</tr>
-								<tr>
-									<td>Def</td>
-									<td></td>
-								</tr>
-								<tr>
-									<td>DR</td>
-									<td></td>
-								</tr>
-							</table>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-			
 	</div>
-	
+
+	<div class="container-fluid" style="background-color: #282828; height: 20px; position: fixed; width: 100%; bottom: 0; left: 0;">
+
+	</div>
 	<script src="scripts/app.js" type="text/javascript"></script>
     <script src="scripts/Controllers/navController.js" type="text/javascript"></script>
 	<script src="scripts/Controllers/buildController.js" type="text/javascript"></script>
