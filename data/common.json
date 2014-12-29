@@ -22,7 +22,109 @@
 			"id" : "assault",
 			"name" : "Assault",
 			"mec_name" : "Marauder",
-			"icon_src" : "http://ufopaedia.org/images/5/57/CLASS_ASSAULT.png"
+			"icon_src" : "http://ufopaedia.org/images/5/57/CLASS_ASSAULT.png",
+            "spec" :  {
+	            "primary_weapons" : [
+		             { "carbines" : 1 },
+		             { "assault_rifles" : 1 },
+		             { "battle_rifles" : 1 },
+		             { "smgs" : 1 },
+		             { "shotguns" : 1}
+	            ],
+	            "secondary_weapons" : [
+		            { "pistols" : 1},
+		            { "machine_pistols" : 1},
+		            { "sawed_off_shotguns" : 1}		
+	            ],
+	            "class_limited_items" : [
+		            { "walker_servos" : 1},
+		            { "impact_vest" : 1},
+		            { "shredder_ammo" : 1},
+		            { "breaching_ammo" : 1}
+	            ],
+	            "abilities" : [
+		            {
+                        "rank_1" : [
+			                { "1" : "run_and_gun"}
+		                ]
+                    },
+		            {"rank_2" : [
+			            { "1" : "flush"},
+			            { "2" : "close_combat_specialist"},
+			            { "3" : "steadfast"}
+		            ]},
+		
+		            {"rank_3" : [
+			            { "1" : "gunslinger"},
+			            { "2" : "tactical_sense"},
+			            { "3" : "aggression"}
+		            ]},		
+		            {"rank_4" : [
+			            { "1" : "hit_and_run"},
+			            { "2" : "close_encounters"},
+			            { "3" : "rapid_fire"}
+		            ]},
+		            {"rank_5" : [
+			            { "1" : "extra_conditioning"},
+			            { "2" : "killer_instinct"},
+			            { "3" : "ranger"}
+		            ]},		
+		            {"rank_6" : [
+			            { "1" : "will_to_survive"},
+			            { "2" : "bring_em_on"},
+			            { "3" : "sprinter"}
+		            ]},
+		            {"rank_7" : [
+			            { "1" : "vital_point_targeting"},
+			            { "2" : "resilience"},
+			            { "3" : "lightning_reflexes"}
+		            ]}
+	            ],
+	            "stat_progression" : {
+		            "rank_1" : {
+			            "health" : 1,
+			            "aim" : 3,
+			            "will_low" : 5,
+			            "hill_high" : 6
+		            },
+		            "rank_2" : {
+			            "health" : 1,
+			            "aim" : 6,
+			            "will_low" : 10,
+			            "hill_high" : 12
+		            },
+		            "rank_3" : {
+			            "health" : 2,
+			            "aim" : 9,
+			            "will_low" : 13,
+			            "hill_high" : 16 
+		            },
+		            "rank_4" : {
+			            "health" : 2,
+			            "aim" : 12,
+			            "will_low" : 16,
+			            "hill_high" : 20
+		            },
+		            "rank_5" : {
+			            "health" : 3,
+			            "aim" : 15,
+			            "will_low" : 16,
+			            "hill_high" : 20
+		            },
+		            "rank_6" : {
+			            "health" : 3,
+			            "aim" : 18,
+			            "will_low" : 22,
+			            "hill_high" : 28
+		            },
+		            "rank_7" : {
+			            "health" : 4,
+			            "aim" : 21,
+			            "will_low" : 25,
+			            "hill_high" : 32
+		            }		
+	            }
+            }
 		},
 		{
 			"id" : "infantry",

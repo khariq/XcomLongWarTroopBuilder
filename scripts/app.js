@@ -26,16 +26,20 @@ xcomApp.factory('DataService', function($http, $q) {
 		var classJson = [];
 		
 		self.getClassJson = function(className) {
-			var deferred = $q.defer();
-			if (self.classJson == null || self.classJson[className] == null) {
-				$http.get('data/' + className + '.json')
-						.success(function(data) { 
-							self.classJson[className] = data; 
-							deferred.resolve(data); 
-						})
-						.error(function(response) { deferred.reject(response)} );
-			} else {
-				deferred.resolve(self.classJson[className]);
+			this.getCommonJson();
+			for (var i = 0; i < this.commonJson.classes.length; i++) {
+				if (this.commonJson.classes[i].id === className) {
+					return this.commonJson.classes[i];
+				}
+			}
+		}
+
+		self.getPerk = function (perkName) {
+			this.getCommonJson();
+			for (var i = 0; i < this.commonJson.perks.length; i++) {
+				if (this.commonJson.perks[i].id === perkName) {
+					return this.commonJson.perks[i];
+				}
 			}
 		}
 	}
@@ -44,7 +48,7 @@ xcomApp.factory('DataService', function($http, $q) {
 		
 });
 
-xcomApp.controller('navController', function($scope, $http, DataService) {
+xcomApp.controller('xcomController', function($scope, $http, DataService) {
 
 	$scope.menuItems = [];
 	$scope.tabs = [];
@@ -60,17 +64,19 @@ xcomApp.controller('navController', function($scope, $http, DataService) {
 		}
 	);
 
-	$scope.showClass = function(id) {
-		DataService.getClassJson(id).then( 
-			function(classJson) {
-				alert(classJson);
-			})
-		,
-		function(classJson) {
+	$scope.isActive = function (id) {
+		return ($scope.class != null && $scope.class.id === id);
+	}
 
-		}
+	$scope.class = null;
+
+	$scope.showClass = function(id) {
+		var classJson = DataService.getClassJson(id);
+		$scope.class = classJson;
 	}
 	
+
+
 });
 
 xcomApp.controller('classController', function($scope, $http, Data) {
