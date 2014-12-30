@@ -69,10 +69,33 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 	}
 
 	$scope.class = null;
+	$scope.perks = [];
 
 	$scope.showClass = function(id) {
 		var classJson = DataService.getClassJson(id);
 		$scope.class = classJson;
+
+		$scope.perks = [];
+		DataService.getCommonJson().then (
+			function(commonJson) { 
+				for (var i = 0; i < classJson.spec.perks.length; i++) {
+					$scope.perks[i] = [];
+					for (var j = 0; j < classJson.spec.perks[i].perks.length; j++) {
+						
+						for (var k = 0; k < commonJson.perks.length; k++) {
+							if (commonJson.perks[k].id === classJson.spec.perks[i].perks[j].id) {
+								$scope.perks[i][j] = commonJson.perks[k];
+								break;
+							}
+						}
+
+					}
+				}
+			},
+			function(commonJson) {
+
+			}
+		);
 	}
 	
 

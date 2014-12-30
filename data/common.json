@@ -42,43 +42,55 @@
 		            { "shredder_ammo" : 1},
 		            { "breaching_ammo" : 1}
 	            ],
-	            "abilities" : [
+	            "perks" : [
 		            {
-                        "rank_1" : [
-			                { "1" : "run_and_gun"}
+		            	"rank" : 1,
+                        "perks" : [
+			                { "id" : "run_and_gun" }
 		                ]
-                    },
-		            {"rank_2" : [
-			            { "1" : "flush"},
-			            { "2" : "close_combat_specialist"},
-			            { "3" : "steadfast"}
-		            ]},
-		
-		            {"rank_3" : [
-			            { "1" : "gunslinger"},
-			            { "2" : "tactical_sense"},
-			            { "3" : "aggression"}
-		            ]},		
-		            {"rank_4" : [
-			            { "1" : "hit_and_run"},
-			            { "2" : "close_encounters"},
-			            { "3" : "rapid_fire"}
-		            ]},
-		            {"rank_5" : [
-			            { "1" : "extra_conditioning"},
-			            { "2" : "killer_instinct"},
-			            { "3" : "ranger"}
-		            ]},		
-		            {"rank_6" : [
-			            { "1" : "will_to_survive"},
-			            { "2" : "bring_em_on"},
-			            { "3" : "sprinter"}
-		            ]},
-		            {"rank_7" : [
-			            { "1" : "vital_point_targeting"},
-			            { "2" : "resilience"},
-			            { "3" : "lightning_reflexes"}
-		            ]}
+                    }, {
+						"rank" : 2,
+		            	"perks" : [
+			            	{ "id" : "flush"},
+			            	{ "id" : "close_combat_specialist"},
+			            	{ "id" : "steadfast"}
+		            	]
+		            }, {
+		            	"rank" : 3,
+		            	"perks" : [
+			            	{ "id" : "gunslinger"},
+			            	{ "id" : "tactical_sense"},
+			            	{ "id" : "aggression"}
+		            	]
+		            }, {
+						"rank" : 4,
+		            	"perks" : [
+			            	{ "id" : "hit_and_run"},
+			            	{ "id" : "close_encounters"},
+			            	{ "id" : "rapid_fire"}
+		            	]
+		            }, {
+		            	"rank" : 5,
+		            	"perks" : [
+			            { "id" : "extra_conditioning"},
+			            { "id" : "killer_instinct"},
+			            { "id" : "ranger"}
+		            	]
+		            }, {
+		            	"rank" : 6,
+		            	"perks" : [
+			            	{ "id" : "will_to_survive"},
+			            	{ "id" : "bring_em_on"},
+			            	{ "id" : "sprinter"}
+		            	]
+		            }, {
+		            	"rank" : 7,
+		            	"perks" : [
+			            	{ "id" : "vital_point_targeting"},
+			            	{ "id" : "resilience"},
+			            	{ "id" : "lightning_reflexes"}
+		            	]
+		           	}
 	            ],
 	            "stat_progression" : {
 		            "rank_1" : {
@@ -173,30 +185,37 @@
 	"ranks" : [
 		{
 			"name" : "Specialist",
+			"rank" : 1,
 			"img_src" : "http://ufopaedia.org/images/thumb/6/6a/RANK_SQUADDIE.png/32px-RANK_SQUADDIE.png"
 		},
 		{
 			"name" : "Lance Corporal",
+			"rank" : 2,
 			"img_src" : "http://ufopaedia.org/images/thumb/f/f2/RANK_CORPORAL.png/32px-RANK_CORPORAL.png"
 		},
 		{
 			"name" : "Corporal",
+			"rank" : 3,
 			"img_src" : "http://ufopaedia.org/images/thumb/3/33/RANK_SERGEANT.png/32px-RANK_SERGEANT.png"
 		},
 		{
 			"name" : "Sergeant",
+			"rank" : 4,
 			"img_src" : "http://ufopaedia.org/images/thumb/c/cc/RANK_LIEUTENANT.png/32px-RANK_LIEUTENANT.png"
 		},
 		{
 			"name" : "Tech Sergeant",
+			"rank" : 5,
 			"img_src" : "http://ufopaedia.org/images/thumb/7/79/RANK_CAPTAIN.png/32px-RANK_CAPTAIN.png"
 		},
 		{
 			"name" : "Gunnery Sergeant",
+			"rank" : 6,
 			"img_src" : "http://ufopaedia.org/images/thumb/e/ee/RANK_MAJOR.png/32px-RANK_MAJOR.png"
 		},
 		{
 			"name" : "Master Sergeant",
+			"rank" : 7,
 			"img_src" : "http://ufopaedia.org/images/thumb/9/9d/RANK_COLONEL.png/32px-RANK_COLONEL.png"
 		}
 	],
