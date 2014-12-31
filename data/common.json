@@ -92,50 +92,44 @@
 		            	]
 		           	}
 	            ],
-	            "stat_progression" : {
-		            "rank_1" : {
+	            "stat_progression" : [
+		            {
 			            "health" : 1,
 			            "aim" : 3,
 			            "will_low" : 5,
-			            "hill_high" : 6
-		            },
-		            "rank_2" : {
+			            "will_high" : 6
+		            }, {
+			            "health" : 0,
+			            "aim" : 3,
+			            "will_low" : 5,
+			            "will_high" : 6
+		            }, {
 			            "health" : 1,
-			            "aim" : 6,
-			            "will_low" : 10,
-			            "hill_high" : 12
-		            },
-		            "rank_3" : {
-			            "health" : 2,
-			            "aim" : 9,
-			            "will_low" : 13,
-			            "hill_high" : 16 
-		            },
-		            "rank_4" : {
-			            "health" : 2,
-			            "aim" : 12,
-			            "will_low" : 16,
-			            "hill_high" : 20
-		            },
-		            "rank_5" : {
-			            "health" : 3,
-			            "aim" : 15,
-			            "will_low" : 16,
-			            "hill_high" : 20
-		            },
-		            "rank_6" : {
-			            "health" : 3,
-			            "aim" : 18,
-			            "will_low" : 22,
-			            "hill_high" : 28
-		            },
-		            "rank_7" : {
-			            "health" : 4,
-			            "aim" : 21,
-			            "will_low" : 25,
-			            "hill_high" : 32
-		            }		
-	            }
+			            "aim" : 3,
+			            "will_low" : 3,
+			            "will_high" : 4 
+		            }, {
+			            "health" : 0,
+			            "aim" : 3,
+			            "will_low" : 3,
+			            "will_high" : 4
+		            }, {
+			            "health" : 1,
+			            "aim" : 3,
+			            "will_low" : 3,
+			            "will_high" : 4
+		            }, {
+			            "health" : 0,
+			            "aim" : 3,
+			            "will_low" : 3,
+			            "will_high" : 4
+		            }, {
+			            "health" : 1,
+			            "aim" : 3,
+			            "will_low" : 3,
+			            "will_high" : 4
+		            }
+		        ]		
             }
 		},
 		{

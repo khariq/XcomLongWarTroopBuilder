@@ -53,10 +53,39 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 	$scope.menuItems = [];
 	$scope.tabs = [];
 	
+	$scope.ranks = [];
+
+	$scope.build = {};
+
+	$scope.resetBuild = function() {
+		$scope.build  = {
+
+			"hp" : 5,
+			"armor" : 0,
+			"mobility" : 13,
+			"aim" : 65,
+			"will" : 35,
+			"defense" : 0,
+			"damage_reduction" : 0,
+			"mod" : {
+				"aim" : 0,
+				"mob" : 0,
+				"will" : 0
+			},
+			"rank_ups" : {
+				"health" : 0,
+				"aim" : 0,
+				"will_low" : 0,
+				"will_high" : 0	
+			}
+		};
+	}
+
 	DataService.getCommonJson().then (
 		function(commonJson) { //success
 			$scope.menuItems = commonJson.classes;
 			$scope.tabs = commonJson.tabs;
+			$scope.ranks = commonJson.ranks;
 
 		},
 		function(commonJson) {
@@ -74,6 +103,8 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 	$scope.showClass = function(id) {
 		var classJson = DataService.getClassJson(id);
 		$scope.class = classJson;
+		
+		$scope.resetBuild();
 
 		$scope.perks = [];
 		DataService.getCommonJson().then (
@@ -98,12 +129,55 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 		);
 	}
 	
+	$scope.selectedPerks = [];
 
-
-});
-
-xcomApp.controller('classController', function($scope, $http, Data) {
-
+	$scope.choosePerk = function(perk, rank, btnElement) {
 	
+		var stat_mods = $scope.class.spec.stat_progression[rank];
+
+		btnElement = $(btnElement);
+
+		if ($scope.selectedPerks[rank] != null) {
+			//deselect currently selected perk at this rank
+
+			var currentPerk = $scope.selectedPerks[rank];
+			$scope.build.mod.aim -= currentPerk.aim_bonus;
+			$scope.build.mod.mob -= currentPerk.mobility_bonus;
+			$scope.build.mod.will -= currentPerk.will_bonus;
+
+			$scope.build.rank_ups.aim -= stat_mods.aim;
+			$scope.build.rank_ups.will_low -= stat_mods.will_low;
+			$scope.build.rank_ups.will_high -= stat_mods.will_high;
+			$scope.build.rank_ups.health -= stat_mods.health;
+		
+			$scope.selectedPerks[rank] = null;
+
+			if (perk.id == currentPerk.id) return;
+
+		}
+
+		$scope.build.mod.aim += perk.aim_bonus;
+		$scope.build.mod.mob += perk.mobility_bonus;
+		$scope.build.mod.will += perk.will_bonus;
+		
+		$scope.build.rank_ups.aim += stat_mods.aim;
+		$scope.build.rank_ups.will_low += stat_mods.will_low;
+		$scope.build.rank_ups.will_high += stat_mods.will_high;
+		$scope.build.rank_ups.health += stat_mods.health;
+
+		$scope.selectedPerks[rank] = perk;
+
+	}
+
+	$scope.showPerkDetails = false;
+	$scope.perkInDetails = {};
+	$scope.showDetails = function(perk) {
+		$scope.showPerkDetails = true;
+		$scope.perkInDetails = perk;
+	}
+
+	$scope.hideDetails = function() {
+		$scope.showPerkDetails = false;
+	}
 
 });
