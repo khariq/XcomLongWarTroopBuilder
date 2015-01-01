@@ -352,7 +352,7 @@
 			"id" : "hit_and_run",
 			"img_src" : "http://ufopaedia.org/images/thumb/3/31/ALIEN_LEAP.png/32px-ALIEN_LEAP.png",
 			"title" : "Hit and Run",
-			"description" : "",
+			"description" : "Your first standard shot of each turn against an uncovered or flanked target does not cost an action. Does not work against flying units, and cannot be used if Run N' Gun activated.",
 			"aim_bonus" : 0,
 			"will_bonus" : 0,
 			"mobility_bonus" : 0
@@ -361,7 +361,7 @@
 			"id" : "close_encounters",
 			"img_src" : "http://ufopaedia.org/images/thumb/2/2a/ASSAULT_CLOSEPERSONAL.png/32px-ASSAULT_CLOSEPERSONAL.png",
 			"title" : "Close Encounters",
-			"description" : "",
+			"description" : "The first standard shot made within 4 tiles of the target does not cost an action. Cannot combine with Run And Gun.",
 			"aim_bonus" : 0,
 			"will_bonus" : 5,
 			"mobility_bonus" : 0
@@ -370,7 +370,7 @@
 			"id" : "rapid_fire",
 			"img_src" : "http://ufopaedia.org/images/thumb/7/70/ASSAULT_RAPIDFIRE.png/32px-ASSAULT_RAPIDFIRE.png",
 			"title" : "Rapid Fire",
-			"description" : "",
+			"description" : "Take two shots against a single target in quick succession. Each shot carries a -15 penalty to Aim",
 			"aim_bonus" : 0,
 			"will_bonus" : 0,
 			"mobility_bonus" : 0
@@ -379,7 +379,7 @@
 			"id" : "extra_conditioning",
 			"img_src" : "http://ufopaedia.org/images/thumb/b/b7/ASSAULT_EXTRACONDITIONING.png/32px-ASSAULT_EXTRACONDITIONING.png",
 			"title" : "Extra Conditioning",
-			"description" : "",
+			"description" : "Confers bonus health based on which type of armor is equipped. Heavier armor increases the bonus.",
 			"aim_bonus" : 2,
 			"will_bonus" : 2,
 			"mobility_bonus" : 1
@@ -388,7 +388,7 @@
 			"id" : "killer_instinct",
 			"img_src" : "http://ufopaedia.org/images/thumb/b/bb/ASSAULT_KILLERINSTINCT.png/32px-ASSAULT_KILLERINSTINCT.png",
 			"title" : "Killer Instinct",
-			"description" : "",
+			"description" : "Activating Run & Gun now also grants +50% critical damage for the rest of the turn.",
 			"aim_bonus" : 0,
 			"will_bonus" : 0,
 			"mobility_bonus" : 0
@@ -397,7 +397,7 @@
 			"id" : "ranger",
 			"img_src" : "http://ufopaedia.org/images/thumb/9/91/ALIEN_CANNONFIRE.png/32px-ALIEN_CANNONFIRE.png",
 			"title" : "Ranger",
-			"description" : "",
+			"description" : "Primary weapons, Rocket Launchers and MEC secondary systems do one additional damage.",
 			"aim_bonus" : 2,
 			"will_bonus" : 0,
 			"mobility_bonus" : 0
@@ -406,7 +406,7 @@
 			"id" : "will_to_survive",
 			"img_src" : "http://ufopaedia.org/images/thumb/d/d8/HEAVY_WILLTOSURVIVE.png/32px-HEAVY_WILLTOSURVIVE.png",
 			"title" : "Will To Survive",
-			"description" : "",
+			"description" : "Reduces all normal damage taken by 1 or 2 points if in cover and not flanked.",
 			"aim_bonus" : 0,
 			"will_bonus" : 3,
 			"mobility_bonus" : 0
@@ -415,7 +415,7 @@
 			"id" : "bring_em_on",
 			"img_src" : "http://ufopaedia.org/images/thumb/c/c2/ASSAULT_BRINGTHEMON.png/32px-ASSAULT_BRINGTHEMON.png",
 			"title" : "Bring 'Em On",
-			"description" : "",
+			"description" : "Adds 1 damage on critical hits for each enemy the unit can see (up to +6).",
 			"aim_bonus" : 0,
 			"will_bonus" : 0,
 			"mobility_bonus" : 0
@@ -424,7 +424,7 @@
 			"id" : "sprinter",
 			"img_src" : "http://ufopaedia.org/images/thumb/c/ce/SUPPORT_SPRINTER.png/32px-SUPPORT_SPRINTER.png",
 			"title" : "Sprinter",
-			"description" : "",
+			"description" : "Grants +4 mobility (roughly 3 tiles movement).",
 			"aim_bonus" : 0,
 			"will_bonus" : 0,
 			"mobility_bonus" : 4
@@ -433,7 +433,7 @@
 			"id" : "vital_point_targeting",
 			"img_src" : "http://ufopaedia.org/images/thumb/7/7f/MEC_VITAL_POINT_TARGETING.png/32px-MEC_VITAL_POINT_TARGETING.png",
 			"title" : "Vital Point Targeting",
-			"description" : "",
+			"description" : "Confers 2 bonus damage with primary guns, and +1 damage with sidearms, against humans and alien targets whose species have been autopsied.",
 			"aim_bonus" : 2,
 			"will_bonus" : 0,
 			"mobility_bonus" : 0
@@ -442,7 +442,7 @@
 			"id" : "resilience",
 			"img_src" : "http://ufopaedia.org/images/thumb/2/2e/ASSAULT_RESILLIENCE.png/32px-ASSAULT_RESILLIENCE.png",
 			"title" : "Resilience",
-			"description" : "",
+			"description" : "Confers immunity to critical hits.",
 			"aim_bonus" : 0,
 			"will_bonus" : 0,
 			"mobility_bonus" : 0
@@ -451,7 +451,7 @@
 			"id" : "lightning_reflexes",
 			"img_src" : "http://ufopaedia.org/images/thumb/9/90/ASSAULT_LIGHTNINGREFLEXES.png/32px-ASSAULT_LIGHTNINGREFLEXES.png",
 			"title" : "Lightning Reflexes",
-			"description" : "",
+			"description" : "The hit chance of reaction fire against this unit is reduced by 90 percent for the first shot, and by 70 percent for additional shots.",
 			"aim_bonus" : 0,
 			"will_bonus" : 0,
 			"mobility_bonus" : 0

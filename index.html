@@ -3,6 +3,7 @@
 <head>
     <title>XCOM: Long War - Troop Builder</title>
 
+    <script src="scripts/linq.min.js" type="text/javascript"></script>
     <script src="scripts/jquery-2.1.1.min.js" type="text/javascript"></script>
 
     <script src="scripts/angular.min.js" type="text/javascript"></script>
@@ -38,7 +39,7 @@
 		
 		<div class="row">
 			
-			<div class="col-md-8">
+			<div class="col-md-6">
 				<div class="panel panel-primary">
 					<div class="panel-heading">
 						<h4 class="panel-title">
@@ -79,8 +80,34 @@
 					</div>
 				</div>
 			</div>
-
-			<div class="col-md-4">
+            <div class="col-md-3">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">Equipment</h4>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                        	<div class="col-sm-5">Armor</div>	
+                        	<div class="col-sm-7"><select class="form-control"> <option ng-repeat="armor in armors">{{armor.name}}</option> </select></div>
+                        </div>
+                        <div class="row">
+                        	<div class="col-sm-5">Primary Weapon</div>	
+                        	<div class="col-sm-7"><select class="form-control"> <option ng-repeat="weapon in primaryWeapons">{{weapon.name}}</option> </select></div>
+                        </div>
+                        <div class="row">
+                        	<div class="col-sm-5">Secondary Weapon</div>	
+                        	<div class="col-sm-7"><select class="form-control"> <option ng-repeat="weapon in secondaryWeapons">{{weapon.name}}</option> </select></div>
+                        </div>
+                        <!--
+                        <div class="row" ng-repeat="slot in equipmentSlot">
+                        	<div class="col-sm-5">Equipment {{$index}}</div>	
+                        	<div class="col-sm-7"><select class="form-control"> <option ng-repeat="e in equipment">{{e.name}}</option> </select></div>
+                        </div>
+                    	-->
+                    </div>
+                </div>
+            </div>
+			<div class="col-md-3">
 				<table class="table table-condensed table-striped">
 					<tr>
 						<td>HP</td>

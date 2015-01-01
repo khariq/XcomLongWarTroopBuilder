@@ -82,13 +82,15 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 	}
 
 	DataService.getCommonJson().then (
-		function(commonJson) { //success
+        // success
+        function (commonJson) { //success
 			$scope.menuItems = commonJson.classes;
 			$scope.tabs = commonJson.tabs;
 			$scope.ranks = commonJson.ranks;
 
-		},
-		function(commonJson) {
+		}, 
+        // failure
+        function (commonJson) {
 		
 		}
 	);
@@ -99,6 +101,10 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 
 	$scope.class = null;
 	$scope.perks = [];
+	$scope.armors = [];
+	$scope.primaryWeapons = [];
+	$scope.secondaryWeapons = [];
+	$scope.equipment = [];
 
 	$scope.showClass = function(id) {
 		var classJson = DataService.getClassJson(id);
@@ -107,8 +113,15 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 		$scope.resetBuild();
 
 		$scope.perks = [];
+		$scope.armors = [];
+		$scope.primaryWeapons = [];
+		$scope.secondaryWeapons = [];
+		$scope.equipment = [];
+		$scope.equipmentSlots = [{},{}];
 		DataService.getCommonJson().then (
-			function(commonJson) { 
+            // success
+            function (commonJson) {
+
 				for (var i = 0; i < classJson.spec.perks.length; i++) {
 					$scope.perks[i] = [];
 					for (var j = 0; j < classJson.spec.perks[i].perks.length; j++) {
@@ -122,8 +135,19 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 
 					}
 				}
+
+				var primaryWeapons = Enumerable.From(commonJson.primary_weapons);
+				for (var i = 0; i < classJson.spec.primary_weapons.length; i++) {
+				    var weaponClass = Object.keys(classJson.spec.primary_weapons[i])[0];
+				    var weapons = primaryWeapons.Where("$.type == '" + weaponClass + "'").Select("$.weapons").ToArray()[0];
+				    if (weapons != null && weapons.length > 0) {
+				    	$scope.primaryWeapons = $scope.primaryWeapons.concat(weapons);
+				    }
+				}
+
 			},
-			function(commonJson) {
+            // failure
+            function (commonJson) {
 
 			}
 		);
@@ -151,6 +175,12 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 			$scope.build.rank_ups.health -= stat_mods.health;
 		
 			$scope.selectedPerks[rank] = null;
+
+			$("input[name='" + rank + "']").each(function(checkbox) { 
+				var chk = $(this);
+				chk.prop("checked", false);
+				chk.parent().removeClass("active");
+			});
 
 			if (perk.id == currentPerk.id) return;
 
