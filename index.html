@@ -88,15 +88,25 @@
                     <div class="panel-body">
                         <div class="row">
                         	<div class="col-sm-5">Armor</div>	
-                        	<div class="col-sm-7"><select class="form-control"> <option ng-repeat="armor in armors">{{armor.name}}</option> </select></div>
+                        	<div class="col-sm-7">
+                        		<select class="form-control"> 
+                        			<option></option> 
+                        			<option ng-repeat="armor in armors">{{armor.name}}</option> 
+                        		</select>
+                        	</div>
                         </div>
                         <div class="row">
                         	<div class="col-sm-5">Primary Weapon</div>	
-                        	<div class="col-sm-7"><select class="form-control"> <option ng-repeat="weapon in primaryWeapons">{{weapon.name}}</option> </select></div>
+                        	<div class="col-sm-7">
+                        		<select class="form-control"
+                        			ng-model="selectedPrimaryWeapon"
+                        			ng-options="weapon.name group by weapon.type for weapon in primaryWeapons"> 
+                        		</select>
+                        	</div>
                         </div>
                         <div class="row">
                         	<div class="col-sm-5">Secondary Weapon</div>	
-                        	<div class="col-sm-7"><select class="form-control"> <option ng-repeat="weapon in secondaryWeapons">{{weapon.name}}</option> </select></div>
+                        	<div class="col-sm-7"><select class="form-control"> <option></option> <option ng-repeat="weapon in secondaryWeapons">{{weapon.name}}</option> </select></div>
                         </div>
                         <!--
                         <div class="row" ng-repeat="slot in equipmentSlot">
@@ -106,6 +116,21 @@
                     	-->
                     </div>
                 </div>
+                <div class="alert alert-success" ng-show="showPerkDetails">
+					{{perkInDetails.description}}
+					<table class="table table-condensed">
+						<tr>
+							<td>Aim</td>
+							<td>Will</td>
+							<td>Mobility</td>
+						</tr>
+						<tr>
+							<td>+{{perkInDetails.aim_bonus}}</td>
+							<td>+{{perkInDetails.will_bonus}}</td>
+							<td>+{{perkInDetails.mobility_bonus}}</td>
+						</tr>
+					</table>
+				</div>
             </div>
 			<div class="col-md-3">
 				<table class="table table-condensed table-striped">
@@ -123,27 +148,38 @@
 					</tr>
 					<tr>
 						<td>Aim</td>
-						<td>{{build.aim + build.mod.aim + build.rank_ups.aim}}</td>
+						<td>{{build.aim + build.mod.aim + build.rank_ups.aim + selectedPrimaryWeapon.aim_mod}}</td>
 						<td>Mobility</td>
-						<td>{{build.mobility + build.mod.mob}}</td>
+						<td>{{build.mobility + build.mod.mob + selectedPrimaryWeapon.mobility_mod}}</td>
+					</tr>
+					<tr>
+						<td colspan="2">
+							Primary Weapon
+						</td>
+					</tr>
+					<tr>
+						<td>Min Damage</td>
+						<td>
+							{{selectedPrimaryWeapon.min_damage + build.damage_bonus}}
+						</td>
+						<td>Max Damage</td>
+						<td>
+							{{selectedPrimaryWeapon.max_damage + build.damage_bonus}}
+						</td>
+					</tr>
+					<tr>
+						<td>Crit Min</td>
+						<td>
+							{{selectedPrimaryWeapon.crit_damage_min + build.damage_bonus}}
+						</td>
+						<td>Crit Max</td>
+						<td>
+							{{selectedPrimaryWeapon.crit_damage_max + build.damage_bonus}}
+						</td>
 					</tr>
 				</table>
 
-				<div class="alert alert-success" ng-show="showPerkDetails">
-					{{perkInDetails.description}}
-					<table class="table table-condensed">
-						<tr>
-							<td>Aim</td>
-							<td>Will</td>
-							<td>Mobility</td>
-						</tr>
-						<tr>
-							<td>+{{perkInDetails.aim_bonus}}</td>
-							<td>+{{perkInDetails.will_bonus}}</td>
-							<td>+{{perkInDetails.mobility_bonus}}</td>
-						</tr>
-					</table>
-				</div>
+				
 
 			</div>
 

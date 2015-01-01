@@ -215,9 +215,325 @@
 	],
 	"primary_weapons" : [
 		{
+			"type" : "smgs",
+			
+			"weapons" : [{
+					"id" : "submachine_gun",
+					"type" : "SMGs",
+					"name" : "Submachine Gun",
+					"min_damage" : 2,
+					"max_damage" : 4,
+					"crit_chance" : 0,
+					"crit_damage_min" : 4,
+					"crit_damage_max" : 5,
+					"aim_mod" : 0,
+					"mobility_mod" : 3,
+					"ammo" : 2,
+					"steady" : 1
+				},
+				{
+					"id" : "laser_shatterray",
+					"type" : "SMGs",
+					"name" : "Laser Shatterray",
+					"min_damage" : 3,
+					"max_damage" : 5,
+					"crit_chance" : 0,
+					"crit_damage_min" : 5,
+					"crit_damage_max" : 7,
+					"aim_mod" : 7,
+					"mobility_mod" : 3,
+					"ammo" : 2,
+					"steady" : 1
+				},
+				{
+					"id" : "gauss_stuttergun",
+					"type" : "SMGs",
+					"name" : "Gauss Stuttergun",
+					"min_damage" : 4,
+					"max_damage" : 6,
+					"crit_chance" : 0,
+					"crit_damage_min" : 6,
+					"crit_damage_max" : 9,
+					"aim_mod" : 0,
+					"mobility_mod" : 3,
+					"ammo" : 3,
+					"steady" : 1
+				},
+				{
+					"id" : "pulse_stengun",
+					"type" : "SMGs",
+					"name" : "Pulse Stengun",
+					"min_damage" : 4,
+					"max_damage" : 8,
+					"crit_chance" : 10,
+					"crit_damage_min" : 8,
+					"crit_damage_max" : 11,
+					"aim_mod" : 0,
+					"mobility_mod" : 3,
+					"ammo" : 2,
+					"steady" : 1
+				},
+				{
+					"id" : "plasma_stormgun",
+					"type" : "SMGs",
+					"name" : "Plasma Stormgun",
+					"min_damage" : 5,
+					"max_damage" : 9,
+					"crit_chance" : 0,
+					"crit_damage_min" : 9,
+					"crit_damage_max" : 12,
+					"aim_mod" : 0,
+					"mobility_mod" : 3,
+					"ammo" : 2,
+					"steady" : 1
+				}
+
+			]
+		},
+		{
+			"type": "assault_rifles",
+			"weapons" : [
+				{
+					"id" : "assault_rifle",
+					"type" : "Assault Rifles",
+					"name" : "Assault Rifle",
+					"min_damage" : 3,
+					"max_damage" : 5,
+					"crit_chance" : 10,
+					"crit_damage_min" : 5,
+					"crit_damage_max" : 7,
+					"aim_mod" : 0,
+					"mobility_mod" : 0,
+					"ammo" : 3,
+					"steady" : 1
+				},
+				{
+					"id" : "laser_rifle",
+					"type" : "Assault Rifles",
+					"name" : "Laser Rifle",
+					"min_damage" : 4,
+					"max_damage" : 6,
+					"crit_chance" : 10,
+					"crit_damage_min" : 6,
+					"crit_damage_max" : 9,
+					"aim_mod" : 7,
+					"mobility_mod" : 0,
+					"ammo" : 3,
+					"steady" : 1
+				},
+				{
+					"id" : "gauss_rifle",
+					"type" : "Assault Rifles",
+					"name" : "Gauss Rifle",
+					"min_damage" : 4,
+					"max_damage" : 8,
+					"crit_chance" : 10,
+					"crit_damage_min" : 8,
+					"crit_damage_max" : 11,
+					"aim_mod" : 0,
+					"mobility_mod" : 0,
+					"ammo" : 4,
+					"steady" : 1
+				},
+				{
+					"id" : "pulse_rifle",
+					"type" : "Assault Rifles",
+					"name" : "Pulse Rifle",
+					"min_damage" : 5,
+					"max_damage" : 9,
+					"crit_chance" : 20,
+					"crit_damage_min" : 9,
+					"crit_damage_max" : 12,
+					"aim_mod" : 0,
+					"mobility_mod" : 0,
+					"ammo" : 3,
+					"steady" : 1
+				},
+				{
+					"id" : "plasma_rifle",
+					"type" : "Assault Rifles",
+					"name" : "Plasma Rifle",
+					"min_damage" : 6,
+					"max_damage" : 10,
+					"crit_chance" : 10,
+					"crit_damage_min" : 10,
+					"crit_damage_max" : 14,
+					"aim_mod" : 0,
+					"mobility_mod" : 0,
+					"ammo" : 3,
+					"steady" : 1
+				},
+				{
+					"id" : "arc_rifle",
+					"type" : "Assault Rifles",
+					"name" : "Arc Rifle",
+					"min_damage" : 1,
+					"max_damage" : 3,
+					"crit_chance" : 0,
+					"crit_damage_min" : 3,
+					"crit_damage_max" : 4,
+					"aim_mod" : 0,
+					"mobility_mod" : 0,
+					"ammo" : 2,
+					"steady" : 1
+				}
+			]
+		},
+		{
+			"type" : "battle_rifle",
+			"weapons" : [
+				{				
+					"id" : "battle_rifle",
+					"type" : "Battle Rifle",
+					"name" : "Battle Rifle",
+					"min_damage" : 4,
+					"max_damage" : 6,
+					"crit_chance" : 15,
+					"crit_damage_min" : 6,
+					"crit_damage_max" : 9,
+					"aim_mod" : -15,
+					"mobility_mod" : -1,
+					"ammo" : 4,
+					"steady" : 1
+				},
+				{				
+					"id" : "heavy_laser",
+					"type" : "Battle Rifle",
+					"name" : "Heavy Laser Rifle",
+					"min_damage" : 4,
+					"max_damage" : 8,
+					"crit_chance" : 15,
+					"crit_damage_min" : 8,
+					"crit_damage_max" : 11,
+					"aim_mod" : -8,
+					"mobility_mod" : -1,
+					"ammo" : 4,
+					"steady" : 1
+				},
+					{				
+					"id" : "heavy_gauss",
+					"type" : "Battle Rifle",
+					"name" : "Heavy Gauss Rifle",
+					"min_damage" : 5,
+					"max_damage" : 9,
+					"crit_chance" : 15,
+					"crit_damage_min" : 9,
+					"crit_damage_max" : 12,
+					"aim_mod" : -15,
+					"mobility_mod" : -1,
+					"ammo" : 5,
+					"steady" : 1
+				},
+				{				
+					"id" : "heavy_pulse_rifle",
+					"type" : "Battle Rifle",
+					"name" : "Heavy Pulse Rifle",
+					"min_damage" : 6,
+					"max_damage" : 10,
+					"crit_chance" : 25,
+					"crit_damage_min" : 10,
+					"crit_damage_max" : 14,
+					"aim_mod" : -15,
+					"mobility_mod" : -1,
+					"ammo" : 4,
+					"steady" : 1
+				},
+				{				
+					"id" : "heavy_plasma_rifle",
+					"type" : "Battle Rifle",
+					"name" : "Heavy Plasma Rifle",
+					"min_damage" : 7,
+					"max_damage" : 11,
+					"crit_chance" : 15,
+					"crit_damage_min" : 11,
+					"crit_damage_max" : 16,
+					"aim_mod" : -15,
+					"mobility_mod" : -1,
+					"ammo" : 4,
+					"steady" : 1
+				}
+			]
+		},
+		{
+			"type" : "shotguns",
+			"weapons" : [
+				{				
+					"id" : "shotgun",
+					"type" : "Shotguns",
+					"name" : "Shotgun",
+					"min_damage" : 4,
+					"max_damage" : 8,
+					"crit_chance" : 20,
+					"crit_damage_min" : 8,
+					"crit_damage_max" : 11,
+					"aim_mod" : 0,
+					"mobility_mod" : 0,
+					"ammo" : 5,
+					"steady" : 1
+				},
+				{				
+					"id" : "scatter",
+					"type" : "Shotguns",
+					"name" : "Scatter Laser",
+					"min_damage" : 5,
+					"max_damage" : 9,
+					"crit_chance" : 20,
+					"crit_damage_min" : 9,
+					"crit_damage_max" : 12,
+					"aim_mod" : 7,
+					"mobility_mod" : 0,
+					"ammo" : 3,
+					"steady" : 1
+				},
+				{				
+					"id" : "alloy",
+					"type" : "Shotguns",
+					"name" : "Alloy Cannon",
+					"min_damage" : 6,
+					"max_damage" : 10,
+					"crit_chance" : 20,
+					"crit_damage_min" : 10,
+					"crit_damage_max" : 14,
+					"aim_mod" : 0,
+					"mobility_mod" : 0,
+					"ammo" : 4,
+					"steady" : 1
+				},
+				{				
+					"id" : "scatter_blaster",
+					"type" : "Shotguns",
+					"name" : "Scatter Blaster",
+					"min_damage" : 7,
+					"max_damage" : 11,
+					"crit_chance" : 0,
+					"crit_damage_min" : 11,
+					"crit_damage_max" : 16,
+					"aim_mod" : 0,
+					"mobility_mod" : 0,
+					"ammo" : 3,
+					"steady" : 1
+				},
+				{				
+					"id" : "reflex_cannon",
+					"type" : "Shotguns",
+					"name" : "Reflex Cannon",
+					"min_damage" : 7,
+					"max_damage" : 13,
+					"crit_chance" : 20,
+					"crit_damage_min" : 13,
+					"crit_damage_max" : 18,
+					"aim_mod" : 0,
+					"mobility_mod" : 0,
+					"ammo" : 3,
+					"steady" : 1
+				}
+			]
+		},
+		{
 			"type" : "carbines",
 			"weapons" : [{
 					"id" : "assault_carbine",
+					"type" : "Carbines",
 					"name" : "Assault Carbine",
 					"min_damage" : 2,
 					"max_damage" : 4,
@@ -231,6 +547,7 @@
 				},
 				{
 					"id" : "laser_carbine",
+					"type" : "Carbines",
 					"name" : "Laser Carbine",
 					"min_damage" : 3,
 					"max_damage" : 5,
@@ -244,6 +561,7 @@
 				},
 				{
 					"id" : "gauss_carbine",
+					"type" : "Carbines",
 					"name" : "Gauss Carbine",
 					"min_damage" : 4,
 					"max_damage" : 6,
@@ -257,6 +575,7 @@
 				},
 				{
 					"id" : "pulse_carbine",
+					"type" : "Carbines",
 					"name" : "Pulse Carbine",
 					"min_damage" : 4,
 					"max_damage" : 8,
@@ -270,6 +589,7 @@
 				},
 				{
 					"id" : "plasma_carbine",
+					"type" : "Carbines",
 					"name" : "Plasma Carbine",
 					"min_damage" : 5,
 					"max_damage" : 9,
@@ -292,7 +612,8 @@
 			"description" : "Allows firing or Overwatch after Dashing on the turn Run and Gun is activated. 2 turn cooldown.",
 			"aim_bonus" : 0,
 			"will_bonus" : 0,
-			"mobility_bonus" : 0
+			"mobility_bonus" : 0,
+			"damage_bonus" : 0
 		},		
 		{
 			"id" : "flush",
@@ -301,7 +622,8 @@
 			"description" : "Fire a shot that causes enemies to run out of cover. The shot is easy to hit with, but does reduced damage.",
 			"aim_bonus" : 2,
 			"will_bonus" : 0,
-			"mobility_bonus" : 0
+			"mobility_bonus" : 0,
+			"damage_bonus" : 0
 		},
 		{
 			"id" : "close_combat_specialist",
@@ -310,7 +632,8 @@
 			"description" : "Confers a reaction shot against any enemy who closes to within 4 tiles. Does not require Overwatch. Warning: Will activate even if unit is concealed.",
 			"aim_bonus" : 0,
 			"will_bonus" : 0,
-			"mobility_bonus" : 0
+			"mobility_bonus" : 0,
+			"damage_bonus" : 0
 		},
 		{
 			"id" : "steadfast",
@@ -319,7 +642,8 @@
 			"description" : "Never panic as a result of getting wounded, allies panicking, allies getting wounded or killed, or the intimidation ability.",
 			"aim_bonus" : 0,
 			"will_bonus" : 5,
-			"mobility_bonus" : 0
+			"mobility_bonus" : 0,
+			"damage_bonus" : 0
 		},
 		{
 			"id" : "gunslinger",
@@ -328,7 +652,8 @@
 			"description" : "Confers +1 damage with sidearms and negates the long-range accuracy penalty when shooting beyond 14 meters.",
 			"aim_bonus" : 1,
 			"will_bonus" : 0,
-			"mobility_bonus" : 0
+			"mobility_bonus" : 0,
+			"damage_bonus" : 0
 		},
 		{
 			"id" : "tactical_sense",
@@ -337,7 +662,8 @@
 			"description" : "Confers +5 Defense per enemy in sight (max +20).",
 			"aim_bonus" : 0,
 			"will_bonus" : 0,
-			"mobility_bonus" : 0
+			"mobility_bonus" : 0,
+			"damage_bonus" : 0
 		},
 		{
 			"id" : "aggression",
@@ -346,7 +672,8 @@
 			"description" : "Confers +10% critical chance per enemy in sight (max +30%).",
 			"aim_bonus" : 0,
 			"will_bonus" : 1,
-			"mobility_bonus" : 0
+			"mobility_bonus" : 0,
+			"damage_bonus" : 0
 		},
 		{
 			"id" : "hit_and_run",
@@ -355,7 +682,8 @@
 			"description" : "Your first standard shot of each turn against an uncovered or flanked target does not cost an action. Does not work against flying units, and cannot be used if Run N' Gun activated.",
 			"aim_bonus" : 0,
 			"will_bonus" : 0,
-			"mobility_bonus" : 0
+			"mobility_bonus" : 0,
+			"damage_bonus" : 0
 		},
 		{
 			"id" : "close_encounters",
@@ -364,7 +692,8 @@
 			"description" : "The first standard shot made within 4 tiles of the target does not cost an action. Cannot combine with Run And Gun.",
 			"aim_bonus" : 0,
 			"will_bonus" : 5,
-			"mobility_bonus" : 0
+			"mobility_bonus" : 0,
+			"damage_bonus" : 0
 		},
 		{
 			"id" : "rapid_fire",
@@ -373,7 +702,8 @@
 			"description" : "Take two shots against a single target in quick succession. Each shot carries a -15 penalty to Aim",
 			"aim_bonus" : 0,
 			"will_bonus" : 0,
-			"mobility_bonus" : 0
+			"mobility_bonus" : 0,
+			"damage_bonus" : 0
 		},
 		{ 
 			"id" : "extra_conditioning",
@@ -382,7 +712,8 @@
 			"description" : "Confers bonus health based on which type of armor is equipped. Heavier armor increases the bonus.",
 			"aim_bonus" : 2,
 			"will_bonus" : 2,
-			"mobility_bonus" : 1
+			"mobility_bonus" : 1,
+			"damage_bonus" : 0
 		},
 		{
 			"id" : "killer_instinct",
@@ -391,7 +722,8 @@
 			"description" : "Activating Run & Gun now also grants +50% critical damage for the rest of the turn.",
 			"aim_bonus" : 0,
 			"will_bonus" : 0,
-			"mobility_bonus" : 0
+			"mobility_bonus" : 0,
+			"damage_bonus" : 0
 		},
 		{
 			"id" : "ranger",
@@ -400,7 +732,8 @@
 			"description" : "Primary weapons, Rocket Launchers and MEC secondary systems do one additional damage.",
 			"aim_bonus" : 2,
 			"will_bonus" : 0,
-			"mobility_bonus" : 0
+			"mobility_bonus" : 0,
+			"damage_bonus" : 1
 		},
 		{
 			"id" : "will_to_survive",
@@ -409,7 +742,8 @@
 			"description" : "Reduces all normal damage taken by 1 or 2 points if in cover and not flanked.",
 			"aim_bonus" : 0,
 			"will_bonus" : 3,
-			"mobility_bonus" : 0
+			"mobility_bonus" : 0,
+			"damage_bonus" : 0
 		},
 		{
 			"id" : "bring_em_on",
@@ -418,7 +752,8 @@
 			"description" : "Adds 1 damage on critical hits for each enemy the unit can see (up to +6).",
 			"aim_bonus" : 0,
 			"will_bonus" : 0,
-			"mobility_bonus" : 0
+			"mobility_bonus" : 0,
+			"damage_bonus" : 0
 		},
 		{
 			"id" : "sprinter",
@@ -427,7 +762,8 @@
 			"description" : "Grants +4 mobility (roughly 3 tiles movement).",
 			"aim_bonus" : 0,
 			"will_bonus" : 0,
-			"mobility_bonus" : 4
+			"mobility_bonus" : 4,
+			"damage_bonus" : 0
 		},
 		{
 			"id" : "vital_point_targeting",
@@ -436,7 +772,8 @@
 			"description" : "Confers 2 bonus damage with primary guns, and +1 damage with sidearms, against humans and alien targets whose species have been autopsied.",
 			"aim_bonus" : 2,
 			"will_bonus" : 0,
-			"mobility_bonus" : 0
+			"mobility_bonus" : 0,
+			"damage_bonus" : 2
 		},
 		{
 			"id" : "resilience",
@@ -445,7 +782,8 @@
 			"description" : "Confers immunity to critical hits.",
 			"aim_bonus" : 0,
 			"will_bonus" : 0,
-			"mobility_bonus" : 0
+			"mobility_bonus" : 0,
+			"damage_bonus" : 0
 		},
 		{
 			"id" : "lightning_reflexes",
@@ -454,7 +792,8 @@
 			"description" : "The hit chance of reaction fire against this unit is reduced by 90 percent for the first shot, and by 70 percent for additional shots.",
 			"aim_bonus" : 0,
 			"will_bonus" : 0,
-			"mobility_bonus" : 0
+			"mobility_bonus" : 0,
+			"damage_bonus" : 0
 		}
 	],
 	

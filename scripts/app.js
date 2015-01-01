@@ -77,7 +77,8 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 				"aim" : 0,
 				"will_low" : 0,
 				"will_high" : 0	
-			}
+			},
+			"damage_bonus" : 0
 		};
 	}
 
@@ -189,7 +190,8 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 		$scope.build.mod.aim += perk.aim_bonus;
 		$scope.build.mod.mob += perk.mobility_bonus;
 		$scope.build.mod.will += perk.will_bonus;
-		
+		$scope.build.damage_bonus += perk.damage_bonus;
+
 		$scope.build.rank_ups.aim += stat_mods.aim;
 		$scope.build.rank_ups.will_low += stat_mods.will_low;
 		$scope.build.rank_ups.will_high += stat_mods.will_high;
@@ -209,5 +211,8 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 	$scope.hideDetails = function() {
 		$scope.showPerkDetails = false;
 	}
+
+	$scope.selectedPrimaryWeapon = null;
+
 
 });
