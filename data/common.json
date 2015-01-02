@@ -529,7 +529,459 @@
 				}
 			]
 		},
-		{
+        {
+            "type" :  "sniper_rifles",
+            "weapons" : [
+                {				
+					"id" : "sniper_rifle",
+					"type" : "Sniper Rifles",
+					"name" : "Sniper Rifle",
+					"min_damage" : 4,
+					"max_damage" : 6,
+					"crit_chance" : 25,
+					"crit_damage_min" : 6,
+					"crit_damage_max" : 9,
+					"aim_mod" : 0,
+					"mobility_mod" : -1,
+					"ammo" : 5,
+					"steady" : 1
+				},
+                {				
+					"id" : "sniper_rifle",
+					"type" : "Sniper Rifles",
+					"name" : "Laser Sniper Rifle",
+					"min_damage" : 4,
+					"max_damage" : 8,
+					"crit_chance" : 25,
+					"crit_damage_min" : 8,
+					"crit_damage_max" : 11,
+					"aim_mod" : 7,
+					"mobility_mod" : -1,
+					"ammo" : 3,
+					"steady" : 1
+				},
+                {				
+					"id" : "sniper_rifle",
+					"type" : "Sniper Rifles",
+					"name" : "Gauss Long Rifle",
+					"min_damage" : 5,
+					"max_damage" : 9,
+					"crit_chance" : 25,
+					"crit_damage_min" : 8,
+					"crit_damage_max" : 11,
+					"aim_mod" : 0,
+					"mobility_mod" : -2,
+					"ammo" : 1,
+					"steady" : 1
+				},
+                {				
+					"id" : "sniper_rifle",
+					"type" : "Sniper Rifles",
+					"name" : "Pulse Sniper Rifle",
+					"min_damage" : 6,
+					"max_damage" : 10,
+					"crit_chance" : 35,
+					"crit_damage_min" : 10,
+					"crit_damage_max" : 14,
+					"aim_mod" : 0,
+					"mobility_mod" : -1,
+					"ammo" : 3,
+					"steady" : 1
+				},
+                {				
+					"id" : "sniper_rifle",
+					"type" : "Sniper Rifles",
+					"name" : "Plasma Sniper Rifle",
+					"min_damage" : 7,
+					"max_damage" : 11,
+					"crit_chance" : 25,
+					"crit_damage_min" : 11,
+					"crit_damage_max" : 16,
+					"aim_mod" : 0,
+					"mobility_mod" : -1,
+					"ammo" : 3,
+					"steady" : 1
+				}
+            ]
+        },
+        {
+            "type" : "marksman_rifle",
+            "weapons" :  [
+                {				
+					"id" : "marksman_rifle",
+					"type" : "Marksman Rifles",
+					"name" : "Marksman Rifle",
+					"min_damage" : 4,
+					"max_damage" : 6,
+					"crit_chance" : 15,
+					"crit_damage_min" : 6,
+					"crit_damage_max" : 9,
+					"aim_mod" : 0,
+					"mobility_mod" : 0,
+					"ammo" : 5,
+					"steady" : 1
+				},
+                 {				
+					"id" : "laser_strike_rifle",
+					"type" : "Marksman Rifles",
+					"name" : "Laser Strike Rifle",
+					"min_damage" : 4,
+					"max_damage" : 8,
+					"crit_chance" : 15,
+					"crit_damage_min" : 8,
+					"crit_damage_max" : 11,
+					"aim_mod" : 7,
+					"mobility_mod" : 0,
+					"ammo" : 3,
+					"steady" : 1
+				},
+                  {				
+					"id" : "alloy_strike_rifle",
+					"type" : "Marksman Rifles",
+					"name" : "Alloy Strike Rifle",
+					"min_damage" : 5,
+					"max_damage" : 9,
+					"crit_chance" : 15,
+					"crit_damage_min" : 9,
+					"crit_damage_max" : 12,
+					"aim_mod" : 0,
+					"mobility_mod" : 0,
+					"ammo" : 4,
+					"steady" : 1
+				},
+                   {				
+					"id" : "blaster_rifle",
+					"type" : "Marksman Rifles",
+					"name" : "Blaster Rifle",
+					"min_damage" : 6,
+					"max_damage" : 10,
+					"crit_chance" : 25,
+					"crit_damage_min" : 10,
+					"crit_damage_max" : 14,
+					"aim_mod" : 0,
+					"mobility_mod" : 0,
+					"ammo" : 3,
+					"steady" : 1
+				},
+                    {				
+					"id" : "reflex_rifle",
+					"type" : "Marksman Rifles",
+					"name" : "Reflex Rifle",
+					"min_damage" : 7,
+					"max_damage" : 11,
+					"crit_chance" : 15,
+					"crit_damage_min" : 11,
+					"crit_damage_max" : 16,
+					"aim_mod" : 0,
+					"mobility_mod" : 0,
+					"ammo" : 3,
+					"steady" : 1
+				}
+            ]
+        },
+        {
+            "type" :  "squad_automatic_weapon",
+            "weapons" :  [
+                 {				
+					"id" : "saw",
+					"type" : "Squad Automatic Weapon",
+					"name" : "SAW",
+					"min_damage" : 4,
+					"max_damage" : 6,
+					"crit_chance" : 0,
+					"crit_damage_min" : 6,
+					"crit_damage_max" : 9,
+					"aim_mod" : 0,
+					"mobility_mod" : -1,
+					"ammo" : 6,
+					"steady" : 1
+				},
+                 {				
+					"id" : "autolaser",
+					"type" : "Squad Automatic Weapon",
+					"name" : "Autolaser",
+					"min_damage" : 4,
+					"max_damage" : 8,
+					"crit_chance" : 0,
+					"crit_damage_min" : 8,
+					"crit_damage_max" : 11,
+					"aim_mod" : 7,
+					"mobility_mod" : -1,
+					"ammo" : 6,
+					"steady" : 1
+				},
+                 {				
+					"id" : "saw",
+					"type" : "Squad Automatic Weapon",
+					"name" : "Gauss Autorifle",
+					"min_damage" : 5,
+					"max_damage" : 9,
+					"crit_chance" : 0,
+					"crit_damage_min" : 9,
+					"crit_damage_max" : 12,
+					"aim_mod" : 0,
+					"mobility_mod" : -1,
+					"ammo" : 7,
+					"steady" : 1
+				},
+                 {				
+					"id" : "saw",
+					"type" : "Squad Automatic Weapon",
+					"name" : "Pulse Autoblaster",
+					"min_damage" : 6,
+					"max_damage" : 10,
+					"crit_chance" : 10,
+					"crit_damage_min" : 10,
+					"crit_damage_max" : 14,
+					"aim_mod" : 0,
+					"mobility_mod" : -1,
+					"ammo" : 6,
+					"steady" : 1
+				},
+                 {				
+					"id" : "saw",
+					"type" : "Squad Automatic Weapon",
+					"name" : "Plasma Novagun",
+					"min_damage" : 7,
+					"max_damage" : 11,
+					"crit_chance" : 0,
+					"crit_damage_min" : 11,
+					"crit_damage_max" : 16,
+					"aim_mod" : 0,
+					"mobility_mod" : -1,
+					"ammo" : 6,
+					"steady" : 1
+				}
+            ]
+        },
+		 {
+            "type" :  "light_machine_gun",
+            "weapons" :  [
+                 {				
+					"id" : "lmg",
+					"type" : "Light Machine Gun",
+					"name" : "LMG",
+					"min_damage" : 4,
+					"max_damage" : 8,
+					"crit_chance" : 5,
+					"crit_damage_min" : 8,
+					"crit_damage_max" : 11,
+					"aim_mod" : 0,
+					"mobility_mod" : -2,
+					"ammo" : 8,
+					"steady" : 1
+				},
+                 {				
+					"id" : "gatling_laser",
+					"type" : "Light Machine Gun",
+					"name" : "Gatling Laser",
+					"min_damage" : 5,
+					"max_damage" : 9,
+					"crit_chance" : 5,
+					"crit_damage_min" : 9,
+					"crit_damage_max" : 12,
+					"aim_mod" : 7,
+					"mobility_mod" : -2,
+					"ammo" : 8,
+					"steady" : 1
+				},
+                 {				
+					"id" : "gauss_machine_gun",
+					"type" : "Light Machine Gun",
+					"name" : "Gauss Machine Gun",
+					"min_damage" : 6,
+					"max_damage" : 10,
+					"crit_chance" : 5,
+					"crit_damage_min" : 10,
+					"crit_damage_max" : 14,
+					"aim_mod" : 0,
+					"mobility_mod" : -2,
+					"ammo" : 9,
+					"steady" : 1
+				},
+                 {				
+					"id" : "gatling_pulser",
+					"type" : "Light Machine Gun",
+					"name" : "Gatling Pulser",
+					"min_damage" : 7,
+					"max_damage" : 11,
+					"crit_chance" : 15,
+					"crit_damage_min" : 11,
+					"crit_damage_max" : 16,
+					"aim_mod" : 0,
+					"mobility_mod" : -2,
+					"ammo" : 8,
+					"steady" : 1
+				},
+                 {				
+					"id" : "plasma_dragon",
+					"type" : "Light Machine Gun",
+					"name" : "Plasma Dragon",
+					"min_damage" : 7,
+					"max_damage" : 13,
+					"crit_chance" : 5,
+					"crit_damage_min" : 13,
+					"crit_damage_max" : 18,
+					"aim_mod" : 0,
+					"mobility_mod" : -2,
+					"ammo" : 8,
+					"steady" : 1
+				}
+            ]
+        },
+         {
+             "type" :  "shiv_turrets",
+             "weapons" :  {
+                  "weapons" :  [
+                 {				
+					"id" : "autocannon",
+					"type" : "SHIV Turrets",
+					"name" : "Autocannon",
+					"min_damage" : 5,
+					"max_damage" : 9,
+					"crit_chance" : 10,
+					"crit_damage_min" : 9,
+					"crit_damage_max" : 12,
+					"aim_mod" : 0,
+					"mobility_mod" : 0,
+					"ammo" : 3,
+					"steady" : 1
+				},
+                 {				
+					"id" : "superheavy_laser",
+					"type" : "SHIV Turrets",
+					"name" : "Superheavy Laser",
+					"min_damage" : 6,
+					"max_damage" : 10,
+					"crit_chance" : 10,
+					"crit_damage_min" : 10,
+					"crit_damage_max" : 14,
+					"aim_mod" : 7,
+					"mobility_mod" : 0,
+					"ammo" : 3,
+					"steady" : 1
+				},
+                 {				
+					"id" : "sentry_gun",
+					"type" : "SHIV Turrets",
+					"name" : "Sentry Gun",
+					"min_damage" : 7,
+					"max_damage" : 11,
+					"crit_chance" : 10,
+					"crit_damage_min" : 11,
+					"crit_damage_max" : 16,
+					"aim_mod" : 0,
+					"mobility_mod" : 0,
+					"ammo" : 4,
+					"steady" : 1
+				},
+                 {				
+					"id" : "superheavy_pulser",
+					"type" : "SHIV Turrets",
+					"name" : "Superheavy Pulser",
+					"min_damage" : 7,
+					"max_damage" : 13,
+					"crit_chance" : 20,
+					"crit_damage_min" : 13,
+					"crit_damage_max" : 18,
+					"aim_mod" : 0,
+					"mobility_mod" : 0,
+					"ammo" : 3,
+					"steady" : 1
+				},
+                 {				
+					"id" : "superheavy_plasma",
+					"type" : "SHIV Turrets",
+					"name" : "Superheavy Plasma",
+					"min_damage" : 8,
+					"max_damage" : 14,
+					"crit_chance" : 10,
+					"crit_damage_min" : 14,
+					"crit_damage_max" : 19,
+					"aim_mod" : 0,
+					"mobility_mod" : 0,
+					"ammo" : 3,
+					"steady" : 1
+				}
+            ]
+             }
+         },
+         {
+            "type" :  "mec_primary",
+            "weapons" :  [
+                 {				
+					"id" : "minigun",
+					"type" : "MEC Primary Weapons",
+					"name" : "Minigun",
+					"min_damage" : 6,
+					"max_damage" : 10,
+					"crit_chance" : 10,
+					"crit_damage_min" : 10,
+					"crit_damage_max" : 14,
+					"aim_mod" : 0,
+					"mobility_mod" : 0,
+					"ammo" : 2,
+					"steady" : 1
+				},
+                 {				
+					"id" : "laser_lance",
+					"type" : "MEC Primary Weapons",
+					"name" : "Laser Lance",
+					"min_damage" : 7,
+					"max_damage" : 11,
+					"crit_chance" : 10,
+					"crit_damage_min" : 11,
+					"crit_damage_max" : 16,
+					"aim_mod" : 7,
+					"mobility_mod" : 0,
+					"ammo" : 3,
+					"steady" : 1
+				},
+                 {				
+					"id" : "railgun",
+					"type" : "MEC Primary Weapons",
+					"name" : "Railgun",
+					"min_damage" : 7,
+					"max_damage" : 13,
+					"crit_chance" : 10,
+					"crit_damage_min" : 13,
+					"crit_damage_max" : 18,
+					"aim_mod" : 0,
+					"mobility_mod" : 0,
+					"ammo" : 4,
+					"steady" : 1
+				},
+                 {				
+					"id" : "pulse_lance",
+					"type" : "MEC Primary Weapons",
+					"name" : "Pulse Lance",
+					"min_damage" : 7,
+					"max_damage" : 13,
+					"crit_chance" : 20,
+					"crit_damage_min" : 13,
+					"crit_damage_max" : 18,
+					"aim_mod" : 0,
+					"mobility_mod" : 0,
+					"ammo" : 3,
+					"steady" : 1
+				},
+                 {				
+					"id" : "particle_cannon",
+					"type" : "MEC Primary Weapons",
+					"name" : "Particle Cannon",
+					"min_damage" : 8,
+					"max_damage" : 14,
+					"crit_chance" : 10,
+					"crit_damage_min" : 14,
+					"crit_damage_max" : 19,
+					"aim_mod" : 0,
+					"mobility_mod" : 0,
+					"ammo" : 3,
+					"steady" : 1
+				}
+            ]
+           },
+         {
 			"type" : "carbines",
 			"weapons" : [{
 					"id" : "assault_carbine",
@@ -604,7 +1056,211 @@
 			]
 		}
 	],
-	"perks" : [
+	"secondary_weapons" : [
+        {
+            "type" :  "pistol",
+            "weapons" :  [
+                 {				
+					"id" : "pistol",
+					"type" : "Pistol",
+					"name" : "Pistol",
+					"min_damage" : 1,
+					"max_damage" : 3,
+					"crit_chance" : 0,
+					"crit_damage_min" : 3,
+					"crit_damage_max" : 4,
+					"aim_mod" : 0,
+					"mobility_mod" : 0,
+					"ammo" : 2,
+					"steady" : 0
+				},
+                 {				
+					"id" : "laser_pistol",
+					"type" : "Pistol",
+					"name" : "Laser Pistol",
+					"min_damage" : 2,
+					"max_damage" : 4,
+					"crit_chance" : 0,
+					"crit_damage_min" : 4,
+					"crit_damage_max" : 5,
+					"aim_mod" : 7,
+					"mobility_mod" : 0,
+					"ammo" : 2,
+					"steady" : 0
+				},
+                 {				
+					"id" : "plasma_pistol",
+					"type" : "Pistol",
+					"name" : "Plasma Pistol",
+					"min_damage" : 3,
+					"max_damage" : 5,
+					"crit_chance" : 0,
+					"crit_damage_min" : 5,
+					"crit_damage_max" : 7,
+					"aim_mod" : 0,
+					"mobility_mod" : 0,
+					"ammo" : 2,
+					"steady" : 0
+				}
+            ]
+        },
+        {
+            "type" :  "machine_pistol",
+            "weapons" :  [
+                {
+                    "id" : "machine_pistol",
+					"type" : "Machine Pistol",
+					"name" : "Machine Pistol",
+					"min_damage" : 2,
+					"max_damage" : 4,
+					"crit_chance" : 0,
+					"crit_damage_min" : 4,
+					"crit_damage_max" : 5,
+					"aim_mod" : -10,
+					"mobility_mod" : -1,
+					"ammo" : 2,
+					"steady" : 0
+                },  {
+                    "id" : "heater",
+					"type" : "Machine Pistol",
+					"name" : "Heater",
+					"min_damage" : 3,
+					"max_damage" : 5,
+					"crit_chance" : 0,
+					"crit_damage_min" : 5,
+					"crit_damage_max" : 7,
+					"aim_mod" : -3,
+					"mobility_mod" : -1,
+					"ammo" : 2,
+					"steady" : 0
+                },  {
+                    "id" : "Gauss_Autopistol",
+					"type" : "Machine Pistol",
+					"name" : "Gauss Autopistol",
+					"min_damage" : 3,
+					"max_damage" : 5,
+					"crit_chance" : 0,
+					"crit_damage_min" : 5,
+					"crit_damage_max" : 7,
+					"aim_mod" : -10,
+					"mobility_mod" : -1,
+					"ammo" : 3,
+					"steady" : 0
+                },  {
+                    "id" : "blaster",
+					"type" : "Machine Pistol",
+					"name" : "Blaster",
+					"min_damage" : 4,
+					"max_damage" : 6,
+					"crit_chance" : 10,
+					"crit_damage_min" : 6,
+					"crit_damage_max" : 9,
+					"aim_mod" : -10,
+					"mobility_mod" : -1,
+					"ammo" : 2,
+					"steady" : 0
+                },  {
+                    "id" : "plasma_mauler",
+					"type" : "Machine Pistol",
+					"name" : "Machine Pistol",
+					"min_damage" : 4,
+					"max_damage" : 8,
+					"crit_chance" : 0,
+					"crit_damage_min" : 8,
+					"crit_damage_max" : 11,
+					"aim_mod" : -10,
+					"mobility_mod" : -2,
+					"ammo" : 2,
+					"steady" : 0
+                }
+            ]
+        },
+        {
+            "type" :  "Shotgun",
+            "weapons" :  [
+                {
+                    "id" : "sawed_off_shotgun",
+					"type" : "Shotgun",
+					"name" : "Sawed-Off Shotgun",
+					"min_damage" : 4,
+					"max_damage" : 8,
+					"crit_chance" : 5,
+					"crit_damage_min" : 8,
+					"crit_damage_max" : 11,
+					"aim_mod" : -15,
+					"mobility_mod" : -1,
+					"ammo" : 1,
+					"steady" : 0
+                }
+            ]
+        },
+        {
+            "type" : "rocket_launchers",
+            "weapons" :  [
+                {
+                    "id" : "rocket_launcher",
+					"type" : "Rocket Launchers",
+					"name" : "Rocket Launchers",
+					"min_damage" : 4,
+					"max_damage" : 10,
+					"crit_chance" : 0,
+					"crit_damage_min" : 0,
+					"crit_damage_max" : 0,
+					"aim_mod" : -0,
+					"mobility_mod" : -1,
+					"ammo" : 1,
+					"steady" : 0
+                },
+                {
+                    "id" : "recoilless_rifle",
+					"type" : "Rocket Launchers",
+					"name" : "Recoilless Rifle",
+					"min_damage" : 6,
+					"max_damage" : 12,
+					"crit_chance" : 0,
+					"crit_damage_min" : 0,
+					"crit_damage_max" : 0,
+					"aim_mod" : 0,
+					"mobility_mod" : -1,
+					"ammo" : 1,
+					"steady" : 0
+                },
+                {
+                    "id" : "blaster_launcher",
+					"type" : "Rocket Launchers",
+					"name" : "Blaster Launcher",
+					"min_damage" : 8,
+					"max_damage" : 16,
+					"crit_chance" : 0,
+					"crit_damage_min" : 0,
+					"crit_damage_max" : 0,
+					"aim_mod" : 0,
+					"mobility_mod" : -2,
+					"ammo" : 1,
+					"steady" : 0
+                }
+            ]
+        }, {
+            "type" :  "mec_secondary",
+            "weapons" :  [
+               {
+                    "id" : "flamethrower",
+					"type" : "MEC Secondary",
+					"name" : "Rocket Launchers",
+					"min_damage" : 4,
+					"max_damage" : 10,
+					"crit_chance" : 0,
+					"crit_damage_min" : 0,
+					"crit_damage_max" : 0,
+					"aim_mod" : -0,
+					"mobility_mod" : -1,
+					"ammo" : 1,
+					"steady" : 0
+                },
+            ]
+        }
+	],
+    "perks" : [
 		{
 			"id" : "run_and_gun",
 			"img_src" : "http://ufopaedia.org/images/thumb/8/87/ASSAULT_RUNGUN.png/32px-ASSAULT_RUNGUN.png", 
