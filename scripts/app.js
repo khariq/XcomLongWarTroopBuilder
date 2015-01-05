@@ -56,6 +56,20 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 	$scope.ranks = [];
 
 	$scope.build = {};
+	$scope.selectedPrimaryWeapon = null;
+	$scope.selectedSecondaryWeapon = null;
+	$scope.selectedArmor = null;
+	$scope.showPerkDetails = false;
+	$scope.perkInDetails = {};
+	
+	$scope.class = null;
+	$scope.perks = [];
+	$scope.armors = [];
+	$scope.primaryWeapons = [];
+	$scope.secondaryWeapons = [];
+	$scope.equipment = [];
+	$scope.equipmentSlots = [{},{}];
+	$scope.selectedPerks = [];
 
 	$scope.resetBuild = function() {
 		$scope.build  = {
@@ -88,7 +102,7 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 			$scope.menuItems = commonJson.classes;
 			$scope.tabs = commonJson.tabs;
 			$scope.ranks = commonJson.ranks;
-
+			$scope.armors = commonJson.armors;
 		}, 
         // failure
         function (commonJson) {
@@ -100,25 +114,12 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 		return ($scope.class != null && $scope.class.id === id);
 	}
 
-	$scope.class = null;
-	$scope.perks = [];
-	$scope.armors = [];
-	$scope.primaryWeapons = [];
-	$scope.secondaryWeapons = [];
-	$scope.equipment = [];
-
 	$scope.showClass = function(id) {
 		var classJson = DataService.getClassJson(id);
 		$scope.class = classJson;
 		
 		$scope.resetBuild();
 
-		$scope.perks = [];
-		$scope.armors = [];
-		$scope.primaryWeapons = [];
-		$scope.secondaryWeapons = [];
-		$scope.equipment = [];
-		$scope.equipmentSlots = [{},{}];
 		DataService.getCommonJson().then (
             // success
             function (commonJson) {
@@ -127,9 +128,15 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 					$scope.perks[i] = [];
 					for (var j = 0; j < classJson.spec.perks[i].perks.length; j++) {
 						
-						for (var k = 0; k < commonJson.perks.length; k++) {
+						for (var k = 0; k < commonJson.perks.length; k++) {							
 							if (commonJson.perks[k].id === classJson.spec.perks[i].perks[j].id) {
+
 								$scope.perks[i][j] = commonJson.perks[k];
+
+								if (i == 0) {
+									$scope.choosePerk(commonJson.perks[k], i, null);
+								}
+
 								break;
 							}
 						}
@@ -146,6 +153,15 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 				    }
 				}
 
+				var secondaryWeapons = Enumerable.From(commonJson.secondary_weapons);
+				for (var i = 0; i < classJson.spec.secondary_weapons.length; i++) {
+				    var weaponClass = Object.keys(classJson.spec.secondary_weapons[i])[0];
+				    var weapons = secondaryWeapons.Where("$.type == '" + weaponClass + "'").Select("$.weapons").ToArray()[0];
+				    if (weapons != null && weapons.length > 0) {
+				    	$scope.secondaryWeapons = $scope.secondaryWeapons.concat(weapons);
+				    }
+				}
+
 			},
             // failure
             function (commonJson) {
@@ -154,13 +170,11 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 		);
 	}
 	
-	$scope.selectedPerks = [];
+	
 
 	$scope.choosePerk = function(perk, rank, btnElement) {
 	
 		var stat_mods = $scope.class.spec.stat_progression[rank];
-
-		btnElement = $(btnElement);
 
 		if ($scope.selectedPerks[rank] != null) {
 			//deselect currently selected perk at this rank
@@ -200,9 +214,7 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 		$scope.selectedPerks[rank] = perk;
 
 	}
-
-	$scope.showPerkDetails = false;
-	$scope.perkInDetails = {};
+	
 	$scope.showDetails = function(perk) {
 		$scope.showPerkDetails = true;
 		$scope.perkInDetails = perk;
@@ -211,8 +223,6 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 	$scope.hideDetails = function() {
 		$scope.showPerkDetails = false;
 	}
-
-	$scope.selectedPrimaryWeapon = null;
 
 
 });

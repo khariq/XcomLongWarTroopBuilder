@@ -58,7 +58,7 @@
 									
 									<div class="btn-group" data-toggle="buttons" ng-repeat="perkDetails in perk">
 								
-										<label class="btn btn-default" ng-mouseover="showDetails(perkDetails)" ng-mouseleave="hideDetails()" ng-click="choosePerk(perkDetails, $parent.$index, this)" >
+										<label class="btn btn-default" ng-mouseover="showDetails(perkDetails)" ng-mouseleave="hideDetails()" ng-click="choosePerk(perkDetails, $parent.$index, this)" ng-class="{active: $parent.$index == 0}" >
 											<input type="checkbox" name="{{$parent.$index}}" id="{{perkDetails.id}}" > 
 											<img src="{{perkDetails.img_src}}" class="pull-left" /> 
 											{{perkDetails.title}}
@@ -89,9 +89,9 @@
                         <div class="row">
                         	<div class="col-sm-5">Armor</div>	
                         	<div class="col-sm-7">
-                        		<select class="form-control"> 
-                        			<option></option> 
-                        			<option ng-repeat="armor in armors">{{armor.name}}</option> 
+                        		<select class="form-control"
+                        			ng-model="selectedArmor"
+                        			ng-options="armor.name group by armor.type for armor in armors"> 
                         		</select>
                         	</div>
                         </div>
@@ -106,7 +106,12 @@
                         </div>
                         <div class="row">
                         	<div class="col-sm-5">Secondary Weapon</div>	
-                        	<div class="col-sm-7"><select class="form-control"> <option></option> <option ng-repeat="weapon in secondaryWeapons">{{weapon.name}}</option> </select></div>
+                        	<div class="col-sm-7">
+                        		<select class="form-control"
+                        			ng-model="selectedSecondaryWeapon"
+                        			ng-options="weapon.name group by weapon.type for weapon in secondaryWeapons">
+                        		</select>
+                        	</div>
                         </div>
                         <!--
                         <div class="row" ng-repeat="slot in equipmentSlot">
@@ -136,21 +141,21 @@
 				<table class="table table-condensed table-striped">
 					<tr>
 						<td>HP</td>
-						<td>{{build.hp + build.rank_ups.health}} + {{build.armor}}</td>
+						<td>{{build.hp + build.rank_ups.health}} + {{build.armor + selectedArmor.hp}}</td>
 						<td>Will</td>
-						<td>{{build.will + build.rank_ups.will_low}} - {{build.will + build.rank_ups.will_high}}</td>
+						<td>{{build.will + build.rank_ups.will_low + selectedArmor.will}} - {{build.will + build.rank_ups.will_high + selectedArmor.will}}</td>
 					</tr>
 					<tr>
 						<td>Defense</td>
-						<td>{{build.defense}}</td>
+						<td>{{build.defense + selectedArmor.defense}}</td>
 						<td>Damage Reduction</td>
-						<td>{{build.damage_reduction}}</td>
+						<td>{{build.damage_reduction + + selectedArmor.damage_reduction}}</td>
 					</tr>
 					<tr>
 						<td>Aim</td>
 						<td>{{build.aim + build.mod.aim + build.rank_ups.aim + selectedPrimaryWeapon.aim_mod}}</td>
 						<td>Mobility</td>
-						<td>{{build.mobility + build.mod.mob + selectedPrimaryWeapon.mobility_mod}}</td>
+						<td>{{build.mobility + build.mod.mob + selectedPrimaryWeapon.mobility_mod + + selectedArmor.mobility}}</td>
 					</tr>
 					<tr>
 						<td colspan="2">
