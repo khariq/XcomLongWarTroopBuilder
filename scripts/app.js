@@ -68,7 +68,8 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 	$scope.primaryWeapons = [];
 	$scope.secondaryWeapons = [];
 	$scope.equipment = [];
-	$scope.equipmentSlots = [{},{}];
+	$scope.equipmentSlot1 = null;
+	$scope.equipmentSlot2 = null;
 	$scope.selectedPerks = [];
 
 	$scope.resetBuild = function() {
@@ -161,6 +162,9 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 				    	$scope.secondaryWeapons = $scope.secondaryWeapons.concat(weapons);
 				    }
 				}
+
+				var equipment = Enumerable.From(commonJson.items);
+				$scope.equipment = equipment.Where("$.classes === '' || $.classes.indexOf('" + id + "') > 0").Select("$").ToArray();
 
 			},
             // failure

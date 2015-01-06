@@ -83,7 +83,7 @@
             <div class="col-md-3">
                 <div class="panel panel-primary">
                     <div class="panel-heading">
-                        <h4 class="panel-title">Equipment</h4>
+                        <h4 class="panel-title">Armory</h4>
                     </div>
                     <div class="panel-body">
                         <div class="row">
@@ -113,12 +113,25 @@
                         		</select>
                         	</div>
                         </div>
-                        <!--
-                        <div class="row" ng-repeat="slot in equipmentSlot">
-                        	<div class="col-sm-5">Equipment {{$index}}</div>	
-                        	<div class="col-sm-7"><select class="form-control"> <option ng-repeat="e in equipment">{{e.name}}</option> </select></div>
+                        
+                        <div class="row" >
+                        	<div class="col-sm-5">Equipment</div>	
+                        	<div class="col-sm-7">
+								<select class="form-control" 
+										ng-model="equipmentSlotOne"
+										ng-options="item.name group by item.type for item in equipment"
+										> 
+								</select>
+							</div>
                         </div>
-                    	-->
+						<div class="row" >
+							<div class="col-sm-5">Equipment</div>
+							<div class="col-sm-7">
+								<select class="form-control"
+										ng-model="equipmentSlotTwo"
+										ng-options="item.name group by item.type for item in equipment"></select>
+							</div>
+						</div>
                     </div>
                 </div>
                 <div class="alert alert-success" ng-show="showPerkDetails">
@@ -141,24 +154,26 @@
 				<table class="table table-condensed table-striped">
 					<tr>
 						<td>HP</td>
-						<td>{{build.hp + build.rank_ups.health}} + {{build.armor + selectedArmor.hp}}</td>
+						<td>{{build.hp + build.rank_ups.health}} + {{build.armor + selectedArmor.hp + equipmentSlotOne.hp + equipmentSlotTwo.hp}}</td>
 						<td>Will</td>
-						<td>{{build.will + build.rank_ups.will_low + selectedArmor.will}} - {{build.will + build.rank_ups.will_high + selectedArmor.will}}</td>
+						<td>{{build.will + build.rank_ups.will_low + selectedArmor.will  + equipmentSlotOne.will + equipmentSlotTwo.will }} - {{build.will + build.rank_ups.will_high + selectedArmor.will + equipmentSlotOne.will + equipmentSlotTwo.will}}</td>
 					</tr>
 					<tr>
 						<td>Defense</td>
-						<td>{{build.defense + selectedArmor.defense}}</td>
+						<td>{{build.defense + selectedArmor.defense + equipmentSlotOne.defense + equipmentSlotTwo.defense}}</td>
 						<td>Damage Reduction</td>
-						<td>{{build.damage_reduction + + selectedArmor.damage_reduction}}</td>
+						<td>{{build.damage_reduction + + selectedArmor.damage_reduction + equipmentSlotOne.damage_reduction + equipmentSlotTwo.damage_reduction}}</td>
 					</tr>
 					<tr>
 						<td>Aim</td>
-						<td>{{build.aim + build.mod.aim + build.rank_ups.aim + selectedPrimaryWeapon.aim_mod}}</td>
+						<td>{{build.aim + build.mod.aim + build.rank_ups.aim + selectedPrimaryWeapon.aim_mod + equipmentSlotOne.aim + equipmentSlotTwo.aim}}</td>
 						<td>Mobility</td>
-						<td>{{build.mobility + build.mod.mob + selectedPrimaryWeapon.mobility_mod + + selectedArmor.mobility}}</td>
+						<td>{{build.mobility + build.mod.mob + selectedPrimaryWeapon.mobility_mod + + selectedArmor.mobility + equipmentSlotOne.mobilitiy + equipmentSlotTwo.mobilitiy}}</td>
 					</tr>
+				</table>
+				<table class="table table-condensed table-striped">
 					<tr>
-						<td colspan="2">
+						<td colspan="4">
 							Primary Weapon
 						</td>
 					</tr>
@@ -183,9 +198,38 @@
 						</td>
 					</tr>
 				</table>
-
-				
-
+				<table class="table table-condensed table-striped">
+					<tr>
+						<td colspan="4">
+							Secondary Weapon
+						</td>
+					</tr>
+					<tr>
+						<td>Min Damage</td>
+						<td>
+							{{selectedSecondaryWeapon.min_damage + build.damage_bonus}}
+						</td>
+						<td>Max Damage</td>
+						<td>
+							{{selectedSecondaryWeapon.max_damage + build.damage_bonus}}
+						</td>
+					</tr>
+					<tr>
+						<td>Crit Min</td>
+						<td>
+							{{selectedSecondaryWeapon.crit_damage_min + build.damage_bonus}}
+						</td>
+						<td>Crit Max</td>
+						<td>
+							{{selectedSecondaryWeapon.crit_damage_max + build.damage_bonus}}
+						</td>
+					</tr>
+				</table>
+				<table class="table table-condensed table-striped">
+					<tr>
+						<td></td>
+					</tr>
+				</table>
 			</div>
 
 		</div>
