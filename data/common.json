@@ -23,114 +23,114 @@
 			"name" : "Assault",
 			"mec_name" : "Marauder",
 			"icon_src" : "http://ufopaedia.org/images/5/57/CLASS_ASSAULT.png",
-            "spec" :  {
-	            "primary_weapons" : [
-		             { "carbines" : 1 },
-		             { "assault_rifles" : 1 },
-		             { "battle_rifles" : 1 },
-		             { "smgs" : 1 },
-		             { "shotguns" : 1}
-	            ],
-	            "secondary_weapons" : [
-		            { "pistols" : 1},
-		            { "machine_pistols" : 1},
-		            { "shotguns" : 1}		
-	            ],
-	            "class_limited_items" : [
-		            { "walker_servos" : 1},
-		            { "impact_vest" : 1},
-		            { "shredder_ammo" : 1},
-		            { "breaching_ammo" : 1}
-	            ],
-	            "perks" : [
-		            {
-		            	"rank" : 1,
-                        "perks" : [
-			                { "id" : "run_and_gun" }
-		                ]
-                    }, {
+			"spec" :  {
+				"primary_weapons" : [
+					 { "carbines" : 1 },
+					 { "assault_rifles" : 1 },
+					 { "battle_rifles" : 1 },
+					 { "smgs" : 1 },
+					 { "shotguns" : 1}
+				],
+				"secondary_weapons" : [
+					{ "pistols" : 1},
+					{ "machine_pistols" : 1},
+					{ "shotguns" : 1}		
+				],
+				"class_limited_items" : [
+					{ "walker_servos" : 1},
+					{ "impact_vest" : 1},
+					{ "shredder_ammo" : 1},
+					{ "breaching_ammo" : 1}
+				],
+				"perks" : [
+					{
+						"rank" : 1,
+						"perks" : [
+							{ "id" : "run_and_gun" }
+						]
+					}, {
 						"rank" : 2,
-		            	"perks" : [
-			            	{ "id" : "flush"},
-			            	{ "id" : "close_combat_specialist"},
-			            	{ "id" : "steadfast"}
-		            	]
-		            }, {
-		            	"rank" : 3,
-		            	"perks" : [
-			            	{ "id" : "gunslinger"},
-			            	{ "id" : "tactical_sense"},
-			            	{ "id" : "aggression"}
-		            	]
-		            }, {
+						"perks" : [
+							{ "id" : "flush"},
+							{ "id" : "close_combat_specialist"},
+							{ "id" : "steadfast"}
+						]
+					}, {
+						"rank" : 3,
+						"perks" : [
+							{ "id" : "gunslinger"},
+							{ "id" : "tactical_sense"},
+							{ "id" : "aggression"}
+						]
+					}, {
 						"rank" : 4,
-		            	"perks" : [
-			            	{ "id" : "hit_and_run"},
-			            	{ "id" : "close_encounters"},
-			            	{ "id" : "rapid_fire"}
-		            	]
-		            }, {
-		            	"rank" : 5,
-		            	"perks" : [
-			            { "id" : "extra_conditioning"},
-			            { "id" : "killer_instinct"},
-			            { "id" : "ranger"}
-		            	]
-		            }, {
-		            	"rank" : 6,
-		            	"perks" : [
-			            	{ "id" : "will_to_survive"},
-			            	{ "id" : "bring_em_on"},
-			            	{ "id" : "sprinter"}
-		            	]
-		            }, {
-		            	"rank" : 7,
-		            	"perks" : [
-			            	{ "id" : "vital_point_targeting"},
-			            	{ "id" : "resilience"},
-			            	{ "id" : "lightning_reflexes"}
-		            	]
-		           	}
-	            ],
-	            "stat_progression" : [
-		            {
-			            "health" : 1,
-			            "aim" : 3,
-			            "will_low" : 5,
-			            "will_high" : 6
-		            }, {
-			            "health" : 0,
-			            "aim" : 3,
-			            "will_low" : 5,
-			            "will_high" : 6
-		            }, {
-			            "health" : 1,
-			            "aim" : 3,
-			            "will_low" : 3,
-			            "will_high" : 4 
-		            }, {
-			            "health" : 0,
-			            "aim" : 3,
-			            "will_low" : 3,
-			            "will_high" : 4
-		            }, {
-			            "health" : 1,
-			            "aim" : 3,
-			            "will_low" : 3,
-			            "will_high" : 4
-		            }, {
-			            "health" : 0,
-			            "aim" : 3,
-			            "will_low" : 3,
-			            "will_high" : 4
-		            }, {
-			            "health" : 1,
-			            "aim" : 3,
-			            "will_low" : 3,
-			            "will_high" : 4
-		            }
-		        ]		
-            }
+						"perks" : [
+							{ "id" : "hit_and_run"},
+							{ "id" : "close_encounters"},
+							{ "id" : "rapid_fire"}
+						]
+					}, {
+						"rank" : 5,
+						"perks" : [
+						{ "id" : "extra_conditioning"},
+						{ "id" : "killer_instinct"},
+						{ "id" : "ranger"}
+						]
+					}, {
+						"rank" : 6,
+						"perks" : [
+							{ "id" : "will_to_survive"},
+							{ "id" : "bring_em_on"},
+							{ "id" : "sprinter"}
+						]
+					}, {
+						"rank" : 7,
+						"perks" : [
+							{ "id" : "vital_point_targeting"},
+							{ "id" : "resilience"},
+							{ "id" : "lightning_reflexes"}
+						]
+					}
+				],
+				"stat_progression" : [
+					{
+						"health" : 1,
+						"aim" : 3,
+						"will_low" : 5,
+						"will_high" : 6
+					}, {
+						"health" : 0,
+						"aim" : 3,
+						"will_low" : 5,
+						"will_high" : 6
+					}, {
+						"health" : 1,
+						"aim" : 3,
+						"will_low" : 3,
+						"will_high" : 4 
+					}, {
+						"health" : 0,
+						"aim" : 3,
+						"will_low" : 3,
+						"will_high" : 4
+					}, {
+						"health" : 1,
+						"aim" : 3,
+						"will_low" : 3,
+						"will_high" : 4
+					}, {
+						"health" : 0,
+						"aim" : 3,
+						"will_low" : 3,
+						"will_high" : 4
+					}, {
+						"health" : 1,
+						"aim" : 3,
+						"will_low" : 3,
+						"will_high" : 4
+					}
+				]		
+			}
 		},
 		{
 			"id" : "infantry",
@@ -138,140 +138,612 @@
 			"mec_name" : "Valkyrie",
 			"icon_src" : "http://ufopaedia.org/images/5/57/CLASS_ASSAULT.png",
 			"spec" :  {
-	            "primary_weapons" : [
-		             { "carbines" : 1 },
-		             { "assault_rifles" : 1 },
-		             { "battle_rifles" : 1 },
-		             { "smgs" : 1 },
-		             { "shotguns" : 1}
-	            ],
-	            "secondary_weapons" : [
-		            { "pistols" : 1},
-		            { "machine_pistols" : 1},
-		            { "shotguns" : 1}		
-	            ],
-	            "class_limited_items" : [
-	            ],
-	            "perks" : [
-		            {
-		            	"rank" : 1,
-                        "perks" : [
-			                { "id" : "light_em_up" }
-		                ]
-                    }, {
+				"primary_weapons" : [
+					 { "carbines" : 1 },
+					 { "assault_rifles" : 1 },
+					 { "battle_rifles" : 1 },
+					 { "smgs" : 1 },
+					 { "shotguns" : 1}
+				],
+				"secondary_weapons" : [
+					{ "pistols" : 1},
+					{ "machine_pistols" : 1},
+					{ "shotguns" : 1}		
+				],
+				"class_limited_items" : [
+				],
+				"perks" : [
+					{
+						"rank" : 1,
+						"perks" : [
+							{ "id" : "light_em_up" }
+						]
+					}, {
 						"rank" : 2,
-		            	"perks" : [
-			            	{ "id" : "steadfast"},
-			            	{ "id" : "executioner"},
-			            	{ "id" : "covering_fire"}
-		            	]
-		            }, {
-		            	"rank" : 3,
-		            	"perks" : [
-			            	{ "id" : "agression"},
-			            	{ "id" : "tactical_sense"},
-			            	{ "id" : "oppotunist"}
-		            	]
-		            }, {
+						"perks" : [
+							{ "id" : "steadfast"},
+							{ "id" : "executioner"},
+							{ "id" : "covering_fire"}
+						]
+					}, {
+						"rank" : 3,
+						"perks" : [
+							{ "id" : "agression"},
+							{ "id" : "tactical_sense"},
+							{ "id" : "opportunist"}
+						]
+					}, {
 						"rank" : 4,
-		            	"perks" : [
-			            	{ "id" : "ranger"},
-			            	{ "id" : "gunslinger"},
-			            	{ "id" : "supression"}
-		            	]
-		            }, {
-		            	"rank" : 5,
-		            	"perks" : [
-			            { "id" : "sharpshooter"},
-			            { "id" : "lock_and_load"},
-			            { "id" : "will_to_survive"}
-		            	]
-		            }, {
-		            	"rank" : 6,
-		            	"perks" : [
-			            	{ "id" : "extra_conditioning"},
-			            	{ "id" : "bring_em_on"},
-			            	{ "id" : "sentinel"}
-		            	]
-		            }, {
-		            	"rank" : 7,
-		            	"perks" : [
-			            	{ "id" : "vital_point_targeting"},
-			            	{ "id" : "resilience"},
-			            	{ "id" : "rapid_fire"}
-		            	]
-		           	}
-	            ],
-	            "stat_progression" : [
-		            {
-			            "health" : 1,
-			            "aim" : 4,
-			            "will_low" : 5,
-			            "will_high" : 6
-		            }, {
-			            "health" : 0,
-			            "aim" : 4,
-			            "will_low" : 5,
-			            "will_high" : 6
-		            }, {
-			            "health" : 0,
-			            "aim" : 4,
-			            "will_low" : 3,
-			            "will_high" : 4 
-		            }, {
-			            "health" : 1,
-			            "aim" : 4,
-			            "will_low" : 3,
-			            "will_high" : 4
-		            }, {
-			            "health" : 0,
-			            "aim" : 3,
-			            "will_low" : 3,
-			            "will_high" : 4
-		            }, {
-			            "health" : 0,
-			            "aim" : 3,
-			            "will_low" : 3,
-			            "will_high" : 4
-		            }, {
-			            "health" : 1,
-			            "aim" : 3,
-			            "will_low" : 3,
-			            "will_high" : 4
-		            }
-		        ]		
-            }
+						"perks" : [
+							{ "id" : "ranger"},
+							{ "id" : "gunslinger"},
+							{ "id" : "supression"}
+						]
+					}, {
+						"rank" : 5,
+						"perks" : [
+						{ "id" : "sharpshooter"},
+						{ "id" : "lock_and_load"},
+						{ "id" : "will_to_survive"}
+						]
+					}, {
+						"rank" : 6,
+						"perks" : [
+							{ "id" : "extra_conditioning"},
+							{ "id" : "bring_em_on"},
+							{ "id" : "sentinel"}
+						]
+					}, {
+						"rank" : 7,
+						"perks" : [
+							{ "id" : "vital_point_targeting"},
+							{ "id" : "resilience"},
+							{ "id" : "rapid_fire"}
+						]
+					}
+				],
+				"stat_progression" : [
+					{
+						"health" : 1,
+						"aim" : 4,
+						"will_low" : 5,
+						"will_high" : 6
+					}, {
+						"health" : 0,
+						"aim" : 4,
+						"will_low" : 5,
+						"will_high" : 6
+					}, {
+						"health" : 0,
+						"aim" : 4,
+						"will_low" : 3,
+						"will_high" : 4 
+					}, {
+						"health" : 1,
+						"aim" : 4,
+						"will_low" : 3,
+						"will_high" : 4
+					}, {
+						"health" : 0,
+						"aim" : 3,
+						"will_low" : 3,
+						"will_high" : 4
+					}, {
+						"health" : 0,
+						"aim" : 3,
+						"will_low" : 3,
+						"will_high" : 4
+					}, {
+						"health" : 1,
+						"aim" : 3,
+						"will_low" : 3,
+						"will_high" : 4
+					}
+				]		
+			}
 		},
 		{
 			"id" : "Rocketeer",
 			"name" : "Rocketeer",
 			"mec_name" : "Archer",
-			"icon_src" : "http://ufopaedia.org/images/5/57/CLASS_ASSAULT.png"
+			"icon_src" : "http://ufopaedia.org/images/5/57/CLASS_ASSAULT.png",
+			"spec" :  {
+				"primary_weapons" : [
+					 { "carbines" : 1 },
+					 { "assault_rifles" : 1 },
+					 { "battle_rifles" : 1 },
+					 { "smgs" : 1 }
+				],
+				"secondary_weapons" : [
+					{ "rocket_launchers" : 1}
+				],
+				"class_limited_items" : [
+					"rocket",
+					"shredder_rocket"
+				],
+				"perks" :  [
+					{
+						"rank" : 1,
+						"perks" : [
+							{ "id" : "fire_rocket" }
+						]
+					}, {
+						"rank" : 2,
+						"perks" : [
+							{ "id" : "covering_fire"},
+							{ "id" : "rapid_reaction"},
+							{ "id" : "heat_warheads"}			            	
+						]
+					}, {
+						"rank" : 3,
+						"perks" : [
+							{ "id" : "fire_in_the_hole"},
+							{ "id" : "supression"},
+							{ "id" : "snapshot"}
+						]
+					}, {
+						"rank" : 4,
+						"perks" : [
+							{ "id" : "opportunist"},
+							{ "id" : "tactical_sense"},
+							{ "id" : "shredder_ammo"}
+						]
+					}, {
+						"rank" : 5,
+						"perks" : [
+						{ "id" : "ranger"},
+						{ "id" : "ready_for_anything"},
+						{ "id" : "will_to_survive"}
+						]
+					}, {
+						"rank" : 6,
+						"perks" : [
+							{ "id" : "danger_zone"},
+							{ "id" : "mayhem"},
+							{ "id" : "javelin_rockets"}
+						]
+					}, {
+						"rank" : 7,
+						"perks" : [
+							{ "id" : "extra_conditioning"},
+							{ "id" : "sprinter"},
+							{ "id" : "shock_and_awe"}
+						]
+					}
+				],
+				"stat_progression" : [
+					{
+						"health" : 1,
+						"aim" : 4,
+						"will_low" : 5,
+						"will_high" : 6
+					}, {
+						"health" : 0,
+						"aim" : 4,
+						"will_low" : 5,
+						"will_high" : 6
+					}, {
+						"health" : 0,
+						"aim" : 4,
+						"will_low" : 3,
+						"will_high" : 4 
+					}, {
+						"health" : 1,
+						"aim" : 4,
+						"will_low" : 3,
+						"will_high" : 4
+					}, {
+						"health" : 0,
+						"aim" : 3,
+						"will_low" : 3,
+						"will_high" : 4
+					}, {
+						"health" : 0,
+						"aim" : 2,
+						"will_low" : 3,
+						"will_high" : 4
+					}, {
+						"health" : 1,
+						"aim" : 2,
+						"will_low" : 3,
+						"will_high" : 4
+					}
+				]	
+				
+			}
 		},
 		{
 			"id" : "Gunner",
 			"name" : "Gunner",
 			"mec_name" : "Goliath",
-			"icon_src" : "http://ufopaedia.org/images/5/57/CLASS_ASSAULT.png"
+			"icon_src" : "http://ufopaedia.org/images/5/57/CLASS_ASSAULT.png",
+			"spec" :  {
+				"primary_weapons" : [
+					 { "squad_automatic_weapon" : 1 },
+					 { "light_machine_gun" : 1 },
+					 { "assault_rifles" : 1 }
+				],
+				"secondary_weapons" : [
+				],
+				"class_limited_items" : [
+					"rocket",
+					"shredder_rocket"
+				],
+				"perks" :  [
+					{
+						"rank" : 1,
+						"perks" : [
+							{ "id" : "supression" }
+						]
+					}, {
+						"rank" : 2,
+						"perks" : [
+							{ "id" : "covering_fire"},
+							{ "id" : "flush"},
+							{ "id" : "holo_targeting"}			            	
+						]
+					}, {
+						"rank" : 3,
+						"perks" : [
+							{ "id" : "shredder_ammo"},
+							{ "id" : "heat_ammo"},
+							{ "id" : "ranger"}
+						]
+					}, {
+						"rank" : 4,
+						"perks" : [
+							{ "id" : "executioner"},
+							{ "id" : "tactical_sense"},
+							{ "id" : "danger_zone"}
+						]
+					}, {
+						"rank" : 5,
+						"perks" : [
+						{ "id" : "ready_for_anything"},
+						{ "id" : "rapid_fire"},
+						{ "id" : "double_tap"}
+						]
+					}, {
+						"rank" : 6,
+						"perks" : [
+							{ "id" : "bring_em_on"},
+							{ "id" : "extra_conditioning"},
+							{ "id" : "will_to_survive"}
+						]
+					}, {
+						"rank" : 7,
+						"perks" : [
+							{ "id" : "resilience"},
+							{ "id" : "sentinel"},
+							{ "id" : "mayhem"}
+						]
+					}
+				],
+				"stat_progression" : [
+					{
+						"health" : 1,
+						"aim" : 3,
+						"will_low" : 5,
+						"will_high" : 6
+					}, {
+						"health" : 0,
+						"aim" : 3,
+						"will_low" : 5,
+						"will_high" : 6
+					}, {
+						"health" : 1,
+						"aim" : 3,
+						"will_low" : 3,
+						"will_high" : 4 
+					}, {
+						"health" : 0,
+						"aim" : 3,
+						"will_low" : 3,
+						"will_high" : 4
+					}, {
+						"health" : 1,
+						"aim" : 3,
+						"will_low" : 3,
+						"will_high" : 4
+					}, {
+						"health" : 0,
+						"aim" : 3,
+						"will_low" : 3,
+						"will_high" : 4
+					}, {
+						"health" : 1,
+						"aim" : 3,
+						"will_low" : 3,
+						"will_high" : 4
+					}
+				]	
+			}
 		},
 		{
 			"id" : "Sniper",
 			"name" : "Sniper",
 			"mec_name" : "Jaeger",
-			"spec" : "Sniper.json",
-			"icon_src" : "http://ufopaedia.org/images/5/57/CLASS_ASSAULT.png"
+			"icon_src" : "http://ufopaedia.org/images/5/57/CLASS_ASSAULT.png",
+			"spec" :  {
+				"primary_weapons" : [
+					 { "sniper_rifles" : 1 },
+					 { "marksman_rifle" : 1 },
+					 { "assault_rifles" : 1 }		             
+				],
+				"secondary_weapons" : [
+					{ "pistols" : 1},
+					{ "machine_pistols" : 1}
+				],
+				"class_limited_items" : [
+				],
+				"perks" : [
+					{
+						"rank" : 1,
+						"perks" : [
+							{ "id" : "squadsight" }
+						]
+					}, {
+						"rank" : 2,
+						"perks" : [
+							{ "id" : "low_profile"},
+							{ "id" : "gunslinger"},
+							{ "id" : "lone_wolf"}
+						]
+					}, {
+						"rank" : 3,
+						"perks" : [
+							{ "id" : "disabling_shot"},
+							{ "id" : "precision_shot"},
+							{ "id" : "snapshot"}
+						]
+					}, {
+						"rank" : 4,
+						"perks" : [
+							{ "id" : "executioner"},
+							{ "id" : "agression"},
+							{ "id" : "damn_good_ground"}
+						]
+					}, {
+						"rank" : 5,
+						"perks" : [
+						{ "id" : "tactical_sense"},
+						{ "id" : "ranger"},
+						{ "id" : "sharpshooter"}
+						]
+					}, {
+						"rank" : 6,
+						"perks" : [
+							{ "id" : "lock_and_load"},
+							{ "id" : "bring_em_on"},
+							{ "id" : "vital_point_targeting"}
+						]
+					}, {
+						"rank" : 7,
+						"perks" : [
+							{ "id" : "in_the_zone"},
+							{ "id" : "mayhem"},
+							{ "id" : "double_tap"}
+						]
+					}
+				],
+				"stat_progression" : [
+					{
+						"health" : 0,						"aim" : 5,						"will_low" : 5,						"will_high" : 6
+					}, {
+						"health" : 0,						"aim" : 5,						"will_low" : 5,						"will_high" : 6
+					}, {
+						"health" : 1,						"aim" : 5,						"will_low" : 3,						"will_high" : 4 
+					}, {
+						"health" : 0,						"aim" : 5,						"will_low" : 3,						"will_high" : 4
+					}, {
+						"health" : 0,						"aim" : 4,						"will_low" : 3,						"will_high" : 4
+					}, {
+						"health" : 0,						"aim" : 4,						"will_low" : 3,						"will_high" : 4
+					}, {
+						"health" : 1,						"aim" : 4,						"will_low" : 3,						"will_high" : 4
+					}
+				]		
+		    }
 		},
 		{
 			"id" : "Scout",
 			"name" : "Scout",
 			"mec_name" : "Pathfinder",
-			"icon_src" : "http://ufopaedia.org/images/5/57/CLASS_ASSAULT.png"
+			"icon_src" : "http://ufopaedia.org/images/5/57/CLASS_ASSAULT.png",
+			"spec" :  {
+				"primary_weapons" : [
+					 { "battle_rifles" : 1 },
+					 { "marksman_rifle" : 1 },
+					 { "carbines" : 1 },
+					 { "shotguns" : 1 },
+					 { "smgs" : 1 },
+					 { "assault_rifles" : 1 }		             
+				],
+				"secondary_weapons" : [
+					{ "pistols" : 1},
+					{ "machine_pistols" : 1},
+					{ "shotguns" :  1}
+				],
+				"class_limited_items" : [
+				],
+				"perks" : [
+					{
+						"rank" : 1,
+						"perks" : [
+							{ "id" : "lightning_reflexes" }
+						]
+					}, {
+						"rank" : 2,
+						"perks" : [
+							{ "id" : "rapid_reaction"},
+							{ "id" : "holo_targeting"},
+							{ "id" : "damn_good_ground"}
+						]
+					}, {
+						"rank" : 3,
+						"perks" : [
+							{ "id" : "battle_scanner"},
+							{ "id" : "flush"},
+							{ "id" : "lone_wolf"}
+						]
+					}, {
+						"rank" : 4,
+						"perks" : [
+							{ "id" : "sharpshooter"},
+							{ "id" : "low_profile"},
+							{ "id" : "sprinter"}
+						]
+					}, {
+						"rank" : 5,
+						"perks" : [
+						{ "id" : "aggression"},
+						{ "id" : "tactical_sense"},
+						{ "id" : "ranger"}
+						]
+					}, {
+						"rank" : 6,
+						"perks" : [
+							{ "id" : "vital_point_targeting"},
+							{ "id" : "resilience"},
+							{ "id" : "smoke_and_mirrors"}
+						]
+					}, {
+						"rank" : 7,
+						"perks" : [
+							{ "id" : "rapid_fire"},
+							{ "id" : "hit_and_run"},
+							{ "id" : "in_the_zone"}
+						]
+					}
+				],
+				"stat_progression" : [
+					{
+						"health" : 0,
+						"aim" : 4,
+						"will_low" : 5,
+						"will_high" : 6
+					}, {
+						"health" : 0,
+						"aim" : 4,
+						"will_low" : 5,
+						"will_high" : 6
+					}, {
+						"health" : 1,
+						"aim" : 4,
+						"will_low" : 3,
+						"will_high" : 4 
+					}, {
+						"health" : 0,
+						"aim" : 4,
+						"will_low" : 3,
+						"will_high" : 4
+					}, {
+						"health" : 0,
+						"aim" : 3,
+						"will_low" : 3,
+						"will_high" : 4
+					}, {
+						"health" : 0,
+						"aim" : 3,
+						"will_low" : 3,
+						"will_high" : 4
+					}, {
+						"health" : 0,
+						"aim" : 3,
+						"will_low" : 3,
+						"will_high" : 4
+					}
+				]		
+		}
 		},
 		{
 			"id" : "Medic",
 			"name" : "Medic",
 			"mec_name" : "Guardian",
-			"icon_src" : "http://ufopaedia.org/images/5/57/CLASS_ASSAULT.png"
+			"icon_src" : "http://ufopaedia.org/images/5/57/CLASS_ASSAULT.png",
+            "spec" :  {
+				"primary_weapons" : [
+					 { "battle_rifles" : 1 },
+					 { "carbines" : 1 },
+					 { "shotguns" : 1 },
+					 { "smgs" : 1 },
+					 { "assault_rifles" : 1 }		             
+				],
+				"secondary_weapons" : [
+					{ "pistols" : 1},
+					{ "machine_pistols" : 1},
+					{ "shotguns" :  1}
+				],
+				"class_limited_items" : [
+				],
+				"perks" : [
+					{
+						"rank" : 1,
+						"perks" : [
+							{ "id" : "field_medic" }
+						]
+					}, {
+						"rank" : 2,
+						"perks" : [
+							{ "id" : "covering_fire"},
+							{ "id" : "steadfast"},
+							{ "id" : "revive"}
+						]
+					}, {
+						"rank" : 3,
+						"perks" : [
+							{ "id" : "opportunist"},
+							{ "id" : "smoke_greande"},
+							{ "id" : "paramedic"}
+						]
+					}, {
+						"rank" : 4,
+						"perks" : [
+							{ "id" : "suppression"},
+							{ "id" : "smoke_and_mirrors"},
+							{ "id" : "field_surgeon"}
+						]
+					}, {
+						"rank" : 5,
+						"perks" : [
+						{ "id" : "ranger"},
+						{ "id" : "dense_smoke"},
+						{ "id" : "combat_drugs"}
+						]
+					}, {
+						"rank" : 6,
+						"perks" : [
+							{ "id" : "ready_for_anything"},
+							{ "id" : "vital_point_targeting"},
+							{ "id" : "sprinter"}
+						]
+					}, {
+						"rank" : 7,
+						"perks" : [
+							{ "id" : "sentinel"},
+							{ "id" : "packmaster"},
+							{ "id" : "savior"}
+						]
+					}
+				],
+				"stat_progression" : [
+					{
+						"health" : 1,						"aim" : 2,						"will_low" : 6,						"will_high" : 7
+					}, {
+						"health" : 0,						"aim" : 2,						"will_low" : 6,						"will_high" : 7
+					}, {
+						"health" : 0,						"aim" : 2,						"will_low" : 3,						"will_high" : 4 
+					}, {
+						"health" : 1,						"aim" : 2,						"will_low" : 3,						"will_high" : 4
+					}, {
+						"health" : 0,						"aim" : 2,						"will_low" : 3,						"will_high" : 4
+					}, {
+						"health" : 0,						"aim" : 2,						"will_low" : 3,						"will_high" : 4
+					}, {
+						"health" : 1,						"aim" : 2,						"will_low" : 3,						"will_high" : 4
+					}
+				]		
+		    }
 		},
 		{
 			"id" : "Engineer",
@@ -669,7 +1141,7 @@
 			]
 		},
 		{
-			"type" : "battle_rifle",
+			"type" : "battle_rifles",
 			"weapons" : [
 				{				
 					"id" : "battle_rifle",
@@ -818,10 +1290,10 @@
 				}
 			]
 		},
-        {
-            "type" :  "sniper_rifles",
-            "weapons" : [
-                {				
+		{
+			"type" :  "sniper_rifles",
+			"weapons" : [
+				{				
 					"id" : "sniper_rifle",
 					"type" : "Sniper Rifles",
 					"name" : "Sniper Rifle",
@@ -835,7 +1307,7 @@
 					"ammo" : 5,
 					"steady" : 1
 				},
-                {				
+				{				
 					"id" : "sniper_rifle",
 					"type" : "Sniper Rifles",
 					"name" : "Laser Sniper Rifle",
@@ -849,7 +1321,7 @@
 					"ammo" : 3,
 					"steady" : 1
 				},
-                {				
+				{				
 					"id" : "sniper_rifle",
 					"type" : "Sniper Rifles",
 					"name" : "Gauss Long Rifle",
@@ -863,7 +1335,7 @@
 					"ammo" : 1,
 					"steady" : 1
 				},
-                {				
+				{				
 					"id" : "sniper_rifle",
 					"type" : "Sniper Rifles",
 					"name" : "Pulse Sniper Rifle",
@@ -877,7 +1349,7 @@
 					"ammo" : 3,
 					"steady" : 1
 				},
-                {				
+				{				
 					"id" : "sniper_rifle",
 					"type" : "Sniper Rifles",
 					"name" : "Plasma Sniper Rifle",
@@ -891,12 +1363,12 @@
 					"ammo" : 3,
 					"steady" : 1
 				}
-            ]
-        },
-        {
-            "type" : "marksman_rifle",
-            "weapons" :  [
-                {				
+			]
+		},
+		{
+			"type" : "marksman_rifle",
+			"weapons" :  [
+				{				
 					"id" : "marksman_rifle",
 					"type" : "Marksman Rifles",
 					"name" : "Marksman Rifle",
@@ -910,7 +1382,7 @@
 					"ammo" : 5,
 					"steady" : 1
 				},
-                 {				
+				 {				
 					"id" : "laser_strike_rifle",
 					"type" : "Marksman Rifles",
 					"name" : "Laser Strike Rifle",
@@ -924,7 +1396,7 @@
 					"ammo" : 3,
 					"steady" : 1
 				},
-                  {				
+				  {				
 					"id" : "alloy_strike_rifle",
 					"type" : "Marksman Rifles",
 					"name" : "Alloy Strike Rifle",
@@ -938,7 +1410,7 @@
 					"ammo" : 4,
 					"steady" : 1
 				},
-                   {				
+				   {				
 					"id" : "blaster_rifle",
 					"type" : "Marksman Rifles",
 					"name" : "Blaster Rifle",
@@ -952,7 +1424,7 @@
 					"ammo" : 3,
 					"steady" : 1
 				},
-                    {				
+					{				
 					"id" : "reflex_rifle",
 					"type" : "Marksman Rifles",
 					"name" : "Reflex Rifle",
@@ -966,12 +1438,12 @@
 					"ammo" : 3,
 					"steady" : 1
 				}
-            ]
-        },
-        {
-            "type" :  "squad_automatic_weapon",
-            "weapons" :  [
-                 {				
+			]
+		},
+		{
+			"type" :  "squad_automatic_weapon",
+			"weapons" :  [
+				 {				
 					"id" : "saw",
 					"type" : "Squad Automatic Weapon",
 					"name" : "SAW",
@@ -985,7 +1457,7 @@
 					"ammo" : 6,
 					"steady" : 1
 				},
-                 {				
+				 {				
 					"id" : "autolaser",
 					"type" : "Squad Automatic Weapon",
 					"name" : "Autolaser",
@@ -999,7 +1471,7 @@
 					"ammo" : 6,
 					"steady" : 1
 				},
-                 {				
+				 {				
 					"id" : "saw",
 					"type" : "Squad Automatic Weapon",
 					"name" : "Gauss Autorifle",
@@ -1013,7 +1485,7 @@
 					"ammo" : 7,
 					"steady" : 1
 				},
-                 {				
+				 {				
 					"id" : "saw",
 					"type" : "Squad Automatic Weapon",
 					"name" : "Pulse Autoblaster",
@@ -1027,7 +1499,7 @@
 					"ammo" : 6,
 					"steady" : 1
 				},
-                 {				
+				 {				
 					"id" : "saw",
 					"type" : "Squad Automatic Weapon",
 					"name" : "Plasma Novagun",
@@ -1041,12 +1513,12 @@
 					"ammo" : 6,
 					"steady" : 1
 				}
-            ]
-        },
+			]
+		},
 		 {
-            "type" :  "light_machine_gun",
-            "weapons" :  [
-                 {				
+			"type" :  "light_machine_gun",
+			"weapons" :  [
+				 {				
 					"id" : "lmg",
 					"type" : "Light Machine Gun",
 					"name" : "LMG",
@@ -1060,7 +1532,7 @@
 					"ammo" : 8,
 					"steady" : 1
 				},
-                 {				
+				 {				
 					"id" : "gatling_laser",
 					"type" : "Light Machine Gun",
 					"name" : "Gatling Laser",
@@ -1074,7 +1546,7 @@
 					"ammo" : 8,
 					"steady" : 1
 				},
-                 {				
+				 {				
 					"id" : "gauss_machine_gun",
 					"type" : "Light Machine Gun",
 					"name" : "Gauss Machine Gun",
@@ -1088,7 +1560,7 @@
 					"ammo" : 9,
 					"steady" : 1
 				},
-                 {				
+				 {				
 					"id" : "gatling_pulser",
 					"type" : "Light Machine Gun",
 					"name" : "Gatling Pulser",
@@ -1102,7 +1574,7 @@
 					"ammo" : 8,
 					"steady" : 1
 				},
-                 {				
+				 {				
 					"id" : "plasma_dragon",
 					"type" : "Light Machine Gun",
 					"name" : "Plasma Dragon",
@@ -1116,13 +1588,13 @@
 					"ammo" : 8,
 					"steady" : 1
 				}
-            ]
-        },
-         {
-             "type" :  "shiv_turrets",
-             "weapons" :  {
-                  "weapons" :  [
-                 {				
+			]
+		},
+		 {
+			 "type" :  "shiv_turrets",
+			 "weapons" :  {
+				  "weapons" :  [
+				 {				
 					"id" : "autocannon",
 					"type" : "SHIV Turrets",
 					"name" : "Autocannon",
@@ -1136,7 +1608,7 @@
 					"ammo" : 3,
 					"steady" : 1
 				},
-                 {				
+				 {				
 					"id" : "superheavy_laser",
 					"type" : "SHIV Turrets",
 					"name" : "Superheavy Laser",
@@ -1150,7 +1622,7 @@
 					"ammo" : 3,
 					"steady" : 1
 				},
-                 {				
+				 {				
 					"id" : "sentry_gun",
 					"type" : "SHIV Turrets",
 					"name" : "Sentry Gun",
@@ -1164,7 +1636,7 @@
 					"ammo" : 4,
 					"steady" : 1
 				},
-                 {				
+				 {				
 					"id" : "superheavy_pulser",
 					"type" : "SHIV Turrets",
 					"name" : "Superheavy Pulser",
@@ -1178,7 +1650,7 @@
 					"ammo" : 3,
 					"steady" : 1
 				},
-                 {				
+				 {				
 					"id" : "superheavy_plasma",
 					"type" : "SHIV Turrets",
 					"name" : "Superheavy Plasma",
@@ -1192,13 +1664,13 @@
 					"ammo" : 3,
 					"steady" : 1
 				}
-            ]
-             }
-         },
-         {
-            "type" :  "mec_primary",
-            "weapons" :  [
-                 {				
+			]
+			 }
+		 },
+		 {
+			"type" :  "mec_primary",
+			"weapons" :  [
+				 {				
 					"id" : "minigun",
 					"type" : "MEC Primary Weapons",
 					"name" : "Minigun",
@@ -1212,7 +1684,7 @@
 					"ammo" : 2,
 					"steady" : 1
 				},
-                 {				
+				 {				
 					"id" : "laser_lance",
 					"type" : "MEC Primary Weapons",
 					"name" : "Laser Lance",
@@ -1226,7 +1698,7 @@
 					"ammo" : 3,
 					"steady" : 1
 				},
-                 {				
+				 {				
 					"id" : "railgun",
 					"type" : "MEC Primary Weapons",
 					"name" : "Railgun",
@@ -1240,7 +1712,7 @@
 					"ammo" : 4,
 					"steady" : 1
 				},
-                 {				
+				 {				
 					"id" : "pulse_lance",
 					"type" : "MEC Primary Weapons",
 					"name" : "Pulse Lance",
@@ -1254,7 +1726,7 @@
 					"ammo" : 3,
 					"steady" : 1
 				},
-                 {				
+				 {				
 					"id" : "particle_cannon",
 					"type" : "MEC Primary Weapons",
 					"name" : "Particle Cannon",
@@ -1268,9 +1740,9 @@
 					"ammo" : 3,
 					"steady" : 1
 				}
-            ]
-           },
-         {
+			]
+		   },
+		 {
 			"type" : "carbines",
 			"weapons" : [{
 					"id" : "assault_carbine",
@@ -1346,10 +1818,10 @@
 		}
 	],
 	"secondary_weapons" : [
-        {
-            "type" :  "pistols",
-            "weapons" :  [
-                 {				
+		{
+			"type" :  "pistols",
+			"weapons" :  [
+				 {				
 					"id" : "pistol",
 					"type" : "Pistol",
 					"name" : "Pistol",
@@ -1363,7 +1835,7 @@
 					"ammo" : 2,
 					"steady" : 0
 				},
-                 {				
+				 {				
 					"id" : "laser_pistol",
 					"type" : "Pistol",
 					"name" : "Laser Pistol",
@@ -1377,7 +1849,7 @@
 					"ammo" : 2,
 					"steady" : 0
 				},
-                 {				
+				 {				
 					"id" : "plasma_pistol",
 					"type" : "Pistol",
 					"name" : "Plasma Pistol",
@@ -1391,13 +1863,13 @@
 					"ammo" : 2,
 					"steady" : 0
 				}
-            ]
-        },
-        {
-            "type" :  "machine_pistols",
-            "weapons" :  [
-                {
-                    "id" : "machine_pistol",
+			]
+		},
+		{
+			"type" :  "machine_pistols",
+			"weapons" :  [
+				{
+					"id" : "machine_pistol",
 					"type" : "Machine Pistol",
 					"name" : "Machine Pistol",
 					"min_damage" : 2,
@@ -1409,8 +1881,8 @@
 					"mobility_mod" : -1,
 					"ammo" : 2,
 					"steady" : 0
-                },  {
-                    "id" : "heater",
+				},  {
+					"id" : "heater",
 					"type" : "Machine Pistol",
 					"name" : "Heater",
 					"min_damage" : 3,
@@ -1422,8 +1894,8 @@
 					"mobility_mod" : -1,
 					"ammo" : 2,
 					"steady" : 0
-                },  {
-                    "id" : "Gauss_Autopistol",
+				},  {
+					"id" : "Gauss_Autopistol",
 					"type" : "Machine Pistol",
 					"name" : "Gauss Autopistol",
 					"min_damage" : 3,
@@ -1435,8 +1907,8 @@
 					"mobility_mod" : -1,
 					"ammo" : 3,
 					"steady" : 0
-                },  {
-                    "id" : "blaster",
+				},  {
+					"id" : "blaster",
 					"type" : "Machine Pistol",
 					"name" : "Blaster",
 					"min_damage" : 4,
@@ -1448,8 +1920,8 @@
 					"mobility_mod" : -1,
 					"ammo" : 2,
 					"steady" : 0
-                },  {
-                    "id" : "plasma_mauler",
+				},  {
+					"id" : "plasma_mauler",
 					"type" : "Machine Pistol",
 					"name" : "Machine Pistol",
 					"min_damage" : 4,
@@ -1461,14 +1933,14 @@
 					"mobility_mod" : -2,
 					"ammo" : 2,
 					"steady" : 0
-                }
-            ]
-        },
-        {
-            "type" :  "shotguns",
-            "weapons" :  [
-                {
-                    "id" : "sawed_off_shotgun",
+				}
+			]
+		},
+		{
+			"type" :  "shotguns",
+			"weapons" :  [
+				{
+					"id" : "sawed_off_shotgun",
 					"type" : "Shotgun",
 					"name" : "Sawed-Off Shotgun",
 					"min_damage" : 4,
@@ -1480,14 +1952,14 @@
 					"mobility_mod" : -1,
 					"ammo" : 1,
 					"steady" : 0
-                }
-            ]
-        },
-        {
-            "type" : "rocket_launchers",
-            "weapons" :  [
-                {
-                    "id" : "rocket_launcher",
+				}
+			]
+		},
+		{
+			"type" : "rocket_launchers",
+			"weapons" :  [
+				{
+					"id" : "rocket_launcher",
 					"type" : "Rocket Launchers",
 					"name" : "Rocket Launchers",
 					"min_damage" : 4,
@@ -1499,9 +1971,9 @@
 					"mobility_mod" : -1,
 					"ammo" : 1,
 					"steady" : 0
-                },
-                {
-                    "id" : "recoilless_rifle",
+				},
+				{
+					"id" : "recoilless_rifle",
 					"type" : "Rocket Launchers",
 					"name" : "Recoilless Rifle",
 					"min_damage" : 6,
@@ -1513,9 +1985,9 @@
 					"mobility_mod" : -1,
 					"ammo" : 1,
 					"steady" : 0
-                },
-                {
-                    "id" : "blaster_launcher",
+				},
+				{
+					"id" : "blaster_launcher",
 					"type" : "Rocket Launchers",
 					"name" : "Blaster Launcher",
 					"min_damage" : 8,
@@ -1527,13 +1999,13 @@
 					"mobility_mod" : -2,
 					"ammo" : 1,
 					"steady" : 0
-                }
-            ]
-        }, {
-            "type" :  "mec_secondary",
-            "weapons" :  [
-               {
-                    "id" : "flamethrower",
+				}
+			]
+		}, {
+			"type" :  "mec_secondary",
+			"weapons" :  [
+			   {
+					"id" : "flamethrower",
 					"type" : "MEC Secondary",
 					"name" : "Rocket Launchers",
 					"min_damage" : 4,
@@ -1545,9 +2017,9 @@
 					"mobility_mod" : -1,
 					"ammo" : 2,
 					"steady" : 0
-                },
-                {
-                    "id" : "restorative_mist",
+				},
+				{
+					"id" : "restorative_mist",
 					"type" : "MEC Secondary",
 					"name" : "Restorative Mist",
 					"min_damage" : 0,
@@ -1559,9 +2031,9 @@
 					"mobility_mod" : -1,
 					"ammo" : 1,
 					"steady" : 0
-                },
-                {
-                    "id" : "kinetic_strike_module",
+				},
+				{
+					"id" : "kinetic_strike_module",
 					"type" : "MEC Secondary",
 					"name" : "Kinetic Strike Module",
 					"min_damage" : 9,
@@ -1573,9 +2045,9 @@
 					"mobility_mod" : -1,
 					"ammo" : 0,
 					"steady" : 0
-                },
-                {
-                    "id" : "grenade_launcher",
+				},
+				{
+					"id" : "grenade_launcher",
 					"type" : "MEC Secondary",
 					"name" : "Grenade Launcher",
 					"min_damage" : 3,
@@ -1587,9 +2059,9 @@
 					"mobility_mod" : -1,
 					"ammo" : 2,
 					"steady" : 0
-                },
-                {
-                    "id" : "proximity_mine_launcher",
+				},
+				{
+					"id" : "proximity_mine_launcher",
 					"type" : "MEC Secondary",
 					"name" : "Proximity Mine Launcher",
 					"min_damage" : 6,
@@ -1601,9 +2073,9 @@
 					"mobility_mod" : -1,
 					"ammo" : 3,
 					"steady" : 0
-                },
-                {
-                    "id" : "electropulse",
+				},
+				{
+					"id" : "electropulse",
 					"type" : "MEC Secondary",
 					"name" : "Electropulse",
 					"min_damage" : 3,
@@ -1615,12 +2087,139 @@
 					"mobility_mod" : -1,
 					"ammo" : 2,
 					"steady" : 0
-                }
-            ]
-        }
+				}
+			]
+		}
 	],
-    "perks" : [
+	"perks" : [
+	{
+			"id" : "battle_scanner",
+			"img_src" :  "http://ufopaedia.org/images/thumb/1/11/SNIPER_BATTLESCANNER.png/32px-SNIPER_BATTLESCANNER.png",
+			"title" :  "Battle Scanner",
+			"description" :  "Scanning device that, when thrown, creates a new source of vision for 2 turns. Can only be used 2 times per battle.",
+			"aim_bonus" :  0,
+			"will_bonus" :  0,
+			"mobility_bonus" :  0,
+			"damage_bonus" : 0
+		},
+{
+			"id" : "smoke_and_mirrors",
+			"img_src" :  "http://ufopaedia.org/images/thumb/e/e7/SUPPORT_SMOKEMIRRORS.png/32px-SUPPORT_SMOKEMIRRORS.png",
+			"title" :  "Smoke and Mirrors",
+			"description" :  "Allows one additional use of all support grenades during each mission. It also increases charges from Smoke Grenade and Battlescanner perks by 1.",
+			"aim_bonus" :  0,
+			"will_bonus" :  0,
+			"mobility_bonus" :  0,
+			"damage_bonus" : 0
+		},	{
+			"id" : "damn_good_ground",
+			"img_src" :  "http://ufopaedia.org/images/thumb/e/ea/SNIPER_DGG.png/32px-SNIPER_DGG.png",
+			"title" :  "Damn Good Ground",
+			"description" :  "Confers +10 Aim and +10 Defense against enemies at lower elevation, in addition to the usual elevation bonuses.",
+			"aim_bonus" :  0,
+			"will_bonus" :  0,
+			"mobility_bonus" :  0,
+			"damage_bonus" : 0
+		},{
+			"id" : "squadsight",
+			"img_src" :  "http://ufopaedia.org/images/thumb/7/7f/SNIPER_SQUADSIGHT.png/32px-SNIPER_SQUADSIGHT.png",
+			"title" :  "Squadsight",
+			"description" :  "Allows firing at targets in any ally's sight radius within weapon range, but critical chance suffers a -30% penalty. Extended range weapons (MEC primary weapons, Marksman and Strike Rifles, and LMGs) gain roughly five extra tiles range. Sniper rifles have infinite range. Overwatch fire does not extend to squadsight ranges, except with Marksman's and Strike Rifles.",
+			"aim_bonus" :  0,
+			"will_bonus" :  0,
+			"mobility_bonus" :  0,
+			"damage_bonus" : 0
+		},
+{
+			"id" : "low_profile",
+			"img_src" :  "http://ufopaedia.org/images/thumb/4/40/SNIPER_LOWPROFILE.png/32px-SNIPER_LOWPROFILE.png",
+			"title" :  "Low Profile",
+			"description" :  "Makes partial cover grant the defense bonus of full cover.",
+			"aim_bonus" :  0,
+			"will_bonus" :  0,
+			"mobility_bonus" :  0,
+			"damage_bonus" : 0
+		},
+{
+			"id" : "lone_wolf",
+			"img_src" :  "http://ufopaedia.org/images/thumb/9/97/Council_Medal_of_Honor_2_%28EU2012%29.png/32px-Council_Medal_of_Honor_2_%28EU2012%29.png",
+			"title" :  "Lone Wolf",
+			"description" :  "+10 Aim and Critical Chance if not within 7 tiles of an allied unit.",
+			"aim_bonus" :  0,
+			"will_bonus" :  0,
+			"mobility_bonus" :  0,
+			"damage_bonus" : 0
+		},
+{
+			"id" : "disabling_shot",
+			"img_src" :  "http://ufopaedia.org/images/thumb/f/f6/SNIPER_DISABLINGSHOT.png/32px-SNIPER_DISABLINGSHOT.png",
+			"title" :  "Disabling Shot",
+			"description" :  "Allows sniper rifles to fire a shot that causes the target's main weapon to malfunction. The target may use Reload to fix the weapon. 2 turn cooldown. Cannot cause critical hits.",
+			"aim_bonus" :  0,
+			"will_bonus" :  0,
+			"mobility_bonus" :  0,
+			"damage_bonus" : 0
+		},
+{
+			"id" : "precision_shot",
+			"img_src" :  "http://ufopaedia.org/images/thumb/0/0e/SNIPER_HEADSHOT.png/32px-SNIPER_HEADSHOT.png",
+			"title" :  "Precision Shot",
+			"description" :  "With sniper/long rifles: Fire a shot with +30% critical chance, no -30% squadsight penalty to criticals, and extra damage on critical hits based on the soldier's weapon tech level. With Marksman's and Strike Rifles: Fire an unlimited range shot with no other bonuses. 2 turn cooldown.",
+			"aim_bonus" :  0,
+			"will_bonus" :  0,
+			"mobility_bonus" :  0,
+			"damage_bonus" : 0
+		},
+{
+			"id" : "in_the_zone",
+			"img_src" :  "http://ufopaedia.org/images/thumb/e/e8/SNIPER_ITZ.png/32px-SNIPER_ITZ.png",
+			"title" :  "In The Zone",
+			"description" :  "Killing a flanked or uncovered target does not cost an action. Confers increasing critical hit penalty for each successive In The Zone shot.",
+			"aim_bonus" :  0,
+			"will_bonus" :  0,
+			"mobility_bonus" :  0,
+			"damage_bonus" : 0
+		},
 		{
+			"id" : "heat_ammo",
+			"img_src" :  "http://ufopaedia.org/images/thumb/9/9c/HEAVY_HEAT_AMMO.png/32px-HEAVY_HEAT_AMMO.png",
+			"title" :  "HEAT Ammo",
+			"description" :  "Your primary weapon does additional damage against robotic enemies(+75%).",
+			"aim_bonus" :  0,
+			"will_bonus" :  0,
+			"mobility_bonus" :  0,
+			"damage_bonus" : 0
+		},
+{
+			"id" : "holo_targeting",
+			"img_src" :  "http://ufopaedia.org/images/thumb/0/08/HEAVY_HOLO.png/32px-HEAVY_HOLO.png",
+			"title" :  "Holo-Targeting",
+			"description" :  "Shooting at, flushing out or suppressing enemies also confers +10 Aim to allies' attacks on those enemies.",
+			"aim_bonus" :  0,
+			"will_bonus" :  0,
+			"mobility_bonus" :  0,
+			"damage_bonus" : 0
+		},
+{
+			"id" : "double_tap",
+			"img_src" :  "http://ufopaedia.org/images/thumb/a/ad/SNIPER_DOUBLETAP.png/32px-SNIPER_DOUBLETAP.png",
+			"title" :  "Double Tap",
+			"description" :  "Allows both actions to be used for Standard Shot, Headshot, or Disable Shot, provided no costly actions were taken, 1 turn cooldown.",
+			"aim_bonus" :  0,
+			"will_bonus" :  0,
+			"mobility_bonus" :  0,
+			"damage_bonus" : 0
+		},
+{
+			"id" : "",
+			"img_src" :  "",
+			"title" :  "",
+			"description" :  "",
+			"aim_bonus" :  0,
+			"will_bonus" :  0,
+			"mobility_bonus" :  0,
+			"damage_bonus" : 0
+		},{
 			"id" : "run_and_gun",
 			"img_src" : "http://ufopaedia.org/images/thumb/8/87/ASSAULT_RUNGUN.png/32px-ASSAULT_RUNGUN.png", 
 			"title" : "Run & Gun",
@@ -1628,6 +2227,16 @@
 			"aim_bonus" : 0,
 			"will_bonus" : 0,
 			"mobility_bonus" : 0,
+			"damage_bonus" : 0
+		},
+		{
+			"id" :  "",
+			"img_src" :  "",
+			"title" :  "",
+			"description" :  "",
+			"aim_bonus" :  0,
+			"will_bonus" :  0,
+			"mobility_bonus" :  0,
 			"damage_bonus" : 0
 		},
 		{
@@ -1671,9 +2280,9 @@
 			"damage_bonus" : 0
 		},
 		{
-			"id" : "oppotunist",
+			"id" : "opportunist",
 			"img_src" : "http://ufopaedia.org/images/thumb/5/50/SNIPER_OPPORTUNIST.png/32px-SNIPER_OPPORTUNIST.png",
-			"title" : "Oppotunist",
+			"title" : "Opportunist",
 			"description" : "Eliminates the Aim penalty on reaction shots, and allows reaction shots to cause critical hits.",
 			"aim_bonus" : 0,
 			"will_bonus" : 0,
@@ -1899,840 +2508,948 @@
 			"will_bonus" : 0,
 			"mobility_bonus" : 0,
 			"damage_bonus" : 0
+		},
+		{
+			"id" :  "fire_rocket",
+			"img_src" :  "http://ufopaedia.org/images/thumb/e/e8/HEAVY_FIREROCKET.png/32px-HEAVY_FIREROCKET.png",
+			"title" :  "Fire Rocket",
+			"description" :  "Fire a high explosive rocket using an equipped launcher.",
+			"aim_bonus" :  0,
+			"will_bonus" :  0,
+			"mobility_bonus" :  0,
+			"damage_bonus" : 0
+		},
+		{
+			"id" : "rapid_reaction",
+			"img_src" :  "http://ufopaedia.org/images/thumb/7/75/HEAVY_RAPIDREACTION.png/32px-HEAVY_RAPIDREACTION.png",
+			"title" :  "Rapid Reaction",
+			"description" :  "If on Overwatch, confers a bonus reaction shot (to a maximum three shots total) for every reaction shot that is a hit.",
+			"aim_bonus" :  3,
+			"will_bonus" :  0,
+			"mobility_bonus" :  0,
+			"damage_bonus" : 0
+		},
+		{
+			"id" :  "heat_warheads",
+			"img_src" :  "http://ufopaedia.org/images/thumb/9/9c/HEAVY_HEAT_AMMO.png/32px-HEAVY_HEAT_AMMO.png",
+			"title" :  "HEAT Warheads",
+			"description" :  "Your rockets and grenades do additional damage to robotic enemies(+75%).",
+			"aim_bonus" :  0,
+			"will_bonus" :  0,
+			"mobility_bonus" :  0,
+			"damage_bonus" : 0
+		},
+		{
+			"id" :  "fire_in_the_hole",
+			"img_src" :  "http://ufopaedia.org/images/thumb/b/b5/ALIEN_CLUSTERBOMB.png/32px-ALIEN_CLUSTERBOMB.png",
+			"title" :  "Fire In The Hole",
+			"description" :  "Grants +10 aim for purposes of reducing scatter if the soldier has not moved this turn. Increases range of non-scattering rockets.",
+			"aim_bonus" :  0,
+			"will_bonus" :  0,
+			"mobility_bonus" :  0,
+			"damage_bonus" : 0
+		},
+{
+			"id" :  "snapshot",
+			"img_src" :  "http://ufopaedia.org/images/thumb/e/ec/SNIPER_SNAPSHOT.png/32px-SNIPER_SNAPSHOT.png",
+			"title" :  "Snapshot",
+			"description" :  "For snipers, removes the sniper rifle's restriction on firing and Overwatch after taking a costly action. Any shots taken after using any costly action suffer a -10 Aim penalty. For rocketeers, reduces the aim penalty for launching a rocket after taking a costly action.",
+			"aim_bonus" :  0,
+			"will_bonus" :  0,
+			"mobility_bonus" :  0,
+			"damage_bonus" : 0
+		},
+{
+			"id" :  "shredder_ammo",
+			"img_src" :  "http://ufopaedia.org/images/thumb/6/69/HEAVY_SHREDDER.png/32px-HEAVY_SHREDDER.png",
+			"title" :  "Shredder Ammo",
+			"description" :  "Any unit hit takes additional damage from all sources for the next 4 turns. Rocketeers get special purpose Shredder rockets while a Gunner's LMG is loaded with Shredder ammo. Shredder rockets are weaker than a standard rocket and cannot penetrate cover.",
+			"aim_bonus" :  0,
+			"will_bonus" :  0,
+			"mobility_bonus" :  0,
+			"damage_bonus" : 0
+		},
+{
+			"id" : "ready_for_anything",
+			"img_src" :  "http://ufopaedia.org/images/thumb/a/a1/MEC_ADVANCED_FIRE_CONTROL.png/32px-MEC_ADVANCED_FIRE_CONTROL.png",
+			"title" :  "Ready For Anything",
+			"description" :  "If the unit fires without moving, it automatically enters overwatch at the end of its turn.",
+			"aim_bonus" :  0,
+			"will_bonus" :  0,
+			"mobility_bonus" :  0,
+			"damage_bonus" : 0
+		},
+{
+			"id" : "danger_zone",
+			"img_src" :  "http://ufopaedia.org/images/thumb/4/4b/HEAVY_DANGERZONE.png/32px-HEAVY_DANGERZONE.png",
+			"title" :  "Danger Zone",
+			"description" :  "Increases area of effect of Suppression, rockets, grenade launchers and proximity mine launchers.",
+			"aim_bonus" :  0,
+			"will_bonus" :  0,
+			"mobility_bonus" :  0,
+			"damage_bonus" : 0
+		},
+{
+			"id" : "mayhem",
+			"img_src" :  "http://ufopaedia.org/images/thumb/a/a5/HEAVY_MAYHEM.png/32px-HEAVY_MAYHEM.png",
+			"title" :  "Mayhem",
+			"description" :  "Confers 2 damage when suppressing. Also confers +1 damage for most explosive grenades, proximity mines and Rocket Launcher ammo. Confers +2 damage for SAW- and LMG- series weapons, Recoilless Rifle and Blaster Launcher ammo, and alien grenades. Confers +4 damage for sniper and long rifles, marksman's, strike and reflex rifles.",
+			"aim_bonus" :  0,
+			"will_bonus" :  0,
+			"mobility_bonus" :  0,
+			"damage_bonus" : 0
+		},
+{
+			"id" : "javelin_rockets",
+			"img_src" :  "http://ufopaedia.org/images/thumb/8/88/ALIEN_DEATHBLOSSOM.png/32px-ALIEN_DEATHBLOSSOM.png",
+			"title" :  "Javelin Rockets",
+			"description" :  "Your rockets now travel much further(+33%) and can hit targets beyond your visual range.",
+			"aim_bonus" :  0,
+			"will_bonus" :  0,
+			"mobility_bonus" :  0,
+			"damage_bonus" : 0
+		},
+{
+			"id" : "shock_and_awe",
+			"img_src" :  "http://ufopaedia.org/images/thumb/b/bd/HEAVY_ROCKETEER.png/32px-HEAVY_ROCKETEER.png",
+			"title" :  "Shock and Awe",
+			"description" :  "Allows 1 additional standard rocket to be fired per battle.",
+			"aim_bonus" :  0,
+			"will_bonus" :  0,
+			"mobility_bonus" :  0,
+			"damage_bonus" : 0
 		}
-	],
-	
+		],
 	"items" : [
-        {
-            "type" :  "Protective Items",
-            "name" :  "Ceramic Plates",
-            "aim" : 0,
-            "crit" : 0,
-            "hp" :  1,
-            "damage_reduction" :  0,
-            "defense" :  0,
-            "will" :  0,
-            "mobilitiy" :  -1,
-            "notes" :  "Provides +1 Armor HP. Cannot be stacked with other plating items.",
-            "classes" : ""
-        }, 
-        {
-            "type" :  "Protective Items",
-            "name" :  "Alloy Plating",
-            "aim" : 0,
-            "crit" : 0,
-            "hp" :  2,
-            "damage_reduction" :  0,
-            "will" :  0,
-            "defense" :  0,
-            "mobilitiy" :  -1,
-            "notes" :  "Provides +2 Armor HP. Cannot be stacked with other plating items.",
-            "classes" : ""              
-        }, 
-        {
-            "type" :  "Protective Items",
-            "name" :  "Chitin Plating",
-            "aim" : 0,
-            "crit" : 0,
-            "hp" :  3,
-            "damage_reduction" :  0,
-            "will" :  0,
-            "defense" :  0,
-            "mobilitiy" :  -2,
-            "notes" :  "Provides +3 Armor HP, reduces melee damage taken, and grants immunity to Seeker strangulation attack. Cannot be stacked with other plating items.",
-            "classes" : ""                
-        }, 
-           {
-            "type" :  "Protective Items",
-            "name" :  "Reinforced Armor",
-            "aim" : 0,
-            "crit" : 0,
-            "hp" :  1,
-            "damage_reduction" :  1,
-            "defense" :  -7,
-            "will" :  0,
-            "mobilitiy" :  -1,
-            "notes" :  "Confers +1 Armor HP and +1 Damage Reduction, but -7 to Defense. Can stack with plating items.",
-            "classes" : ""    
-        }, 
-           {
-            "type" :  "Protective Items",
-            "name" :  "Chameleon Suit",
-            "aim" : 0,
-            "crit" : 0,
-            "hp" :  0,
-            "damage_reduction" :  0,
-            "defense" :  5,
-            "will" :  0,
-            "mobilitiy" :  -1,
-            "notes" :  "Grants +5 Defense and improves Lightning Reflexes by further halving the chances of reaction fire hitting (95% for first shot, 85% for subsequent shots).",
-            "classes" : "Scout"
-        }, 
-           {
-            "type" :  "Protective Items",
-            "name" :  "Respirator Implant",
-            "aim" : 0,
-            "crit" : 0,
-            "hp" :  0,
-            "damage_reduction" :  0,
-            "defense" :  0,
-            "will" :  0,
-            "mobilitiy" :  -1,
-            "notes" :  "Grants immunity to strangulation and partial immunity to acid.",
-            "classes" : ""
-        }, 
-           {
-            "type" :  "Protective Items",
-            "name" :  "Impact Vest",
-            "aim" : 0,
-            "crit" : 0,
-            "hp" :  1,
-            "damage_reduction" :  0.33,
-            "defense" :  0,
-            "will" :  0,
-            "mobilitiy" :  -1,
-            "notes" :  "Grants the Shock-Absorbent Armor perk( 33% damage reduction against attacks within 4 tiles) and + 1 HP.",
-            "classes" : "Assault"
-        }, 
-           {
+		{
+			"type" :  "Protective Items",
+			"name" :  "Ceramic Plates",
+			"aim" : 0,
+			"crit" : 0,
+			"hp" :  1,
+			"damage_reduction" :  0,
+			"defense" :  0,
+			"will" :  0,
+			"mobilitiy" :  -1,
+			"notes" :  "Provides +1 Armor HP. Cannot be stacked with other plating items.",
+			"classes" : ""
+		}, 
+		{
+			"type" :  "Protective Items",
+			"name" :  "Alloy Plating",
+			"aim" : 0,
+			"crit" : 0,
+			"hp" :  2,
+			"damage_reduction" :  0,
+			"will" :  0,
+			"defense" :  0,
+			"mobilitiy" :  -1,
+			"notes" :  "Provides +2 Armor HP. Cannot be stacked with other plating items.",
+			"classes" : ""              
+		}, 
+		{
+			"type" :  "Protective Items",
+			"name" :  "Chitin Plating",
+			"aim" : 0,
+			"crit" : 0,
+			"hp" :  3,
+			"damage_reduction" :  0,
+			"will" :  0,
+			"defense" :  0,
+			"mobilitiy" :  -2,
+			"notes" :  "Provides +3 Armor HP, reduces melee damage taken, and grants immunity to Seeker strangulation attack. Cannot be stacked with other plating items.",
+			"classes" : ""                
+		}, 
+		   {
+			"type" :  "Protective Items",
+			"name" :  "Reinforced Armor",
+			"aim" : 0,
+			"crit" : 0,
+			"hp" :  1,
+			"damage_reduction" :  1,
+			"defense" :  -7,
+			"will" :  0,
+			"mobilitiy" :  -1,
+			"notes" :  "Confers +1 Armor HP and +1 Damage Reduction, but -7 to Defense. Can stack with plating items.",
+			"classes" : ""    
+		}, 
+		   {
+			"type" :  "Protective Items",
+			"name" :  "Chameleon Suit",
+			"aim" : 0,
+			"crit" : 0,
+			"hp" :  0,
+			"damage_reduction" :  0,
+			"defense" :  5,
+			"will" :  0,
+			"mobilitiy" :  -1,
+			"notes" :  "Grants +5 Defense and improves Lightning Reflexes by further halving the chances of reaction fire hitting (95% for first shot, 85% for subsequent shots).",
+			"classes" : "Scout"
+		}, 
+		   {
+			"type" :  "Protective Items",
+			"name" :  "Respirator Implant",
+			"aim" : 0,
+			"crit" : 0,
+			"hp" :  0,
+			"damage_reduction" :  0,
+			"defense" :  0,
+			"will" :  0,
+			"mobilitiy" :  -1,
+			"notes" :  "Grants immunity to strangulation and partial immunity to acid.",
+			"classes" : ""
+		}, 
+		   {
+			"type" :  "Protective Items",
+			"name" :  "Impact Vest",
+			"aim" : 0,
+			"crit" : 0,
+			"hp" :  1,
+			"damage_reduction" :  0.33,
+			"defense" :  0,
+			"will" :  0,
+			"mobilitiy" :  -1,
+			"notes" :  "Grants the Shock-Absorbent Armor perk( 33% damage reduction against attacks within 4 tiles) and + 1 HP.",
+			"classes" : "Assault"
+		}, 
+		   {
 
-            "type" :  "Protective Items",
-            "name" :  "Mind Shield",
-            "aim" : 0,
-            "crit" : 0,
-            "hp" :  1,
-            "damage_reduction" :  0.33,
-            "defense" :  0,
-            "will" :  25,
-            "mobilitiy" :  -1,
-            "notes" :  "Provide +25 Will, Grants immunity to strangulation and panic, except Psi Panic",
-            "classes" :  "Psionic"
-        }, 
-           {
-            "type" :  "Protective Items",
-            "name" :  "Psi Screen",
-            "aim" : 0,
-            "crit" : 0,
-            "hp" :  0,
-            "damage_reduction" :  1,
-            "defense" :  0,
-            "will" :  -12,
-            "mobilitiy" :  -1,
-            "notes" :  "Confers +1 DR, but draws -12 Will when equipped",
-            "classes" : "Psionic"
-        }, 
-           {
+			"type" :  "Protective Items",
+			"name" :  "Mind Shield",
+			"aim" : 0,
+			"crit" : 0,
+			"hp" :  1,
+			"damage_reduction" :  0.33,
+			"defense" :  0,
+			"will" :  25,
+			"mobilitiy" :  -1,
+			"notes" :  "Provide +25 Will, Grants immunity to strangulation and panic, except Psi Panic",
+			"classes" :  "Psionic"
+		}, 
+		   {
+			"type" :  "Protective Items",
+			"name" :  "Psi Screen",
+			"aim" : 0,
+			"crit" : 0,
+			"hp" :  0,
+			"damage_reduction" :  1,
+			"defense" :  0,
+			"will" :  -12,
+			"mobilitiy" :  -1,
+			"notes" :  "Confers +1 DR, but draws -12 Will when equipped",
+			"classes" : "Psionic"
+		}, 
+		   {
 
-            "type" :  "Thrown Devices",
-            "name" :  "Battle Scanner",
-            "aim" : 0,
-            "crit" : 0,
-            "hp" :  0,
-            "damage_reduction":  0,
-            "will" :  0,
-            "mobility" :  -1,
-            "notes" :  "Can be thrown to provide vision for two turns. Reveals cloaked targets",
-            "classes" : ""
-        }, 
-           {
+			"type" :  "Thrown Devices",
+			"name" :  "Battle Scanner",
+			"aim" : 0,
+			"crit" : 0,
+			"hp" :  0,
+			"damage_reduction":  0,
+			"will" :  0,
+			"mobility" :  -1,
+			"notes" :  "Can be thrown to provide vision for two turns. Reveals cloaked targets",
+			"classes" : ""
+		}, 
+		   {
 
-            "type" :  "Thrown Devices",
-            "name" :  "Mimic Beacon",
-            "aim" : 0,
-            "crit" : 0,
-            "hp" :  0,
-            "damage_reduction":  0,
-            "will" :  0,
-            "mobility" :  -1,
-            "notes" :  "When thrown, the mimic beacon generates a unique audio signal causing aliens to advance towards it for 2 turns. Aliens in combat are less likely to be fooled. Does not affect Mechanical units. 2 uses. -3 will when equipped.",
-            "classes" : ""
-        }, 
-           {
-            "type" :  "Grenades",
-            "name" :  "AP Grenade",
-            "aim" : 0,
-            "crit" : 0,
-            "hp" :  0,
-            "damage_reduction":  0,
-            "will" :  0,
-            "mobility" :  -1,
-            "notes" :  "Deals 2-6 damage to units not in cover relative to the center of the blast radius. DR from cover is ignored.",
-            "classes" : ""
-        }, 
-           {
-            "type" :  "Grenades",
-            "name" :  "HE Grenade",
-            "hp" :  0,
-            "damage_reduction":  0,
-            "will" :  0,
-            "mobility" :  -1,
-            "notes" :  "Deals 1-5 damage to units in blast radius and can destroy cover",
-            "classes" : ""
-        }, 
-           {
-            "type" :  "Grenades",
-            "name" :  "Flashbang Grenade",
-            "aim" : 0,
-            "crit" : 0,
-            "hp" :  0,
-            "damage_reduction":  0,
-            "will" :  0,
-            "mobility" :  -1,
-            "notes" :  "Incurs -50% Aim, -40% Mobility and reduced range for many area-of-effect attacks on enemies in blast radius for one turn.  Most synthetic/cybernetic and psionic enemies are immune.",
-            "classes" : ""
-        }, 
-           {
-            "type" :  "Grenades",
-            "name" :  "Smoke Grenade",
-            "hp" :  0,
-            "damage_reduction":  0,
-            "will" :  0,
-            "mobility" :  -1,
-            "notes" :  "Confers +20 Defense units in radius for two turns. Also eliminates the exposed or flanked crit chance penalties against units within the smoke.",
-            "classes" : ""
-        }, 
-           {
-            "type" :  "Grenades",
-            "name" :  "Chem Grenade",
-            "aim" : 0,
-            "crit" : 0,
-            "hp" :  0,
-            "damage_reduction":  0,
-            "will" :  0,
-            "mobility" :  -1,
-            "notes" :  "Creates an Acidic Cloud at the point of impact. Organic targets suffer reductions in mobility and take damage for performing actions other than hunkering down. All targets (also including robots) also suffer aim penalty and up to 3 DR nullified. Thin men and Chryssalids are immune.",
-            "classes" : ""
-        }, 
-           {
-            "type" :  "Grenades",
-            "name" :  "Psi Grenade",
-            "aim" : 0,
-            "crit" : 0,
-            "hp" :  0,
-            "damage_reduction":  0,
-            "will" :  -2,
-            "mobility" :  -1,
-            "notes" :  "Has the same effect as a flashbang grenade, but has a larger area of effect. Carried by Sectoid Commanders, but stuns drop it as an Alien Grenade. Confers a 2 Will penalty when equipped.",
-            "classes" : "Psionic"
-        }, 
-           {
-            "type" :  "Grenades",
-            "name" :  "Ghost Grenade",
-            "aim" : 0,
-            "crit" : 0,
-            "hp" :  0,
-            "damage_reduction":  0,
-            "will" :  -10,
-            "mobility" :  -1,
-            "notes" :  "Grants stealth to units in an area for one turn. Incurs a -10 Will penalty when equipped. Can only equip one per soldier, perks that increase limited use items still apply.",
-            "classes" : "Psionic"
-        }, 
-           {
+			"type" :  "Thrown Devices",
+			"name" :  "Mimic Beacon",
+			"aim" : 0,
+			"crit" : 0,
+			"hp" :  0,
+			"damage_reduction":  0,
+			"will" :  0,
+			"mobility" :  -1,
+			"notes" :  "When thrown, the mimic beacon generates a unique audio signal causing aliens to advance towards it for 2 turns. Aliens in combat are less likely to be fooled. Does not affect Mechanical units. 2 uses. -3 will when equipped.",
+			"classes" : ""
+		}, 
+		   {
+			"type" :  "Grenades",
+			"name" :  "AP Grenade",
+			"aim" : 0,
+			"crit" : 0,
+			"hp" :  0,
+			"damage_reduction":  0,
+			"will" :  0,
+			"mobility" :  -1,
+			"notes" :  "Deals 2-6 damage to units not in cover relative to the center of the blast radius. DR from cover is ignored.",
+			"classes" : ""
+		}, 
+		   {
+			"type" :  "Grenades",
+			"name" :  "HE Grenade",
+			"hp" :  0,
+			"damage_reduction":  0,
+			"will" :  0,
+			"mobility" :  -1,
+			"notes" :  "Deals 1-5 damage to units in blast radius and can destroy cover",
+			"classes" : ""
+		}, 
+		   {
+			"type" :  "Grenades",
+			"name" :  "Flashbang Grenade",
+			"aim" : 0,
+			"crit" : 0,
+			"hp" :  0,
+			"damage_reduction":  0,
+			"will" :  0,
+			"mobility" :  -1,
+			"notes" :  "Incurs -50% Aim, -40% Mobility and reduced range for many area-of-effect attacks on enemies in blast radius for one turn.  Most synthetic/cybernetic and psionic enemies are immune.",
+			"classes" : ""
+		}, 
+		   {
+			"type" :  "Grenades",
+			"name" :  "Smoke Grenade",
+			"hp" :  0,
+			"damage_reduction":  0,
+			"will" :  0,
+			"mobility" :  -1,
+			"notes" :  "Confers +20 Defense units in radius for two turns. Also eliminates the exposed or flanked crit chance penalties against units within the smoke.",
+			"classes" : ""
+		}, 
+		   {
+			"type" :  "Grenades",
+			"name" :  "Chem Grenade",
+			"aim" : 0,
+			"crit" : 0,
+			"hp" :  0,
+			"damage_reduction":  0,
+			"will" :  0,
+			"mobility" :  -1,
+			"notes" :  "Creates an Acidic Cloud at the point of impact. Organic targets suffer reductions in mobility and take damage for performing actions other than hunkering down. All targets (also including robots) also suffer aim penalty and up to 3 DR nullified. Thin men and Chryssalids are immune.",
+			"classes" : ""
+		}, 
+		   {
+			"type" :  "Grenades",
+			"name" :  "Psi Grenade",
+			"aim" : 0,
+			"crit" : 0,
+			"hp" :  0,
+			"damage_reduction":  0,
+			"will" :  -2,
+			"mobility" :  -1,
+			"notes" :  "Has the same effect as a flashbang grenade, but has a larger area of effect. Carried by Sectoid Commanders, but stuns drop it as an Alien Grenade. Confers a 2 Will penalty when equipped.",
+			"classes" : "Psionic"
+		}, 
+		   {
+			"type" :  "Grenades",
+			"name" :  "Ghost Grenade",
+			"aim" : 0,
+			"crit" : 0,
+			"hp" :  0,
+			"damage_reduction":  0,
+			"will" :  -10,
+			"mobility" :  -1,
+			"notes" :  "Grants stealth to units in an area for one turn. Incurs a -10 Will penalty when equipped. Can only equip one per soldier, perks that increase limited use items still apply.",
+			"classes" : "Psionic"
+		}, 
+		   {
 
-            "type" :  "Ammo",
-            "name" :  "Rocket",
-            "aim" : 0,
-            "crit" : 0,
-            "hp" :  0,
-            "damage_reduction" :  0,
-            "defense" :  0,
-            "will" :  0,
-            "mobilitiy" :  -2,
-            "notes" :  "Grants one additional rocket.",
-            "classes" : "Rocketeer"
-        }, 
-           {
+			"type" :  "Ammo",
+			"name" :  "Rocket",
+			"aim" : 0,
+			"crit" : 0,
+			"hp" :  0,
+			"damage_reduction" :  0,
+			"defense" :  0,
+			"will" :  0,
+			"mobilitiy" :  -2,
+			"notes" :  "Grants one additional rocket.",
+			"classes" : "Rocketeer"
+		}, 
+		   {
 
-            "type" :  "Ammo",
-            "name" :  "Shredder Rocket",
-            "hp" :  0,
-            "damage_reduction" :  0,
-            "defense" :  0,
-            "will" :  0,
-            "mobilitiy" :  -2,
-            "notes" :  "Grants one additional shredder rocket.",
-            "classes" : "Rocketeer"
-        }, 
-           {
+			"type" :  "Ammo",
+			"name" :  "Shredder Rocket",
+			"hp" :  0,
+			"damage_reduction" :  0,
+			"defense" :  0,
+			"will" :  0,
+			"mobilitiy" :  -2,
+			"notes" :  "Grants one additional shredder rocket.",
+			"classes" : "Rocketeer"
+		}, 
+		   {
 
-            "type" :  "Ammo",
-            "name" :  "Hi Cap Mags",
-            "aim" : 0,
-            "crit" : 0,
-            "hp" :  0,
-            "damage_reduction" :  0,
-            "defense" :  0,
-            "will" :  0,
-            "mobilitiy" :  -1,
-            "notes" :  "Grants +1 ammo capacity for primary weapon. Stacks with bonus ammo from perks and other sources.",
-            "classes" : ""
-        }, 
-           {
+			"type" :  "Ammo",
+			"name" :  "Hi Cap Mags",
+			"aim" : 0,
+			"crit" : 0,
+			"hp" :  0,
+			"damage_reduction" :  0,
+			"defense" :  0,
+			"will" :  0,
+			"mobilitiy" :  -1,
+			"notes" :  "Grants +1 ammo capacity for primary weapon. Stacks with bonus ammo from perks and other sources.",
+			"classes" : ""
+		}, 
+		   {
 
-            "type" :  "Ammo",
-            "name" :  "Shredder Ammo",
-            "aim" : 0,
-            "crit" : 0,
-            "hp" :  0,
-            "damage_reduction" :  0,
-            "defense" :  0,
-            "will" :  0,
-            "mobilitiy" :  -1,
-            "notes" :  "Grants the Shredder Ammunition perk.",
-            "classes" : "Assault"
-        }, 
-           {
+			"type" :  "Ammo",
+			"name" :  "Shredder Ammo",
+			"aim" : 0,
+			"crit" : 0,
+			"hp" :  0,
+			"damage_reduction" :  0,
+			"defense" :  0,
+			"will" :  0,
+			"mobilitiy" :  -1,
+			"notes" :  "Grants the Shredder Ammunition perk.",
+			"classes" : "Assault"
+		}, 
+		   {
 
-            "type" :  "Ammo",
-            "name" :  "Armor Piercing Ammo",
-            "aim" : 0,
-            "crit" : 0,
-            "hp" :  0,
-            "damage_reduction" :  0,
-            "defense" :  0,
-            "will" :  0,
-            "mobilitiy" :  -1,
-            "notes" :  "Reduces enemy damage reduction (including that from cover) by 1.66",
-            "classes" : "Gunner"
-        }, 
-           {
+			"type" :  "Ammo",
+			"name" :  "Armor Piercing Ammo",
+			"aim" : 0,
+			"crit" : 0,
+			"hp" :  0,
+			"damage_reduction" :  0,
+			"defense" :  0,
+			"will" :  0,
+			"mobilitiy" :  -1,
+			"notes" :  "Reduces enemy damage reduction (including that from cover) by 1.66",
+			"classes" : "Gunner"
+		}, 
+		   {
 
-            "type" :  "Ammo",
-            "name" :  "Breaching Ammo",
-            "aim" : 0,
-            "crit" : 0,
-            "hp" :  0,
-            "damage_reduction" :  0,
-            "defense" :  0,
-            "will" :  0,
-            "mobilitiy" :  -1,
-            "notes" :  "Nullifies extra damage reduction penalties for shotgun-type weapons, including the sawed-off shotgun.",
-            "classes" : "Assault"
-        }, 
-           {
+			"type" :  "Ammo",
+			"name" :  "Breaching Ammo",
+			"aim" : 0,
+			"crit" : 0,
+			"hp" :  0,
+			"damage_reduction" :  0,
+			"defense" :  0,
+			"will" :  0,
+			"mobilitiy" :  -1,
+			"notes" :  "Nullifies extra damage reduction penalties for shotgun-type weapons, including the sawed-off shotgun.",
+			"classes" : "Assault"
+		}, 
+		   {
 
-            "type" :  "Ammo",
-            "name" :  "Reaper Rounds",
-            "aim" : 0,
-            "crit" : 0,
-            "hp" :  0,
-            "damage_reduction" :  0,
-            "defense" :  0,
-            "will" :  0,
-            "mobilitiy" :  -1,
-            "notes" :  "Increases critical hit chance of Ballistic and Gauss weapons by 20%, but halves the weapon's effective range.",
-            "classes" : ""
-        }, 
-           {
+			"type" :  "Ammo",
+			"name" :  "Reaper Rounds",
+			"aim" : 0,
+			"crit" : 0,
+			"hp" :  0,
+			"damage_reduction" :  0,
+			"defense" :  0,
+			"will" :  0,
+			"mobilitiy" :  -1,
+			"notes" :  "Increases critical hit chance of Ballistic and Gauss weapons by 20%, but halves the weapon's effective range.",
+			"classes" : ""
+		}, 
+		   {
 
-            "type" :  "Ammo",
-            "name" :  "Alloy-Jacketed Rounds",
-            "aim" : 0,
-            "crit" : 0,
-            "hp" :  0,
-            "damage_reduction" :  0,
-            "defense" :  0,
-            "will" :  0,
-            "mobilitiy" :  -1,
-            "notes" :  "Increases Ballistic and Gauss weapon damage by 1.",
-            "classes" : ""
-        }, 
-           {
+			"type" :  "Ammo",
+			"name" :  "Alloy-Jacketed Rounds",
+			"aim" : 0,
+			"crit" : 0,
+			"hp" :  0,
+			"damage_reduction" :  0,
+			"defense" :  0,
+			"will" :  0,
+			"mobilitiy" :  -1,
+			"notes" :  "Increases Ballistic and Gauss weapon damage by 1.",
+			"classes" : ""
+		}, 
+		   {
 
-            "type" :  "Ammo",
-            "name" :  "Enhanced Beam Optics",
-            "aim" : 0,
-            "crit" : 0,
-            "hp" :  0,
-            "damage_reduction" :  0,
-            "defense" :  0,
-            "will" :  0,
-            "mobilitiy" :  -1,
-            "notes" :  "Increases Beam and Pulse weapon damage by 1.",
-            "classes" : ""
-        }, 
-           {
+			"type" :  "Ammo",
+			"name" :  "Enhanced Beam Optics",
+			"aim" : 0,
+			"crit" : 0,
+			"hp" :  0,
+			"damage_reduction" :  0,
+			"defense" :  0,
+			"will" :  0,
+			"mobilitiy" :  -1,
+			"notes" :  "Increases Beam and Pulse weapon damage by 1.",
+			"classes" : ""
+		}, 
+		   {
 
-            "type" :  "Ammo",
-            "name" :  "Plasma Stellerator",
-            "aim" : 0,
-            "crit" : 0,
-            "hp" :  0,
-            "damage_reduction" :  0,
-            "defense" :  0,
-            "will" :  0,
-            "mobilitiy" :  -1,
-            "notes" :  "Increases Plasma weapon damage by 1.",
-            "classes" : ""
-        },
-            {
-            "type" :  "Optics",
-            "name" :  "Laser Sight",
-            "aim" :  5,
-            "crit" :  5,
-            "hp" :  0,
-            "damage_reduction" :  0,
-            "defense" :  0,
-            "will" :  0,
-            "mobilitiy" :  -1,
-            "notes" :  "Confers +5 Aim and +5 Critical Hit Chance after SCOPE Upgrade. Stacks with SCOPE.",
-            "classes" : ""
-        },
-            {
-            "type" :  "Optics",
-            "name" :  "SCOPE",
-            "hp" :  0,
-            "damage_reduction" :  0,
-            "defense" :  0,
-            "will" :  0,
-            "mobilitiy" :  -1,
-            "aim" :  10,
-            "crit" :  10,
-            "notes" :  "Increases aim by +10 for primary weapon and Rocket Launchers. . Receives +10% Crit chance with Foundry upgrade",
-            "classes" : ""
-        },
-            {
-            "type" :  "Optics",
-            "name" :  "Targeting Module",
-            "hp" :  0,
-            "damage_reduction" :  0,
-            "defense" :  0,
-            "will" :  0,
-            "aim" :  0,
-            "crit" :  7,
-            "mobilitiy" :  -1,
-            "notes" :  "Confers +7 Critical Hit Chance to a soldier's primary weapon.",
-            "classes" : ""
-        },
-            {
-            "type" :  "Optics",
-            "name" :  "Smartgun Kit",
-            "aim" : 0,
-            "crit" : 0,
-            "hp" :  0,
-            "damage_reduction" :  0,
-            "defense" :  0,
-            "will" :  0,
-            "mobilitiy" :  -1,
-            "notes" :  "Grants the Advanced Fire Control perk, removing the aim penalty on reaction shots.",
-            "classes" : "Gunner"
-        },
-            {
-            "type" :  "Optics",
-            "name" :  "Marksmans Scope",
-            "aim" : 0,
-            "crit" : 0,
-            "hp" :  0,
-            "damage_reduction" :  0,
-            "defense" :  0,
-            "will" :  0,
-            "mobilitiy" :  -1,
-            "notes" :  "Grants Squadsight to scouts (useful only when they equip Marksmans or Strike Rifles).",
-            "classes" : "Scout"
-        },
-            {
-            "type" :  "Optics",
-            "name" :  "Alloy Bipod",
-            "aim" : 0,
-            "crit" : 0,
-            "hp" :  0,
-            "damage_reduction" :  0,
-            "defense" :  0,
-            "will" :  0,
-            "mobilitiy" :  0,
-            "notes" :  "Confers Platform Stability perk. (Shots taken before any costly actions have +10 Aim and +10% critical chance.)",
-            "classes" : "Gunner"
-        },
-            {
-            "type" :  "Optics",
-            "name" :  "Neural Gunlink",
-            "hp" :  0,
-            "damage_reduction" :  0,
-            "defense" :  0,
-            "aim" :  10,
-            "crit" :  10,
-            "will" :  -12,
-            "mobilitiy" :  -1,
-            "notes" :  "Grants +10 Aim and +10 Crit Chance to primary weapon and rockets launchers, but -12 Will Penalty. Stacks with SCOPE and Laser Sight.",
-            "classes" : "Psionic"
-        },
-            {
-            "type" :  "Misc.",
-            "name" :  "Alien Trophy",
-            "aim" : 0,
-            "crit" : 0,
-            "hp" :  0,
-            "damage_reduction" :  0,
-            "defense" :  0,
-            "will" :  0,
-            "mobilitiy" :  -1,
-            "notes" :  "Grants the Steadfast perk, making the soldier immune to panic and intimidation, except Psi Panic",
-            "classes" : ""
-        },
-            {
-            "type" :  "Misc.",
-            "name" :  "Medikit",
-            "aim" : 0,
-            "crit" : 0,
-            "hp" :  0,
-            "damage_reduction" :  0,
-            "defense" :  0,
-            "will" :  0,
-            "mobilitiy" :  -1,
-            "notes" :  "Confers partial acid immunity, neutralizes acid, heals 3 HP (upgradable)",
-            "classes" : ""
-        },
-            {
-            "type" :  "Misc.",
-            "name" :  "Combat Stims",
-            "aim" : 0,
-            "crit" : 0,
-            "hp" :  0,
-            "damage_reduction" :  0,
-            "defense" :  0,
-            "will" :  0,
-            "mobilitiy" :  -1,
-            "notes" :  "Strengthens user's will, grants 40% damage reduction, increased mobility and immunity to critical hits for the next 2 turns",
-            "classes" : ""
-        },
-            {
-            "type" :  "Misc.",
-            "name" :  "Arc Thrower",
-            "aim" : 0,
-            "crit" : 0,
-            "hp" :  0,
-            "damage_reduction" :  0,
-            "defense" :  0,
-            "will" :  0,
-            "mobilitiy" :  -2,
-            "notes" :  "Stun device, carries one charge per mission. Standard: 55% | 49% | 43% | 30%. Upgraded: 58% |58% | 56% | 55% | 49% | 43%",
-            "classes" : ""
-        },
-            {
-            "type" :  "Misc.",
-            "name" :  "Fuel Cell",
-            "aim" : 0,
-            "crit" : 0,
-            "hp" :  0,
-            "damage_reduction" :  0,
-            "defense" :  0,
-            "will" :  0,
-            "mobilitiy" :  -2,
-            "notes" :  "Confers additional flight fuel for Archangel and Seraph armors.",
-            "classes" : ""
-        },
-            {
-            "type" :  "Misc.",
-            "name" :  "Walker Servos",
-            "aim" : 0,
-            "crit" : 0,
-            "hp" :  0,
-            "damage_reduction" :  0,
-            "defense" :  0,
-            "will" :  0,
-            "mobilitiy" :  2,
-            "notes" :  "Grants +2 Mobility.",
-            "classes" : ""
-        }, 
-        {
-            "type" :  "EXALT HQ Loot",
-            "name" :  "Illuminator Gunsight",
-            "aim" :  10,
-            "crit" :  10,
-            "hp" :  0,
-            "damage_reduction" :  0,
-            "defense" :  0,
-            "will" :  0,
-            "mobility" :  -1,
-            "notes" :  "Confers Executioner perk and +10% to both Aim and Critical Chance.",
-            "classes" :  ""
-        }, 
-        {
-            "type" :  "EXALT HQ Loot",
-            "name" :  "Cognitive Enhancer",
-            "aim" :  0,
-            "crit" :  0,
-            "hp" :  0,
-            "damage_reduction" :  0,
-            "defense" :  0,
-            "will" :  0,
-            "mobility" :  -1,
-            "notes" :  "Confers +20% Experience.",
-            "classes" :  ""
-        }, 
-        {
-            "type" :  "EXALT HQ Loot",
-            "name" :  "Neuroregulator",
-            "aim" :  0,
-            "crit" :  0,
-            "hp" :  0,
-            "damage_reduction" :  0,
-            "defense" :  0,
-            "will" :  0,
-            "mobility" :  -1,
-            "notes" :  "Confers +20% Psi XP",
-            "classes" :  "Psionic"
-        }, 
-        {
-            "type" :  "MEC/SHIV",
-            "name" :  "Alloy Belt",
-            "aim" :  0,
-            "crit" :  0,
-            "hp" :  0,
-            "damage_reduction" :  0,
-            "defense" :  0,
-            "will" :  0,
-            "mobility" :  -1,
-            "notes" :  "Grants Extra Conditioning perk.",
-            "classes" :  "MEC, SHIV"
-        }, 
-        {
-            "type" :  "MEC/SHIV",
-            "name" :  "HEAT Ammo",
-            "aim" :  0,
-            "crit" :  0,
-            "hp" :  0,
-            "damage_reduction" :  0,
-            "defense" :  0,
-            "will" :  0,
-            "mobility" :  -1,
-            "notes" :  "Grants HEAT Ammo perk, providing additional damage against mechanized units.",
-            "classes" :  "SHIV"
-        }, 
-        {
-            "type" :  "MEC/SHIV",
-            "name" :  "Smartshell Pod",
-            "aim" :  5,
-            "crit" :  0,
-            "hp" :  0,
-            "damage_reduction" :  0,
-            "defense" :  0,
-            "will" :  0,
-            "mobility" :  -1,
-            "notes" :  "Grants the Flush ability and provides +5 aim.",
-            "classes" :  "SHIV"
-        }, 
-        {
-            "type" :  "MEC/SHIV",
-            "name" :  "Counterfire Pod",
-            "aim" :  0,
-            "crit" :  0,
-            "hp" :  0,
-            "damage_reduction" :  0,
-            "defense" :  0,
-            "will" :  0,
-            "mobility" :  -1,
-            "notes" :  "Grants Reactive Targeting Sensors perk, allowing the SHIV to return fire.",
-            "classes" :  "SHIV"
-        }, 
-        {
-            "type" :  "MEC/SHIV",
-            "name" :  "Adaptive Tracking Pod",
-            "aim" :  0,
-            "crit" :  0,
-            "hp" :  0,
-            "damage_reduction" :  0,
-            "defense" :  0,
-            "will" :  0,
-            "mobility" :  -1,
-            "notes" :  "Grants the Advanced Fire Control perk.",
-            "classes" :  "SHIV"
-        }, 
-        {
-            "type" :  "MEC/SHIV",
-            "name" :  "Damage Control Pod",
-            "aim" :  0,
-            "crit" :  0,
-            "hp" :  0,
-            "damage_reduction" :  0,
-            "defense" :  0,
-            "will" :  0,
-            "mobility" :  -1,
-            "notes" :  "Grants the Damage Control perk, reducing oncoming damage by 1 or 2 for several turns after first being struck.",
-            "classes" :  "SHIV"
-        }, 
-        {
-            "type" :  "MEC/SHIV",
-            "name" :  "Holo-Targeter",
-            "aim" :  5,
-            "crit" :  0,
-            "hp" :  0,
-            "damage_reduction" :  0,
-            "defense" :  0,
-            "will" :  0,
-            "mobility" :  -1,
-            "notes" :  "Grants Holo-Targeting perk and provides +5 aim.",
-            "classes" :  "MEC, SHIV"
-        }, 
-        {
-            "type" :  "MEC/SHIV",
-            "name" :  "Weapon Supercooler",
-            "aim" :  0,
-            "crit" :  0,
-            "hp" :  0,
-            "damage_reduction" :  0,
-            "defense" :  0,
-            "will" :  0,
-            "mobility" :  -1,
-            "notes" :  "Grants Light 'Em Up perk, allowing a second shot or action after firing the main weapon as the first action.",
-            "classes" :  "SHIV"
-        }, 
-        {
-            "type" :  "MEC/SHIV",
-            "name" :  "Autosentry Turret",
-            "aim" :  0,
-            "crit" :  0,
-            "hp" :  0,
-            "damage_reduction" :  0,
-            "defense" :  0,
-            "will" :  0,
-            "mobility" :  -1,
-            "notes" :  "Confers the Sentinel perk, allowing the SHIV to fire twice while on overwatch.",
-            "classes" :  "SHIV"
-        }, 
-        {
-            "type" :  "MEC/SHIV",
-            "name" :  "Core Armoring",
-            "aim" :  0,
-            "crit" :  0,
-            "hp" :  2,
-            "damage_reduction" :  0,
-            "defense" :  0,
-            "will" :  0,
-            "mobility" :  -1,
-            "notes" :  "Grants +2 HP and the Resilience perk, rendering the SHIV immune to Critical Hits.",
-            "classes" :  "SHIV"
-        }, 
-        {
-            "type" :  "MEC/SHIV",
-            "name" :  "Tactical Sensors",
-            "aim" :  0,
-            "crit" :  0,
-            "hp" :  0,
-            "damage_reduction" :  0,
-            "defense" :  0,
-            "will" :  0,
-            "mobility" :  -1,
-            "notes" :  "Grants Tactical Sense perk, enhancing defense by 5 for every enemy the MEC can see. (Up to a maximum bonus of +20)",
-            "classes" :  "MEC, SHIV"
-        }, 
-        {
-            "type" :  "Damage Enhancing Equipment",
-            "name" :  "Depleted Elerium Rounds",
-            "aim" :  0,
-            "crit" :  0,
-            "hp" :  0,
-            "damage_reduction" :  0,
-            "defense" :  0,
-            "will" :  0,
-            "mobility" :  -1,
-            "notes" :  "Increases Autocannon, Sentry Gun, Minigun, and Railgun damage by 1.",
-            "classes" :  "MEC, SHIV"
-        }, 
-        {
-            "type" :  "Damage Enhancing Equipment",
-            "name" :  "Laser Pumper",
-            "aim" :  0,
-            "crit" :  0,
-            "hp" :  0,
-            "damage_reduction" :  0,
-            "defense" :  0,
-            "will" :  0,
-            "mobility" :  -1,
-            "notes" :  "Increases Superheavy Laser, Superheavy Pulse, Laser Lance, and Pulse Lance damage by 1.",
-            "classes" :  "MEC, SHIV"
-        }, 
-        {
-            "type" :  "Damage Enhancing Equipment",
-            "name" :  "Zevatron Booster",
-            "aim" :  0,
-            "crit" :  0,
-            "hp" :  0,
-            "damage_reduction" :  0,
-            "defense" :  0,
-            "will" :  0,
-            "mobility" :  -1,
-            "notes" :  "Increases Particle Cannon and Superheavy Plasma damage by 1.",
-            "classes" :  "MEC, SHIV"
-        }, 
-        {
-            "type" :  "Damage Enhancing Equipment",
-            "name" :  "The Thumper",
-            "aim" :  0,
-            "crit" :  0,
-            "hp" :  0,
-            "damage_reduction" :  0,
-            "defense" :  0,
-            "will" :  0,
-            "mobility" :  -1,
-            "notes" :  "Increases Kinetic Strike Damage by 3.",
-            "classes" :  "MEC"
-        }, 
-        {
-            "type" :  "Miscellaneous Equipment",
-            "name" :  "Autoloader",
-            "aim" :  0,
-            "crit" :  0,
-            "hp" :  0,
-            "damage_reduction" :  0,
-            "defense" :  0,
-            "will" :  0,
-            "mobility" :  -1,
-            "notes" :  "Confers 1 additional shot or burst to primary weapon. Stacks with Lock'N'Load.",
-            "classes" :  "MEC, SHIV"
-        }, 
-        {
-            "type" :  "Miscellaneous Equipment",
-            "name" :  "Alloy Carbide Plating",
-            "aim" :  0,
-            "crit" :  0,
-            "hp" :  1,
-            "damage_reduction" :  0,
-            "defense" :  1,
-            "will" :  0,
-            "mobility" :  -1,
-            "notes" :  "Increases both DR and HP of the equipped unit by +1",
-            "classes" :  "MEC, SHIV"
-        }, 
-        {
-            "type" :  "Miscellaneous Equipment",
-            "name" :  "Weapon Gyros",
-            "aim" :  5,
-            "crit" :  5,
-            "hp" :  0,
-            "damage_reduction" :  0,
-            "defense" :  0,
-            "will" :  0,
-            "mobility" :  -1,
-            "notes" :  "Provides +5 aim and +5 crit.",
-            "classes" :  "MEC, SHIV"
-        }, 
-        {
-            "type" :  "Miscellaneous Equipment",
-            "name" :  "Battle Computer",
-            "aim" :  10,
-            "crit" :  10,
-            "hp" :  0,
-            "damage_reduction" :  0,
-            "defense" :  10,
-            "will" :  0,
-            "mobility" :  -1,
-            "notes" :  "Provides +10 aim, crit chance and defence.",
-            "classes" :  "MEC, SHIV"
-        }, 
-        {
-            "type" :  "Miscellaneous Equipment",
-            "name" :  "Elerium Turbos",
-            "aim" :  0,
-            "crit" :  0,
-            "hp" :  0,
-            "damage_reduction" :  0,
-            "defense" :  0,
-            "will" :  0,
-            "mobility" :  2,
-            "notes" :  "Increases SHIV/MEC mobility by 2 points.",
-            "classes" :  "MEC, SHIV"
-        }
+			"type" :  "Ammo",
+			"name" :  "Plasma Stellerator",
+			"aim" : 0,
+			"crit" : 0,
+			"hp" :  0,
+			"damage_reduction" :  0,
+			"defense" :  0,
+			"will" :  0,
+			"mobilitiy" :  -1,
+			"notes" :  "Increases Plasma weapon damage by 1.",
+			"classes" : ""
+		},
+			{
+			"type" :  "Optics",
+			"name" :  "Laser Sight",
+			"aim" :  5,
+			"crit" :  5,
+			"hp" :  0,
+			"damage_reduction" :  0,
+			"defense" :  0,
+			"will" :  0,
+			"mobilitiy" :  -1,
+			"notes" :  "Confers +5 Aim and +5 Critical Hit Chance after SCOPE Upgrade. Stacks with SCOPE.",
+			"classes" : ""
+		},
+			{
+			"type" :  "Optics",
+			"name" :  "SCOPE",
+			"hp" :  0,
+			"damage_reduction" :  0,
+			"defense" :  0,
+			"will" :  0,
+			"mobilitiy" :  -1,
+			"aim" :  10,
+			"crit" :  10,
+			"notes" :  "Increases aim by +10 for primary weapon and Rocket Launchers. . Receives +10% Crit chance with Foundry upgrade",
+			"classes" : ""
+		},
+			{
+			"type" :  "Optics",
+			"name" :  "Targeting Module",
+			"hp" :  0,
+			"damage_reduction" :  0,
+			"defense" :  0,
+			"will" :  0,
+			"aim" :  0,
+			"crit" :  7,
+			"mobilitiy" :  -1,
+			"notes" :  "Confers +7 Critical Hit Chance to a soldier's primary weapon.",
+			"classes" : ""
+		},
+			{
+			"type" :  "Optics",
+			"name" :  "Smartgun Kit",
+			"aim" : 0,
+			"crit" : 0,
+			"hp" :  0,
+			"damage_reduction" :  0,
+			"defense" :  0,
+			"will" :  0,
+			"mobilitiy" :  -1,
+			"notes" :  "Grants the Advanced Fire Control perk, removing the aim penalty on reaction shots.",
+			"classes" : "Gunner"
+		},
+			{
+			"type" :  "Optics",
+			"name" :  "Marksmans Scope",
+			"aim" : 0,
+			"crit" : 0,
+			"hp" :  0,
+			"damage_reduction" :  0,
+			"defense" :  0,
+			"will" :  0,
+			"mobilitiy" :  -1,
+			"notes" :  "Grants Squadsight to scouts (useful only when they equip Marksmans or Strike Rifles).",
+			"classes" : "Scout"
+		},
+			{
+			"type" :  "Optics",
+			"name" :  "Alloy Bipod",
+			"aim" : 0,
+			"crit" : 0,
+			"hp" :  0,
+			"damage_reduction" :  0,
+			"defense" :  0,
+			"will" :  0,
+			"mobilitiy" :  0,
+			"notes" :  "Confers Platform Stability perk. (Shots taken before any costly actions have +10 Aim and +10% critical chance.)",
+			"classes" : "Gunner"
+		},
+			{
+			"type" :  "Optics",
+			"name" :  "Neural Gunlink",
+			"hp" :  0,
+			"damage_reduction" :  0,
+			"defense" :  0,
+			"aim" :  10,
+			"crit" :  10,
+			"will" :  -12,
+			"mobilitiy" :  -1,
+			"notes" :  "Grants +10 Aim and +10 Crit Chance to primary weapon and rockets launchers, but -12 Will Penalty. Stacks with SCOPE and Laser Sight.",
+			"classes" : "Psionic"
+		},
+			{
+			"type" :  "Misc.",
+			"name" :  "Alien Trophy",
+			"aim" : 0,
+			"crit" : 0,
+			"hp" :  0,
+			"damage_reduction" :  0,
+			"defense" :  0,
+			"will" :  0,
+			"mobilitiy" :  -1,
+			"notes" :  "Grants the Steadfast perk, making the soldier immune to panic and intimidation, except Psi Panic",
+			"classes" : ""
+		},
+			{
+			"type" :  "Misc.",
+			"name" :  "Medikit",
+			"aim" : 0,
+			"crit" : 0,
+			"hp" :  0,
+			"damage_reduction" :  0,
+			"defense" :  0,
+			"will" :  0,
+			"mobilitiy" :  -1,
+			"notes" :  "Confers partial acid immunity, neutralizes acid, heals 3 HP (upgradable)",
+			"classes" : ""
+		},
+			{
+			"type" :  "Misc.",
+			"name" :  "Combat Stims",
+			"aim" : 0,
+			"crit" : 0,
+			"hp" :  0,
+			"damage_reduction" :  0,
+			"defense" :  0,
+			"will" :  0,
+			"mobilitiy" :  -1,
+			"notes" :  "Strengthens user's will, grants 40% damage reduction, increased mobility and immunity to critical hits for the next 2 turns",
+			"classes" : ""
+		},
+			{
+			"type" :  "Misc.",
+			"name" :  "Arc Thrower",
+			"aim" : 0,
+			"crit" : 0,
+			"hp" :  0,
+			"damage_reduction" :  0,
+			"defense" :  0,
+			"will" :  0,
+			"mobilitiy" :  -2,
+			"notes" :  "Stun device, carries one charge per mission. Standard: 55% | 49% | 43% | 30%. Upgraded: 58% |58% | 56% | 55% | 49% | 43%",
+			"classes" : ""
+		},
+			{
+			"type" :  "Misc.",
+			"name" :  "Fuel Cell",
+			"aim" : 0,
+			"crit" : 0,
+			"hp" :  0,
+			"damage_reduction" :  0,
+			"defense" :  0,
+			"will" :  0,
+			"mobilitiy" :  -2,
+			"notes" :  "Confers additional flight fuel for Archangel and Seraph armors.",
+			"classes" : ""
+		},
+			{
+			"type" :  "Misc.",
+			"name" :  "Walker Servos",
+			"aim" : 0,
+			"crit" : 0,
+			"hp" :  0,
+			"damage_reduction" :  0,
+			"defense" :  0,
+			"will" :  0,
+			"mobilitiy" :  2,
+			"notes" :  "Grants +2 Mobility.",
+			"classes" : ""
+		}, 
+		{
+			"type" :  "EXALT HQ Loot",
+			"name" :  "Illuminator Gunsight",
+			"aim" :  10,
+			"crit" :  10,
+			"hp" :  0,
+			"damage_reduction" :  0,
+			"defense" :  0,
+			"will" :  0,
+			"mobility" :  -1,
+			"notes" :  "Confers Executioner perk and +10% to both Aim and Critical Chance.",
+			"classes" :  ""
+		}, 
+		{
+			"type" :  "EXALT HQ Loot",
+			"name" :  "Cognitive Enhancer",
+			"aim" :  0,
+			"crit" :  0,
+			"hp" :  0,
+			"damage_reduction" :  0,
+			"defense" :  0,
+			"will" :  0,
+			"mobility" :  -1,
+			"notes" :  "Confers +20% Experience.",
+			"classes" :  ""
+		}, 
+		{
+			"type" :  "EXALT HQ Loot",
+			"name" :  "Neuroregulator",
+			"aim" :  0,
+			"crit" :  0,
+			"hp" :  0,
+			"damage_reduction" :  0,
+			"defense" :  0,
+			"will" :  0,
+			"mobility" :  -1,
+			"notes" :  "Confers +20% Psi XP",
+			"classes" :  "Psionic"
+		}, 
+		{
+			"type" :  "MEC/SHIV",
+			"name" :  "Alloy Belt",
+			"aim" :  0,
+			"crit" :  0,
+			"hp" :  0,
+			"damage_reduction" :  0,
+			"defense" :  0,
+			"will" :  0,
+			"mobility" :  -1,
+			"notes" :  "Grants Extra Conditioning perk.",
+			"classes" :  "MEC, SHIV"
+		}, 
+		{
+			"type" :  "MEC/SHIV",
+			"name" :  "HEAT Ammo",
+			"aim" :  0,
+			"crit" :  0,
+			"hp" :  0,
+			"damage_reduction" :  0,
+			"defense" :  0,
+			"will" :  0,
+			"mobility" :  -1,
+			"notes" :  "Grants HEAT Ammo perk, providing additional damage against mechanized units.",
+			"classes" :  "SHIV"
+		}, 
+		{
+			"type" :  "MEC/SHIV",
+			"name" :  "Smartshell Pod",
+			"aim" :  5,
+			"crit" :  0,
+			"hp" :  0,
+			"damage_reduction" :  0,
+			"defense" :  0,
+			"will" :  0,
+			"mobility" :  -1,
+			"notes" :  "Grants the Flush ability and provides +5 aim.",
+			"classes" :  "SHIV"
+		}, 
+		{
+			"type" :  "MEC/SHIV",
+			"name" :  "Counterfire Pod",
+			"aim" :  0,
+			"crit" :  0,
+			"hp" :  0,
+			"damage_reduction" :  0,
+			"defense" :  0,
+			"will" :  0,
+			"mobility" :  -1,
+			"notes" :  "Grants Reactive Targeting Sensors perk, allowing the SHIV to return fire.",
+			"classes" :  "SHIV"
+		}, 
+		{
+			"type" :  "MEC/SHIV",
+			"name" :  "Adaptive Tracking Pod",
+			"aim" :  0,
+			"crit" :  0,
+			"hp" :  0,
+			"damage_reduction" :  0,
+			"defense" :  0,
+			"will" :  0,
+			"mobility" :  -1,
+			"notes" :  "Grants the Advanced Fire Control perk.",
+			"classes" :  "SHIV"
+		}, 
+		{
+			"type" :  "MEC/SHIV",
+			"name" :  "Damage Control Pod",
+			"aim" :  0,
+			"crit" :  0,
+			"hp" :  0,
+			"damage_reduction" :  0,
+			"defense" :  0,
+			"will" :  0,
+			"mobility" :  -1,
+			"notes" :  "Grants the Damage Control perk, reducing oncoming damage by 1 or 2 for several turns after first being struck.",
+			"classes" :  "SHIV"
+		}, 
+		{
+			"type" :  "MEC/SHIV",
+			"name" :  "Holo-Targeter",
+			"aim" :  5,
+			"crit" :  0,
+			"hp" :  0,
+			"damage_reduction" :  0,
+			"defense" :  0,
+			"will" :  0,
+			"mobility" :  -1,
+			"notes" :  "Grants Holo-Targeting perk and provides +5 aim.",
+			"classes" :  "MEC, SHIV"
+		}, 
+		{
+			"type" :  "MEC/SHIV",
+			"name" :  "Weapon Supercooler",
+			"aim" :  0,
+			"crit" :  0,
+			"hp" :  0,
+			"damage_reduction" :  0,
+			"defense" :  0,
+			"will" :  0,
+			"mobility" :  -1,
+			"notes" :  "Grants Light 'Em Up perk, allowing a second shot or action after firing the main weapon as the first action.",
+			"classes" :  "SHIV"
+		}, 
+		{
+			"type" :  "MEC/SHIV",
+			"name" :  "Autosentry Turret",
+			"aim" :  0,
+			"crit" :  0,
+			"hp" :  0,
+			"damage_reduction" :  0,
+			"defense" :  0,
+			"will" :  0,
+			"mobility" :  -1,
+			"notes" :  "Confers the Sentinel perk, allowing the SHIV to fire twice while on overwatch.",
+			"classes" :  "SHIV"
+		}, 
+		{
+			"type" :  "MEC/SHIV",
+			"name" :  "Core Armoring",
+			"aim" :  0,
+			"crit" :  0,
+			"hp" :  2,
+			"damage_reduction" :  0,
+			"defense" :  0,
+			"will" :  0,
+			"mobility" :  -1,
+			"notes" :  "Grants +2 HP and the Resilience perk, rendering the SHIV immune to Critical Hits.",
+			"classes" :  "SHIV"
+		}, 
+		{
+			"type" :  "MEC/SHIV",
+			"name" :  "Tactical Sensors",
+			"aim" :  0,
+			"crit" :  0,
+			"hp" :  0,
+			"damage_reduction" :  0,
+			"defense" :  0,
+			"will" :  0,
+			"mobility" :  -1,
+			"notes" :  "Grants Tactical Sense perk, enhancing defense by 5 for every enemy the MEC can see. (Up to a maximum bonus of +20)",
+			"classes" :  "MEC, SHIV"
+		}, 
+		{
+			"type" :  "Damage Enhancing Equipment",
+			"name" :  "Depleted Elerium Rounds",
+			"aim" :  0,
+			"crit" :  0,
+			"hp" :  0,
+			"damage_reduction" :  0,
+			"defense" :  0,
+			"will" :  0,
+			"mobility" :  -1,
+			"notes" :  "Increases Autocannon, Sentry Gun, Minigun, and Railgun damage by 1.",
+			"classes" :  "MEC, SHIV"
+		}, 
+		{
+			"type" :  "Damage Enhancing Equipment",
+			"name" :  "Laser Pumper",
+			"aim" :  0,
+			"crit" :  0,
+			"hp" :  0,
+			"damage_reduction" :  0,
+			"defense" :  0,
+			"will" :  0,
+			"mobility" :  -1,
+			"notes" :  "Increases Superheavy Laser, Superheavy Pulse, Laser Lance, and Pulse Lance damage by 1.",
+			"classes" :  "MEC, SHIV"
+		}, 
+		{
+			"type" :  "Damage Enhancing Equipment",
+			"name" :  "Zevatron Booster",
+			"aim" :  0,
+			"crit" :  0,
+			"hp" :  0,
+			"damage_reduction" :  0,
+			"defense" :  0,
+			"will" :  0,
+			"mobility" :  -1,
+			"notes" :  "Increases Particle Cannon and Superheavy Plasma damage by 1.",
+			"classes" :  "MEC, SHIV"
+		}, 
+		{
+			"type" :  "Damage Enhancing Equipment",
+			"name" :  "The Thumper",
+			"aim" :  0,
+			"crit" :  0,
+			"hp" :  0,
+			"damage_reduction" :  0,
+			"defense" :  0,
+			"will" :  0,
+			"mobility" :  -1,
+			"notes" :  "Increases Kinetic Strike Damage by 3.",
+			"classes" :  "MEC"
+		}, 
+		{
+			"type" :  "Miscellaneous Equipment",
+			"name" :  "Autoloader",
+			"aim" :  0,
+			"crit" :  0,
+			"hp" :  0,
+			"damage_reduction" :  0,
+			"defense" :  0,
+			"will" :  0,
+			"mobility" :  -1,
+			"notes" :  "Confers 1 additional shot or burst to primary weapon. Stacks with Lock'N'Load.",
+			"classes" :  "MEC, SHIV"
+		}, 
+		{
+			"type" :  "Miscellaneous Equipment",
+			"name" :  "Alloy Carbide Plating",
+			"aim" :  0,
+			"crit" :  0,
+			"hp" :  1,
+			"damage_reduction" :  0,
+			"defense" :  1,
+			"will" :  0,
+			"mobility" :  -1,
+			"notes" :  "Increases both DR and HP of the equipped unit by +1",
+			"classes" :  "MEC, SHIV"
+		}, 
+		{
+			"type" :  "Miscellaneous Equipment",
+			"name" :  "Weapon Gyros",
+			"aim" :  5,
+			"crit" :  5,
+			"hp" :  0,
+			"damage_reduction" :  0,
+			"defense" :  0,
+			"will" :  0,
+			"mobility" :  -1,
+			"notes" :  "Provides +5 aim and +5 crit.",
+			"classes" :  "MEC, SHIV"
+		}, 
+		{
+			"type" :  "Miscellaneous Equipment",
+			"name" :  "Battle Computer",
+			"aim" :  10,
+			"crit" :  10,
+			"hp" :  0,
+			"damage_reduction" :  0,
+			"defense" :  10,
+			"will" :  0,
+			"mobility" :  -1,
+			"notes" :  "Provides +10 aim, crit chance and defence.",
+			"classes" :  "MEC, SHIV"
+		}, 
+		{
+			"type" :  "Miscellaneous Equipment",
+			"name" :  "Elerium Turbos",
+			"aim" :  0,
+			"crit" :  0,
+			"hp" :  0,
+			"damage_reduction" :  0,
+			"defense" :  0,
+			"will" :  0,
+			"mobility" :  2,
+			"notes" :  "Increases SHIV/MEC mobility by 2 points.",
+			"classes" :  "MEC, SHIV"
+		}
 	]
-		
 }
