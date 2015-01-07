@@ -136,7 +136,111 @@
 			"id" : "infantry",
 			"name" : "Infantry",
 			"mec_name" : "Valkyrie",
-			"icon_src" : "http://ufopaedia.org/images/5/57/CLASS_ASSAULT.png"
+			"icon_src" : "http://ufopaedia.org/images/5/57/CLASS_ASSAULT.png",
+			"spec" :  {
+	            "primary_weapons" : [
+		             { "carbines" : 1 },
+		             { "assault_rifles" : 1 },
+		             { "battle_rifles" : 1 },
+		             { "smgs" : 1 },
+		             { "shotguns" : 1}
+	            ],
+	            "secondary_weapons" : [
+		            { "pistols" : 1},
+		            { "machine_pistols" : 1},
+		            { "shotguns" : 1}		
+	            ],
+	            "class_limited_items" : [
+	            ],
+	            "perks" : [
+		            {
+		            	"rank" : 1,
+                        "perks" : [
+			                { "id" : "light_em_up" }
+		                ]
+                    }, {
+						"rank" : 2,
+		            	"perks" : [
+			            	{ "id" : "steadfast"},
+			            	{ "id" : "executioner"},
+			            	{ "id" : "covering_fire"}
+		            	]
+		            }, {
+		            	"rank" : 3,
+		            	"perks" : [
+			            	{ "id" : "agression"},
+			            	{ "id" : "tactical_sense"},
+			            	{ "id" : "oppotunist"}
+		            	]
+		            }, {
+						"rank" : 4,
+		            	"perks" : [
+			            	{ "id" : "ranger"},
+			            	{ "id" : "gunslinger"},
+			            	{ "id" : "supression"}
+		            	]
+		            }, {
+		            	"rank" : 5,
+		            	"perks" : [
+			            { "id" : "sharpshooter"},
+			            { "id" : "lock_and_load"},
+			            { "id" : "will_to_survive"}
+		            	]
+		            }, {
+		            	"rank" : 6,
+		            	"perks" : [
+			            	{ "id" : "extra_conditioning"},
+			            	{ "id" : "bring_em_on"},
+			            	{ "id" : "sentinel"}
+		            	]
+		            }, {
+		            	"rank" : 7,
+		            	"perks" : [
+			            	{ "id" : "vital_point_targeting"},
+			            	{ "id" : "resilience"},
+			            	{ "id" : "rapid_fire"}
+		            	]
+		           	}
+	            ],
+	            "stat_progression" : [
+		            {
+			            "health" : 1,
+			            "aim" : 4,
+			            "will_low" : 5,
+			            "will_high" : 6
+		            }, {
+			            "health" : 0,
+			            "aim" : 4,
+			            "will_low" : 5,
+			            "will_high" : 6
+		            }, {
+			            "health" : 0,
+			            "aim" : 4,
+			            "will_low" : 3,
+			            "will_high" : 4 
+		            }, {
+			            "health" : 1,
+			            "aim" : 4,
+			            "will_low" : 3,
+			            "will_high" : 4
+		            }, {
+			            "health" : 0,
+			            "aim" : 3,
+			            "will_low" : 3,
+			            "will_high" : 4
+		            }, {
+			            "health" : 0,
+			            "aim" : 3,
+			            "will_low" : 3,
+			            "will_high" : 4
+		            }, {
+			            "health" : 1,
+			            "aim" : 3,
+			            "will_low" : 3,
+			            "will_high" : 4
+		            }
+		        ]		
+            }
 		},
 		{
 			"id" : "Rocketeer",
@@ -1525,6 +1629,16 @@
 			"will_bonus" : 0,
 			"mobility_bonus" : 0,
 			"damage_bonus" : 0
+		},
+		{
+			"id" : "light_em_up",
+			"img_src" : "http://ufopaedia.org/images/thumb/2/2a/HEAVY_BULLETSWARM.png/32px-HEAVY_BULLETSWARM.png", 
+			"title" : "Light 'Em Up",
+			"description" : "Standard shots no longer end the turn, if taken as the first action",
+			"aim_bonus" : 0,
+			"will_bonus" : 0,
+			"mobility_bonus" : 0,
+			"damage_bonus" : 0
 		},		
 		{
 			"id" : "flush",
@@ -1532,6 +1646,86 @@
 			"title" : "Flush",
 			"description" : "Fire a shot that causes enemies to run out of cover. The shot is easy to hit with, but does reduced damage.",
 			"aim_bonus" : 2,
+			"will_bonus" : 0,
+			"mobility_bonus" : 0,
+			"damage_bonus" : 0
+		},
+		{
+			"id" : "executioner",
+			"img_src" : "http://ufopaedia.org/images/thumb/f/f2/SNIPER_EXECUTIONER.png/32px-SNIPER_EXECUTIONER.png",
+			"title" : "Executioner",
+			"description" : "Confers +10 aim and +10 critical chance against targets at or below 50% health.",
+			"aim_bonus" : 0,
+			"will_bonus" : 0,
+			"mobility_bonus" : 0,
+			"damage_bonus" : 0
+		},
+		{
+			"id" : "agression",
+			"img_src" : "http://ufopaedia.org/images/thumb/4/40/ASSAULT_AGGRESSION.png/32px-ASSAULT_AGGRESSION.png",
+			"title" : "Aggression",
+			"description" : "Confers +10% critical chance per enemy in sight (max +30%).",
+			"aim_bonus" : 0,
+			"will_bonus" : 0,
+			"mobility_bonus" : 0,
+			"damage_bonus" : 0
+		},
+		{
+			"id" : "oppotunist",
+			"img_src" : "http://ufopaedia.org/images/thumb/5/50/SNIPER_OPPORTUNIST.png/32px-SNIPER_OPPORTUNIST.png",
+			"title" : "Oppotunist",
+			"description" : "Eliminates the Aim penalty on reaction shots, and allows reaction shots to cause critical hits.",
+			"aim_bonus" : 0,
+			"will_bonus" : 0,
+			"mobility_bonus" : 0,
+			"damage_bonus" : 0
+		},
+		{
+			"id" : "supression",
+			"img_src" : "http://ufopaedia.org/images/thumb/8/89/HEAVY_SUPPRESSION.png/32px-HEAVY_SUPPRESSION.png",
+			"title" : "Supression",
+			"description" : "Fire a barrage that pins down a target, granting reaction fire against it and imposing a -30 penalty to Aim and reduced range of many area-of-effect attacks, including grenades. Gunners using an LMG-class weapon also get Opportunist bonus when taking a suppression-based reaction fire shot.",
+			"aim_bonus" : 0,
+			"will_bonus" : 0,
+			"mobility_bonus" : 0,
+			"damage_bonus" : 0
+		},
+		{
+			"id" : "sharpshooter",
+			"img_src" : "http://ufopaedia.org/images/thumb/1/1d/Urban_Combat_Badge_2_%28EU2012%29.png/32px-Urban_Combat_Badge_2_%28EU2012%29.png",
+			"title" : "Sharpshooter",
+			"description" : "+10 critical chance in all situations, +10 Aim against enemies in full cover.",
+			"aim_bonus" : 4,
+			"will_bonus" : 0,
+			"mobility_bonus" : 0,
+			"damage_bonus" : 0
+		},
+		{
+			"id" : "lock_and_load",
+			"img_src" : "http://ufopaedia.org/images/thumb/9/95/SUPPORT_DEEPPOCKETS.png/32px-SUPPORT_DEEPPOCKETS.png",
+			"title" : "Lock N' Load",
+			"description" : "rimary weapons receive one additional shot or burst before a reload is required, and you may reload your primary weapon as the first action of your turn without ending the turn.",
+			"aim_bonus" : 0,
+			"will_bonus" : 0,
+			"mobility_bonus" : 0,
+			"damage_bonus" : 0
+		},
+		{
+			"id" : "covering_fire",
+			"img_src" : "http://ufopaedia.org/images/thumb/3/32/SUPPORT_COVERINGFIRE.png/32px-SUPPORT_COVERINGFIRE.png",
+			"title" : "Covering Fire",
+			"description" : "Allows reaction shots to trigger on enemy attacks, not just movement.",
+			"aim_bonus" : 3,
+			"will_bonus" : 0,
+			"mobility_bonus" : 0,
+			"damage_bonus" : 0
+		},
+		{
+			"id" : "sentinel",
+			"img_src" : "http://ufopaedia.org/images/thumb/d/d6/SUPPORT_SENTINEL.png/32px-SUPPORT_SENTINEL.png",
+			"title" : "Covering Fire",
+			"description" : "Allows two reaction shots during Overwatch, instead of only one.",
+			"aim_bonus" : 0,
 			"will_bonus" : 0,
 			"mobility_bonus" : 0,
 			"damage_bonus" : 0
