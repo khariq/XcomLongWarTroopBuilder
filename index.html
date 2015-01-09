@@ -39,14 +39,16 @@
 		
 		<div class="row">
 			
-			<div class="col-md-6">
-				<div class="panel panel-primary">
-					<div class="panel-heading">
-						<h4 class="panel-title">
-							{{class.name}} Perks
-						</h4>
-					</div>
-					<div class="panel-body">
+			<div class="col-md-9">
+				<div class="panel">
+					<ul class="nav nav-pills nav-justified">
+						<li role="presentation" ng-class="{active: visibleTab === 'perks'}" ><a href="#" ng-click="showTab('perks')" >{{class.name}} Perks</a></li>
+						<li role="presentation" ng-class="{active: visibleTab === 'armory'}"><a href="#" ng-click="showTab('armory')">Armory</a></li>
+						<li role="presentation" ng-class="{active: visibleTab === 'psionics'}"><a href="#" ng-click="showTab('psionics')">Psionics</a></li>
+						<li role="presentation" ng-class="{active: visibleTab === 'gene'}"><a href="#" ng-click="showTab('gene')">Gene Mods</a></li>
+					</ul>
+					
+					<div class="panel-body" ng-show="visibleTab === 'perks'">
 						
 						<div class="row" ng-repeat="perk in perks" style="padding: 2px;">
 							<div class="col-sm-3">
@@ -78,53 +80,42 @@
 						</div>
 						
 					</div>
-				</div>
-			</div>
-            <div class="col-md-3">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">Armory</h4>
-                    </div>
-                    <div class="panel-body">
-                        <div class="row">
-                        	<div class="col-sm-5">Armor</div>	
-                        	<div class="col-sm-7">
-                        		<select class="form-control"
-                        			ng-model="selectedArmor"
-                        			ng-options="armor.name group by armor.type for armor in armors"> 
-                        		</select>
-                        	</div>
-                        </div>
-                        <div class="row">
-                        	<div class="col-sm-5">Primary Weapon</div>	
-                        	<div class="col-sm-7">
-                        		<select class="form-control"
-                        			ng-model="selectedPrimaryWeapon"
-                        			ng-options="weapon.name group by weapon.type for weapon in primaryWeapons"> 
-                        		</select>
-                        	</div>
-                        </div>
-                        <div class="row">
-                        	<div class="col-sm-5">Secondary Weapon</div>	
-                        	<div class="col-sm-7">
-                        		<select class="form-control"
-                        			ng-model="selectedSecondaryWeapon"
-                        			ng-options="weapon.name group by weapon.type for weapon in secondaryWeapons">
-                        		</select>
-                        	</div>
-                        </div>
-                        
-                        <div class="row" >
-                        	<div class="col-sm-5">Equipment</div>	
-                        	<div class="col-sm-7">
-								<select class="form-control" 
-										ng-model="equipmentSlotOne"
-										ng-options="item.name group by item.type for item in equipment"
-										> 
-								</select>
+				
+					<div class="panel-body" ng-show="visibleTab === 'armory'">
+						<div class="row">
+							<div class="col-sm-5">Armor</div>
+							<div class="col-sm-7">
+								<select class="form-control"
+										ng-model="selectedArmor"
+										ng-options="armor.name group by armor.type for armor in armors"></select>
 							</div>
-                        </div>
-						<div class="row" >
+						</div>
+						<div class="row">
+							<div class="col-sm-5">Primary Weapon</div>
+							<div class="col-sm-7">
+								<select class="form-control"
+										ng-model="selectedPrimaryWeapon"
+										ng-options="weapon.name group by weapon.type for weapon in primaryWeapons"></select>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-5">Secondary Weapon</div>
+							<div class="col-sm-7">
+								<select class="form-control"
+										ng-model="selectedSecondaryWeapon"
+										ng-options="weapon.name group by weapon.type for weapon in secondaryWeapons"></select>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-sm-5">Equipment</div>
+							<div class="col-sm-7">
+								<select class="form-control"
+										ng-model="equipmentSlotOne"
+										ng-options="item.name group by item.type for item in equipment"></select>
+							</div>
+						</div>
+						<div class="row">
 							<div class="col-sm-5">Equipment</div>
 							<div class="col-sm-7">
 								<select class="form-control"
@@ -132,24 +123,23 @@
 										ng-options="item.name group by item.type for item in equipment"></select>
 							</div>
 						</div>
-                    </div>
-                </div>
-                <div class="alert alert-success" ng-show="showPerkDetails">
-					{{perkInDetails.description}}
-					<table class="table table-condensed">
-						<tr>
-							<td>Aim</td>
-							<td>Will</td>
-							<td>Mobility</td>
-						</tr>
-						<tr>
-							<td>+{{perkInDetails.aim_bonus}}</td>
-							<td>+{{perkInDetails.will_bonus}}</td>
-							<td>+{{perkInDetails.mobility_bonus}}</td>
-						</tr>
-					</table>
+					</div>
+				
+					<h4>Build</h4>
+					<div class="well well-lg">
+						<table class="table table-condensed table-striped">
+
+							<tr ng-repeat="description in descriptions">
+								<td>{{description.key}}</td>
+								<td>{{description.value}}</td>
+							</tr>
+
+						</table>
+						
+					</div>
+
 				</div>
-            </div>
+			</div>            
 			<div class="col-md-3">
 				<table class="table table-condensed table-striped">
 					<tr>
@@ -230,6 +220,21 @@
 						<td></td>
 					</tr>
 				</table>
+				<div class="alert alert-success" ng-show="showPerkDetails">
+					{{perkInDetails.description}}
+					<table class="table table-condensed">
+						<tr>
+							<td>Aim</td>
+							<td>Will</td>
+							<td>Mobility</td>
+						</tr>
+						<tr>
+							<td>+{{perkInDetails.aim_bonus}}</td>
+							<td>+{{perkInDetails.will_bonus}}</td>
+							<td>+{{perkInDetails.mobility_bonus}}</td>
+						</tr>
+					</table>
+				</div>
 			</div>
 
 		</div>

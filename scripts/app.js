@@ -71,6 +71,8 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 	$scope.equipmentSlot1 = null;
 	$scope.equipmentSlot2 = null;
 	$scope.selectedPerks = [];
+	$scope.visibleTab = "perks";
+	$scope.descriptions = [];
 
 	$scope.resetBuild = function() {
 		$scope.build  = {
@@ -174,8 +176,6 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 		);
 	}
 	
-	
-
 	$scope.choosePerk = function(perk, rank, btnElement) {
 	
 		var stat_mods = $scope.class.spec.stat_progression[rank];
@@ -215,6 +215,8 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 		$scope.build.rank_ups.will_high += stat_mods.will_high;
 		$scope.build.rank_ups.health += stat_mods.health;
 
+		$scope.descriptions.push({ key: perk.title , value: perk.description });
+
 		$scope.selectedPerks[rank] = perk;
 
 	}
@@ -228,5 +230,8 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 		$scope.showPerkDetails = false;
 	}
 
+	$scope.showTab = function(tabName) {
+		$scope.visibleTab = tabName;
+	}
 
 });

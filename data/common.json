@@ -177,7 +177,7 @@
 						"perks" : [
 							{ "id" : "ranger"},
 							{ "id" : "gunslinger"},
-							{ "id" : "supression"}
+							{ "id" : "suppression"}
 						]
 					}, {
 						"rank" : 5,
@@ -278,7 +278,7 @@
 						"rank" : 3,
 						"perks" : [
 							{ "id" : "fire_in_the_hole"},
-							{ "id" : "supression"},
+							{ "id" : "suppression"},
 							{ "id" : "snapshot"}
 						]
 					}, {
@@ -373,7 +373,7 @@
 					{
 						"rank" : 1,
 						"perks" : [
-							{ "id" : "supression" }
+							{ "id" : "suppression" }
 						]
 					}, {
 						"rank" : 2,
@@ -693,7 +693,7 @@
 						"rank" : 3,
 						"perks" : [
 							{ "id" : "opportunist"},
-							{ "id" : "smoke_greande"},
+							{ "id" : "smoke_grenade"},
 							{ "id" : "paramedic"}
 						]
 					}, {
@@ -749,8 +749,91 @@
 			"id" : "Engineer",
 			"name" : "Engineer",
 			"mec_name" : "Shogun",
-			"icon_src" : "http://ufopaedia.org/images/5/57/CLASS_ASSAULT.png"
-		}
+			"icon_src" : "http://ufopaedia.org/images/5/57/CLASS_ASSAULT.png",
+		 "spec" :  {
+				"primary_weapons" : [
+					 { "battle_rifles" : 1 },
+					 { "carbines" : 1 },
+					 { "shotguns" : 1 },
+					 { "smgs" : 1 },
+					 { "assault_rifles" : 1 }		             
+				],
+				"secondary_weapons" : [
+					{ "pistols" : 1},
+					{ "machine_pistols" : 1},
+					{ "shotguns" :  1}
+				],
+				"class_limited_items" : [
+				],
+				"perks" : [
+					{
+						"rank" : 1,
+						"perks" : [
+							{ "id" : "grenadier" }
+						]
+					}, {
+						"rank" : 2,
+						"perks" : [
+							{ "id" : "rapid_reaction"},
+							{ "id" : "smoke_grenade"},
+							{ "id" : "sapper"}
+						]
+					}, {
+						"rank" : 3,
+						"perks" : [
+							{ "id" : "heat_warheads"},
+							{ "id" : "smoke_and_mirrors"},
+							{ "id" : "holo_targeting"}
+						]
+					}, {
+						"rank" : 4,
+						"perks" : [
+							{ "id" : "ranger"},
+							{ "id" : "suppression"},
+							{ "id" : "repair"}
+						]
+					}, {
+						"rank" : 5,
+						"perks" : [
+						{ "id" : "extra_conditioning"},
+						{ "id" : "dense_smoke"},
+						{ "id" : "battle_scanner"}
+						]
+					}, {
+						"rank" : 6,
+						"perks" : [
+							{ "id" : "will_to_survive"},
+							{ "id" : "ready_for_anything"},
+							{ "id" : "packmaster"}
+						]
+					}, {
+						"rank" : 7,
+						"perks" : [
+							{ "id" : "mayhem"},
+							{ "id" : "fire_rocket"},
+							{ "id" : "bombard"}
+						]
+					}
+				],
+				"stat_progression" : [
+					{
+						"health" : 1,						"aim" : 2,						"will_low" : 6,						"will_high" : 7
+					}, {
+						"health" : 0,						"aim" : 2,						"will_low" : 6,						"will_high" : 7
+					}, {
+						"health" : 0,						"aim" : 2,						"will_low" : 3,						"will_high" : 4 
+					}, {
+						"health" : 1,						"aim" : 2,						"will_low" : 3,						"will_high" : 4
+					}, {
+						"health" : 0,						"aim" : 2,						"will_low" : 3,						"will_high" : 4
+					}, {
+						"health" : 0,						"aim" : 2,						"will_low" : 3,						"will_high" : 4
+					}, {
+						"health" : 1,						"aim" : 2,						"will_low" : 3,						"will_high" : 4
+					}
+				]		
+		    }
+                }
 	], 
 	"ranks" : [
 		{
@@ -2093,6 +2176,115 @@
 	],
 	"perks" : [
 	{
+            "id" : "revive",
+            "img_src" :  "http://ufopaedia.org/images/thumb/c/cc/SUPPORT_REVIVE.png/32px-SUPPORT_REVIVE.png",
+            "title" :  "Revive",
+            "description" :  "Allows Medikits to revive critically wounded Soldiers at 33% of maximum health instead of just stabilizing them.",
+            "aim_bonus" :  0,
+            "will_bonus" :  0,
+            "mobility_bonus" :  0,
+            "damage_bonus" : 0
+        },
+    {
+            "id" : "grenadier",
+            "img_src" :  "http://ufopaedia.org/images/thumb/8/8a/HEAVY_GRENADIER.png/32px-HEAVY_GRENADIER.png",
+            "title" :  "Grenadier",
+            "description" :  "Allows 2 destructive grenades in a single inventory slot, and the soldier may throw grenades 20 percent further.",
+            "aim_bonus" :  0,
+            "will_bonus" :  0,
+            "mobility_bonus" :  0,
+            "damage_bonus" : 0
+        },
+{
+            "id" : "sapper",
+            "img_src" :  "http://ufopaedia.org/images/thumb/6/61/Ace_hole.png/32px-Ace_hole.png",
+            "title" :  "Sapper",
+            "description" :  "Your grenades do additional damage to enemies, and all your weapons do additional damage to the environment(+1 damage with AP and HE grenades, +2 damage with Alien grenades and triple environmental damage for all weapons).",
+            "aim_bonus" :  0,
+            "will_bonus" :  0,
+            "mobility_bonus" :  0,
+            "damage_bonus" : 0
+        },
+{
+            "id" : "repair",
+            "img_src" :  "http://ufopaedia.org/images/thumb/0/05/ALIEN_REPAIR.png/32px-ALIEN_REPAIR.png",
+            "title" :  "Repair",
+            "description" :  "Grants +2 Arc Thrower charges",
+            "aim_bonus" :  0,
+            "will_bonus" :  0,
+            "mobility_bonus" :  0,
+            "damage_bonus" : 0
+        },
+{
+            "id" : "bombard",
+            "img_src" :  "http://ufopaedia.org/images/thumb/1/1a/ALIEN_BOMBARD.png/32px-ALIEN_BOMBARD.png",
+            "title" :  "Bombard",
+            "description" :  "Throw or launch grenades over exceptionally long distances(+50%).",
+            "aim_bonus" :  0,
+            "will_bonus" :  0,
+            "mobility_bonus" :  0,
+            "damage_bonus" : 0
+        },
+{
+            "id" : "smoke_grenade",
+            "img_src" :  "http://ufopaedia.org/images/thumb/4/44/SUPPORT_SMOKEGRENADE.png/32px-SUPPORT_SMOKEGRENADE.png",
+            "title" :  "Smoke Grenade",
+            "description" :  "Deploy a smoke grenade once per mission. The smoke confers +20 defense to all units, not just allies, and lasts through the enemy turn. Taking the perk on level up also allows an additional action after deploying a smoke grenade.",
+            "aim_bonus" :  0,
+            "will_bonus" :  0,
+            "mobility_bonus" :  0,
+            "damage_bonus" : 0
+        },
+{
+            "id" : "paramedic",
+            "img_src" :  "http://ufopaedia.org/images/thumb/5/52/Defenders_Medal_2_%28EU2012%29.png/32px-Defenders_Medal_2_%28EU2012%29.png",
+            "title" :  "Paramedic",
+            "description" :  "Once per turn, this unit may use a medikit without spending an action.",
+            "aim_bonus" :  0,
+            "will_bonus" :  0,
+            "mobility_bonus" :  0,
+            "damage_bonus" : 0
+        },
+{
+            "id" : "field_surgeon",
+            "img_src" :  "http://ufopaedia.org/images/thumb/3/3f/Adaptive_Bone_Marrow_Gene_Mod_%28EU2012%29.png/32px-Adaptive_Bone_Marrow_Gene_Mod_%28EU2012%29.png",
+            "title" :  "Field Surgeon",
+            "description" :  "Has a 75% chance to reduce or eliminate recovery time of non-critically wounded soldiers. Automatic reduction if multiple medics on a mission have this perk. Does not affect wound sustained by sending fatigued soldier on a mission.",
+            "aim_bonus" :  0,
+            "will_bonus" :  0,
+            "mobility_bonus" :  0,
+            "damage_bonus" : 0
+        },
+{
+            "id" : "dense_smoke",
+            "img_src" :  "http://ufopaedia.org/images/thumb/d/d1/SUPPORT_DENSESMOKE.png/32px-SUPPORT_DENSESMOKE.png",
+            "title" :  "Dense Smoke",
+            "description" :  "Smoke Grenades have increased area of effect and further increase units' Defense by 20.",
+            "aim_bonus" :  0,
+            "will_bonus" :  0,
+            "mobility_bonus" :  0,
+            "damage_bonus" : 0
+        },
+{
+            "id" : "packmaster",
+            "img_src" :  "http://ufopaedia.org/images/thumb/2/23/MEC_EXPANDED_STORAGE.png/32px-MEC_EXPANDED_STORAGE.png",
+            "title" :  "Packmaster",
+            "description" :  "Limited-use small items and mechanized unit subsystems in your inventory receive additional uses.",
+            "aim_bonus" :  0,
+            "will_bonus" :  0,
+            "mobility_bonus" :  0,
+            "damage_bonus" : 0
+        },
+{
+            "id" : "savior",
+            "img_src" :  "http://ufopaedia.org/images/thumb/5/52/SUPPORT_SAVIOR.png/32px-SUPPORT_SAVIOR.png",
+            "title" :  "Savior",
+            "description" :  "Medikits restore six more health per use; Restorative Mist units restore three more health per use.",
+            "aim_bonus" :  0,
+            "will_bonus" :  0,
+            "mobility_bonus" :  0,
+            "damage_bonus" : 0
+        },{
 			"id" : "battle_scanner",
 			"img_src" :  "http://ufopaedia.org/images/thumb/1/11/SNIPER_BATTLESCANNER.png/32px-SNIPER_BATTLESCANNER.png",
 			"title" :  "Battle Scanner",
@@ -2290,9 +2482,9 @@
 			"damage_bonus" : 0
 		},
 		{
-			"id" : "supression",
+			"id" : "suppression",
 			"img_src" : "http://ufopaedia.org/images/thumb/8/89/HEAVY_SUPPRESSION.png/32px-HEAVY_SUPPRESSION.png",
-			"title" : "Supression",
+			"title" : "suppression",
 			"description" : "Fire a barrage that pins down a target, granting reaction fire against it and imposing a -30 penalty to Aim and reduced range of many area-of-effect attacks, including grenades. Gunners using an LMG-class weapon also get Opportunist bonus when taking a suppression-based reaction fire shot.",
 			"aim_bonus" : 0,
 			"will_bonus" : 0,
@@ -2339,6 +2531,16 @@
 			"mobility_bonus" : 0,
 			"damage_bonus" : 0
 		},
+        {
+            "id" : "combat_drugs",
+            "img_src" :  "http://ufopaedia.org/images/thumb/0/01/SUPPORT_COMBATDRUGS.png/32px-SUPPORT_COMBATDRUGS.png",
+            "title" :  "Combat Drugs",
+            "description" :  "Smoke grenades now contain powerful stimulants that grant +20 Will, +20% critical chance, and +20 defense for all units in the cloud.",
+            "aim_bonus" :  0,
+            "will_bonus" :  3,
+            "mobility_bonus" :  0,
+            "damage_bonus" : 0
+        },
 		{
 			"id" : "close_combat_specialist",
 			"img_src" : "http://ufopaedia.org/images/thumb/a/ac/ASSAULT_CLOSECOMBAT.png/32px-ASSAULT_CLOSECOMBAT.png",
