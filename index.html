@@ -74,11 +74,6 @@
 
 						</div>
 
-						<div class="row">
-							<div class="col-md-12">
-							</div>
-						</div>
-						
 					</div>
 				
 					<div class="panel-body" ng-show="visibleTab === 'armory'">
@@ -125,17 +120,75 @@
 						</div>
 					</div>
 				
+					<div class="panel-body" ng-show="visibleTab === 'psionics' ">
+						<div class="row" ng-repeat="rank in psionicsPerks" style="padding: 2px;">
+							<div class="col-sm-3">
+								{{rank.name}}
+							</div>
+							<div class="col-sm-9">
+
+								<div class="btn-group btn-group-justified" role="group">
+									
+									<div class="btn-group" data-toggle="buttons" ng-repeat="perkDetails in rank.perks">
+								
+										<label class="btn btn-default" ng-mouseover="showDescription(perkDetails.description)" ng-mouseleave="hideDescription()" ng-click="choosePsiPerk(perkDetails, $parent.$index, this)" >
+											<input type="checkbox" name="psi{{$parent.$index}}" id="{{perkDetails.id}}" > 
+											<img src="{{perkDetails.img_src}}" class="pull-left" /> 
+											{{perkDetails.name}}
+										</label>
+
+									</div>
+
+								</div>
+
+							</div>
+
+						</div>
+					</div>
+
+					<div class="panel-body" ng-show="visibleTab === 'gene' ">
+						<div class="row" ng-repeat="slot in geneMods" style="padding: 2px;">
+							<div class="col-sm-3">
+								{{slot.slot}}
+							</div>
+							<div class="col-sm-9">
+
+								<div class="btn-group btn-group-justified" role="group">
+									
+									<div class="btn-group" data-toggle="buttons" ng-repeat="perkDetails in slot.mods">
+								
+										<label class="btn btn-default" ng-mouseover="showDescription(perkDetails.description)" ng-mouseleave="hideDescription()" ng-click="chooseGeneMod(perkDetails, $parent.$index, this)" >
+											<input type="checkbox" name="psi{{$parent.$index}}" id="{{perkDetails.id}}" > 
+											<img src="{{perkDetails.img_src}}" class="pull-left" style="width: 32px;" /> 
+											{{perkDetails.name}}
+										</label>
+
+									</div>
+
+								</div>
+
+							</div>
+
+						</div>
+					</div>
+
 					<h4>Build</h4>
-					<div class="well well-lg">
-						<table class="table table-condensed table-striped">
+					<div class="well well-lg container-fluid">
+						<div class="col-lg-5 row">
 
-							<tr ng-repeat="description in descriptions">
-								<td>{{description.key}}</td>
-								<td>{{description.value}}</td>
-							</tr>
-
-						</table>
-						
+							<span ng-repeat="icon in icons">
+								<img src="{{icon.img_url}}" alt="{{icon.title}}" style="width: 32px;" ng-mouseover="showDescription(icon.description)" ng-mouseout="hideDescription()" />
+								
+							</span>
+						</div>
+						<div class="col-lg-7">
+							<table class="table table-condensed table-striped">
+								<tr>
+									<td>{{equipmentSlotOne.name}}</td>
+									<td>{{equipmentSlotOne.notes}}</td>
+								</tr>
+							</table>
+						</div>
 					</div>
 
 				</div>
@@ -168,6 +221,11 @@
 						</td>
 					</tr>
 					<tr>
+						<td colspan="4">
+							{{selectedPrimaryWeapon.name}}
+						</td>
+					</tr>
+					<tr>
 						<td>Min Damage</td>
 						<td>
 							{{selectedPrimaryWeapon.min_damage + build.damage_bonus}}
@@ -192,6 +250,11 @@
 					<tr>
 						<td colspan="4">
 							Secondary Weapon
+						</td>
+					</tr>
+					<tr>
+						<td colspan="4">
+							{{selectedSecondaryWeapon.name}}
 						</td>
 					</tr>
 					<tr>
@@ -234,6 +297,9 @@
 							<td>+{{perkInDetails.mobility_bonus}}</td>
 						</tr>
 					</table>
+				</div>
+				<div class="alert alert-success" ng-show="displayDescription">
+					{{description}}
 				</div>
 			</div>
 

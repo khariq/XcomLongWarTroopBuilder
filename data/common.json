@@ -2403,15 +2403,6 @@
 			"damage_bonus" : 0
 		},
 {
-			"id" : "",
-			"img_src" :  "",
-			"title" :  "",
-			"description" :  "",
-			"aim_bonus" :  0,
-			"will_bonus" :  0,
-			"mobility_bonus" :  0,
-			"damage_bonus" : 0
-		},{
 			"id" : "run_and_gun",
 			"img_src" : "http://ufopaedia.org/images/thumb/8/87/ASSAULT_RUNGUN.png/32px-ASSAULT_RUNGUN.png", 
 			"title" : "Run & Gun",
@@ -2421,16 +2412,7 @@
 			"mobility_bonus" : 0,
 			"damage_bonus" : 0
 		},
-		{
-			"id" :  "",
-			"img_src" :  "",
-			"title" :  "",
-			"description" :  "",
-			"aim_bonus" :  0,
-			"will_bonus" :  0,
-			"mobility_bonus" :  0,
-			"damage_bonus" : 0
-		},
+		
 		{
 			"id" : "light_em_up",
 			"img_src" : "http://ufopaedia.org/images/thumb/2/2a/HEAVY_BULLETSWARM.png/32px-HEAVY_BULLETSWARM.png", 
@@ -2484,7 +2466,7 @@
 		{
 			"id" : "suppression",
 			"img_src" : "http://ufopaedia.org/images/thumb/8/89/HEAVY_SUPPRESSION.png/32px-HEAVY_SUPPRESSION.png",
-			"title" : "suppression",
+			"title" : "Suppression",
 			"description" : "Fire a barrage that pins down a target, granting reaction fire against it and imposing a -30 penalty to Aim and reduced range of many area-of-effect attacks, including grenades. Gunners using an LMG-class weapon also get Opportunist bonus when taking a suppression-based reaction fire shot.",
 			"aim_bonus" : 0,
 			"will_bonus" : 0,

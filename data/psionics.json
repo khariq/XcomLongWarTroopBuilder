@@ -1,108 +1,132 @@
+
 {
-	"ranks" : [
+	"psionics" : [
 		{
 			"rank" : 1,
 			"name" : "Awakened",
-			"img_url" : "http://ufopaedia.org/images/thumb/6/6d/CLASS_PSIONIC.png/48px-CLASS_PSIONIC.png"
+			"img_url" : "http://ufopaedia.org/images/thumb/6/6d/CLASS_PSIONIC.png/48px-CLASS_PSIONIC.png",
+			"perks" : [
+				{
+					"id" : "psi_inspiration",
+					"name" : "Psi Inspiration",
+					"rank" : 1,
+					"description" : "Removes Mindfray and panic from all allies within 3 tiles, and strengthen their Will by +30 for 3 turns, 4 turn cooldown. Imposes +12 hours fatigue after missions.",
+					"img_src" : "http://ufopaedia.org/images/thumb/d/db/PSIONIC_PSIINSPIRATION.png/32px-PSIONIC_PSIINSPIRATION.png"
+				},
+				{
+					"id" : "mindfray",
+					"name" : "Mind Fray",
+					"rank" : 1,
+					"description" : "Causes the target to lose grip on reality, inflicting penalties to Aim, Will, area-of-effect attack range, and mobility, and doing one base damage. Robotic units are immune. Lasts 3 turns. 2 turn cooldown. Imposes +12 hours fatigue after missions.",
+					"img_src" : "http://ufopaedia.org/images/thumb/b/b5/PSIONIC_MINDFRAY.png/32px-PSIONIC_MINDFRAY.png"
+				},
+				{
+					"id" : "neural_feedback",
+					"name" : "Neural Feedback",			
+					"rank" : 1,
+					"img_src" : "http://ufopaedia.org/images/thumb/2/25/Neural_Feedback.png/32px-Neural_Feedback.png",
+					"description" : "Causes damage to psi attackers and puts all of their psi attacks on cooldown. Does not reduce the attacks' chance of success. Protects the psion and nearby allies who pass a will check. Imposes +12 hours fatigue after missions."
+
+				}
+			]
 		},
 		{
 			"rank" : 2,
 			"name" : "Sensitive",
-			"img_url" : "http://ufopaedia.org/images/thumb/6/6d/CLASS_PSIONIC.png/48px-CLASS_PSIONIC.png"
-		},
+			"img_url" : "http://ufopaedia.org/images/thumb/6/6d/CLASS_PSIONIC.png/48px-CLASS_PSIONIC.png",
+			"perks" : [
+				{
+					"id" : "mind_merge",
+					"name" : "Mind Merge",
+					"rank" : 2,
+					"img_src" : "http://ufopaedia.org/images/thumb/f/f2/PSIONIC_MINDMERGE.png/32px-PSIONIC_MINDMERGE.png",
+					"description" : "Merge minds with the target, granting the target +25% critical chance, bonus will, and temporary health (for aliens) or damage reduction (for humans). Imposes +12 hours postmission fatigue for psi soldiers."
+				},
+				{
+					"id" : "psi_panic",
+					"name" : "Psi Panic",
+					"rank" : 2,
+					"img_src" : "http://ufopaedia.org/images/thumb/9/90/PSIONIC_PANIC.png/32px-PSIONIC_PANIC.png",
+					"description" : "Cause target to panic on its following turn, if the target's Will is overcome. Robotic enemies are immune, 2 turn cooldown. Imposes +12 hours fatigue after missions."
+				}
+			]
+		},		
 		{
 			"rank" : 3,
 			"name" : "Talent",
-			"img_url" : "http://ufopaedia.org/images/thumb/6/6d/CLASS_PSIONIC.png/48px-CLASS_PSIONIC.png"
+			"img_url" : "http://ufopaedia.org/images/thumb/6/6d/CLASS_PSIONIC.png/48px-CLASS_PSIONIC.png",
+			"perks" : [
+				{
+					"id" : "regen_biofield",
+					"name" : "Regen Biofield",
+					"rank" : 3,
+					"img_src" : "http://ufopaedia.org/images/thumb/5/56/Regen_Biofield.png/32px-Regen_Biofield.png",
+					"description" : "This unit and all nearby allies are healed for 1 health each turn. This does not repair damage to body armor or other hp-granting items. Imposes +12 hours postmission fatigue for psi soldiers. (Passive ability)"
+				},
+				{
+					"id" : "distortion_field",
+					"name" : "Distortion Field",
+					"rank" : 3,
+					"img_src" : "http://ufopaedia.org/images/thumb/d/d4/Distortion_Field.png/32px-Distortion_Field.png",
+					"description" : "Nearby allies in cover receive +10 Defense. Imposes +12 hours postmission fatigue for psi soldiers. (Passive ability)"
+				}
+			]
 		},
 		{
 			"rank" : 4,
 			"name" : "Adept",
-			"img_url" : "http://ufopaedia.org/images/thumb/6/6d/CLASS_PSIONIC.png/48px-CLASS_PSIONIC.png"
+			"img_url" : "http://ufopaedia.org/images/thumb/6/6d/CLASS_PSIONIC.png/48px-CLASS_PSIONIC.png",
+			"perks" : [
+				{
+					"id" : "psi_shadow",
+					"name" : "Psi Shadow",
+					"rank" : 4,
+					"img_src" : "http://ufopaedia.org/images/thumb/2/2c/Psi_Shadow.png/32px-Psi_Shadow.png",
+					"description" : "Changes enemy perceptions to make this soldier harder to see. When the soldier moves to high cover, enemies without special capabilities will not target the soldier. Does not work if any enemies have line of sight to the soldier's starting position. Leaving cover, being flanked, or firing will break this concealment. Imposes +12 hours fatigue after missions."
+				},
+				{
+					"id" : "psychokinetic_strike",
+					"name" : "Psychokinetic Strike",
+					"rank" : 4,
+					"img_src" : "http://ufopaedia.org/images/thumb/5/56/PSIONIC_PSIDRAIN.png/32px-PSIONIC_PSIDRAIN.png",
+					"description" : "Project a bolt of pure psi force that destroys cover but does not harm units. Imposes 12 hours additional post-mission fatigue."
+				},
+				{
+					"id" : "telekinetic_field",
+					"name" : "Telekinetic Field",
+					"rank" : 4,
+					"img_src" : "http://ufopaedia.org/images/thumb/e/e1/PSIONIC_TELEKINETICFIELD.png/32px-PSIONIC_TELEKINETICFIELD.png",
+					"description" : "Create an immobile telekinetic field that lasts through the enemy turn. The field distorts and deflects incoming attacks, granting +40 Defense to allies within the field, 4 turn cooldown. Imposes +12 hours fatigue after missions."
+				}
+			]
 		},
 		{
 			"rank" : 5,
 			"name" : "Psion",
-			"img_url" : "http://ufopaedia.org/images/thumb/6/6d/CLASS_PSIONIC.png/48px-CLASS_PSIONIC.png"
+			"img_url" : "http://ufopaedia.org/images/thumb/6/6d/CLASS_PSIONIC.png/48px-CLASS_PSIONIC.png",
+			"perks" : [
+				{
+					"id" : "mind_control",
+					"name" : "Mind Control",
+					"rank" : 5,
+					"img_src" : "http://ufopaedia.org/images/thumb/2/2e/PSIONIC_MINDCONTROL.png/32px-PSIONIC_MINDCONTROL.png",
+					"description" : "Difficult psi technique that, if successful, grants control of the target for 3 turns. Does not work on robotic enemies. 5 turn cooldown. Imposes +12 hours fatigue after missions."
+				}
+			]
 		},
 		{
 			"rank" : 6,
 			"name" : "Master",
-			"img_url" : "http://ufopaedia.org/images/thumb/6/6d/CLASS_PSIONIC.png/48px-CLASS_PSIONIC.png"
-		}
-	],
-	"psionics" : [
-		{
-			"id" : "psi_inspiration",
-			"name" : "Psi Inspiration",
-			"rank" : 1,
-			"description" : "Removes Mindfray and panic from all allies within 3 tiles, and strengthen their Will by +30 for 3 turns, 4 turn cooldown. Imposes +12 hours fatigue after missions."
-		},
-		{
-			"id" : "mindfray",
-			"name" : "Mind Fray",
-			"rank" : 1,
-			"description" : "Causes the target to lose grip on reality, inflicting penalties to Aim, Will, area-of-effect attack range, and mobility, and doing one base damage. Robotic units are immune. Lasts 3 turns. 2 turn cooldown. Imposes +12 hours fatigue after missions."
-		},
-		{
-			"id" : "neural_feedback",
-			"name" : "Neural Feedback",			
-			"rank" : 1,
-			"description" : "Causes damage to psi attackers and puts all of their psi attacks on cooldown. Does not reduce the attacks' chance of success. Protects the psion and nearby allies who pass a will check. Imposes +12 hours fatigue after missions."
-		},		
-		{
-			"id" : "mind_merge",
-			"name" : "Mind Merge",
-			"rank" : 2,
-			"description" : "Merge minds with the target, granting the target +25% critical chance, bonus will, and temporary health (for aliens) or damage reduction (for humans). Imposes +12 hours postmission fatigue for psi soldiers."
-		},
-		{
-			"id" : "psi_panic",
-			"name" : "Psi Panic",
-			"rank" : 2,
-			"description" : "Cause target to panic on its following turn, if the target's Will is overcome. Robotic enemies are immune, 2 turn cooldown. Imposes +12 hours fatigue after missions."
-		},
-		{
-			"id" : "regen_biofield",
-			"name" : "Regen Biofield",
-			"rank" : 3,
-			"description" : "This unit and all nearby allies are healed for 1 health each turn. This does not repair damage to body armor or other hp-granting items. Imposes +12 hours postmission fatigue for psi soldiers. (Passive ability)"
-		},
-		{
-			"id" : "distortion_field",
-			"name" : "Distortion Field",
-			"rank" : 3,
-			"description" : "Nearby allies in cover receive +10 Defense. Imposes +12 hours postmission fatigue for psi soldiers. (Passive ability)"
-		},
-		{
-			"id" : "psi_shadow",
-			"name" : "Psi Shadow",
-			"rank" : 4,
-			"description" : "Changes enemy perceptions to make this soldier harder to see. When the soldier moves to high cover, enemies without special capabilities will not target the soldier. Does not work if any enemies have line of sight to the soldier's starting position. Leaving cover, being flanked, or firing will break this concealment. Imposes +12 hours fatigue after missions."
-		},
-		{
-			"id" : "psychokinetic_strike",
-			"name" : "Psychokinetic Strike",
-			"rank" : 4,
-			"description" : "Project a bolt of pure psi force that destroys cover but does not harm units. Imposes 12 hours additional post-mission fatigue."
-		},
-		{
-			"id" : "telekinetic_field",
-			"name" : "Telekinetic Field",
-			"rank" : 4,
-			"description" : "Create an immobile telekinetic field that lasts through the enemy turn. The field distorts and deflects incoming attacks, granting +40 Defense to allies within the field, 4 turn cooldown. Imposes +12 hours fatigue after missions."
-		},
-		{
-			"id" : "mind_control",
-			"name" : "Mind Control",
-			"rank" : 5,
-			"description" : "Difficult psi technique that, if successful, grants control of the target for 3 turns. Does not work on robotic enemies. 5 turn cooldown. Imposes +12 hours fatigue after missions."
-		},
-		{
-			"id" : "rift",
-			"name" : "rift",
-			"rank" : 6,
-			"description" : "Devastate an area with a storm of psi energy. The rift does more damage against targets with low Will, and reduced damage against targets with high Will, 4 turn cooldown. Imposes +12 hours fatigue after missions."
+			"img_url" : "http://ufopaedia.org/images/thumb/6/6d/CLASS_PSIONIC.png/48px-CLASS_PSIONIC.png",
+			"perks" : [
+				{
+					"id" : "rift",
+					"name" : "Rift",
+					"rank" : 6,
+					"img_src" : "http://ufopaedia.org/images/thumb/2/2b/PSIONIC_RIFT.png/32px-PSIONIC_RIFT.png",
+					"description" : "Devastate an area with a storm of psi energy. The rift does more damage against targets with low Will, and reduced damage against targets with high Will, 4 turn cooldown. Imposes +12 hours fatigue after missions."
+				}
+			]
 		}
 	]	
 }

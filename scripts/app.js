@@ -5,7 +5,9 @@ xcomApp.factory('DataService', function($http, $q) {
 	function DataService() {
 		var self = this;
 		self.commonJson = null;
-		
+		self.psionicsJson = null;
+		self.geneModsJson = null;
+
 		self.getCommonJson = function() {
 			var deferred = $q.defer();
 			if (self.commonJson !== null) {
@@ -42,6 +44,40 @@ xcomApp.factory('DataService', function($http, $q) {
 				}
 			}
 		}
+
+		self.getPsionics = function() {
+			var deferred = $q.defer();
+			if (self.psionicsJson !== null) {
+				deferred.resolve(self.psionicsJson);
+			} else {
+				$http.get('data/psionics.json')
+					.success(function(data) {
+						self.psionicsJson = data;
+						deferred.resolve(data);
+					})
+					.error(function(response) { 
+						deferred.reject(response);
+					});
+			}
+			return deferred.promise;
+		}
+
+		self.getGeneMods = function() {
+			var deferred = $q.defer();
+			if (self.geneModsJson !== null) {
+				deferred.resolve(self.geneModsJson);
+			} else {
+				$http.get('data/gene_mods.json')
+					.success(function(data) {
+						self.geneModsJson = data;
+						deferred.resolve(data);
+					})
+					.error(function(response) { 
+						deferred.reject(response);
+					});
+			}
+			return deferred.promise;
+		}
 	}
 	
 	return new DataService();
@@ -56,8 +92,6 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 	$scope.ranks = [];
 
 	$scope.build = {};
-	$scope.selectedPrimaryWeapon = null;
-	$scope.selectedSecondaryWeapon = null;
 	$scope.selectedArmor = null;
 	$scope.showPerkDetails = false;
 	$scope.perkInDetails = {};
@@ -72,8 +106,20 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 	$scope.equipmentSlot2 = null;
 	$scope.selectedPerks = [];
 	$scope.visibleTab = "perks";
-	$scope.descriptions = [];
+	$scope.icons = [];
+	$scope.description = '';
+	$scope.displayDescription = false;
 
+	$scope.psionicRanks = [];
+	$scope.psionicsPerks = [];
+
+	$scope.geneMods = [];
+	
+	$scope.selectedGeneMods = [];
+	$scope.selectedPsionicPerks = [];
+	$scope.selectedPrimaryWeapon = null;
+	$scope.selectedSecondaryWeapon = null;
+	
 	$scope.resetBuild = function() {
 		$scope.build  = {
 
@@ -97,6 +143,13 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 			},
 			"damage_bonus" : 0
 		};
+
+		$scope.selectedGeneMods = [];
+		$scope.selectedPsionicPerks = [];
+		$scope.selectedPrimaryWeapon = null;
+		$scope.selectedSecondaryWeapon = null;
+		$scope.icons = [];
+
 	}
 
 	DataService.getCommonJson().then (
@@ -110,6 +163,25 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
         // failure
         function (commonJson) {
 		
+		}
+	);
+
+	DataService.getPsionics().then (
+		function(psionicsJson) {
+			
+			$scope.psionicsPerks = psionicsJson.psionics;
+		},
+		function (psionicsJson) {
+
+		}
+	);
+
+	DataService.getGeneMods().then (
+		function(json) {
+			$scope.geneMods = json.gene_mods;
+		},
+		function(json) {
+
 		}
 	);
 
@@ -201,6 +273,11 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 				chk.parent().removeClass("active");
 			});
 
+			$scope.icons = $scope.icons.filter(
+				function(icon) { 
+					return icon.id !== currentPerk.id; 
+				});
+
 			if (perk.id == currentPerk.id) return;
 
 		}
@@ -215,12 +292,80 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 		$scope.build.rank_ups.will_high += stat_mods.will_high;
 		$scope.build.rank_ups.health += stat_mods.health;
 
-		$scope.descriptions.push({ key: perk.title , value: perk.description });
+		$scope.icons.push(
+			{
+		 		id: perk.id,
+		 		img_url: perk.img_src,
+		 		title: perk.title,
+		 		description: perk.description
+		 	}
+		 );
 
 		$scope.selectedPerks[rank] = perk;
 
 	}
 	
+	$scope.choosePsiPerk = function(perk, rank, btnElement) {
+
+		if ($scope.selectedPsionicPerks[rank] != null) {
+
+			$("input[name=psi'" + rank + "']").each(function(checkbox) { 
+				var chk = $(this);
+				chk.prop("checked", false);
+				chk.parent().removeClass("active");
+			});
+
+			$scope.icons = $scope.icons.filter(
+				function(icon) { 
+					return icon.id !== currentPerk.id; 
+				});
+
+			$scope.selectedPsionicPerks[rank] = null;
+
+			if (perk.id == currentPerk.id) return;
+		}
+
+		$scope.icons.push(
+			{
+		 		id: perk.id,
+		 		img_url: perk.img_src,
+		 		title: perk.title,
+		 		description: perk.description
+		 	}
+		 );
+
+		$scope.selectedPsionicPerks[rank] = perk;
+
+	}
+
+	$scope.chooseGeneMod = function(perk, rank, btnElement) {
+
+		var currentPerk = $scope.icons.filter(
+				function(icon) { 
+					return icon.id === perk.id; 
+				});
+
+		if (currentPerk != null && currentPerk.length > 0) {
+
+			$scope.icons = $scope.icons.filter(
+					function(icon) { 
+						return icon.id !== perk.id; 
+					});
+			return;
+
+		};
+
+		$scope.icons.push(
+			{
+		 		id: perk.id,
+		 		img_url: perk.img_src,
+		 		title: perk.title,
+		 		description: perk.description
+		 	}
+		 );
+
+	}
+
 	$scope.showDetails = function(perk) {
 		$scope.showPerkDetails = true;
 		$scope.perkInDetails = perk;
@@ -232,6 +377,15 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 
 	$scope.showTab = function(tabName) {
 		$scope.visibleTab = tabName;
+	}
+
+	$scope.showDescription = function(description) {
+		$scope.description = description;
+		$scope.displayDescription = true;
+	}
+
+	$scope.hideDescription = function() {
+		$scope.displayDescription = false;
 	}
 
 });
