@@ -1,0 +1,144 @@
+{
+	"gene_mods" : [
+		{
+			"id": "neural_dampening",
+			"name" : "Neural Dampening",
+			"img_url" : "http://ufopaedia.org/images/thumb/1/15/Neural_Damping_Gene_Mod_%28EU2012%29.png/48px-Neural_Damping_Gene_Mod_%28EU2012%29.png",
+			"slot" : "Brain",
+			"prerequisite" : "Berserker Autopsy",
+			"description" : "Confers +20 will when defending against Psi attacks and immunity to panic. If the soldier is mind controlled, the control is cancelled and the soldier is stunned for 1 turn instead. Neural damped soldiers cannot learn psionic skills and psionic soldiers cannot be neural damped.",
+			"fatigue" : "6",
+			"cost" : {
+				"cash" : 20,
+				"meld" : 12,
+				"time" : 10
+			}
+		},
+		{
+			"id": "smart_macrophages",
+			"name" : "Smart Macrophages",
+			"img_url" : "http://ufopaedia.org/images/thumb/2/27/Restorative_mist.png/48px-Restorative_mist.png",
+			"slot" : "Brain",
+			"prerequisite" : "Sectoid Autopsy",
+			"description" : "Medikits and Restorative Mist heal 2 HP more when used on the soldier.  Confers complete immunity to poison and acid.",
+			"fatigue" : "3",
+			"cost" : {
+				"cash" : 15,
+				"meld" : 8,
+				"time" : 4
+			}
+		},
+		{
+			"id": "hyper_reactive_pupils",
+			"name" : "Hyper Reactive Pupils",
+			"img_url" : "http://ufopaedia.org/images/thumb/f/fe/Hyper_Reactive_Pupils_Gene_Mod_%28EU2012%29.png/48px-Hyper_Reactive_Pupils_Gene_Mod_%28EU2012%29.png",
+			"slot" : "Eyes",
+			"prerequisite" : "Xenogenetics",
+			"description" : "Confers +10 Aim on any shot after a miss.",
+			"fatigue" : "3",
+			"cost" : {
+				"cash" : 10,
+				"meld" : 8,
+				"time" : 4
+			}
+		},
+		{
+			"id": "depth_perception",
+			"name" : "Depth Perception",
+			"img_url" : "http://ufopaedia.org/images/thumb/4/4d/Depth_Perception_Gene_Mod_%28EU2012%29.png/48px-Depth_Perception_Gene_Mod_%28EU2012%29.png",
+			"slot" : "Eyes",
+			"prerequisite" : "Xenogenetics",
+			"description" : "Height Advantage confers an additional +5 Aim and +5 critical chance.",
+			"fatigue" : "3",
+			"cost" : {
+				"cash" : 10,
+				"meld" : 4,
+				"time" : 3
+			}
+		},
+		{
+			"id": "Secondary Heart",
+			"name" : "Secondary Heart",
+			"img_url" : "http://ufopaedia.org/images/thumb/8/8e/Secondary_Heart_Gene_Mod_%28EU2012%29.png/48px-Secondary_Heart_Gene_Mod_%28EU2012%29.png",
+			"slot" : "Chest",
+			"prerequisite" : "Muton Elite Autopsy",
+			"description" : "Causes soldiers to bleed out instead of dying the first time they go to zero health in a mission. The bleed-out timer is extended by 2 turns. Prevents loss of Will from critical wounds.",
+			"fatigue" : 6,
+			"cost" : {
+				"cash" : 30,
+				"meld" : 10,
+				"time" : 10
+			}
+		},
+		{
+			"id": "Adrenal Neurosympathy",
+			"name" : "Adrenal Neurosympathy",
+			"img_url" : "http://ufopaedia.org/images/thumb/e/eb/Adrenal_Neurosympathy_Gene_Mod_%28EU2012%29.png/48px-Adrenal_Neurosympathy_Gene_Mod_%28EU2012%29.png",
+			"slot" : "Chest",
+			"prerequisite" : "Muton Autopsy",
+			"description" : "Overloads the soldiers adrenal glands: when a kill is confirmed the soldier emits pheromones that grant offensive benefits to all nearby squad mates. Cannot be used more than once every 5 turns.",
+			"fatigue" : 9,
+			"cost" : {
+				"cash" : 20,
+				"meld" : 10,
+				"time" : 6
+			}
+		},
+		{
+			"id": "Bioelectric Skin",
+			"name" : "Bioelectric Skin",
+			"img_url" : "http://ufopaedia.org/images/thumb/a/ac/Bioelectric_Skin_Gene_Mod_%28EU2012%29.png/48px-Bioelectric_Skin_Gene_Mod_%28EU2012%29.png",
+			"slot" : "Skin",
+			"prerequisite" : "Seeker Autopsy",
+			"description" : "The soldier projects an electric field from his or her skin, revealing but not alerting nearby enemies, and is immune to strangulation.",
+			"fatigue" : 6,
+			"cost" : {
+				"cash" : 25,
+				"meld" : 10,
+				"time" : 6
+			}
+		},
+		{
+			"id": "Iron Skin",
+			"name" : "Iron Skin",
+			"img_url" : "http://ufopaedia.org/images/thumb/b/bd/Iron_Skin_Gene_Mod_%28EU2012%29.png/48px-Iron_Skin_Gene_Mod_%28EU2012%29.png",
+			"slot" : "Skin",
+			"prerequisite" : "Cyberdisc Autopsy",
+			"description" : "Confers 1.0 damage reduction.",
+			"fatigue" : 12,
+			"cost" : {
+				"cash" : 20,
+				"meld" : 10,
+				"time" : 0
+			}
+		},
+		{
+			"id": "Muscle Fiber Density",
+			"name" : "Muscle Fiber Density",
+			"img_url" : "http://ufopaedia.org/images/thumb/d/d4/Muscle_Fiber_Density_Gene_Mod_%28EU2012%29.png/48px-Muscle_Fiber_Density_Gene_Mod_%28EU2012%29.png",
+			"slot" : "Legs",
+			"prerequisite" : "Thin Man Autopsy",
+			"description" : "Confers superhuman leg strength, enabling the soldier to reach high positions without the need for ladders or other climbing aids.",
+			"fatigue" : 9,
+			"cost" : {
+				"cash" : 20,
+				"meld" : 12,
+				"time" : 7
+			}
+		},
+		{
+			"id": "Adaptive Bone Marrow",
+			"name" : "Adaptive Bone Marrow",
+			"img_url" : "http://ufopaedia.org/images/thumb/6/64/BATTLEFATIGUE.png/48px-BATTLEFATIGUE.png",
+			"slot" : "Legs",
+			"prerequisite" : "Chryssalid Autopsy",
+			"description" : "Regenerate wounds. For humans, wound recovery time is reduced by 66% (stacks with Advanced Surgery), and unit regenerates 2 hp every turn up to the HP max without armor.",
+			"fatigue" : "9",
+			"cost" : {
+				"cash" : 30,
+				"meld" : 12,
+				"time" : 7
+			}
+		},
+	]
+}
