@@ -1,3 +1,22 @@
+
+// props Dmitry Mina from Stack Overflow: http://stackoverflow.com/questions/16709373/angularjs-how-to-call-controller-function-from-outside-of-controller-component
+function getParameterByName(name) {
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+
+$(document).ready(function(){
+
+	if (location.search != null && location.search.length > 0) {
+		var controller = angular.element($('#xcomController')).scope();
+		var _class = getParameterByName("class");
+		controller.showClass(_class);
+		controller.$apply();
+	}
+});
+
 var xcomApp = angular.module('xcomApp', []);
 
 xcomApp.factory('DataService', function($http, $q) {		
@@ -92,7 +111,6 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 	$scope.ranks = [];
 
 	$scope.build = {};
-	$scope.selectedArmor = null;
 	$scope.showPerkDetails = false;
 	$scope.perkInDetails = {};
 	
@@ -101,10 +119,7 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 	$scope.armors = [];
 	$scope.primaryWeapons = [];
 	$scope.secondaryWeapons = [];
-	$scope.equipment = [];
-	$scope.equipmentSlot1 = null;
-	$scope.equipmentSlot2 = null;
-	$scope.selectedPerks = [];
+	$scope.equipment = [];	
 	$scope.visibleTab = "perks";
 	$scope.icons = [];
 	$scope.description = '';
@@ -115,11 +130,75 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 
 	$scope.geneMods = [];
 	
+	$scope.selectedPerks = [];
 	$scope.selectedGeneMods = [];
 	$scope.selectedPsionicPerks = [];
 	$scope.selectedPrimaryWeapon = null;
 	$scope.selectedSecondaryWeapon = null;
-	
+	$scope.equipmentSlotOne = null;
+	$scope.equipmentSlotTwo = null
+	$scope.selectedClass = null;
+	$scope.selectedArmor = null;
+		
+	$scope.linkText = '';
+
+	$scope.buildLink = function() {
+
+		var link = "";
+		link += "class=" + encodeURIComponent($scope.selectedClass);
+		
+		link += "&perks=";
+		var perks = "";
+		for (var i = 0; i < $scope.selectedPerks.length; i++) {
+			if ($scope.selectedPerks[i] != null) {
+				perks += $scope.selectedPerks[i].id + ",";
+			}
+		}
+		link += encodeURIComponent(perks.replace(/^,|,$/g,''));
+
+		link += "&psionics=";
+		perks = "";
+		for (var i = 0; i < $scope.selectedPsionicPerks.length; i++) {
+			if ($scope.selectedPsionicPerks[i] != null) {
+				perks += $scope.selectedPsionicPerks[i].id + ",";
+			}
+		}
+		link += encodeURIComponent(perks.replace(/^,|,$/g,''));
+
+		link += "&geneMods=";
+		perks = "";
+		for (var i = 0; i < $scope.selectedGeneMods.length; i++) {
+			if ($scope.selectedGeneMods[i] != null) {
+				perks += $scope.selectedGeneMods[i].id + ",";
+			}
+		}		
+		link += encodeURIComponent(perks.replace(/^,|,$/g,''));
+
+		if ($scope.selectedPrimaryWeapon != null) {
+			link += "&primaryWeapon=" + encodeURIComponent($scope.selectedPrimaryWeapon.id);
+		}
+
+		if ($scope.selectedSecondaryWeapon != null) {
+			link += "&secondaryWeapon=" + encodeURIComponent($scope.selectedSecondaryWeapon.id);
+		}
+
+		if ($scope.selectedArmor != null) {
+			link += "&selectedArmor=" + encodeURIComponent($scope.selectedArmor.id);
+		}
+
+		if ($scope.equipmentSlotOne != null) {
+			link += "&equipmentSlotOne=" + encodeURIComponent($scope.equipmentSlotOne.id);
+		}
+
+		if ($scope.equipmentSlotTwo != null) {
+			link += "&equipmentSlotTwo=" + encodeURIComponent($scope.equipmentSlotTwo.id);
+		}
+
+		var tinyUrl = "http://localhost?" + link;
+		
+		$scope.linkText = tinyUrl;		       
+	}
+
 	$scope.resetBuild = function() {
 		$scope.build  = {
 
@@ -144,6 +223,7 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 			"damage_bonus" : 0
 		};
 
+		$scope.selectedClass = null;
 		$scope.selectedGeneMods = [];
 		$scope.selectedPsionicPerks = [];
 		$scope.selectedPrimaryWeapon = null;
@@ -190,10 +270,12 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 	}
 
 	$scope.showClass = function(id) {
-		var classJson = DataService.getClassJson(id);
-		$scope.class = classJson;
-		
 		$scope.resetBuild();
+
+		var classJson = DataService.getClassJson(id);
+		
+		$scope.class = classJson;
+		$scope.selectedClass = id;
 
 		DataService.getCommonJson().then (
             // success
@@ -309,7 +391,9 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 
 		if ($scope.selectedPsionicPerks[rank] != null) {
 
-			$("input[name=psi'" + rank + "']").each(function(checkbox) { 
+			var currentPerk = $scope.selectedPsionicPerks[rank];
+
+			$("input[name='psi" + rank + "']").each(function(checkbox) { 
 				var chk = $(this);
 				chk.prop("checked", false);
 				chk.parent().removeClass("active");

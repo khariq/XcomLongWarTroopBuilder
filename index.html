@@ -13,7 +13,7 @@
 
     
 </head>
-<body ng-controller="xcomController">
+<body id="xcomController" ng-controller="xcomController">
 
 	<nav class="navbar navbar-default">
 		<div class="container-fluid">
@@ -174,18 +174,22 @@
 
 					<h4>Build</h4>
 					<div class="well well-lg container-fluid">
-						<div class="col-lg-5 row">
+						<div class="col-lg-5">
 
 							<span ng-repeat="icon in icons">
-								<img src="{{icon.img_url}}" alt="{{icon.title}}" style="width: 32px;" ng-mouseover="showDescription(icon.description)" ng-mouseout="hideDescription()" />
-								
+								<img src="{{icon.img_url}}" alt="{{icon.title}}" style="width: 32px;" ng-mouseover="showDescription(icon.description)" ng-mouseout="hideDescription()" />								
 							</span>
+
 						</div>
 						<div class="col-lg-7">
-							<table class="table table-condensed table-striped">
+							<table class="table table-condensed table-striped" ng-show="equipmentSlotOne != null || equipmentSlotTwo != null">
 								<tr>
 									<td>{{equipmentSlotOne.name}}</td>
 									<td>{{equipmentSlotOne.notes}}</td>
+								</tr>
+								<tr>
+									<td>{{equipmentSlotTwo.name}}</td>
+									<td>{{equipmentSlotTwo.notes}}</td>
 								</tr>
 							</table>
 						</div>
@@ -194,6 +198,13 @@
 				</div>
 			</div>            
 			<div class="col-md-3">
+
+				<form class="form-inline" style="width: 100%;">
+  					<div class="form-group pull-right" style="margin-bottom: 3px;">
+  						<input type="text" value="{{linkText}}" class="form-control" />
+						<button class="btn btn-success" ng-click="buildLink();" >Share this build</button>
+  					</div>
+  				</form>
 				<table class="table table-condensed table-striped">
 					<tr>
 						<td>HP</td>
@@ -220,7 +231,7 @@
 							Primary Weapon
 						</td>
 					</tr>
-					<tr>
+					<tr class="info">
 						<td colspan="4">
 							{{selectedPrimaryWeapon.name}}
 						</td>
@@ -252,7 +263,7 @@
 							Secondary Weapon
 						</td>
 					</tr>
-					<tr>
+					<tr class="info">
 						<td colspan="4">
 							{{selectedSecondaryWeapon.name}}
 						</td>

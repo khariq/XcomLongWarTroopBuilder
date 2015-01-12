@@ -2944,7 +2944,7 @@
 			"crit" : 0,
 			"hp" :  0,
 			"damage_reduction":  0,
-			"will" :  0,
+			"will" :  -3,
 			"mobility" :  -1,
 			"notes" :  "When thrown, the mimic beacon generates a unique audio signal causing aliens to advance towards it for 2 turns. Aliens in combat are less likely to be fooled. Does not affect Mechanical units. 2 uses. -3 will when equipped.",
 			"classes" : ""
