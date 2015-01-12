@@ -12,7 +12,31 @@ $(document).ready(function(){
 	if (location.search != null && location.search.length > 0) {
 		var controller = angular.element($('#xcomController')).scope();
 		var _class = getParameterByName("class");
-		controller.showClass(_class);
+		var perks = getParameterByName("perks");
+		var psiPerks = getParameterByName("psiPerks");
+		var geneMods = getParameterByName("geneMods");
+		var pWep = getParameterByName("primaryWeapon");
+		var sWep = getParameterByName("secondaryWeapon");
+		var armor = getParameterByName("selectedArmor");
+		var eOne = getParameterByName("equipmentSlotOne");
+		var eTwo = getParameterByName("equipmentSlotTwo");
+
+		var doc = {
+			"class": _class,
+			"perks": perks.length > 0 ? perks.split(',') : [],
+			"psiPerks": psiPerks.length > 0 ? psiPerks.split(',') : [],
+			"geneMods" : geneMods.length > 0 ? geneMods.split(',') : [],
+			"armory": {
+				"primaryWeapon": pWep,
+				"secondaryWeapon": sWep,
+				"armor": armor,
+				"equip_one": eOne,
+				"equip_twp" : eTwo,
+			}
+		}
+
+		controller.showBuild(doc);
+
 		controller.$apply();
 	}
 });
@@ -51,15 +75,6 @@ xcomApp.factory('DataService', function($http, $q) {
 			for (var i = 0; i < this.commonJson.classes.length; i++) {
 				if (this.commonJson.classes[i].id === className) {
 					return this.commonJson.classes[i];
-				}
-			}
-		}
-
-		self.getPerk = function (perkName) {
-			this.getCommonJson();
-			for (var i = 0; i < this.commonJson.perks.length; i++) {
-				if (this.commonJson.perks[i].id === perkName) {
-					return this.commonJson.perks[i];
 				}
 			}
 		}
@@ -199,6 +214,10 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 		$scope.linkText = tinyUrl;		       
 	}
 
+	$scope.showBuild = function (build) {
+
+	}
+
 	$scope.resetBuild = function() {
 		$scope.build  = {
 
@@ -272,14 +291,15 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 	$scope.showClass = function(id) {
 		$scope.resetBuild();
 
-		var classJson = DataService.getClassJson(id);
-		
-		$scope.class = classJson;
 		$scope.selectedClass = id;
 
 		DataService.getCommonJson().then (
             // success
             function (commonJson) {
+				
+            	var classJson = DataService.getClassJson(id);
+
+            	$scope.class = classJson;
 
 				for (var i = 0; i < classJson.spec.perks.length; i++) {
 					$scope.perks[i] = [];
