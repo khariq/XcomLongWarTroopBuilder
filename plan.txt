@@ -1,9 +1,6 @@
-1) json data files
-2) angular controller
-3) standard classes
-4) MECs
-5) Psi Troops
-6) calculated stats
-7) items
-8) link to builds
-9) 
+1) MEC perks
+2) class specific equipment
+3) Markdown, HTML and text output
+4) Armor name on stat sheet
+5) Base defense value?
+6) SHIV as solider type
