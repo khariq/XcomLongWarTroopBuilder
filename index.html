@@ -40,29 +40,31 @@
 		<div class="row">
 			
 			<div class="col-md-9">
-				<div class="panel">
-					<ul class="nav nav-pills nav-justified">
-						<li role="presentation" ng-class="{active: visibleTab === 'perks'}" ><a href="#" ng-click="showTab('perks')" >{{class.name}} Perks</a></li>
-						<li role="presentation" ng-class="{active: visibleTab === 'armory'}"><a href="#" ng-click="showTab('armory')">Armory</a></li>
-						<li role="presentation" ng-class="{active: visibleTab === 'psionics'}"><a href="#" ng-click="showTab('psionics')">Psionics</a></li>
-						<li role="presentation" ng-class="{active: visibleTab === 'gene'}"><a href="#" ng-click="showTab('gene')">Gene Mods</a></li>
-					</ul>
-					
+				
+				<ul class="nav nav-pills nav-justified">
+					<li role="presentation" ng-class="{active: visibleTab === 'perks'}" ><a href="#" ng-click="showTab('perks')" >{{class.name}} Perks</a></li>
+					<li role="presentation" ng-class="{active: visibleTab === 'armory'}"><a href="#" ng-click="showTab('armory')">Armory</a></li>
+					<li role="presentation" ng-class="{active: visibleTab === 'psionics'}"><a href="#" ng-click="showTab('psionics')">Psionics</a></li>
+					<li role="presentation" ng-class="{active: visibleTab === 'gene'}"><a href="#" ng-click="showTab('gene')">Gene Mods</a></li>
+				</ul>
+				<div class="panel panel-default">
 					<div class="panel-body" ng-show="visibleTab === 'perks'">
-						
+
 						<div class="row" ng-repeat="perk in perks" style="padding: 2px;">
 							<div class="col-sm-3">
-								{{ranks[$index].name}}
+								<span class="pull-right">
+									{{ranks[$index].name}}
+								</span>
 							</div>
 							<div class="col-sm-9">
 
 								<div class="btn-group btn-group-justified" role="group">
-									
+
 									<div class="btn-group" data-toggle="buttons" ng-repeat="perkDetails in perk">
-								
-										<label class="btn btn-default" ng-mouseover="showDetails(perkDetails)" ng-mouseleave="hideDetails()" ng-click="choosePerk(perkDetails, $parent.$index, this)" ng-class="{active: $parent.$index == 0}" >
-											<input type="checkbox" name="{{$parent.$index}}" id="{{perkDetails.id}}" > 
-											<img src="{{perkDetails.img_src}}" class="pull-left" /> 
+
+										<label class="btn btn-default" ng-mouseover="showDetails(perkDetails)" ng-mouseleave="hideDetails()" ng-click="choosePerk(perkDetails, $parent.$index, this)" ng-class="{active: $parent.$index == 0}">
+											<input type="checkbox" name="{{$parent.$index}}" id="{{perkDetails.id}}">
+											<img src="{{perkDetails.img_src}}" class="pull-left" />
 											{{perkDetails.title}}
 										</label>
 
@@ -75,10 +77,10 @@
 						</div>
 
 					</div>
-				
+
 					<div class="panel-body" ng-show="visibleTab === 'armory'">
 						<div class="row">
-							<div class="col-sm-5">Armor</div>
+							<div class="col-sm-5"><span class="pull-right">Armor</span></div>
 							<div class="col-sm-7">
 								<select class="form-control"
 										ng-model="selectedArmor"
@@ -86,7 +88,7 @@
 							</div>
 						</div>
 						<div class="row">
-							<div class="col-sm-5">Primary Weapon</div>
+							<div class="col-sm-5"><span class="pull-right">Primary Weapon</span></div>
 							<div class="col-sm-7">
 								<select class="form-control"
 										ng-model="selectedPrimaryWeapon"
@@ -94,7 +96,7 @@
 							</div>
 						</div>
 						<div class="row">
-							<div class="col-sm-5">Secondary Weapon</div>
+							<div class="col-sm-5"><span class="pull-right">Secondary Weapon</span></div>
 							<div class="col-sm-7">
 								<select class="form-control"
 										ng-model="selectedSecondaryWeapon"
@@ -103,7 +105,7 @@
 						</div>
 
 						<div class="row">
-							<div class="col-sm-5">Equipment</div>
+							<div class="col-sm-5"><span class="pull-right">Equipment</span></div>
 							<div class="col-sm-7">
 								<select class="form-control"
 										ng-model="equipmentSlotOne"
@@ -111,7 +113,7 @@
 							</div>
 						</div>
 						<div class="row">
-							<div class="col-sm-5">Equipment</div>
+							<div class="col-sm-5"><span class="pull-right">Equipment</span></div>
 							<div class="col-sm-7">
 								<select class="form-control"
 										ng-model="equipmentSlotTwo"
@@ -119,21 +121,21 @@
 							</div>
 						</div>
 					</div>
-				
+
 					<div class="panel-body" ng-show="visibleTab === 'psionics' ">
 						<div class="row" ng-repeat="rank in psionicsPerks" style="padding: 2px;">
 							<div class="col-sm-3">
-								{{rank.name}}
+								<span class="pull-right">{{rank.name}}</span>
 							</div>
 							<div class="col-sm-9">
 
 								<div class="btn-group btn-group-justified" role="group">
-									
+
 									<div class="btn-group" data-toggle="buttons" ng-repeat="perkDetails in rank.perks">
-								
-										<label class="btn btn-default" ng-mouseover="showDescription(perkDetails.description)" ng-mouseleave="hideDescription()" ng-click="choosePsiPerk(perkDetails, $parent.$index, this)" >
-											<input type="checkbox" name="psi{{$parent.$index}}" id="{{perkDetails.id}}" > 
-											<img src="{{perkDetails.img_src}}" class="pull-left" /> 
+
+										<label class="btn btn-default" ng-mouseover="showDescription(perkDetails.description)" ng-mouseleave="hideDescription()" ng-click="choosePsiPerk(perkDetails, $parent.$index, this)">
+											<input type="checkbox" name="psi{{$parent.$index}}" id="{{perkDetails.id}}">
+											<img src="{{perkDetails.img_src}}" class="pull-left" />
 											{{perkDetails.name}}
 										</label>
 
@@ -149,17 +151,17 @@
 					<div class="panel-body" ng-show="visibleTab === 'gene' ">
 						<div class="row" ng-repeat="slot in geneMods" style="padding: 2px;">
 							<div class="col-sm-3">
-								{{slot.slot}}
+								<span class="pull-right">{{slot.slot}}</span>
 							</div>
 							<div class="col-sm-9">
 
 								<div class="btn-group btn-group-justified" role="group">
-									
+
 									<div class="btn-group" data-toggle="buttons" ng-repeat="perkDetails in slot.mods">
-								
-										<label class="btn btn-default" ng-mouseover="showDescription(perkDetails.description)" ng-mouseleave="hideDescription()" ng-click="chooseGeneMod(perkDetails, $parent.$index, this)" >
-											<input type="checkbox" name="psi{{$parent.$index}}" id="{{perkDetails.id}}" > 
-											<img src="{{perkDetails.img_src}}" class="pull-left" style="width: 32px;" /> 
+
+										<label class="btn btn-default" ng-mouseover="showDescription(perkDetails.description)" ng-mouseleave="hideDescription()" ng-click="chooseGeneMod(perkDetails, $parent.$index, this)">
+											<input type="checkbox" name="psi{{$parent.$index}}" id="{{perkDetails.id}}">
+											<img src="{{perkDetails.img_src}}" class="pull-left" style="width: 32px;" />
 											{{perkDetails.name}}
 										</label>
 
@@ -171,17 +173,21 @@
 
 						</div>
 					</div>
-
-					<h4>Build</h4>
-					<div class="well well-lg container-fluid">
-						<div class="col-lg-5">
+				</div>
+				
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						<h3 class="panel-title">Build</h3>
+					</div>
+					<div class="panel-body">
+						<div class="col-lg-4">
 
 							<span ng-repeat="icon in icons">
-								<img src="{{icon.img_url}}" alt="{{icon.title}}" style="width: 32px;" ng-mouseover="showDescription(icon.description)" ng-mouseout="hideDescription()" />								
+								<img src="{{icon.img_url}}" alt="{{icon.title}}" style="width: 32px;" ng-mouseover="showDescription(icon.description)" ng-mouseout="hideDescription()" />
 							</span>
 
 						</div>
-						<div class="col-lg-7">
+						<div class="col-lg-4">
 							<table class="table table-condensed table-striped" ng-show="equipmentSlotOne != null || equipmentSlotTwo != null">
 								<tr>
 									<td>{{equipmentSlotOne.name}}</td>
@@ -193,18 +199,21 @@
 								</tr>
 							</table>
 						</div>
+						<div class="col-lg-4">
+							<ul class="nav nav-tabs">
+								<li role="presentation" ng-class="{active: visibleOutput === 'html'}"><a href="#" ng-click="showOutput('html')">HTML</a></li>
+								<li role="presentation" ng-class="{active: visibleOutput === 'markdown'}"><a href="#" ng-click="showOutput('markdown')">Markdown (reddit)</a></li>
+								<li role="presentation" ng-class="{active: visibleOutput === 'text'}"><a href="#" ng-click="showOutput('text')">Plain Text</a></li>
+							</ul>
+							<div>
+								<pre><code>{{formatted_build}}</code></pre>
+							</div>
+						</div>
 					</div>
-
 				</div>
+								
 			</div>            
 			<div class="col-md-3">
-
-				<form class="form-inline" style="width: 100%;">
-  					<div class="form-group pull-right" style="margin-bottom: 3px;">
-  						<input type="text" value="{{linkText}}" class="form-control" />
-						<button class="btn btn-success" ng-click="buildLink();" >Share this build</button>
-  					</div>
-  				</form>
 				<table class="table table-condensed table-striped">
 					<tr>
 						<td>HP</td>
@@ -231,7 +240,7 @@
 							Primary Weapon
 						</td>
 					</tr>
-					<tr class="info">
+					<tr class="primary">
 						<td colspan="4">
 							{{selectedPrimaryWeapon.name}}
 						</td>
@@ -263,7 +272,7 @@
 							Secondary Weapon
 						</td>
 					</tr>
-					<tr class="info">
+					<tr class="primary">
 						<td colspan="4">
 							{{selectedSecondaryWeapon.name}}
 						</td>

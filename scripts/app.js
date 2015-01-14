@@ -1,46 +1,4 @@
 
-// props Dmitry Mina from Stack Overflow: http://stackoverflow.com/questions/16709373/angularjs-how-to-call-controller-function-from-outside-of-controller-component
-function getParameterByName(name) {
-    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
-    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
-        results = regex.exec(location.search);
-    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
-}
-
-$(document).ready(function(){
-
-	if (location.search != null && location.search.length > 0) {
-		var controller = angular.element($('#xcomController')).scope();
-		var _class = getParameterByName("class");
-		var perks = getParameterByName("perks");
-		var psiPerks = getParameterByName("psiPerks");
-		var geneMods = getParameterByName("geneMods");
-		var pWep = getParameterByName("primaryWeapon");
-		var sWep = getParameterByName("secondaryWeapon");
-		var armor = getParameterByName("selectedArmor");
-		var eOne = getParameterByName("equipmentSlotOne");
-		var eTwo = getParameterByName("equipmentSlotTwo");
-
-		var doc = {
-			"class": _class,
-			"perks": perks.length > 0 ? perks.split(',') : [],
-			"psiPerks": psiPerks.length > 0 ? psiPerks.split(',') : [],
-			"geneMods" : geneMods.length > 0 ? geneMods.split(',') : [],
-			"armory": {
-				"primaryWeapon": pWep,
-				"secondaryWeapon": sWep,
-				"armor": armor,
-				"equip_one": eOne,
-				"equip_twp" : eTwo,
-			}
-		}
-
-		controller.showBuild(doc);
-
-		controller.$apply();
-	}
-});
-
 var xcomApp = angular.module('xcomApp', []);
 
 xcomApp.factory('DataService', function($http, $q) {		
@@ -119,105 +77,7 @@ xcomApp.factory('DataService', function($http, $q) {
 });
 
 xcomApp.controller('xcomController', function($scope, $http, DataService) {
-
-	$scope.menuItems = [];
-	$scope.tabs = [];
-	
-	$scope.ranks = [];
-
-	$scope.build = {};
-	$scope.showPerkDetails = false;
-	$scope.perkInDetails = {};
-	
-	$scope.class = null;
-	$scope.perks = [];
-	$scope.armors = [];
-	$scope.primaryWeapons = [];
-	$scope.secondaryWeapons = [];
-	$scope.equipment = [];	
-	$scope.visibleTab = "perks";
-	$scope.icons = [];
-	$scope.description = '';
-	$scope.displayDescription = false;
-
-	$scope.psionicRanks = [];
-	$scope.psionicsPerks = [];
-
-	$scope.geneMods = [];
-	
-	$scope.selectedPerks = [];
-	$scope.selectedGeneMods = [];
-	$scope.selectedPsionicPerks = [];
-	$scope.selectedPrimaryWeapon = null;
-	$scope.selectedSecondaryWeapon = null;
-	$scope.equipmentSlotOne = null;
-	$scope.equipmentSlotTwo = null
-	$scope.selectedClass = null;
-	$scope.selectedArmor = null;
 		
-	$scope.linkText = '';
-
-	$scope.buildLink = function() {
-
-		var link = "";
-		link += "class=" + encodeURIComponent($scope.selectedClass);
-		
-		link += "&perks=";
-		var perks = "";
-		for (var i = 0; i < $scope.selectedPerks.length; i++) {
-			if ($scope.selectedPerks[i] != null) {
-				perks += $scope.selectedPerks[i].id + ",";
-			}
-		}
-		link += encodeURIComponent(perks.replace(/^,|,$/g,''));
-
-		link += "&psionics=";
-		perks = "";
-		for (var i = 0; i < $scope.selectedPsionicPerks.length; i++) {
-			if ($scope.selectedPsionicPerks[i] != null) {
-				perks += $scope.selectedPsionicPerks[i].id + ",";
-			}
-		}
-		link += encodeURIComponent(perks.replace(/^,|,$/g,''));
-
-		link += "&geneMods=";
-		perks = "";
-		for (var i = 0; i < $scope.selectedGeneMods.length; i++) {
-			if ($scope.selectedGeneMods[i] != null) {
-				perks += $scope.selectedGeneMods[i].id + ",";
-			}
-		}		
-		link += encodeURIComponent(perks.replace(/^,|,$/g,''));
-
-		if ($scope.selectedPrimaryWeapon != null) {
-			link += "&primaryWeapon=" + encodeURIComponent($scope.selectedPrimaryWeapon.id);
-		}
-
-		if ($scope.selectedSecondaryWeapon != null) {
-			link += "&secondaryWeapon=" + encodeURIComponent($scope.selectedSecondaryWeapon.id);
-		}
-
-		if ($scope.selectedArmor != null) {
-			link += "&selectedArmor=" + encodeURIComponent($scope.selectedArmor.id);
-		}
-
-		if ($scope.equipmentSlotOne != null) {
-			link += "&equipmentSlotOne=" + encodeURIComponent($scope.equipmentSlotOne.id);
-		}
-
-		if ($scope.equipmentSlotTwo != null) {
-			link += "&equipmentSlotTwo=" + encodeURIComponent($scope.equipmentSlotTwo.id);
-		}
-
-		var tinyUrl = "http://localhost?" + link;
-		
-		$scope.linkText = tinyUrl;		       
-	}
-
-	$scope.showBuild = function (build) {
-
-	}
-
 	$scope.resetBuild = function() {
 		$scope.build  = {
 
@@ -342,12 +202,14 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 				var equipment = Enumerable.From(commonJson.items);
 				$scope.equipment = equipment.Where("$.classes === '' || $.classes.indexOf('" + id + "') > 0").Select("$").ToArray();
 
+				$scope.showOutput($scope.visibleOutput);
 			},
             // failure
             function (commonJson) {
 
 			}
 		);
+		
 	}
 	
 	$scope.choosePerk = function(perk, rank, btnElement) {
@@ -404,7 +266,7 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 		 );
 
 		$scope.selectedPerks[rank] = perk;
-
+		$scope.showOutput($scope.visibleOutput);
 	}
 	
 	$scope.choosePsiPerk = function(perk, rank, btnElement) {
@@ -439,7 +301,7 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 		 );
 
 		$scope.selectedPsionicPerks[rank] = perk;
-
+		$scope.showOutput($scope.visibleOutput);
 	}
 
 	$scope.chooseGeneMod = function(perk, rank, btnElement) {
@@ -468,6 +330,7 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 		 	}
 		 );
 
+		$scope.showOutput($scope.visibleOutput);
 	}
 
 	$scope.showDetails = function(perk) {
@@ -491,5 +354,83 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 	$scope.hideDescription = function() {
 		$scope.displayDescription = false;
 	}
+
+	$scope.showOutput = function (type) {
+		$scope.visibleOutput = type;
+
+		switch (type) {
+			case 'html': { $scope.formatted_build = $scope.buildHTMLOutput(); break; }
+			case 'text': { $scope.formatted_build = $scope.buildTextOutput(); break; }
+			case 'markdown': { $scope.formatted_build = $scope.buildMarkdownOutput(); break; }
+		} 
+
+	}
+
+	$scope.buildMarkdownOutput = function () {
+		var markup = '';
+		if ($scope.class != null) {
+			markup += '**' + $scope.class.name + ' Perks**\r\n\r\n';
+		}
+		markup += 'Rank|Perk\r\n';
+		markup += '----:|----\r\n';
+		for (var i = 0; i < $scope.selectedPerks.length; i++) {
+			markup += $scope.ranks[i].name + '|';
+			markup += $scope.selectedPerks[i].title;
+
+			markup += '\r\n';
+		}
+		markup += '\r\n';
+		markup += '**Psi Perks**\r\n\r\n';
+		markup += 'Rank|Perk\r\n';
+		markup += '----:|----\r\n';
+		for (var i = 0; i < $scope.selectedPsionicPerks.length; i++) {
+			markup += $scope.psionicsPerks[i].name + '|';
+			markup += $scope.selectedPsionicPerks[i].name;
+
+			markup += '\r\n';
+		}
+
+
+		return markup;
+	}
+
+	$scope.menuItems = [];
+	$scope.tabs = [];
+
+	$scope.ranks = [];
+
+	$scope.build = {};
+	$scope.showPerkDetails = false;
+	$scope.perkInDetails = {};
+
+	$scope.class = null;
+	$scope.perks = [];
+	$scope.armors = [];
+	$scope.primaryWeapons = [];
+	$scope.secondaryWeapons = [];
+	$scope.equipment = [];
+	$scope.visibleTab = "perks";
+	$scope.icons = [];
+	$scope.description = '';
+	$scope.displayDescription = false;
+
+	$scope.psionicsPerks = [];
+
+	$scope.geneMods = [];
+
+	$scope.selectedPerks = [];
+	$scope.selectedGeneMods = [];
+	$scope.selectedPsionicPerks = [];
+	$scope.selectedPrimaryWeapon = null;
+	$scope.selectedSecondaryWeapon = null;
+	$scope.equipmentSlotOne = null;
+	$scope.equipmentSlotTwo = null
+	$scope.selectedClass = null;
+	$scope.selectedArmor = null;
+
+	$scope.linkText = '';
+	$scope.formatted_build = $scope.buildMarkdownOutput();
+	$scope.visibleOutput = 'markdown';
+
 
 });

@@ -2506,7 +2506,7 @@
 		{
 			"id" : "sentinel",
 			"img_src" : "http://ufopaedia.org/images/thumb/d/d6/SUPPORT_SENTINEL.png/32px-SUPPORT_SENTINEL.png",
-			"title" : "Covering Fire",
+			"title" : "Sentinel",
 			"description" : "Allows two reaction shots during Overwatch, instead of only one.",
 			"aim_bonus" : 0,
 			"will_bonus" : 0,
