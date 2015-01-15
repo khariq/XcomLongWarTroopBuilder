@@ -1,74 +1,67 @@
 {
-	"id" : "assault",
-	"name" : "Assault",
-	"mec_name" : "Marauder",
+	"id" : "gunner",
+	"name" : "Gunner",
+	"mec_name" : "Goliath",
 	"icon_src" : "http://ufopaedia.org/images/5/57/CLASS_ASSAULT.png",
 	"spec" :  {
 		"primary_weapons" : [
-				{ "carbines" : 1 },
-				{ "assault_rifles" : 1 },
-				{ "battle_rifles" : 1 },
-				{ "smgs" : 1 },
-				{ "shotguns" : 1}
+				{ "squad_automatic_weapon" : 1 },
+				{ "light_machine_gun" : 1 },
+				{ "assault_rifles" : 1 }
 		],
 		"secondary_weapons" : [
-			{ "pistols" : 1},
-			{ "machine_pistols" : 1},
-			{ "shotguns" : 1}		
 		],
 		"class_limited_items" : [
-			{ "walker_servos" : 1},
-			{ "impact_vest" : 1},
-			{ "shredder_ammo" : 1},
-			{ "breaching_ammo" : 1}
+			"rocket",
+			"shredder_rocket"
 		],
-		"perks" : [
+		"perks" :  [
 			{
 				"rank" : 1,
 				"perks" : [
-					{ "id" : "run_and_gun" }
+					{ "id" : "suppression" }
 				]
 			}, {
 				"rank" : 2,
 				"perks" : [
+					{ "id" : "covering_fire"},
 					{ "id" : "flush"},
-					{ "id" : "close_combat_specialist"},
-					{ "id" : "steadfast"}
+					{ "id" : "holo_targeting"}			            	
 				]
 			}, {
 				"rank" : 3,
 				"perks" : [
-					{ "id" : "gunslinger"},
-					{ "id" : "tactical_sense"},
-					{ "id" : "aggression"}
+					{ "id" : "shredder_ammo"},
+					{ "id" : "heat_ammo"},
+					{ "id" : "ranger"}
 				]
 			}, {
 				"rank" : 4,
 				"perks" : [
-					{ "id" : "hit_and_run"},
-					{ "id" : "close_encounters"},
-					{ "id" : "rapid_fire"}
+					{ "id" : "executioner"},
+					{ "id" : "tactical_sense"},
+					{ "id" : "danger_zone"}
 				]
 			}, {
 				"rank" : 5,
 				"perks" : [
-				{ "id" : "extra_conditioning"},
-				{ "id" : "killer_instinct"},
-				{ "id" : "ranger"}
+				{ "id" : "ready_for_anything"},
+				{ "id" : "rapid_fire"},
+				{ "id" : "double_tap"}
 				]
 			}, {
 				"rank" : 6,
 				"perks" : [
-					{ "id" : "will_to_survive"},
 					{ "id" : "bring_em_on"},
-					{ "id" : "sprinter"}
+					{ "id" : "extra_conditioning"},
+					{ "id" : "will_to_survive"}
 				]
 			}, {
 				"rank" : 7,
 				"perks" : [
-					{ "id" : "vital_point_targeting"},
 					{ "id" : "resilience"},
-					{ "id" : "lightning_reflexes"}
+					{ "id" : "sentinel"},
+					{ "id" : "mayhem"}
 				]
 			}
 		],
@@ -109,6 +102,6 @@
 				"will_low" : 3,
 				"will_high" : 4
 			}
-		]		
+		]	
 	}
 }

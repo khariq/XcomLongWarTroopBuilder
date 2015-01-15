@@ -44,8 +44,8 @@
 				<ul class="nav nav-pills nav-justified">
 					<li role="presentation" ng-class="{active: visibleTab === 'perks'}" ><a href="#" ng-click="showTab('perks')" >{{class.name}} Perks</a></li>
 					<li role="presentation" ng-class="{active: visibleTab === 'armory'}"><a href="#" ng-click="showTab('armory')">Armory</a></li>
-					<li role="presentation" ng-class="{active: visibleTab === 'psionics'}"><a href="#" ng-click="showTab('psionics')">Psionics</a></li>
-					<li role="presentation" ng-class="{active: visibleTab === 'gene'}"><a href="#" ng-click="showTab('gene')">Gene Mods</a></li>
+					<li role="presentation" ng-hide="hideTab('psionics')" ng-class="{active: visibleTab === 'psionics'}"><a href="#" ng-click="showTab('psionics')">Psionics</a></li>
+					<li role="presentation" ng-hide="hideTab('gene')" ng-class="{active: visibleTab === 'gene'}"><a href="#" ng-click="showTab('gene')">Gene Mods</a></li>
 				</ul>
 				<div class="panel panel-default">
 					<div class="panel-body" ng-show="visibleTab === 'perks'">
@@ -201,7 +201,6 @@
 						</div>
 						<div class="col-lg-4">
 							<ul class="nav nav-tabs">
-								<li role="presentation" ng-class="{active: visibleOutput === 'html'}"><a href="#" ng-click="showOutput('html')">HTML</a></li>
 								<li role="presentation" ng-class="{active: visibleOutput === 'markdown'}"><a href="#" ng-click="showOutput('markdown')">Markdown (reddit)</a></li>
 								<li role="presentation" ng-class="{active: visibleOutput === 'text'}"><a href="#" ng-click="showOutput('text')">Plain Text</a></li>
 							</ul>
@@ -232,6 +231,17 @@
 						<td>{{build.aim + build.mod.aim + build.rank_ups.aim + selectedPrimaryWeapon.aim_mod + equipmentSlotOne.aim + equipmentSlotTwo.aim}}</td>
 						<td>Mobility</td>
 						<td>{{build.mobility + build.mod.mob + selectedPrimaryWeapon.mobility_mod + + selectedArmor.mobility + equipmentSlotOne.mobilitiy + equipmentSlotTwo.mobilitiy}}</td>
+					</tr>					
+				</table>
+				<table class="table table-condensed table-striped">
+					<tr>
+						<td colspan="4">Armor</td>
+					</tr>
+					<tr>
+						<td>{{selectedArmor.name}}</td><td>{{selectedArmor.type}}</td>
+					</tr>
+					<tr>
+						<td>HP</td><td>{{selectedArmor.hp}}</td>
 					</tr>
 				</table>
 				<table class="table table-condensed table-striped">
@@ -319,9 +329,9 @@
 					</table>
 				</div>
 				<div class="alert alert-success" ng-show="displayDescription">
-					{{description}}
-				</div>
-			</div>
+						{{description}}
+					</div>
+</div>
 
 		</div>
 		

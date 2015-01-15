@@ -1,0 +1,110 @@
+{
+	"id" : "rocketeer",
+	"name" : "Rocketeer",
+	"mec_name" : "Archer",
+	"icon_src" : "http://ufopaedia.org/images/5/57/CLASS_ASSAULT.png",
+	"spec" :  {
+		"primary_weapons" : [
+				{ "carbines" : 1 },
+				{ "assault_rifles" : 1 },
+				{ "battle_rifles" : 1 },
+				{ "smgs" : 1 }
+		],
+		"secondary_weapons" : [
+			{ "rocket_launchers" : 1}
+		],
+		"class_limited_items" : [
+			"rocket",
+			"shredder_rocket"
+		],
+		"perks" :  [
+			{
+				"rank" : 1,
+				"perks" : [
+					{ "id" : "fire_rocket" }
+				]
+			}, {
+				"rank" : 2,
+				"perks" : [
+					{ "id" : "covering_fire"},
+					{ "id" : "rapid_reaction"},
+					{ "id" : "heat_warheads"}			            	
+				]
+			}, {
+				"rank" : 3,
+				"perks" : [
+					{ "id" : "fire_in_the_hole"},
+					{ "id" : "suppression"},
+					{ "id" : "snapshot"}
+				]
+			}, {
+				"rank" : 4,
+				"perks" : [
+					{ "id" : "opportunist"},
+					{ "id" : "tactical_sense"},
+					{ "id" : "shredder_ammo"}
+				]
+			}, {
+				"rank" : 5,
+				"perks" : [
+				{ "id" : "ranger"},
+				{ "id" : "ready_for_anything"},
+				{ "id" : "will_to_survive"}
+				]
+			}, {
+				"rank" : 6,
+				"perks" : [
+					{ "id" : "danger_zone"},
+					{ "id" : "mayhem"},
+					{ "id" : "javelin_rockets"}
+				]
+			}, {
+				"rank" : 7,
+				"perks" : [
+					{ "id" : "extra_conditioning"},
+					{ "id" : "sprinter"},
+					{ "id" : "shock_and_awe"}
+				]
+			}
+		],
+		"stat_progression" : [
+			{
+				"health" : 1,
+				"aim" : 4,
+				"will_low" : 5,
+				"will_high" : 6
+			}, {
+				"health" : 0,
+				"aim" : 4,
+				"will_low" : 5,
+				"will_high" : 6
+			}, {
+				"health" : 0,
+				"aim" : 4,
+				"will_low" : 3,
+				"will_high" : 4 
+			}, {
+				"health" : 1,
+				"aim" : 4,
+				"will_low" : 3,
+				"will_high" : 4
+			}, {
+				"health" : 0,
+				"aim" : 3,
+				"will_low" : 3,
+				"will_high" : 4
+			}, {
+				"health" : 0,
+				"aim" : 2,
+				"will_low" : 3,
+				"will_high" : 4
+			}, {
+				"health" : 1,
+				"aim" : 2,
+				"will_low" : 3,
+				"will_high" : 4
+			}
+		]	
+				
+	}
+}

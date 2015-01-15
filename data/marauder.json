@@ -1,0 +1,75 @@
+{
+	"id" : "marauder",
+	"name" : "Marauder",
+	"mec_name" : "Marauder",
+	"icon_src" : "http://ufopaedia.org/images/5/57/CLASS_ASSAULT.png",
+	"spec" :  {
+		"primary_weapons" : [
+				{ "mec_primary" : 1 }
+		],
+		"secondary_weapons" : [
+			{ "mec_secondary" : 1}	
+		],
+		"class_limited_items" : [
+		],
+		"perks" : [
+			{
+				"rank" : 1,
+				"perks" : [
+					{ "id" : "shock_absorbent_armor" }
+				]
+			}, {
+				"rank" : 2,
+				"perks" : [
+					{ "id" : "aggression"},
+					{ "id" : "ranger"},
+					{ "id" : "body_shield"}
+				]
+			}, {
+				"rank" : 3,
+				"perks" : [
+					{ "id" : "executioner"},
+					{ "id" : "close_combat_specialist"},
+					{ "id" : "jetboost_module"}
+				]
+			}, {
+				"rank" : 4,
+				"perks" : [
+					{ "id" : "advanced_fire_control"},
+					{ "id" : "damage_control"},
+					{ "id" : "collateral_damage"}
+				]
+			}, {
+				"rank" : 5,
+				"perks" : [
+				{ "id" : "repair_servos"},
+				{ "id" : "bring_em_on"},
+				{ "id" : "reactive_targeting_sensors"}
+				]
+			}, {
+				"rank" : 6,
+				"perks" : [
+					{ "id" : "vital_point_targeting"},
+					{ "id" : "close_encounters"},
+					{ "id" : "hit_and_run"}
+				]
+			}, {
+				"rank" : 7,
+				"perks" : [
+					{ "id" : "absorption_fields"},
+					{ "id" : "rapid_fire"},
+					{ "id" : "run_and_gun"}
+				]
+			}
+		],
+		"stat_progression" : [
+			{               "health" : 1,               "aim" : 3,				"will_low" : 2,				"will_high" : 3			}, 
+            {				"health" : 0,				"aim" : 3,				"will_low" : 2,				"will_high" : 3			}, 
+            {				"health" : 1,				"aim" : 3,				"will_low" : 2,				"will_high" : 3 		}, 
+            {				"health" : 1,				"aim" : 3,				"will_low" : 2,				"will_high" : 3			}, 
+            {				"health" : 1,				"aim" : 3,				"will_low" : 2,				"will_high" : 3			}, 
+            {				"health" : 0,				"aim" : 3,				"will_low" : 2,				"will_high" : 3			}, 
+            {				"health" : 1,				"aim" : 3,				"will_low" : 2,				"will_high" : 3			}
+		]		
+	}
+}

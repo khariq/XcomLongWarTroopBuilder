@@ -1,0 +1,185 @@
+{
+	"armors" : [
+		{
+			"type" : "Basic Armor",
+			"name" : "Leather Jacket",
+			"hp" : 0,
+			"mobility" : 5,
+			"defense" : 0,
+			"will" : 0,
+			"damage_reduction" : 0,
+			"tech" : "none"
+		},
+		{
+			"type" : "Basic Armor",
+			"name" : "Tac Vest",
+			"hp" : 1,
+			"mobility" : 3,
+			"defense" : 0,
+			"will" : 0,
+			"damage_reduction" : 0,
+			"tech" : "none"
+		},
+		{
+			"type" : "Basic Armor",
+			"name" : "Tac Armor",
+			"hp" : 2,
+			"mobility" : 1,
+			"defense" : 0,
+			"will" : 0,
+			"damage_reduction" : 0,
+			"tech" : "none"
+		},
+		{
+			"type" : "Basic Armor",
+			"name" : "Phalanx Armor",
+			"hp" : 3,
+			"mobility" : 2,
+			"defense" : 0,
+			"will" : 0,
+			"damage_reduction" : 0,
+			"tech" : "Improved Body Armor"
+		},
+		{
+			"type" : "Basic Armor",
+			"name" : "Aurora Armor",
+			"hp" : 4,
+			"mobility" : 2,
+			"defense" : 15,
+			"will" : 10,
+			"damage_reduction" : 0,
+			"tech" : "Improved Body Armor, Psi Warfare Systems"
+		},
+		{
+			"type" : "Basic Armor",
+			"name" : "Kestrel Armor",
+			"hp" : 2,
+			"mobility" : 3,
+			"defense" : 5,
+			"will" : 0,
+			"damage_reduction" : 0,
+			"tech" : "Advanced Body Armor"
+		},
+		{
+			"type" : "Basic Armor",
+			"name" : "Carapace Armor",
+			"hp" : 5,
+			"mobility" : 1,
+			"defense" : 0,
+			"will" : 0,
+			"damage_reduction" : 0,
+			"tech" : "Advanced Body Armor"
+		},
+		{
+			"type" : "Power Armor",
+			"name" : "Banshee Armor",
+			"hp" : 3,
+			"mobility" : 4,
+			"defense" : 15,
+			"will" : 0,
+			"damage_reduction" : 0,
+			"tech" : "Mobile Power Armor"
+		},
+		{
+			"type" : "Power Armor",
+			"name" : "Aegis Armor",
+			"hp" : 7,
+			"mobility" : 2,
+			"defense" : 0,
+			"will" : 0,
+			"damage_reduction" : 0,
+			"tech" : "Mobile Power Armor"
+		},
+		{
+			"type" : "Power Armor",
+			"name" : "Corsair Armor",
+			"hp" : 6,
+			"mobility" : 3,
+			"defense" : 10,
+			"will" : 0,
+			"damage_reduction" : 0,
+			"tech" : "Advanced Power Armor"
+		},
+		{
+			"type" : "Power Armor",
+			"name" : "Titan Armor",
+			"hp" : 10,
+			"mobility" : 0,
+			"defense" : 0,
+			"will" : 0,
+			"damage_reduction" : 0.4,
+			"tech" : "Advanced Power Armor"
+		},
+		{
+			"type" : "Power Armor",
+			"name" : "Seraphim Armor",
+			"hp" : 5,
+			"mobility" : 3,
+			"defense" : 10,
+			"will" : 0,
+			"damage_reduction" : 0,
+			"tech" : "Antigrav Systems"
+		},
+		{
+			"type" : "Power Armor",
+			"name" : "Archangel Armor",
+			"hp" : 8,
+			"mobility" : 1,
+			"defense" : 0,
+			"will" : 0,
+			"damage_reduction" : 0.2,
+			"tech" : "Antigrav Systems"
+		},
+		{
+			"type" : "Power Armor",
+			"name" : "Shadow Armor",
+			"hp" : 4,
+			"mobility" : 2,
+			"defense" : 20,
+			"will" : 0,
+			"damage_reduction" : 0,
+			"tech" : "Stealth Systems"
+		},
+		{
+			"type" : "Power Armor",
+			"name" : "Vortex Armor",
+			"hp" : 8,
+			"mobility" : 2,
+			"defense" : 10,
+			"will" : 20,
+			"damage_reduction" : 0,
+			"tech" : "Mind and Machine"
+		},
+
+		{
+			"type" : "MEC Armor",
+			"name" : "MEC-1 Warden",
+			"hp" : 10,
+			"mobility" : 4,
+			"defense" : 20,
+			"will" : 10,
+			"damage_reduction" : 1,
+			"tech" : "Alien Biocybernetics"
+		},
+		{
+			"type" : "MEC Armor",
+			"name" : "MEC-2 Sentinel",
+			"hp" : 14,
+			"mobility" : 5,
+			"defense" : 20,
+			"will" : 15,
+			"damage_reduction" : 1.3,
+			"tech" : "Mobile Power Armor, MEC Warfare Systems"
+		},
+		{
+			"type" : "MEC Armor",
+			"name" : "MEC-3 Paladin",
+			"hp" : 18,
+			"mobility" : 6,
+			"defense" : 20,
+			"will" : 20,
+			"damage_reduction" : 1.5,
+			"tech" : "Advanced Power Armor, MEC Warfare Systems"
+		}
+	]
+}

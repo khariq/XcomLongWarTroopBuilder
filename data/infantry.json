@@ -1,7 +1,7 @@
 {
-	"id" : "assault",
-	"name" : "Assault",
-	"mec_name" : "Marauder",
+	"id" : "infantry",
+	"name" : "Infantry",
+	"mec_name" : "Valkyrie",
 	"icon_src" : "http://ufopaedia.org/images/5/57/CLASS_ASSAULT.png",
 	"spec" :  {
 		"primary_weapons" : [
@@ -17,84 +17,80 @@
 			{ "shotguns" : 1}		
 		],
 		"class_limited_items" : [
-			{ "walker_servos" : 1},
-			{ "impact_vest" : 1},
-			{ "shredder_ammo" : 1},
-			{ "breaching_ammo" : 1}
 		],
 		"perks" : [
 			{
 				"rank" : 1,
 				"perks" : [
-					{ "id" : "run_and_gun" }
+					{ "id" : "light_em_up" }
 				]
 			}, {
 				"rank" : 2,
 				"perks" : [
-					{ "id" : "flush"},
-					{ "id" : "close_combat_specialist"},
-					{ "id" : "steadfast"}
+					{ "id" : "steadfast"},
+					{ "id" : "executioner"},
+					{ "id" : "covering_fire"}
 				]
 			}, {
 				"rank" : 3,
 				"perks" : [
-					{ "id" : "gunslinger"},
+					{ "id" : "agression"},
 					{ "id" : "tactical_sense"},
-					{ "id" : "aggression"}
+					{ "id" : "opportunist"}
 				]
 			}, {
 				"rank" : 4,
 				"perks" : [
-					{ "id" : "hit_and_run"},
-					{ "id" : "close_encounters"},
-					{ "id" : "rapid_fire"}
+					{ "id" : "ranger"},
+					{ "id" : "gunslinger"},
+					{ "id" : "suppression"}
 				]
 			}, {
 				"rank" : 5,
 				"perks" : [
-				{ "id" : "extra_conditioning"},
-				{ "id" : "killer_instinct"},
-				{ "id" : "ranger"}
+				{ "id" : "sharpshooter"},
+				{ "id" : "lock_and_load"},
+				{ "id" : "will_to_survive"}
 				]
 			}, {
 				"rank" : 6,
 				"perks" : [
-					{ "id" : "will_to_survive"},
+					{ "id" : "extra_conditioning"},
 					{ "id" : "bring_em_on"},
-					{ "id" : "sprinter"}
+					{ "id" : "sentinel"}
 				]
 			}, {
 				"rank" : 7,
 				"perks" : [
 					{ "id" : "vital_point_targeting"},
 					{ "id" : "resilience"},
-					{ "id" : "lightning_reflexes"}
+					{ "id" : "rapid_fire"}
 				]
 			}
 		],
 		"stat_progression" : [
 			{
 				"health" : 1,
-				"aim" : 3,
+				"aim" : 4,
 				"will_low" : 5,
 				"will_high" : 6
 			}, {
 				"health" : 0,
-				"aim" : 3,
+				"aim" : 4,
 				"will_low" : 5,
 				"will_high" : 6
 			}, {
-				"health" : 1,
-				"aim" : 3,
+				"health" : 0,
+				"aim" : 4,
 				"will_low" : 3,
 				"will_high" : 4 
 			}, {
-				"health" : 0,
-				"aim" : 3,
+				"health" : 1,
+				"aim" : 4,
 				"will_low" : 3,
 				"will_high" : 4
 			}, {
-				"health" : 1,
+				"health" : 0,
 				"aim" : 3,
 				"will_low" : 3,
 				"will_high" : 4

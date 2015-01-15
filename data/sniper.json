@@ -1,0 +1,86 @@
+{
+	"id" : "sniper",
+	"name" : "Sniper",
+	"mec_name" : "Jaeger",
+	"icon_src" : "http://ufopaedia.org/images/5/57/CLASS_ASSAULT.png",
+	"spec" :  {
+		"primary_weapons" : [
+				{ "sniper_rifles" : 1 },
+				{ "marksman_rifle" : 1 },
+				{ "assault_rifles" : 1 }		             
+		],
+		"secondary_weapons" : [
+			{ "pistols" : 1},
+			{ "machine_pistols" : 1}
+		],
+		"class_limited_items" : [
+		],
+		"perks" : [
+			{
+				"rank" : 1,
+				"perks" : [
+					{ "id" : "squadsight" }
+				]
+			}, {
+				"rank" : 2,
+				"perks" : [
+					{ "id" : "low_profile"},
+					{ "id" : "gunslinger"},
+					{ "id" : "lone_wolf"}
+				]
+			}, {
+				"rank" : 3,
+				"perks" : [
+					{ "id" : "disabling_shot"},
+					{ "id" : "precision_shot"},
+					{ "id" : "snapshot"}
+				]
+			}, {
+				"rank" : 4,
+				"perks" : [
+					{ "id" : "executioner"},
+					{ "id" : "agression"},
+					{ "id" : "damn_good_ground"}
+				]
+			}, {
+				"rank" : 5,
+				"perks" : [
+				{ "id" : "tactical_sense"},
+				{ "id" : "ranger"},
+				{ "id" : "sharpshooter"}
+				]
+			}, {
+				"rank" : 6,
+				"perks" : [
+					{ "id" : "lock_and_load"},
+					{ "id" : "bring_em_on"},
+					{ "id" : "vital_point_targeting"}
+				]
+			}, {
+				"rank" : 7,
+				"perks" : [
+					{ "id" : "in_the_zone"},
+					{ "id" : "mayhem"},
+					{ "id" : "double_tap"}
+				]
+			}
+		],
+		"stat_progression" : [
+			{
+				"health" : 0,						"aim" : 5,						"will_low" : 5,						"will_high" : 6
+			}, {
+				"health" : 0,						"aim" : 5,						"will_low" : 5,						"will_high" : 6
+			}, {
+				"health" : 1,						"aim" : 5,						"will_low" : 3,						"will_high" : 4 
+			}, {
+				"health" : 0,						"aim" : 5,						"will_low" : 3,						"will_high" : 4
+			}, {
+				"health" : 0,						"aim" : 4,						"will_low" : 3,						"will_high" : 4
+			}, {
+				"health" : 0,						"aim" : 4,						"will_low" : 3,						"will_high" : 4
+			}, {
+				"health" : 1,						"aim" : 4,						"will_low" : 3,						"will_high" : 4
+			}
+		]		
+	}
+}

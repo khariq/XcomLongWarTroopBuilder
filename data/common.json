@@ -833,8 +833,83 @@
 					}
 				]		
 		    }
-                }
-	], 
+                },
+	    {
+	        "id" : "marauder",
+	        "name" : "Marauder",
+	        "mec" : 1,
+	        "icon_src" : "http://ufopaedia.org/images/5/57/CLASS_ASSAULT.png",
+	        "spec" :  {
+		        "primary_weapons" : [
+				        { "mec_primary" : 1 }
+		        ],
+		        "secondary_weapons" : [
+			        { "mec_secondary" : 1}	
+		        ],
+		        "class_limited_items" : [
+		        ],
+		        "perks" : [
+			        {
+				        "rank" : 1,
+				        "perks" : [
+					        { "id" : "shock_absorbent_armor" }
+				        ]
+			        }, {
+				        "rank" : 2,
+				        "perks" : [
+					        { "id" : "aggression"},
+					        { "id" : "ranger"},
+					        { "id" : "body_shield"}
+				        ]
+			        }, {
+				        "rank" : 3,
+				        "perks" : [
+					        { "id" : "executioner"},
+					        { "id" : "close_combat_specialist"},
+					        { "id" : "jetboot_module"}
+				        ]
+			        }, {
+				        "rank" : 4,
+				        "perks" : [
+					        { "id" : "advanced_fire_control"},
+					        { "id" : "damage_control"},
+					        { "id" : "collateral_damage"}
+				        ]
+			        }, {
+				        "rank" : 5,
+				        "perks" : [
+				        { "id" : "repair_servos"},
+				        { "id" : "bring_em_on"},
+				        { "id" : "reactive_targeting_sensors"}
+				        ]
+			        }, {
+				        "rank" : 6,
+				        "perks" : [
+					        { "id" : "vital_point_targeting"},
+					        { "id" : "close_encounters"},
+					        { "id" : "hit_and_run"}
+				        ]
+			        }, {
+				        "rank" : 7,
+				        "perks" : [
+					        { "id" : "absorption_fields"},
+					        { "id" : "rapid_fire"},
+					        { "id" : "run_and_gun"}
+				        ]
+			        }
+		        ],
+		        "stat_progression" : [
+			        {               "health" : 1,               "aim" : 3,				"will_low" : 2,				"will_high" : 3			}, 
+                    {				"health" : 0,				"aim" : 3,				"will_low" : 2,				"will_high" : 3			}, 
+                    {				"health" : 1,				"aim" : 3,				"will_low" : 2,				"will_high" : 3 		}, 
+                    {				"health" : 1,				"aim" : 3,				"will_low" : 2,				"will_high" : 3			}, 
+                    {				"health" : 1,				"aim" : 3,				"will_low" : 2,				"will_high" : 3			}, 
+                    {				"health" : 0,				"aim" : 3,				"will_low" : 2,				"will_high" : 3			}, 
+                    {				"health" : 1,				"aim" : 3,				"will_low" : 2,				"will_high" : 3			}
+		        ]		
+	        }
+        }
+        ], 
 	"ranks" : [
 		{
 			"name" : "Specialist",
@@ -2802,7 +2877,96 @@
 			"will_bonus" :  0,
 			"mobility_bonus" :  0,
 			"damage_bonus" : 0
-		}
+		},{
+	"id" : "shock_absorbent_armor",
+	"img_src" :  "http://ufopaedia.org/images/thumb/1/19/MEC_SHOCK_ABSORBENT_ARMOR.png/32px-MEC_SHOCK_ABSORBENT_ARMOR.png",
+	"title" :  "Shock-Absorbent Armor",
+	"description" :  "Damage received from enemies within 4 tiles is reduced by 33%.",
+	"aim_bonus" :  0,
+	"will_bonus" :  0,
+	"mobility_bonus" :  0,
+	"damage_bonus" : 0
+},
+{
+	"id" : "body_shield",
+	"img_src" :  "http://ufopaedia.org/images/thumb/d/d5/MEC_BODY_SHIELD.png/32px-MEC_BODY_SHIELD.png",
+	"title" :  "Body Shield",
+	"description" :  "The nearest visible enemy suffers -20 aim and cannot critically hit this unit",
+	"aim_bonus" :  0,
+	"will_bonus" :  3,
+	"mobility_bonus" :  1,
+	"damage_bonus" : 0
+},
+{
+	"id" : "jetboot_module",
+	"img_src" :  "http://ufopaedia.org/images/thumb/c/c2/MEC_JET_BOOT_MODULE.png/32px-MEC_JET_BOOT_MODULE.png",
+	"title" :  "Jetboot Module",
+	"description" :  "When activated, confers the ability to jump to normally inaccessible heights for the rest of the turn.",
+	"aim_bonus" :  0,
+	"will_bonus" :  0,
+	"mobility_bonus" :  0,
+	"damage_bonus" : 0
+},
+{
+	"id" : "advanced_fire_control",
+	"img_src" :  "http://ufopaedia.org/images/thumb/a/a1/MEC_ADVANCED_FIRE_CONTROL.png/32px-MEC_ADVANCED_FIRE_CONTROL.png",
+	"title" :  "Advanced Fire Control",
+	"description" :  "Shots from Overwatch no longer suffer any Aim penalty.",
+	"aim_bonus" :  0,
+	"will_bonus" :  0,
+	"mobility_bonus" :  0,
+	"damage_bonus" : 0
+},
+{
+	"id" : "damage_control",
+	"img_src" :  "http://ufopaedia.org/images/thumb/7/75/MEC_DAMAGE_CONTROL.png/32px-MEC_DAMAGE_CONTROL.png",
+	"title" :  "Damage Control",
+	"description" :  "When this unit takes damage, all further damage will be reduced by 1 or 2 points for the next 2 turns.",
+	"aim_bonus" :  0,
+	"will_bonus" :  0,
+	"mobility_bonus" :  0,
+	"damage_bonus" : 0
+},
+{
+	"id" : "collateral_damage",
+	"img_src" :  "http://ufopaedia.org/images/thumb/a/a4/MEC_COLLATERAL_DAMAGE.png/32px-MEC_COLLATERAL_DAMAGE.png",
+	"title" :  "Collateral Damage",
+	"description" :  "Area of effect attack that destroys most cover and hits all eligible targets for 34% damage. This attack cannot cause critical hits.",
+	"aim_bonus" :  0,
+	"will_bonus" :  0,
+	"mobility_bonus" :  0,
+	"damage_bonus" : 0
+},
+{
+	"id" : "absorption_fields",
+	"img_src" :  "http://ufopaedia.org/images/thumb/b/b8/MEC_ABSORTION_FIELDS.png/32px-MEC_ABSORTION_FIELDS.png",
+	"title" :  "Absorption Fields",
+	"description" :  "Reduces most incoming damage to this unit, scaling up as damage increases.",
+	"aim_bonus" :  0,
+	"will_bonus" :  0,
+	"mobility_bonus" :  0,
+	"damage_bonus" : 0
+},
+{
+	"id" : "reactive_targeting_sensors",
+	"img_src" :  "http://ufopaedia.org/images/thumb/f/f9/MEC_REACTIVE_TARGETING_SENSORS.png/32px-MEC_REACTIVE_TARGETING_SENSORS.png",
+	"title" :  "Reactive Targeting Sensors",
+	"description" :  "Unit gets a free shot back at the first enemy who attacks the MEC each turn, provided there's enough ammo to do so.",
+	"aim_bonus" :  2,
+	"will_bonus" :  0,
+	"mobility_bonus" :  0,
+	"damage_bonus" : 0
+},
+{
+	"id" : "repair_servos",
+	"img_src" :  "http://ufopaedia.org/images/thumb/6/6b/MEC_REPAIR_SERVOS.png/32px-MEC_REPAIR_SERVOS.png",
+	"title" :  "Repair Servos",
+	"description" :  "Repairs up to 50% of damage taken (max 2 per turn). Value on icon represents repairs remaining at 2 points per hp. Additional damage taken before repairs are complete reduces how much can be repaired.",
+	"aim_bonus" :  0,
+	"will_bonus" :  1,
+	"mobility_bonus" :  0,
+	"damage_bonus" : 0
+}
 		],
 	"items" : [
 		{
@@ -2868,7 +3032,7 @@
 			"will" :  0,
 			"mobilitiy" :  -1,
 			"notes" :  "Grants +5 Defense and improves Lightning Reflexes by further halving the chances of reaction fire hitting (95% for first shot, 85% for subsequent shots).",
-			"classes" : "Scout"
+			"classes" : "scout"
 		}, 
 		   {
 			"type" :  "Protective Items",
@@ -2894,7 +3058,7 @@
 			"will" :  0,
 			"mobilitiy" :  -1,
 			"notes" :  "Grants the Shock-Absorbent Armor perk( 33% damage reduction against attacks within 4 tiles) and + 1 HP.",
-			"classes" : "Assault"
+			"classes" : "assault"
 		}, 
 		   {
 
@@ -2908,7 +3072,7 @@
 			"will" :  25,
 			"mobilitiy" :  -1,
 			"notes" :  "Provide +25 Will, Grants immunity to strangulation and panic, except Psi Panic",
-			"classes" :  "Psionic"
+			"classes" :  "psionic"
 		}, 
 		   {
 			"type" :  "Protective Items",
@@ -2921,7 +3085,7 @@
 			"will" :  -12,
 			"mobilitiy" :  -1,
 			"notes" :  "Confers +1 DR, but draws -12 Will when equipped",
-			"classes" : "Psionic"
+			"classes" : "psionic"
 		}, 
 		   {
 
@@ -3015,7 +3179,7 @@
 			"will" :  -2,
 			"mobility" :  -1,
 			"notes" :  "Has the same effect as a flashbang grenade, but has a larger area of effect. Carried by Sectoid Commanders, but stuns drop it as an Alien Grenade. Confers a 2 Will penalty when equipped.",
-			"classes" : "Psionic"
+			"classes" : "psionic"
 		}, 
 		   {
 			"type" :  "Grenades",
@@ -3027,7 +3191,7 @@
 			"will" :  -10,
 			"mobility" :  -1,
 			"notes" :  "Grants stealth to units in an area for one turn. Incurs a -10 Will penalty when equipped. Can only equip one per soldier, perks that increase limited use items still apply.",
-			"classes" : "Psionic"
+			"classes" : "psionic"
 		}, 
 		   {
 
@@ -3041,7 +3205,7 @@
 			"will" :  0,
 			"mobilitiy" :  -2,
 			"notes" :  "Grants one additional rocket.",
-			"classes" : "Rocketeer"
+			"classes" :  "rocketeer"
 		}, 
 		   {
 
@@ -3053,7 +3217,7 @@
 			"will" :  0,
 			"mobilitiy" :  -2,
 			"notes" :  "Grants one additional shredder rocket.",
-			"classes" : "Rocketeer"
+			"classes" :  "rocketeer"
 		}, 
 		   {
 
@@ -3081,7 +3245,7 @@
 			"will" :  0,
 			"mobilitiy" :  -1,
 			"notes" :  "Grants the Shredder Ammunition perk.",
-			"classes" : "Assault"
+			"classes" : "assault"
 		}, 
 		   {
 
@@ -3095,7 +3259,7 @@
 			"will" :  0,
 			"mobilitiy" :  -1,
 			"notes" :  "Reduces enemy damage reduction (including that from cover) by 1.66",
-			"classes" : "Gunner"
+			"classes" : "gunner"
 		}, 
 		   {
 
@@ -3109,7 +3273,7 @@
 			"will" :  0,
 			"mobilitiy" :  -1,
 			"notes" :  "Nullifies extra damage reduction penalties for shotgun-type weapons, including the sawed-off shotgun.",
-			"classes" : "Assault"
+			"classes" : "assault"
 		}, 
 		   {
 
@@ -3217,7 +3381,7 @@
 			"will" :  0,
 			"mobilitiy" :  -1,
 			"notes" :  "Grants the Advanced Fire Control perk, removing the aim penalty on reaction shots.",
-			"classes" : "Gunner"
+			"classes" : "gunner"
 		},
 			{
 			"type" :  "Optics",
@@ -3230,7 +3394,7 @@
 			"will" :  0,
 			"mobilitiy" :  -1,
 			"notes" :  "Grants Squadsight to scouts (useful only when they equip Marksmans or Strike Rifles).",
-			"classes" : "Scout"
+			"classes" : "scout"
 		},
 			{
 			"type" :  "Optics",
@@ -3243,7 +3407,7 @@
 			"will" :  0,
 			"mobilitiy" :  0,
 			"notes" :  "Confers Platform Stability perk. (Shots taken before any costly actions have +10 Aim and +10% critical chance.)",
-			"classes" : "Gunner"
+			"classes" : "gunner"
 		},
 			{
 			"type" :  "Optics",
@@ -3256,7 +3420,7 @@
 			"will" :  -12,
 			"mobilitiy" :  -1,
 			"notes" :  "Grants +10 Aim and +10 Crit Chance to primary weapon and rockets launchers, but -12 Will Penalty. Stacks with SCOPE and Laser Sight.",
-			"classes" : "Psionic"
+			"classes" : "psionic"
 		},
 			{
 			"type" :  "Misc.",
@@ -3373,7 +3537,7 @@
 			"will" :  0,
 			"mobility" :  -1,
 			"notes" :  "Confers +20% Psi XP",
-			"classes" :  "Psionic"
+			"classes" :  "psionic"
 		}, 
 		{
 			"type" :  "MEC/SHIV",
@@ -3386,7 +3550,7 @@
 			"will" :  0,
 			"mobility" :  -1,
 			"notes" :  "Grants Extra Conditioning perk.",
-			"classes" :  "MEC, SHIV"
+			"classes" :  "mec, shiv"
 		}, 
 		{
 			"type" :  "MEC/SHIV",
@@ -3399,7 +3563,7 @@
 			"will" :  0,
 			"mobility" :  -1,
 			"notes" :  "Grants HEAT Ammo perk, providing additional damage against mechanized units.",
-			"classes" :  "SHIV"
+			"classes" :  "shiv"
 		}, 
 		{
 			"type" :  "MEC/SHIV",
@@ -3412,7 +3576,7 @@
 			"will" :  0,
 			"mobility" :  -1,
 			"notes" :  "Grants the Flush ability and provides +5 aim.",
-			"classes" :  "SHIV"
+			"classes" :  "shiv"
 		}, 
 		{
 			"type" :  "MEC/SHIV",
@@ -3425,7 +3589,7 @@
 			"will" :  0,
 			"mobility" :  -1,
 			"notes" :  "Grants Reactive Targeting Sensors perk, allowing the SHIV to return fire.",
-			"classes" :  "SHIV"
+			"classes" :  "shiv"
 		}, 
 		{
 			"type" :  "MEC/SHIV",
@@ -3438,7 +3602,7 @@
 			"will" :  0,
 			"mobility" :  -1,
 			"notes" :  "Grants the Advanced Fire Control perk.",
-			"classes" :  "SHIV"
+			"classes" :  "shiv"
 		}, 
 		{
 			"type" :  "MEC/SHIV",
@@ -3451,7 +3615,7 @@
 			"will" :  0,
 			"mobility" :  -1,
 			"notes" :  "Grants the Damage Control perk, reducing oncoming damage by 1 or 2 for several turns after first being struck.",
-			"classes" :  "SHIV"
+			"classes" :  "shiv"
 		}, 
 		{
 			"type" :  "MEC/SHIV",
@@ -3464,7 +3628,7 @@
 			"will" :  0,
 			"mobility" :  -1,
 			"notes" :  "Grants Holo-Targeting perk and provides +5 aim.",
-			"classes" :  "MEC, SHIV"
+			"classes" :  "mec, shiv"
 		}, 
 		{
 			"type" :  "MEC/SHIV",
@@ -3477,7 +3641,7 @@
 			"will" :  0,
 			"mobility" :  -1,
 			"notes" :  "Grants Light 'Em Up perk, allowing a second shot or action after firing the main weapon as the first action.",
-			"classes" :  "SHIV"
+			"classes" :  "shiv"
 		}, 
 		{
 			"type" :  "MEC/SHIV",
@@ -3490,7 +3654,7 @@
 			"will" :  0,
 			"mobility" :  -1,
 			"notes" :  "Confers the Sentinel perk, allowing the SHIV to fire twice while on overwatch.",
-			"classes" :  "SHIV"
+			"classes" :  "shiv"
 		}, 
 		{
 			"type" :  "MEC/SHIV",
@@ -3503,7 +3667,7 @@
 			"will" :  0,
 			"mobility" :  -1,
 			"notes" :  "Grants +2 HP and the Resilience perk, rendering the SHIV immune to Critical Hits.",
-			"classes" :  "SHIV"
+			"classes" :  "shiv"
 		}, 
 		{
 			"type" :  "MEC/SHIV",
@@ -3516,7 +3680,7 @@
 			"will" :  0,
 			"mobility" :  -1,
 			"notes" :  "Grants Tactical Sense perk, enhancing defense by 5 for every enemy the MEC can see. (Up to a maximum bonus of +20)",
-			"classes" :  "MEC, SHIV"
+			"classes" :  "mec, shiv"
 		}, 
 		{
 			"type" :  "Damage Enhancing Equipment",
@@ -3529,7 +3693,7 @@
 			"will" :  0,
 			"mobility" :  -1,
 			"notes" :  "Increases Autocannon, Sentry Gun, Minigun, and Railgun damage by 1.",
-			"classes" :  "MEC, SHIV"
+			"classes" :  "mec, shiv"
 		}, 
 		{
 			"type" :  "Damage Enhancing Equipment",
@@ -3542,7 +3706,7 @@
 			"will" :  0,
 			"mobility" :  -1,
 			"notes" :  "Increases Superheavy Laser, Superheavy Pulse, Laser Lance, and Pulse Lance damage by 1.",
-			"classes" :  "MEC, SHIV"
+			"classes" :  "mec, shiv"
 		}, 
 		{
 			"type" :  "Damage Enhancing Equipment",
@@ -3555,7 +3719,7 @@
 			"will" :  0,
 			"mobility" :  -1,
 			"notes" :  "Increases Particle Cannon and Superheavy Plasma damage by 1.",
-			"classes" :  "MEC, SHIV"
+			"classes" :  "mec, shiv"
 		}, 
 		{
 			"type" :  "Damage Enhancing Equipment",
@@ -3581,7 +3745,7 @@
 			"will" :  0,
 			"mobility" :  -1,
 			"notes" :  "Confers 1 additional shot or burst to primary weapon. Stacks with Lock'N'Load.",
-			"classes" :  "MEC, SHIV"
+			"classes" :  "mec, shiv"
 		}, 
 		{
 			"type" :  "Miscellaneous Equipment",
@@ -3594,7 +3758,7 @@
 			"will" :  0,
 			"mobility" :  -1,
 			"notes" :  "Increases both DR and HP of the equipped unit by +1",
-			"classes" :  "MEC, SHIV"
+			"classes" :  "mec, shiv"
 		}, 
 		{
 			"type" :  "Miscellaneous Equipment",
@@ -3607,7 +3771,7 @@
 			"will" :  0,
 			"mobility" :  -1,
 			"notes" :  "Provides +5 aim and +5 crit.",
-			"classes" :  "MEC, SHIV"
+			"classes" :  "mec, shiv"
 		}, 
 		{
 			"type" :  "Miscellaneous Equipment",
@@ -3620,7 +3784,7 @@
 			"will" :  0,
 			"mobility" :  -1,
 			"notes" :  "Provides +10 aim, crit chance and defence.",
-			"classes" :  "MEC, SHIV"
+			"classes" :  "mec, shiv"
 		}, 
 		{
 			"type" :  "Miscellaneous Equipment",
@@ -3633,7 +3797,7 @@
 			"will" :  0,
 			"mobility" :  2,
 			"notes" :  "Increases SHIV/MEC mobility by 2 points.",
-			"classes" :  "MEC, SHIV"
+			"classes" :  "mec, shiv"
 		}
 	]
 }

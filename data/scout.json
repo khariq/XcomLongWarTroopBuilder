@@ -1,100 +1,97 @@
 {
-	"id" : "assault",
-	"name" : "Assault",
-	"mec_name" : "Marauder",
+	"id" : "scout",
+	"name" : "Scout",
+	"mec_name" : "Pathfinder",
 	"icon_src" : "http://ufopaedia.org/images/5/57/CLASS_ASSAULT.png",
 	"spec" :  {
 		"primary_weapons" : [
-				{ "carbines" : 1 },
-				{ "assault_rifles" : 1 },
 				{ "battle_rifles" : 1 },
+				{ "marksman_rifle" : 1 },
+				{ "carbines" : 1 },
+				{ "shotguns" : 1 },
 				{ "smgs" : 1 },
-				{ "shotguns" : 1}
+				{ "assault_rifles" : 1 }		             
 		],
 		"secondary_weapons" : [
 			{ "pistols" : 1},
 			{ "machine_pistols" : 1},
-			{ "shotguns" : 1}		
+			{ "shotguns" :  1}
 		],
 		"class_limited_items" : [
-			{ "walker_servos" : 1},
-			{ "impact_vest" : 1},
-			{ "shredder_ammo" : 1},
-			{ "breaching_ammo" : 1}
 		],
 		"perks" : [
 			{
 				"rank" : 1,
 				"perks" : [
-					{ "id" : "run_and_gun" }
+					{ "id" : "lightning_reflexes" }
 				]
 			}, {
 				"rank" : 2,
 				"perks" : [
-					{ "id" : "flush"},
-					{ "id" : "close_combat_specialist"},
-					{ "id" : "steadfast"}
+					{ "id" : "rapid_reaction"},
+					{ "id" : "holo_targeting"},
+					{ "id" : "damn_good_ground"}
 				]
 			}, {
 				"rank" : 3,
 				"perks" : [
-					{ "id" : "gunslinger"},
-					{ "id" : "tactical_sense"},
-					{ "id" : "aggression"}
+					{ "id" : "battle_scanner"},
+					{ "id" : "flush"},
+					{ "id" : "lone_wolf"}
 				]
 			}, {
 				"rank" : 4,
 				"perks" : [
-					{ "id" : "hit_and_run"},
-					{ "id" : "close_encounters"},
-					{ "id" : "rapid_fire"}
+					{ "id" : "sharpshooter"},
+					{ "id" : "low_profile"},
+					{ "id" : "sprinter"}
 				]
 			}, {
 				"rank" : 5,
 				"perks" : [
-				{ "id" : "extra_conditioning"},
-				{ "id" : "killer_instinct"},
+				{ "id" : "aggression"},
+				{ "id" : "tactical_sense"},
 				{ "id" : "ranger"}
 				]
 			}, {
 				"rank" : 6,
 				"perks" : [
-					{ "id" : "will_to_survive"},
-					{ "id" : "bring_em_on"},
-					{ "id" : "sprinter"}
+					{ "id" : "vital_point_targeting"},
+					{ "id" : "resilience"},
+					{ "id" : "smoke_and_mirrors"}
 				]
 			}, {
 				"rank" : 7,
 				"perks" : [
-					{ "id" : "vital_point_targeting"},
-					{ "id" : "resilience"},
-					{ "id" : "lightning_reflexes"}
+					{ "id" : "rapid_fire"},
+					{ "id" : "hit_and_run"},
+					{ "id" : "in_the_zone"}
 				]
 			}
 		],
 		"stat_progression" : [
 			{
-				"health" : 1,
-				"aim" : 3,
+				"health" : 0,
+				"aim" : 4,
 				"will_low" : 5,
 				"will_high" : 6
 			}, {
 				"health" : 0,
-				"aim" : 3,
+				"aim" : 4,
 				"will_low" : 5,
 				"will_high" : 6
 			}, {
 				"health" : 1,
-				"aim" : 3,
+				"aim" : 4,
 				"will_low" : 3,
 				"will_high" : 4 
 			}, {
 				"health" : 0,
-				"aim" : 3,
+				"aim" : 4,
 				"will_low" : 3,
 				"will_high" : 4
 			}, {
-				"health" : 1,
+				"health" : 0,
 				"aim" : 3,
 				"will_low" : 3,
 				"will_high" : 4
@@ -104,7 +101,7 @@
 				"will_low" : 3,
 				"will_high" : 4
 			}, {
-				"health" : 1,
+				"health" : 0,
 				"aim" : 3,
 				"will_low" : 3,
 				"will_high" : 4

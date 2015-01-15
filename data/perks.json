@@ -1,0 +1,632 @@
+{
+	"perks" : [
+	{
+            "id" : "revive",
+            "img_src" :  "http://ufopaedia.org/images/thumb/c/cc/SUPPORT_REVIVE.png/32px-SUPPORT_REVIVE.png",
+            "title" :  "Revive",
+            "description" :  "Allows Medikits to revive critically wounded Soldiers at 33% of maximum health instead of just stabilizing them.",
+            "aim_bonus" :  0,
+            "will_bonus" :  0,
+            "mobility_bonus" :  0,
+            "damage_bonus" : 0
+        },
+    {
+            "id" : "grenadier",
+            "img_src" :  "http://ufopaedia.org/images/thumb/8/8a/HEAVY_GRENADIER.png/32px-HEAVY_GRENADIER.png",
+            "title" :  "Grenadier",
+            "description" :  "Allows 2 destructive grenades in a single inventory slot, and the soldier may throw grenades 20 percent further.",
+            "aim_bonus" :  0,
+            "will_bonus" :  0,
+            "mobility_bonus" :  0,
+            "damage_bonus" : 0
+        },
+{
+            "id" : "sapper",
+            "img_src" :  "http://ufopaedia.org/images/thumb/6/61/Ace_hole.png/32px-Ace_hole.png",
+            "title" :  "Sapper",
+            "description" :  "Your grenades do additional damage to enemies, and all your weapons do additional damage to the environment(+1 damage with AP and HE grenades, +2 damage with Alien grenades and triple environmental damage for all weapons).",
+            "aim_bonus" :  0,
+            "will_bonus" :  0,
+            "mobility_bonus" :  0,
+            "damage_bonus" : 0
+        },
+{
+            "id" : "repair",
+            "img_src" :  "http://ufopaedia.org/images/thumb/0/05/ALIEN_REPAIR.png/32px-ALIEN_REPAIR.png",
+            "title" :  "Repair",
+            "description" :  "Grants +2 Arc Thrower charges",
+            "aim_bonus" :  0,
+            "will_bonus" :  0,
+            "mobility_bonus" :  0,
+            "damage_bonus" : 0
+        },
+{
+            "id" : "bombard",
+            "img_src" :  "http://ufopaedia.org/images/thumb/1/1a/ALIEN_BOMBARD.png/32px-ALIEN_BOMBARD.png",
+            "title" :  "Bombard",
+            "description" :  "Throw or launch grenades over exceptionally long distances(+50%).",
+            "aim_bonus" :  0,
+            "will_bonus" :  0,
+            "mobility_bonus" :  0,
+            "damage_bonus" : 0
+        },
+{
+            "id" : "smoke_grenade",
+            "img_src" :  "http://ufopaedia.org/images/thumb/4/44/SUPPORT_SMOKEGRENADE.png/32px-SUPPORT_SMOKEGRENADE.png",
+            "title" :  "Smoke Grenade",
+            "description" :  "Deploy a smoke grenade once per mission. The smoke confers +20 defense to all units, not just allies, and lasts through the enemy turn. Taking the perk on level up also allows an additional action after deploying a smoke grenade.",
+            "aim_bonus" :  0,
+            "will_bonus" :  0,
+            "mobility_bonus" :  0,
+            "damage_bonus" : 0
+        },
+{
+            "id" : "paramedic",
+            "img_src" :  "http://ufopaedia.org/images/thumb/5/52/Defenders_Medal_2_%28EU2012%29.png/32px-Defenders_Medal_2_%28EU2012%29.png",
+            "title" :  "Paramedic",
+            "description" :  "Once per turn, this unit may use a medikit without spending an action.",
+            "aim_bonus" :  0,
+            "will_bonus" :  0,
+            "mobility_bonus" :  0,
+            "damage_bonus" : 0
+        },
+{
+            "id" : "field_surgeon",
+            "img_src" :  "http://ufopaedia.org/images/thumb/3/3f/Adaptive_Bone_Marrow_Gene_Mod_%28EU2012%29.png/32px-Adaptive_Bone_Marrow_Gene_Mod_%28EU2012%29.png",
+            "title" :  "Field Surgeon",
+            "description" :  "Has a 75% chance to reduce or eliminate recovery time of non-critically wounded soldiers. Automatic reduction if multiple medics on a mission have this perk. Does not affect wound sustained by sending fatigued soldier on a mission.",
+            "aim_bonus" :  0,
+            "will_bonus" :  0,
+            "mobility_bonus" :  0,
+            "damage_bonus" : 0
+        },
+{
+            "id" : "dense_smoke",
+            "img_src" :  "http://ufopaedia.org/images/thumb/d/d1/SUPPORT_DENSESMOKE.png/32px-SUPPORT_DENSESMOKE.png",
+            "title" :  "Dense Smoke",
+            "description" :  "Smoke Grenades have increased area of effect and further increase units' Defense by 20.",
+            "aim_bonus" :  0,
+            "will_bonus" :  0,
+            "mobility_bonus" :  0,
+            "damage_bonus" : 0
+        },
+{
+            "id" : "packmaster",
+            "img_src" :  "http://ufopaedia.org/images/thumb/2/23/MEC_EXPANDED_STORAGE.png/32px-MEC_EXPANDED_STORAGE.png",
+            "title" :  "Packmaster",
+            "description" :  "Limited-use small items and mechanized unit subsystems in your inventory receive additional uses.",
+            "aim_bonus" :  0,
+            "will_bonus" :  0,
+            "mobility_bonus" :  0,
+            "damage_bonus" : 0
+        },
+{
+            "id" : "savior",
+            "img_src" :  "http://ufopaedia.org/images/thumb/5/52/SUPPORT_SAVIOR.png/32px-SUPPORT_SAVIOR.png",
+            "title" :  "Savior",
+            "description" :  "Medikits restore six more health per use; Restorative Mist units restore three more health per use.",
+            "aim_bonus" :  0,
+            "will_bonus" :  0,
+            "mobility_bonus" :  0,
+            "damage_bonus" : 0
+        },{
+			"id" : "battle_scanner",
+			"img_src" :  "http://ufopaedia.org/images/thumb/1/11/SNIPER_BATTLESCANNER.png/32px-SNIPER_BATTLESCANNER.png",
+			"title" :  "Battle Scanner",
+			"description" :  "Scanning device that, when thrown, creates a new source of vision for 2 turns. Can only be used 2 times per battle.",
+			"aim_bonus" :  0,
+			"will_bonus" :  0,
+			"mobility_bonus" :  0,
+			"damage_bonus" : 0
+		},
+{
+			"id" : "smoke_and_mirrors",
+			"img_src" :  "http://ufopaedia.org/images/thumb/e/e7/SUPPORT_SMOKEMIRRORS.png/32px-SUPPORT_SMOKEMIRRORS.png",
+			"title" :  "Smoke and Mirrors",
+			"description" :  "Allows one additional use of all support grenades during each mission. It also increases charges from Smoke Grenade and Battlescanner perks by 1.",
+			"aim_bonus" :  0,
+			"will_bonus" :  0,
+			"mobility_bonus" :  0,
+			"damage_bonus" : 0
+		},	{
+			"id" : "damn_good_ground",
+			"img_src" :  "http://ufopaedia.org/images/thumb/e/ea/SNIPER_DGG.png/32px-SNIPER_DGG.png",
+			"title" :  "Damn Good Ground",
+			"description" :  "Confers +10 Aim and +10 Defense against enemies at lower elevation, in addition to the usual elevation bonuses.",
+			"aim_bonus" :  0,
+			"will_bonus" :  0,
+			"mobility_bonus" :  0,
+			"damage_bonus" : 0
+		},{
+			"id" : "squadsight",
+			"img_src" :  "http://ufopaedia.org/images/thumb/7/7f/SNIPER_SQUADSIGHT.png/32px-SNIPER_SQUADSIGHT.png",
+			"title" :  "Squadsight",
+			"description" :  "Allows firing at targets in any ally's sight radius within weapon range, but critical chance suffers a -30% penalty. Extended range weapons (MEC primary weapons, Marksman and Strike Rifles, and LMGs) gain roughly five extra tiles range. Sniper rifles have infinite range. Overwatch fire does not extend to squadsight ranges, except with Marksman's and Strike Rifles.",
+			"aim_bonus" :  0,
+			"will_bonus" :  0,
+			"mobility_bonus" :  0,
+			"damage_bonus" : 0
+		},
+{
+			"id" : "low_profile",
+			"img_src" :  "http://ufopaedia.org/images/thumb/4/40/SNIPER_LOWPROFILE.png/32px-SNIPER_LOWPROFILE.png",
+			"title" :  "Low Profile",
+			"description" :  "Makes partial cover grant the defense bonus of full cover.",
+			"aim_bonus" :  0,
+			"will_bonus" :  0,
+			"mobility_bonus" :  0,
+			"damage_bonus" : 0
+		},
+{
+			"id" : "lone_wolf",
+			"img_src" :  "http://ufopaedia.org/images/thumb/9/97/Council_Medal_of_Honor_2_%28EU2012%29.png/32px-Council_Medal_of_Honor_2_%28EU2012%29.png",
+			"title" :  "Lone Wolf",
+			"description" :  "+10 Aim and Critical Chance if not within 7 tiles of an allied unit.",
+			"aim_bonus" :  0,
+			"will_bonus" :  0,
+			"mobility_bonus" :  0,
+			"damage_bonus" : 0
+		},
+{
+			"id" : "disabling_shot",
+			"img_src" :  "http://ufopaedia.org/images/thumb/f/f6/SNIPER_DISABLINGSHOT.png/32px-SNIPER_DISABLINGSHOT.png",
+			"title" :  "Disabling Shot",
+			"description" :  "Allows sniper rifles to fire a shot that causes the target's main weapon to malfunction. The target may use Reload to fix the weapon. 2 turn cooldown. Cannot cause critical hits.",
+			"aim_bonus" :  0,
+			"will_bonus" :  0,
+			"mobility_bonus" :  0,
+			"damage_bonus" : 0
+		},
+{
+			"id" : "precision_shot",
+			"img_src" :  "http://ufopaedia.org/images/thumb/0/0e/SNIPER_HEADSHOT.png/32px-SNIPER_HEADSHOT.png",
+			"title" :  "Precision Shot",
+			"description" :  "With sniper/long rifles: Fire a shot with +30% critical chance, no -30% squadsight penalty to criticals, and extra damage on critical hits based on the soldier's weapon tech level. With Marksman's and Strike Rifles: Fire an unlimited range shot with no other bonuses. 2 turn cooldown.",
+			"aim_bonus" :  0,
+			"will_bonus" :  0,
+			"mobility_bonus" :  0,
+			"damage_bonus" : 0
+		},
+{
+			"id" : "in_the_zone",
+			"img_src" :  "http://ufopaedia.org/images/thumb/e/e8/SNIPER_ITZ.png/32px-SNIPER_ITZ.png",
+			"title" :  "In The Zone",
+			"description" :  "Killing a flanked or uncovered target does not cost an action. Confers increasing critical hit penalty for each successive In The Zone shot.",
+			"aim_bonus" :  0,
+			"will_bonus" :  0,
+			"mobility_bonus" :  0,
+			"damage_bonus" : 0
+		},
+		{
+			"id" : "heat_ammo",
+			"img_src" :  "http://ufopaedia.org/images/thumb/9/9c/HEAVY_HEAT_AMMO.png/32px-HEAVY_HEAT_AMMO.png",
+			"title" :  "HEAT Ammo",
+			"description" :  "Your primary weapon does additional damage against robotic enemies(+75%).",
+			"aim_bonus" :  0,
+			"will_bonus" :  0,
+			"mobility_bonus" :  0,
+			"damage_bonus" : 0
+		},
+{
+			"id" : "holo_targeting",
+			"img_src" :  "http://ufopaedia.org/images/thumb/0/08/HEAVY_HOLO.png/32px-HEAVY_HOLO.png",
+			"title" :  "Holo-Targeting",
+			"description" :  "Shooting at, flushing out or suppressing enemies also confers +10 Aim to allies' attacks on those enemies.",
+			"aim_bonus" :  0,
+			"will_bonus" :  0,
+			"mobility_bonus" :  0,
+			"damage_bonus" : 0
+		},
+{
+			"id" : "double_tap",
+			"img_src" :  "http://ufopaedia.org/images/thumb/a/ad/SNIPER_DOUBLETAP.png/32px-SNIPER_DOUBLETAP.png",
+			"title" :  "Double Tap",
+			"description" :  "Allows both actions to be used for Standard Shot, Headshot, or Disable Shot, provided no costly actions were taken, 1 turn cooldown.",
+			"aim_bonus" :  0,
+			"will_bonus" :  0,
+			"mobility_bonus" :  0,
+			"damage_bonus" : 0
+		},
+{
+			"id" : "run_and_gun",
+			"img_src" : "http://ufopaedia.org/images/thumb/8/87/ASSAULT_RUNGUN.png/32px-ASSAULT_RUNGUN.png", 
+			"title" : "Run & Gun",
+			"description" : "Allows firing or Overwatch after Dashing on the turn Run and Gun is activated. 2 turn cooldown.",
+			"aim_bonus" : 0,
+			"will_bonus" : 0,
+			"mobility_bonus" : 0,
+			"damage_bonus" : 0
+		},
+		
+		{
+			"id" : "light_em_up",
+			"img_src" : "http://ufopaedia.org/images/thumb/2/2a/HEAVY_BULLETSWARM.png/32px-HEAVY_BULLETSWARM.png", 
+			"title" : "Light 'Em Up",
+			"description" : "Standard shots no longer end the turn, if taken as the first action",
+			"aim_bonus" : 0,
+			"will_bonus" : 0,
+			"mobility_bonus" : 0,
+			"damage_bonus" : 0
+		},		
+		{
+			"id" : "flush",
+			"img_src" : "http://ufopaedia.org/images/thumb/e/e2/ASSAULT_FLUSH.png/32px-ASSAULT_FLUSH.png",
+			"title" : "Flush",
+			"description" : "Fire a shot that causes enemies to run out of cover. The shot is easy to hit with, but does reduced damage.",
+			"aim_bonus" : 2,
+			"will_bonus" : 0,
+			"mobility_bonus" : 0,
+			"damage_bonus" : 0
+		},
+		{
+			"id" : "executioner",
+			"img_src" : "http://ufopaedia.org/images/thumb/f/f2/SNIPER_EXECUTIONER.png/32px-SNIPER_EXECUTIONER.png",
+			"title" : "Executioner",
+			"description" : "Confers +10 aim and +10 critical chance against targets at or below 50% health.",
+			"aim_bonus" : 0,
+			"will_bonus" : 0,
+			"mobility_bonus" : 0,
+			"damage_bonus" : 0
+		},
+		{
+			"id" : "agression",
+			"img_src" : "http://ufopaedia.org/images/thumb/4/40/ASSAULT_AGGRESSION.png/32px-ASSAULT_AGGRESSION.png",
+			"title" : "Aggression",
+			"description" : "Confers +10% critical chance per enemy in sight (max +30%).",
+			"aim_bonus" : 0,
+			"will_bonus" : 0,
+			"mobility_bonus" : 0,
+			"damage_bonus" : 0
+		},
+		{
+			"id" : "opportunist",
+			"img_src" : "http://ufopaedia.org/images/thumb/5/50/SNIPER_OPPORTUNIST.png/32px-SNIPER_OPPORTUNIST.png",
+			"title" : "Opportunist",
+			"description" : "Eliminates the Aim penalty on reaction shots, and allows reaction shots to cause critical hits.",
+			"aim_bonus" : 0,
+			"will_bonus" : 0,
+			"mobility_bonus" : 0,
+			"damage_bonus" : 0
+		},
+		{
+			"id" : "suppression",
+			"img_src" : "http://ufopaedia.org/images/thumb/8/89/HEAVY_SUPPRESSION.png/32px-HEAVY_SUPPRESSION.png",
+			"title" : "Suppression",
+			"description" : "Fire a barrage that pins down a target, granting reaction fire against it and imposing a -30 penalty to Aim and reduced range of many area-of-effect attacks, including grenades. Gunners using an LMG-class weapon also get Opportunist bonus when taking a suppression-based reaction fire shot.",
+			"aim_bonus" : 0,
+			"will_bonus" : 0,
+			"mobility_bonus" : 0,
+			"damage_bonus" : 0
+		},
+		{
+			"id" : "sharpshooter",
+			"img_src" : "http://ufopaedia.org/images/thumb/1/1d/Urban_Combat_Badge_2_%28EU2012%29.png/32px-Urban_Combat_Badge_2_%28EU2012%29.png",
+			"title" : "Sharpshooter",
+			"description" : "+10 critical chance in all situations, +10 Aim against enemies in full cover.",
+			"aim_bonus" : 4,
+			"will_bonus" : 0,
+			"mobility_bonus" : 0,
+			"damage_bonus" : 0
+		},
+		{
+			"id" : "lock_and_load",
+			"img_src" : "http://ufopaedia.org/images/thumb/9/95/SUPPORT_DEEPPOCKETS.png/32px-SUPPORT_DEEPPOCKETS.png",
+			"title" : "Lock N' Load",
+			"description" : "rimary weapons receive one additional shot or burst before a reload is required, and you may reload your primary weapon as the first action of your turn without ending the turn.",
+			"aim_bonus" : 0,
+			"will_bonus" : 0,
+			"mobility_bonus" : 0,
+			"damage_bonus" : 0
+		},
+		{
+			"id" : "covering_fire",
+			"img_src" : "http://ufopaedia.org/images/thumb/3/32/SUPPORT_COVERINGFIRE.png/32px-SUPPORT_COVERINGFIRE.png",
+			"title" : "Covering Fire",
+			"description" : "Allows reaction shots to trigger on enemy attacks, not just movement.",
+			"aim_bonus" : 3,
+			"will_bonus" : 0,
+			"mobility_bonus" : 0,
+			"damage_bonus" : 0
+		},
+		{
+			"id" : "sentinel",
+			"img_src" : "http://ufopaedia.org/images/thumb/d/d6/SUPPORT_SENTINEL.png/32px-SUPPORT_SENTINEL.png",
+			"title" : "Sentinel",
+			"description" : "Allows two reaction shots during Overwatch, instead of only one.",
+			"aim_bonus" : 0,
+			"will_bonus" : 0,
+			"mobility_bonus" : 0,
+			"damage_bonus" : 0
+		},
+        {
+            "id" : "combat_drugs",
+            "img_src" :  "http://ufopaedia.org/images/thumb/0/01/SUPPORT_COMBATDRUGS.png/32px-SUPPORT_COMBATDRUGS.png",
+            "title" :  "Combat Drugs",
+            "description" :  "Smoke grenades now contain powerful stimulants that grant +20 Will, +20% critical chance, and +20 defense for all units in the cloud.",
+            "aim_bonus" :  0,
+            "will_bonus" :  3,
+            "mobility_bonus" :  0,
+            "damage_bonus" : 0
+        },
+		{
+			"id" : "close_combat_specialist",
+			"img_src" : "http://ufopaedia.org/images/thumb/a/ac/ASSAULT_CLOSECOMBAT.png/32px-ASSAULT_CLOSECOMBAT.png",
+			"title" : "Close Combat Specialist",
+			"description" : "Confers a reaction shot against any enemy who closes to within 4 tiles. Does not require Overwatch. Warning: Will activate even if unit is concealed.",
+			"aim_bonus" : 0,
+			"will_bonus" : 0,
+			"mobility_bonus" : 0,
+			"damage_bonus" : 0
+		},
+		{
+			"id" : "steadfast",
+			"img_src" : "http://ufopaedia.org/images/thumb/5/5f/Defenders_Medal_1_%28EU2012%29.png/32px-Defenders_Medal_1_%28EU2012%29.png",
+			"title" : "Steadfast",
+			"description" : "Never panic as a result of getting wounded, allies panicking, allies getting wounded or killed, or the intimidation ability.",
+			"aim_bonus" : 0,
+			"will_bonus" : 5,
+			"mobility_bonus" : 0,
+			"damage_bonus" : 0
+		},
+		{
+			"id" : "gunslinger",
+			"img_src" : "http://ufopaedia.org/images/thumb/8/8c/SNIPER_GUNSLINGER.png/32px-SNIPER_GUNSLINGER.png",
+			"title" : "Gunslinger",
+			"description" : "Confers +1 damage with sidearms and negates the long-range accuracy penalty when shooting beyond 14 meters.",
+			"aim_bonus" : 1,
+			"will_bonus" : 0,
+			"mobility_bonus" : 0,
+			"damage_bonus" : 0
+		},
+		{
+			"id" : "tactical_sense",
+			"img_src" : "http://ufopaedia.org/images/thumb/a/a6/ASSAULT_TACTICALSENSE.png/32px-ASSAULT_TACTICALSENSE.png",
+			"title" : "Tactical Sense",
+			"description" : "Confers +5 Defense per enemy in sight (max +20).",
+			"aim_bonus" : 0,
+			"will_bonus" : 0,
+			"mobility_bonus" : 0,
+			"damage_bonus" : 0
+		},
+		{
+			"id" : "aggression",
+			"img_src" : "http://ufopaedia.org/images/thumb/4/40/ASSAULT_AGGRESSION.png/32px-ASSAULT_AGGRESSION.png",
+			"title" : "Aggression",
+			"description" : "Confers +10% critical chance per enemy in sight (max +30%).",
+			"aim_bonus" : 0,
+			"will_bonus" : 1,
+			"mobility_bonus" : 0,
+			"damage_bonus" : 0
+		},
+		{
+			"id" : "hit_and_run",
+			"img_src" : "http://ufopaedia.org/images/thumb/3/31/ALIEN_LEAP.png/32px-ALIEN_LEAP.png",
+			"title" : "Hit and Run",
+			"description" : "Your first standard shot of each turn against an uncovered or flanked target does not cost an action. Does not work against flying units, and cannot be used if Run N' Gun activated.",
+			"aim_bonus" : 0,
+			"will_bonus" : 0,
+			"mobility_bonus" : 0,
+			"damage_bonus" : 0
+		},
+		{
+			"id" : "close_encounters",
+			"img_src" : "http://ufopaedia.org/images/thumb/2/2a/ASSAULT_CLOSEPERSONAL.png/32px-ASSAULT_CLOSEPERSONAL.png",
+			"title" : "Close Encounters",
+			"description" : "The first standard shot made within 4 tiles of the target does not cost an action. Cannot combine with Run And Gun.",
+			"aim_bonus" : 0,
+			"will_bonus" : 5,
+			"mobility_bonus" : 0,
+			"damage_bonus" : 0
+		},
+		{
+			"id" : "rapid_fire",
+			"img_src" : "http://ufopaedia.org/images/thumb/7/70/ASSAULT_RAPIDFIRE.png/32px-ASSAULT_RAPIDFIRE.png",
+			"title" : "Rapid Fire",
+			"description" : "Take two shots against a single target in quick succession. Each shot carries a -15 penalty to Aim",
+			"aim_bonus" : 0,
+			"will_bonus" : 0,
+			"mobility_bonus" : 0,
+			"damage_bonus" : 0
+		},
+		{ 
+			"id" : "extra_conditioning",
+			"img_src" : "http://ufopaedia.org/images/thumb/b/b7/ASSAULT_EXTRACONDITIONING.png/32px-ASSAULT_EXTRACONDITIONING.png",
+			"title" : "Extra Conditioning",
+			"description" : "Confers bonus health based on which type of armor is equipped. Heavier armor increases the bonus.",
+			"aim_bonus" : 2,
+			"will_bonus" : 2,
+			"mobility_bonus" : 1,
+			"damage_bonus" : 0
+		},
+		{
+			"id" : "killer_instinct",
+			"img_src" : "http://ufopaedia.org/images/thumb/b/bb/ASSAULT_KILLERINSTINCT.png/32px-ASSAULT_KILLERINSTINCT.png",
+			"title" : "Killer Instinct",
+			"description" : "Activating Run & Gun now also grants +50% critical damage for the rest of the turn.",
+			"aim_bonus" : 0,
+			"will_bonus" : 0,
+			"mobility_bonus" : 0,
+			"damage_bonus" : 0
+		},
+		{
+			"id" : "ranger",
+			"img_src" : "http://ufopaedia.org/images/thumb/9/91/ALIEN_CANNONFIRE.png/32px-ALIEN_CANNONFIRE.png",
+			"title" : "Ranger",
+			"description" : "Primary weapons, Rocket Launchers and MEC secondary systems do one additional damage.",
+			"aim_bonus" : 2,
+			"will_bonus" : 0,
+			"mobility_bonus" : 0,
+			"damage_bonus" : 1
+		},
+		{
+			"id" : "will_to_survive",
+			"img_src" : "http://ufopaedia.org/images/thumb/d/d8/HEAVY_WILLTOSURVIVE.png/32px-HEAVY_WILLTOSURVIVE.png",
+			"title" : "Will To Survive",
+			"description" : "Reduces all normal damage taken by 1 or 2 points if in cover and not flanked.",
+			"aim_bonus" : 0,
+			"will_bonus" : 3,
+			"mobility_bonus" : 0,
+			"damage_bonus" : 0
+		},
+		{
+			"id" : "bring_em_on",
+			"img_src" : "http://ufopaedia.org/images/thumb/c/c2/ASSAULT_BRINGTHEMON.png/32px-ASSAULT_BRINGTHEMON.png",
+			"title" : "Bring 'Em On",
+			"description" : "Adds 1 damage on critical hits for each enemy the unit can see (up to +6).",
+			"aim_bonus" : 0,
+			"will_bonus" : 0,
+			"mobility_bonus" : 0,
+			"damage_bonus" : 0
+		},
+		{
+			"id" : "sprinter",
+			"img_src" : "http://ufopaedia.org/images/thumb/c/ce/SUPPORT_SPRINTER.png/32px-SUPPORT_SPRINTER.png",
+			"title" : "Sprinter",
+			"description" : "Grants +4 mobility (roughly 3 tiles movement).",
+			"aim_bonus" : 0,
+			"will_bonus" : 0,
+			"mobility_bonus" : 4,
+			"damage_bonus" : 0
+		},
+		{
+			"id" : "vital_point_targeting",
+			"img_src" : "http://ufopaedia.org/images/thumb/7/7f/MEC_VITAL_POINT_TARGETING.png/32px-MEC_VITAL_POINT_TARGETING.png",
+			"title" : "Vital Point Targeting",
+			"description" : "Confers 2 bonus damage with primary guns, and +1 damage with sidearms, against humans and alien targets whose species have been autopsied.",
+			"aim_bonus" : 2,
+			"will_bonus" : 0,
+			"mobility_bonus" : 0,
+			"damage_bonus" : 2
+		},
+		{
+			"id" : "resilience",
+			"img_src" : "http://ufopaedia.org/images/thumb/2/2e/ASSAULT_RESILLIENCE.png/32px-ASSAULT_RESILLIENCE.png",
+			"title" : "Resilience",
+			"description" : "Confers immunity to critical hits.",
+			"aim_bonus" : 0,
+			"will_bonus" : 0,
+			"mobility_bonus" : 0,
+			"damage_bonus" : 0
+		},
+		{
+			"id" : "lightning_reflexes",
+			"img_src" : "http://ufopaedia.org/images/thumb/9/90/ASSAULT_LIGHTNINGREFLEXES.png/32px-ASSAULT_LIGHTNINGREFLEXES.png",
+			"title" : "Lightning Reflexes",
+			"description" : "The hit chance of reaction fire against this unit is reduced by 90 percent for the first shot, and by 70 percent for additional shots.",
+			"aim_bonus" : 0,
+			"will_bonus" : 0,
+			"mobility_bonus" : 0,
+			"damage_bonus" : 0
+		},
+		{
+			"id" :  "fire_rocket",
+			"img_src" :  "http://ufopaedia.org/images/thumb/e/e8/HEAVY_FIREROCKET.png/32px-HEAVY_FIREROCKET.png",
+			"title" :  "Fire Rocket",
+			"description" :  "Fire a high explosive rocket using an equipped launcher.",
+			"aim_bonus" :  0,
+			"will_bonus" :  0,
+			"mobility_bonus" :  0,
+			"damage_bonus" : 0
+		},
+		{
+			"id" : "rapid_reaction",
+			"img_src" :  "http://ufopaedia.org/images/thumb/7/75/HEAVY_RAPIDREACTION.png/32px-HEAVY_RAPIDREACTION.png",
+			"title" :  "Rapid Reaction",
+			"description" :  "If on Overwatch, confers a bonus reaction shot (to a maximum three shots total) for every reaction shot that is a hit.",
+			"aim_bonus" :  3,
+			"will_bonus" :  0,
+			"mobility_bonus" :  0,
+			"damage_bonus" : 0
+		},
+		{
+			"id" :  "heat_warheads",
+			"img_src" :  "http://ufopaedia.org/images/thumb/9/9c/HEAVY_HEAT_AMMO.png/32px-HEAVY_HEAT_AMMO.png",
+			"title" :  "HEAT Warheads",
+			"description" :  "Your rockets and grenades do additional damage to robotic enemies(+75%).",
+			"aim_bonus" :  0,
+			"will_bonus" :  0,
+			"mobility_bonus" :  0,
+			"damage_bonus" : 0
+		},
+		{
+			"id" :  "fire_in_the_hole",
+			"img_src" :  "http://ufopaedia.org/images/thumb/b/b5/ALIEN_CLUSTERBOMB.png/32px-ALIEN_CLUSTERBOMB.png",
+			"title" :  "Fire In The Hole",
+			"description" :  "Grants +10 aim for purposes of reducing scatter if the soldier has not moved this turn. Increases range of non-scattering rockets.",
+			"aim_bonus" :  0,
+			"will_bonus" :  0,
+			"mobility_bonus" :  0,
+			"damage_bonus" : 0
+		},
+{
+			"id" :  "snapshot",
+			"img_src" :  "http://ufopaedia.org/images/thumb/e/ec/SNIPER_SNAPSHOT.png/32px-SNIPER_SNAPSHOT.png",
+			"title" :  "Snapshot",
+			"description" :  "For snipers, removes the sniper rifle's restriction on firing and Overwatch after taking a costly action. Any shots taken after using any costly action suffer a -10 Aim penalty. For rocketeers, reduces the aim penalty for launching a rocket after taking a costly action.",
+			"aim_bonus" :  0,
+			"will_bonus" :  0,
+			"mobility_bonus" :  0,
+			"damage_bonus" : 0
+		},
+{
+			"id" :  "shredder_ammo",
+			"img_src" :  "http://ufopaedia.org/images/thumb/6/69/HEAVY_SHREDDER.png/32px-HEAVY_SHREDDER.png",
+			"title" :  "Shredder Ammo",
+			"description" :  "Any unit hit takes additional damage from all sources for the next 4 turns. Rocketeers get special purpose Shredder rockets while a Gunner's LMG is loaded with Shredder ammo. Shredder rockets are weaker than a standard rocket and cannot penetrate cover.",
+			"aim_bonus" :  0,
+			"will_bonus" :  0,
+			"mobility_bonus" :  0,
+			"damage_bonus" : 0
+		},
+{
+			"id" : "ready_for_anything",
+			"img_src" :  "http://ufopaedia.org/images/thumb/a/a1/MEC_ADVANCED_FIRE_CONTROL.png/32px-MEC_ADVANCED_FIRE_CONTROL.png",
+			"title" :  "Ready For Anything",
+			"description" :  "If the unit fires without moving, it automatically enters overwatch at the end of its turn.",
+			"aim_bonus" :  0,
+			"will_bonus" :  0,
+			"mobility_bonus" :  0,
+			"damage_bonus" : 0
+		},
+{
+			"id" : "danger_zone",
+			"img_src" :  "http://ufopaedia.org/images/thumb/4/4b/HEAVY_DANGERZONE.png/32px-HEAVY_DANGERZONE.png",
+			"title" :  "Danger Zone",
+			"description" :  "Increases area of effect of Suppression, rockets, grenade launchers and proximity mine launchers.",
+			"aim_bonus" :  0,
+			"will_bonus" :  0,
+			"mobility_bonus" :  0,
+			"damage_bonus" : 0
+		},
+{
+			"id" : "mayhem",
+			"img_src" :  "http://ufopaedia.org/images/thumb/a/a5/HEAVY_MAYHEM.png/32px-HEAVY_MAYHEM.png",
+			"title" :  "Mayhem",
+			"description" :  "Confers 2 damage when suppressing. Also confers +1 damage for most explosive grenades, proximity mines and Rocket Launcher ammo. Confers +2 damage for SAW- and LMG- series weapons, Recoilless Rifle and Blaster Launcher ammo, and alien grenades. Confers +4 damage for sniper and long rifles, marksman's, strike and reflex rifles.",
+			"aim_bonus" :  0,
+			"will_bonus" :  0,
+			"mobility_bonus" :  0,
+			"damage_bonus" : 0
+		},
+{
+			"id" : "javelin_rockets",
+			"img_src" :  "http://ufopaedia.org/images/thumb/8/88/ALIEN_DEATHBLOSSOM.png/32px-ALIEN_DEATHBLOSSOM.png",
+			"title" :  "Javelin Rockets",
+			"description" :  "Your rockets now travel much further(+33%) and can hit targets beyond your visual range.",
+			"aim_bonus" :  0,
+			"will_bonus" :  0,
+			"mobility_bonus" :  0,
+			"damage_bonus" : 0
+		},
+{
+			"id" : "shock_and_awe",
+			"img_src" :  "http://ufopaedia.org/images/thumb/b/bd/HEAVY_ROCKETEER.png/32px-HEAVY_ROCKETEER.png",
+			"title" :  "Shock and Awe",
+			"description" :  "Allows 1 additional standard rocket to be fired per battle.",
+			"aim_bonus" :  0,
+			"will_bonus" :  0,
+			"mobility_bonus" :  0,
+			"damage_bonus" : 0
+		}
+		]
+}

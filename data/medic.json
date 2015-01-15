@@ -1,0 +1,89 @@
+{
+	"id" : "medic",
+	"name" : "Medic",
+	"mec_name" : "Guardian",
+	"icon_src" : "http://ufopaedia.org/images/5/57/CLASS_ASSAULT.png",
+    "spec" :  {
+		"primary_weapons" : [
+				{ "battle_rifles" : 1 },
+				{ "carbines" : 1 },
+				{ "shotguns" : 1 },
+				{ "smgs" : 1 },
+				{ "assault_rifles" : 1 }		             
+		],
+		"secondary_weapons" : [
+			{ "pistols" : 1},
+			{ "machine_pistols" : 1},
+			{ "shotguns" :  1}
+		],
+		"class_limited_items" : [
+		],
+		"perks" : [
+			{
+				"rank" : 1,
+				"perks" : [
+					{ "id" : "field_medic" }
+				]
+			}, {
+				"rank" : 2,
+				"perks" : [
+					{ "id" : "covering_fire"},
+					{ "id" : "steadfast"},
+					{ "id" : "revive"}
+				]
+			}, {
+				"rank" : 3,
+				"perks" : [
+					{ "id" : "opportunist"},
+					{ "id" : "smoke_grenade"},
+					{ "id" : "paramedic"}
+				]
+			}, {
+				"rank" : 4,
+				"perks" : [
+					{ "id" : "suppression"},
+					{ "id" : "smoke_and_mirrors"},
+					{ "id" : "field_surgeon"}
+				]
+			}, {
+				"rank" : 5,
+				"perks" : [
+				{ "id" : "ranger"},
+				{ "id" : "dense_smoke"},
+				{ "id" : "combat_drugs"}
+				]
+			}, {
+				"rank" : 6,
+				"perks" : [
+					{ "id" : "ready_for_anything"},
+					{ "id" : "vital_point_targeting"},
+					{ "id" : "sprinter"}
+				]
+			}, {
+				"rank" : 7,
+				"perks" : [
+					{ "id" : "sentinel"},
+					{ "id" : "packmaster"},
+					{ "id" : "savior"}
+				]
+			}
+		],
+		"stat_progression" : [
+			{
+				"health" : 1,						"aim" : 2,						"will_low" : 6,						"will_high" : 7
+			}, {
+				"health" : 0,						"aim" : 2,						"will_low" : 6,						"will_high" : 7
+			}, {
+				"health" : 0,						"aim" : 2,						"will_low" : 3,						"will_high" : 4 
+			}, {
+				"health" : 1,						"aim" : 2,						"will_low" : 3,						"will_high" : 4
+			}, {
+				"health" : 0,						"aim" : 2,						"will_low" : 3,						"will_high" : 4
+			}, {
+				"health" : 0,						"aim" : 2,						"will_low" : 3,						"will_high" : 4
+			}, {
+				"health" : 1,						"aim" : 2,						"will_low" : 3,						"will_high" : 4
+			}
+		]		
+	}
+}

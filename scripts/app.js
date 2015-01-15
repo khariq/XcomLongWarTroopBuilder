@@ -148,6 +148,28 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 		return ($scope.class != null && $scope.class.id === id);
 	}
 
+	$scope.filterEquipment = function () {
+		DataService.getCommonJson().then(
+			// success
+			function (commonJson) { //success
+
+				var equipment = Enumerable.From(commonJson.items).ToArray();
+
+				$scope.equipment = equipment.filter(function (item) {
+					return item.classes === '' ||
+							item.classes.indexOf($scope.class.id) >= 0 ||
+							(
+								item.classes.indexOf('psionic') >= 0 &&
+								$scope.selectedPsionicPerks != null &&
+								$scope.selectedPsionicPerks.length > 0
+							);
+				});
+			},
+			function(error){}
+		);
+	}
+
+
 	$scope.showClass = function(id) {
 		$scope.resetBuild();
 
@@ -199,8 +221,28 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 				    }
 				}
 
-				var equipment = Enumerable.From(commonJson.items);
-				$scope.equipment = equipment.Where("$.classes === '' || $.classes.indexOf('" + id + "') > 0").Select("$").ToArray();
+				$scope.filterEquipment();
+
+				DataService.getCommonJson().then(
+					// success
+					function (commonJson) { //success
+						$scope.armors = commonJson.armors;
+						if ($scope.isClassMec()) {
+							$scope.armors = $scope.armors.filter(function (armor) {
+								return armor.type === "MEC Armor";
+							});
+						} else {
+							$scope.armors = $scope.armors.filter(function (armor) {
+								return armor.type !== "MEC Armor";
+							});
+						}
+						
+					},
+					// failure
+					function (commonJson) {
+
+					}
+				);
 
 				$scope.showOutput($scope.visibleOutput);
 			},
@@ -211,7 +253,7 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 		);
 		
 	}
-	
+		
 	$scope.choosePerk = function(perk, rank, btnElement) {
 	
 		var stat_mods = $scope.class.spec.stat_progression[rank];
@@ -301,6 +343,9 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 		 );
 
 		$scope.selectedPsionicPerks[rank] = perk;
+
+		$scope.filterEquipment();
+
 		$scope.showOutput($scope.visibleOutput);
 	}
 
@@ -314,21 +359,27 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 		if (currentPerk != null && currentPerk.length > 0) {
 
 			$scope.icons = $scope.icons.filter(
-					function(icon) { 
-						return icon.id !== perk.id; 
+					function (icon) {
+						return icon.id !== perk.id;
 					});
-			return;
 
-		};
+			$scope.selectedGeneMods = $scope.selectedGeneMods.filter(
+					function (geneMod) {
+						return geneMod.id !== perk.id
+					});
+		} else {
 
-		$scope.icons.push(
-			{
-		 		id: perk.id,
-		 		img_url: perk.img_src,
-		 		title: perk.title,
-		 		description: perk.description
-		 	}
-		 );
+			$scope.icons.push(
+				{
+					id: perk.id,
+					img_url: perk.img_src,
+					title: perk.title,
+					description: perk.description
+				}
+			 );
+
+			$scope.selectedGeneMods.push(perk);
+		}
 
 		$scope.showOutput($scope.visibleOutput);
 	}
@@ -344,6 +395,14 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 
 	$scope.showTab = function(tabName) {
 		$scope.visibleTab = tabName;
+	}
+
+	$scope.hideTab = function (tabName) {
+		return (tabName === 'psionics' || tabName === 'gene') && $scope.isClassMec();
+	}
+
+	$scope.isClassMec = function () {
+		return $scope.class != null && $scope.class.mec != null && $scope.class.mec === 1;
 	}
 
 	$scope.showDescription = function(description) {
@@ -368,6 +427,9 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 
 	$scope.buildMarkdownOutput = function () {
 		var markup = '';
+
+
+
 		if ($scope.class != null) {
 			markup += '**' + $scope.class.name + ' Perks**\r\n\r\n';
 		}
@@ -390,6 +452,15 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 			markup += '\r\n';
 		}
 
+		markup += '\r\n';
+		markup += '**Gene Mods**\r\n\r\n';
+		markup += 'Upgrade\r\n';
+		markup += '----\r\n';
+		for (var i = 0; i < $scope.selectedGeneMods.length; i++) {
+			markup += $scope.selectedGeneMods[i].name;
+
+			markup += '\r\n';
+		}
 
 		return markup;
 	}

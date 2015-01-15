@@ -1,0 +1,89 @@
+{
+	"id" : "engineer",
+	"name" : "Engineer",
+	"mec_name" : "Shogun",
+	"icon_src" : "http://ufopaedia.org/images/5/57/CLASS_ASSAULT.png",
+	"spec" :  {
+		"primary_weapons" : [
+				{ "battle_rifles" : 1 },
+				{ "carbines" : 1 },
+				{ "shotguns" : 1 },
+				{ "smgs" : 1 },
+				{ "assault_rifles" : 1 }		             
+		],
+		"secondary_weapons" : [
+			{ "pistols" : 1},
+			{ "machine_pistols" : 1},
+			{ "shotguns" :  1}
+		],
+		"class_limited_items" : [
+		],
+		"perks" : [
+			{
+				"rank" : 1,
+				"perks" : [
+					{ "id" : "grenadier" }
+				]
+			}, {
+				"rank" : 2,
+				"perks" : [
+					{ "id" : "rapid_reaction"},
+					{ "id" : "smoke_grenade"},
+					{ "id" : "sapper"}
+				]
+			}, {
+				"rank" : 3,
+				"perks" : [
+					{ "id" : "heat_warheads"},
+					{ "id" : "smoke_and_mirrors"},
+					{ "id" : "holo_targeting"}
+				]
+			}, {
+				"rank" : 4,
+				"perks" : [
+					{ "id" : "ranger"},
+					{ "id" : "suppression"},
+					{ "id" : "repair"}
+				]
+			}, {
+				"rank" : 5,
+				"perks" : [
+				{ "id" : "extra_conditioning"},
+				{ "id" : "dense_smoke"},
+				{ "id" : "battle_scanner"}
+				]
+			}, {
+				"rank" : 6,
+				"perks" : [
+					{ "id" : "will_to_survive"},
+					{ "id" : "ready_for_anything"},
+					{ "id" : "packmaster"}
+				]
+			}, {
+				"rank" : 7,
+				"perks" : [
+					{ "id" : "mayhem"},
+					{ "id" : "fire_rocket"},
+					{ "id" : "bombard"}
+				]
+			}
+		],
+		"stat_progression" : [
+			{
+				"health" : 1,						"aim" : 2,						"will_low" : 6,						"will_high" : 7
+			}, {
+				"health" : 0,						"aim" : 2,						"will_low" : 6,						"will_high" : 7
+			}, {
+				"health" : 0,						"aim" : 2,						"will_low" : 3,						"will_high" : 4 
+			}, {
+				"health" : 1,						"aim" : 2,						"will_low" : 3,						"will_high" : 4
+			}, {
+				"health" : 0,						"aim" : 2,						"will_low" : 3,						"will_high" : 4
+			}, {
+				"health" : 0,						"aim" : 2,						"will_low" : 3,						"will_high" : 4
+			}, {
+				"health" : 1,						"aim" : 2,						"will_low" : 3,						"will_high" : 4
+			}
+		]		
+	}
+}
