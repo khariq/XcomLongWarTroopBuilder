@@ -1,6 +1,10 @@
-1) MEC perks
-2) class specific equipment
-3) Markdown, HTML and text output
-4) Armor name on stat sheet
-5) Base defense value?
-6) SHIV as solider type
+Basic
+* MEC perks
+* class specific equipment
+* Markdown, HTML and text output
+* SHIV as solider type
+* Iron Skin does not grant +1.0 DR
+
+Future
+* Interactive research tree
+* Base designer
