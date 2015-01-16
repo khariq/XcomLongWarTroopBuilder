@@ -908,6 +908,532 @@
                     {				"health" : 1,				"aim" : 3,				"will_low" : 2,				"will_high" : 3			}
 		        ]		
 	        }
+        },
+        {
+	"id" : "valkyrie",
+	"name" : "Valkyrie",
+	"mec" : 1,
+	"icon_src" : "http://ufopaedia.org/images/f/f6/CLASS_MECH.png",
+	"spec" :  {
+		"primary_weapons" : [
+				{ "mec_primary" : 1 }
+		],
+		"secondary_weapons" : [
+			{ "mec_secondary" : 1}	
+		],
+		"class_limited_items" : [
+		],
+		"perks" : [
+			{
+				"rank" : 1,
+				"perks" : [
+					{ "id" : "light_em_up" }
+				]
+			}, {
+				"rank" : 2,
+				"perks" : [
+					{ "id" : "platform_stability"},
+					{ "id" : "body_shield"},
+					{ "id" : "automated_threat_assessment"}
+				]
+			}, {
+				"rank" : 3,
+				"perks" : [
+					{ "id" : "advanced_fire_control"},
+					{ "id" : "damage_control"},
+					{ "id" : "jetboot_module"}
+				]
+			}, {
+				"rank" : 4,
+				"perks" : [
+					{ "id" : "shredder_ammo"},
+					{ "id" : "ranger"},
+					{ "id" : "shock_absorbent_armor"}
+				]
+			}, {
+				"rank" : 5,
+				"perks" : [
+				{ "id" : "collateral_damage"},
+				{ "id" : "reactive_targeting_sensors"},
+				{ "id" : "repair_servos"}
+				]
+			}, {
+				"rank" : 6,
+				"perks" : [
+					{ "id" : "lock_and_load"},
+					{ "id" : "absorption_fields"},
+					{ "id" : "vital_point_targeting"}
+				]
+			}, {
+				"rank" : 7,
+				"perks" : [
+					{ "id" : "sentinel"},
+					{ "id" : "rapid_fire"},
+					{ "id" : "squadsight"}
+				]
+			}
+		],
+		"stat_progression" : [
+			{				"health" : 1,				"aim" : 4,				"will_low" : 2,				"will_high" : 3			}, 
+            {				"health" : 0,				"aim" : 3,				"will_low" : 2,				"will_high" : 3			}, 
+            {				"health" : 1,				"aim" : 4,				"will_low" : 2,				"will_high" : 3 		}, 
+            {				"health" : 0,				"aim" : 3,				"will_low" : 2,				"will_high" : 3			}, 
+            {				"health" : 1,				"aim" : 4,				"will_low" : 2,				"will_high" : 3			}, 
+            {				"health" : 0,				"aim" : 3,				"will_low" : 2,				"will_high" : 3			}, 
+            {				"health" : 1,				"aim" : 4,				"will_low" : 2,				"will_high" : 3			}
+		]		
+	}
+},
+        {
+	"id" : "archer",
+	"name" : "Archer",
+	"mec" : 1,
+	"icon_src" : "http://ufopaedia.org/images/f/f6/CLASS_MECH.png",
+	"spec" :  {
+		"primary_weapons" : [
+				{ "mec_primary" : 1 }
+		],
+		"secondary_weapons" : [
+			{ "mec_secondary" : 1}	
+		],
+		"class_limited_items" : [
+		],
+		"perks" : [
+			{
+				"rank" : 1,
+				"perks" : [
+					{ "id" : "bombard" }
+				]
+			}, {
+				"rank" : 2,
+				"perks" : [
+					{ "id" : "rapid_reaction"},
+					{ "id" : "automated_threat_assessment"},
+					{ "id" : "platform_stability"}
+				]
+			}, {
+				"rank" : 3,
+				"perks" : [
+					{ "id" : "heat_warheads"},
+					{ "id" : "body_shield"},
+					{ "id" : "jetboot_module"}
+				]
+			}, {
+				"rank" : 4,
+				"perks" : [
+					{ "id" : "mayhem"},
+					{ "id" : "agression"},
+					{ "id" : "damage_control"}
+				]
+			}, {
+				"rank" : 5,
+				"perks" : [
+				{ "id" : "ranger"},
+				{ "id" : "packmaster"},
+				{ "id" : "collateral_damage"}
+				]
+			}, {
+				"rank" : 6,
+				"perks" : [
+					{ "id" : "danger_zone"},
+					{ "id" : "double_tap"},
+					{ "id" : "reactive_targeting_sensors"}
+				]
+			}, {
+				"rank" : 7,
+				"perks" : [
+					{ "id" : "grenadier"},
+					{ "id" : "vital_point_targeting"},
+					{ "id" : "absorption_fields"}
+				]
+			}
+		],
+		"stat_progression" : [
+			{               "health" : 1,               "aim" : 2,				"will_low" : 2,				"will_high" : 3			}, 
+            {				"health" : 0,				"aim" : 2,				"will_low" : 2,				"will_high" : 3			}, 
+            {				"health" : 0,				"aim" : 2,				"will_low" : 2,				"will_high" : 3 		}, 
+            {				"health" : 1,				"aim" : 2,				"will_low" : 2,				"will_high" : 3			}, 
+            {				"health" : 0,				"aim" : 2,				"will_low" : 2,				"will_high" : 3			}, 
+            {				"health" : 0,				"aim" : 2,				"will_low" : 2,				"will_high" : 3			}, 
+            {				"health" : 1,				"aim" : 2,				"will_low" : 2,				"will_high" : 3			}
+		]		
+	}
+    
+},
+        {
+	"id" : "goliath",
+	"name" : "Goliath",
+	"mec" : 1,
+	"icon_src" : "http://ufopaedia.org/images/f/f6/CLASS_MECH.png",
+	"spec" :  {
+		"primary_weapons" : [
+				{ "mec_primary" : 1 }
+		],
+		"secondary_weapons" : [
+			{ "mec_secondary" : 1}	
+		],
+		"class_limited_items" : [
+		],
+		"perks" : [
+			{
+				"rank" : 1,
+				"perks" : [
+					{ "id" : "absorption_fields_goliath" }
+				]
+			}, {
+				"rank" : 2,
+				"perks" : [
+					{ "id" : "platform_stability"},
+					{ "id" : "flush"},
+					{ "id" : "automated_threat_assessment"}
+				]
+			}, {
+				"rank" : 3,
+				"perks" : [
+					{ "id" : "ranger"},
+					{ "id" : "reactive_targeting_sensors"},
+					{ "id" : "close_combat_specialist"}
+				]
+			}, {
+				"rank" : 4,
+				"perks" : [
+					{ "id" : "platform_stability"},
+					{ "id" : "heat_ammo"},
+					{ "id" : "shock_absorbent_armor"}
+				]
+			}, {
+				"rank" : 5,
+				"perks" : [
+				{ "id" : "collateral_damage"},
+				{ "id" : "advanced_fire_control"},
+				{ "id" : "resilience"}
+				]
+			}, {
+				"rank" : 6,
+				"perks" : [
+					{ "id" : "repair_servos"},
+					{ "id" : "bring_em_on"},
+					{ "id" : "ready_for_anything"}
+				]
+			}, {
+				"rank" : 7,
+				"perks" : [
+					{ "id" : "packmaster"},
+					{ "id" : "damage_control"},
+					{ "id" : "vital_point_targeting"}
+				]
+			}
+		],
+		"stat_progression" : [
+			{				"health" : 1,				"aim" : 3,				"will_low" : 2,				"will_high" : 3			}, 
+            {				"health" : 1,				"aim" : 3,				"will_low" : 2,				"will_high" : 3			}, 
+            {				"health" : 1,				"aim" : 3,				"will_low" : 2,				"will_high" : 3 		}, 
+            {				"health" : 1,				"aim" : 3,				"will_low" : 2,				"will_high" : 3			}, 
+            {				"health" : 1,				"aim" : 3,				"will_low" : 2,				"will_high" : 3			}, 
+            {				"health" : 1,				"aim" : 3,				"will_low" : 2,				"will_high" : 3			}, 
+            {				"health" : 1,				"aim" : 3,				"will_low" : 2,				"will_high" : 3			}
+		]		
+	}
+},
+        {
+	"id" : "jaeger",
+	"name" : "Jaeger",
+	"mec" : 1,
+	"icon_src" : "http://ufopaedia.org/images/f/f6/CLASS_MECH.png",
+	"spec" :  {
+		"primary_weapons" : [
+				{ "mec_primary" : 1 }
+		],
+		"secondary_weapons" : [
+			{ "mec_secondary" : 1}	
+		],
+		"class_limited_items" : [
+		],
+		"perks" : [
+			{
+				"rank" : 1,
+				"perks" : [
+					{ "id" : "vital_point_targeting" }
+				]
+			}, {
+				"rank" : 2,
+				"perks" : [
+					{ "id" : "damn_good_ground"},
+					{ "id" : "sharpshooter"},
+					{ "id" : "platform_stability"}
+				]
+			}, {
+				"rank" : 3,
+				"perks" : [
+					{ "id" : "agression"},
+					{ "id" : "automated_threat_assessment"},
+					{ "id" : "flush"}
+				]
+			}, {
+				"rank" : 4,
+				"perks" : [
+					{ "id" : "squadsight"},
+					{ "id" : "ranger"},
+					{ "id" : "jetboot_module"}
+				]
+			}, {
+				"rank" : 5,
+				"perks" : [
+				{ "id" : "lone_wolf"},
+				{ "id" : "executioner"},
+				{ "id" : "damage_control"}
+				]
+			}, {
+				"rank" : 6,
+				"perks" : [
+					{ "id" : "advanced_fire_control"},
+					{ "id" : "bring_em_on"},
+					{ "id" : "shredder_ammo"}
+				]
+			}, {
+				"rank" : 7,
+				"perks" : [
+					{ "id" : "in_the_zone"},
+					{ "id" : "absorption_fields"},
+					{ "id" : "light_em_up"}
+				]
+			}
+		],
+		"stat_progression" : [
+			{				"health" : 0,				"aim" : 5,				"will_low" : 2,				"will_high" : 3			}, 
+            {				"health" : 0,				"aim" : 5,				"will_low" : 2,				"will_high" : 3			}, 
+            {				"health" : 1,				"aim" : 5,				"will_low" : 2,				"will_high" : 3 		}, 
+            {				"health" : 0,				"aim" : 5,				"will_low" : 2,				"will_high" : 3			}, 
+            {				"health" : 0,				"aim" : 5,				"will_low" : 2,				"will_high" : 3			}, 
+            {				"health" : 0,				"aim" : 5,				"will_low" : 2,				"will_high" : 3			}, 
+            {				"health" : 1,				"aim" : 5,				"will_low" : 2,				"will_high" : 3			}
+		]		
+	}
+},
+        {
+	        "id" : "pathfinder",
+	        "name" : "Pathfinder",
+	        "mec" : 1,
+	        "icon_src" : "http://ufopaedia.org/images/f/f6/CLASS_MECH.png",
+	        "spec" :  {
+		        "primary_weapons" : [
+				        { "mec_primary" : 1 }
+		        ],
+		        "secondary_weapons" : [
+			        { "mec_secondary" : 1}	
+		        ],
+		        "class_limited_items" : [
+		        ],
+		        "perks" : [
+			        {
+				        "rank" : 1,
+				        "perks" : [
+					        { "id" : "jetboot_module" }
+				        ]
+			        }, {
+				        "rank" : 2,
+				        "perks" : [
+					        { "id" : "body_shield"},
+					        { "id" : "automated_threat_assessment"},
+					        { "id" : "platform_stability"}
+				        ]
+			        }, {
+				        "rank" : 3,
+				        "perks" : [
+					        { "id" : "damn_good_ground"},
+					        { "id" : "flush"},
+					        { "id" : "advanced_fire_control"}
+				        ]
+			        }, {
+				        "rank" : 4,
+				        "perks" : [
+					        { "id" : "lone_wolf"},
+					        { "id" : "executioner"},
+					        { "id" : "damage_control"}
+				        ]
+			        }, {
+				        "rank" : 5,
+				        "perks" : [
+				        { "id" : "reactive_targeting_sensors"},
+				        { "id" : "ranger"},
+				        { "id" : "shredder_ammo"}
+				        ]
+			        }, {
+				        "rank" : 6,
+				        "perks" : [
+					        { "id" : "absorption_fields"},
+					        { "id" : "squadsight"},
+					        { "id" : "vital_point_targeting"}
+				        ]
+			        }, {
+				        "rank" : 7,
+				        "perks" : [
+					        { "id" : "in_the_zone"},
+					        { "id" : "hit_and_run"},
+					        { "id" : "lightning_reflexes"}
+				        ]
+			        }
+		        ],
+		        "stat_progression" : [
+			        {				"health" : 1,				"aim" : 4,				"will_low" : 2,				"will_high" : 3			}, 
+                    {				"health" : 0,				"aim" : 4,				"will_low" : 2,				"will_high" : 3			}, 
+                    {				"health" : 1,				"aim" : 4,				"will_low" : 2,				"will_high" : 3 		}, 
+                    {				"health" : 0,				"aim" : 4,				"will_low" : 2,				"will_high" : 3			}, 
+                    {				"health" : 1,				"aim" : 4,				"will_low" : 2,				"will_high" : 3			}, 
+                    {				"health" : 0,				"aim" : 4,				"will_low" : 2,				"will_high" : 3			}, 
+                    {				"health" : 1,				"aim" : 4,				"will_low" : 2,				"will_high" : 3			}
+		        ]		
+	        }
+        },
+        {
+	        "id" : "guardian",
+	        "name" : "Guardian",
+	        "mec" : 1,
+	        "icon_src" : "http://ufopaedia.org/images/f/f6/CLASS_MECH.png",
+	        "spec" :  {
+		        "primary_weapons" : [
+				        { "mec_primary" : 1 }
+		        ],
+		        "secondary_weapons" : [
+			        { "mec_secondary" : 1}	
+		        ],
+		        "class_limited_items" : [
+		        ],
+		        "perks" : [
+			        {
+				        "rank" : 1,
+				        "perks" : [
+					        { "id" : "packmaster" }
+				        ]
+			        }, {
+				        "rank" : 2,
+				        "perks" : [
+					        { "id" : "covering_fire"},
+					        { "id" : "automated_threat_assessment"},
+					        { "id" : "steadfast"}
+				        ]
+			        }, {
+				        "rank" : 3,
+				        "perks" : [
+					        { "id" : "field_medic"},
+					        { "id" : "platform_stability"},
+					        { "id" : "body_shield"}
+				        ]
+			        }, {
+				        "rank" : 4,
+				        "perks" : [
+					        { "id" : "jetboot_module"},
+					        { "id" : "ranger"},
+					        { "id" : "opportunist"}
+				        ]
+			        }, {
+				        "rank" : 5,
+				        "perks" : [
+				        { "id" : "repair_servos"},
+				        { "id" : "damage_control"},
+				        { "id" : "reactive_targeting_sensors"}
+				        ]
+			        }, {
+				        "rank" : 6,
+				        "perks" : [
+					        { "id" : "resilience"},
+					        { "id" : "sentinel"},
+					        { "id" : "absorption_fields"}
+				        ]
+			        }, {
+				        "rank" : 7,
+				        "perks" : [
+					        { "id" : "ready_for_anything"},
+					        { "id" : "savior"},
+					        { "id" : "double_tap"}
+				        ]
+			        }
+		        ],
+		        "stat_progression" : [
+			        {				"health" : 1,				"aim" : 3,				"will_low" : 2,				"will_high" : 3			}, 
+                    {				"health" : 0,				"aim" : 3,				"will_low" : 2,				"will_high" : 3			}, 
+                    {				"health" : 1,				"aim" : 3,				"will_low" : 2,				"will_high" : 3 		}, 
+                    {				"health" : 0,				"aim" : 3,				"will_low" : 2,				"will_high" : 3			}, 
+                    {				"health" : 1,				"aim" : 3,				"will_low" : 2,				"will_high" : 3			}, 
+                    {				"health" : 0,				"aim" : 3,				"will_low" : 2,				"will_high" : 3			}, 
+                    {				"health" : 1,				"aim" : 3,				"will_low" : 2,				"will_high" : 3			}
+		        ]		
+	        }
+        },
+        {
+	        "id" : "shogun",
+	        "name" : "Shogun",
+	        "mec" : 1,
+	        "icon_src" : "http://ufopaedia.org/images/f/f6/CLASS_MECH.png",
+	        "spec" :  {
+		        "primary_weapons" : [
+				        { "mec_primary" : 1 }
+		        ],
+		        "secondary_weapons" : [
+			        { "mec_secondary" : 1}	
+		        ],
+		        "class_limited_items" : [
+		        ],
+		        "perks" : [
+			        {
+				        "rank" : 1,
+				        "perks" : [
+					        { "id" : "collateral_damage" }
+				        ]
+			        }, {
+				        "rank" : 2,
+				        "perks" : [
+					        { "id" : "body_shield"},
+					        { "id" : "automated_threat_assessment"},
+					        { "id" : "jetboot_module"}
+				        ]
+			        }, {
+				        "rank" : 3,
+				        "perks" : [
+					        { "id" : "heat_warheads"},
+					        { "id" : "advanced_fire_control"},
+					        { "id" : "shock_absorbent_armor"}
+				        ]
+			        }, {
+				        "rank" : 4,
+				        "perks" : [
+					        { "id" : "heat_ammo"},
+					        { "id" : "repair_servos"},
+					        { "id" : "sapper"}
+				        ]
+			        }, {
+				        "rank" : 5,
+				        "perks" : [
+				        { "id" : "damage_control"},
+				        { "id" : "packmaster"},
+				        { "id" : "ranger"}
+				        ]
+			        }, {
+				        "rank" : 6,
+				        "perks" : [
+					        { "id" : "grenadier"},
+					        { "id" : "vital_point_targeting"},
+					        { "id" : "light_em_up"}
+				        ]
+			        }, {
+				        "rank" : 7,
+				        "perks" : [
+					        { "id" : "mayhem"},
+					        { "id" : "reactive_targeting_sensors"},
+					        { "id" : "absorption_fields"}
+				        ]
+			        }
+		        ],
+		        "stat_progression" : [
+			        {				"health" : 1,				"aim" : 3,				"will_low" : 2,				"will_high" : 3			}, 
+                    {				"health" : 0,				"aim" : 3,				"will_low" : 2,				"will_high" : 3			}, 
+                    {				"health" : 1,				"aim" : 3,				"will_low" : 2,				"will_high" : 3 		}, 
+                    {				"health" : 1,				"aim" : 3,				"will_low" : 2,				"will_high" : 3			}, 
+                    {				"health" : 1,				"aim" : 3,				"will_low" : 2,				"will_high" : 3			}, 
+                    {				"health" : 0,				"aim" : 3,				"will_low" : 2,				"will_high" : 3			}, 
+                    {				"health" : 1,				"aim" : 3,				"will_low" : 2,				"will_high" : 3			}
+		        ]		
+	        }
         }
         ], 
 	"ranks" : [
@@ -2948,6 +3474,16 @@
 	"damage_bonus" : 0
 },
 {
+	"id" : "absorption_fields_goliath",
+	"img_src" :  "http://ufopaedia.org/images/thumb/b/b8/MEC_ABSORTION_FIELDS.png/32px-MEC_ABSORTION_FIELDS.png",
+	"title" :  "Absorption Fields",
+	"description" :  "Reduces most incoming damage to this unit, scaling up as damage increases.",
+	"aim_bonus" :  0,
+	"will_bonus" :  0,
+	"mobility_bonus" :  -1,
+	"damage_bonus" : 0
+},
+{
 	"id" : "reactive_targeting_sensors",
 	"img_src" :  "http://ufopaedia.org/images/thumb/f/f9/MEC_REACTIVE_TARGETING_SENSORS.png/32px-MEC_REACTIVE_TARGETING_SENSORS.png",
 	"title" :  "Reactive Targeting Sensors",
@@ -2958,10 +3494,40 @@
 	"damage_bonus" : 0
 },
 {
+	"id" : "platform_stability",
+	"img_src" :  "http://ufopaedia.org/images/thumb/1/10/MEC_PLATFORM_STABILITY.png/32px-MEC_PLATFORM_STABILITY.png",
+	"title" :  "Platform Stability",
+	"description" :  "Shots taken before any costly actions have +10 Aim and +10% critical chance.",
+	"aim_bonus" :  0,
+	"will_bonus" :  1,
+	"mobility_bonus" :  0,
+	"damage_bonus" : 0
+},
+{
+	"id" : "automated_threat_assessment",
+	"img_src" :  "http://ufopaedia.org/images/thumb/b/bb/MEC_AUTOMATED_THREAT_ASSESSMENT.png/32px-MEC_AUTOMATED_THREAT_ASSESSMENT.png",
+	"title" :  "Automated Threat Assessment",
+	"description" :  "Confers +15 Defense during first attack in Overwatch, and a half-point of Damage Reduction (meaning one point of damage in an successful attack has a 50 percent chance of being avoided).",
+	"aim_bonus" :  0,
+	"will_bonus" :  1,
+	"mobility_bonus" :  0,
+	"damage_bonus" : 0
+},
+{
 	"id" : "repair_servos",
 	"img_src" :  "http://ufopaedia.org/images/thumb/6/6b/MEC_REPAIR_SERVOS.png/32px-MEC_REPAIR_SERVOS.png",
 	"title" :  "Repair Servos",
 	"description" :  "Repairs up to 50% of damage taken (max 2 per turn). Value on icon represents repairs remaining at 2 points per hp. Additional damage taken before repairs are complete reduces how much can be repaired.",
+	"aim_bonus" :  0,
+	"will_bonus" :  1,
+	"mobility_bonus" :  0,
+	"damage_bonus" : 0
+},
+{
+	"id" : "field_medic",
+	"img_src" :  "http://ufopaedia.org/images/thumb/7/7a/SUPPORT_FIELDMEDIC.png/32px-SUPPORT_FIELDMEDIC.png",
+	"title" :  "Field Medic",
+	"description" :  "For soldiers, grants one free use of a medikit per mission and allows additional medikit items to be used two times per battle instead of one. Also allows Restorative Mist items to be used three times per battle instead of once.",
 	"aim_bonus" :  0,
 	"will_bonus" :  1,
 	"mobility_bonus" :  0,

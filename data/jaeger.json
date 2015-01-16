@@ -1,114 +1,75 @@
 {
-	"id" : "assault",
-	"name" : "Assault",
-	"mec_name" : "Marauder",
-	"icon_src" : "http://ufopaedia.org/images/5/57/CLASS_ASSAULT.png",
+	"id" : "jaeger",
+	"name" : "Jaeger",
+	"mec_name" : "Jaeger",
+	"icon_src" : "http://ufopaedia.org/images/f/f6/CLASS_MECH.png",
 	"spec" :  {
 		"primary_weapons" : [
-				{ "carbines" : 1 },
-				{ "assault_rifles" : 1 },
-				{ "battle_rifles" : 1 },
-				{ "smgs" : 1 },
-				{ "shotguns" : 1}
+				{ "mec_primary" : 1 }
 		],
 		"secondary_weapons" : [
-			{ "pistols" : 1},
-			{ "machine_pistols" : 1},
-			{ "shotguns" : 1}		
+			{ "mec_secondary" : 1}	
 		],
 		"class_limited_items" : [
-			{ "walker_servos" : 1},
-			{ "impact_vest" : 1},
-			{ "shredder_ammo" : 1},
-			{ "breaching_ammo" : 1}
 		],
 		"perks" : [
 			{
 				"rank" : 1,
 				"perks" : [
-					{ "id" : "run_and_gun" }
+					{ "id" : "vital_point_targeting" }
 				]
 			}, {
 				"rank" : 2,
 				"perks" : [
-					{ "id" : "flush"},
-					{ "id" : "close_combat_specialist"},
-					{ "id" : "steadfast"}
+					{ "id" : "damn_good_ground"},
+					{ "id" : "sharpshooter"},
+					{ "id" : "platform_stability"}
 				]
 			}, {
 				"rank" : 3,
 				"perks" : [
-					{ "id" : "gunslinger"},
-					{ "id" : "tactical_sense"},
-					{ "id" : "aggression"}
+					{ "id" : "agression"},
+					{ "id" : "automated_threat_assessment"},
+					{ "id" : "flush"}
 				]
 			}, {
 				"rank" : 4,
 				"perks" : [
-					{ "id" : "hit_and_run"},
-					{ "id" : "close_encounters"},
-					{ "id" : "rapid_fire"}
+					{ "id" : "squadsight"},
+					{ "id" : "ranger"},
+					{ "id" : "jetboot_module"}
 				]
 			}, {
 				"rank" : 5,
 				"perks" : [
-				{ "id" : "extra_conditioning"},
-				{ "id" : "killer_instinct"},
-				{ "id" : "ranger"}
+				{ "id" : "lone_wolf"},
+				{ "id" : "executioner"},
+				{ "id" : "damage_control"}
 				]
 			}, {
 				"rank" : 6,
 				"perks" : [
-					{ "id" : "will_to_survive"},
+					{ "id" : "advanced_fire_control"},
 					{ "id" : "bring_em_on"},
-					{ "id" : "sprinter"}
+					{ "id" : "shredder_ammo"}
 				]
 			}, {
 				"rank" : 7,
 				"perks" : [
-					{ "id" : "vital_point_targeting"},
-					{ "id" : "resilience"},
-					{ "id" : "lightning_reflexes"}
+					{ "id" : "in_the_zone"},
+					{ "id" : "absorption_fields"},
+					{ "id" : "light_em_up"}
 				]
 			}
 		],
 		"stat_progression" : [
-			{
-				"health" : 1,
-				"aim" : 3,
-				"will_low" : 5,
-				"will_high" : 6
-			}, {
-				"health" : 0,
-				"aim" : 3,
-				"will_low" : 5,
-				"will_high" : 6
-			}, {
-				"health" : 1,
-				"aim" : 3,
-				"will_low" : 3,
-				"will_high" : 4 
-			}, {
-				"health" : 0,
-				"aim" : 3,
-				"will_low" : 3,
-				"will_high" : 4
-			}, {
-				"health" : 1,
-				"aim" : 3,
-				"will_low" : 3,
-				"will_high" : 4
-			}, {
-				"health" : 0,
-				"aim" : 3,
-				"will_low" : 3,
-				"will_high" : 4
-			}, {
-				"health" : 1,
-				"aim" : 3,
-				"will_low" : 3,
-				"will_high" : 4
-			}
+			{				"health" : 0,				"aim" : 5,				"will_low" : 2,				"will_high" : 3			}, 
+            {				"health" : 0,				"aim" : 5,				"will_low" : 2,				"will_high" : 3			}, 
+            {				"health" : 1,				"aim" : 5,				"will_low" : 2,				"will_high" : 3 		}, 
+            {				"health" : 0,				"aim" : 5,				"will_low" : 2,				"will_high" : 3			}, 
+            {				"health" : 0,				"aim" : 5,				"will_low" : 2,				"will_high" : 3			}, 
+            {				"health" : 0,				"aim" : 5,				"will_low" : 2,				"will_high" : 3			}, 
+            {				"health" : 1,				"aim" : 5,				"will_low" : 2,				"will_high" : 3			}
 		]		
 	}
 }

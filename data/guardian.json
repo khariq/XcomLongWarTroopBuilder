@@ -1,114 +1,75 @@
 {
-	"id" : "assault",
-	"name" : "Assault",
-	"mec_name" : "Marauder",
-	"icon_src" : "http://ufopaedia.org/images/5/57/CLASS_ASSAULT.png",
-	"spec" :  {
-		"primary_weapons" : [
-				{ "carbines" : 1 },
-				{ "assault_rifles" : 1 },
-				{ "battle_rifles" : 1 },
-				{ "smgs" : 1 },
-				{ "shotguns" : 1}
-		],
-		"secondary_weapons" : [
-			{ "pistols" : 1},
-			{ "machine_pistols" : 1},
-			{ "shotguns" : 1}		
-		],
-		"class_limited_items" : [
-			{ "walker_servos" : 1},
-			{ "impact_vest" : 1},
-			{ "shredder_ammo" : 1},
-			{ "breaching_ammo" : 1}
-		],
-		"perks" : [
-			{
-				"rank" : 1,
-				"perks" : [
-					{ "id" : "run_and_gun" }
-				]
-			}, {
-				"rank" : 2,
-				"perks" : [
-					{ "id" : "flush"},
-					{ "id" : "close_combat_specialist"},
-					{ "id" : "steadfast"}
-				]
-			}, {
-				"rank" : 3,
-				"perks" : [
-					{ "id" : "gunslinger"},
-					{ "id" : "tactical_sense"},
-					{ "id" : "aggression"}
-				]
-			}, {
-				"rank" : 4,
-				"perks" : [
-					{ "id" : "hit_and_run"},
-					{ "id" : "close_encounters"},
-					{ "id" : "rapid_fire"}
-				]
-			}, {
-				"rank" : 5,
-				"perks" : [
-				{ "id" : "extra_conditioning"},
-				{ "id" : "killer_instinct"},
-				{ "id" : "ranger"}
-				]
-			}, {
-				"rank" : 6,
-				"perks" : [
-					{ "id" : "will_to_survive"},
-					{ "id" : "bring_em_on"},
-					{ "id" : "sprinter"}
-				]
-			}, {
-				"rank" : 7,
-				"perks" : [
-					{ "id" : "vital_point_targeting"},
-					{ "id" : "resilience"},
-					{ "id" : "lightning_reflexes"}
-				]
-			}
-		],
-		"stat_progression" : [
-			{
-				"health" : 1,
-				"aim" : 3,
-				"will_low" : 5,
-				"will_high" : 6
-			}, {
-				"health" : 0,
-				"aim" : 3,
-				"will_low" : 5,
-				"will_high" : 6
-			}, {
-				"health" : 1,
-				"aim" : 3,
-				"will_low" : 3,
-				"will_high" : 4 
-			}, {
-				"health" : 0,
-				"aim" : 3,
-				"will_low" : 3,
-				"will_high" : 4
-			}, {
-				"health" : 1,
-				"aim" : 3,
-				"will_low" : 3,
-				"will_high" : 4
-			}, {
-				"health" : 0,
-				"aim" : 3,
-				"will_low" : 3,
-				"will_high" : 4
-			}, {
-				"health" : 1,
-				"aim" : 3,
-				"will_low" : 3,
-				"will_high" : 4
-			}
-		]		
-	}
-}
+	        "id" : "guardian",
+	        "name" : "Guardian",
+	        "mec_name" : "Guardian",
+	        "icon_src" : "http://ufopaedia.org/images/f/f6/CLASS_MECH.png",
+	        "spec" :  {
+		        "primary_weapons" : [
+				        { "mec_primary" : 1 }
+		        ],
+		        "secondary_weapons" : [
+			        { "mec_secondary" : 1}	
+		        ],
+		        "class_limited_items" : [
+		        ],
+		        "perks" : [
+			        {
+				        "rank" : 1,
+				        "perks" : [
+					        { "id" : "packmaster" }
+				        ]
+			        }, {
+				        "rank" : 2,
+				        "perks" : [
+					        { "id" : "covering_fire"},
+					        { "id" : "automated_threat_assessment"},
+					        { "id" : "steadfast"}
+				        ]
+			        }, {
+				        "rank" : 3,
+				        "perks" : [
+					        { "id" : "field_medic"},
+					        { "id" : "platform_stability"},
+					        { "id" : "body_shield"}
+				        ]
+			        }, {
+				        "rank" : 4,
+				        "perks" : [
+					        { "id" : "jetboot_module"},
+					        { "id" : "ranger"},
+					        { "id" : "opportunist"}
+				        ]
+			        }, {
+				        "rank" : 5,
+				        "perks" : [
+				        { "id" : "repair_servos"},
+				        { "id" : "damage_control"},
+				        { "id" : "reactive_targeting_sensors"}
+				        ]
+			        }, {
+				        "rank" : 6,
+				        "perks" : [
+					        { "id" : "resilience"},
+					        { "id" : "sentinel"},
+					        { "id" : "absorption_fields"}
+				        ]
+			        }, {
+				        "rank" : 7,
+				        "perks" : [
+					        { "id" : "ready_for_anything"},
+					        { "id" : "savior"},
+					        { "id" : "double_tap"}
+				        ]
+			        }
+		        ],
+		        "stat_progression" : [
+			        {				"health" : 1,				"aim" : 3,				"will_low" : 2,				"will_high" : 3			}, 
+                    {				"health" : 0,				"aim" : 3,				"will_low" : 2,				"will_high" : 3			}, 
+                    {				"health" : 1,				"aim" : 3,				"will_low" : 2,				"will_high" : 3 		}, 
+                    {				"health" : 0,				"aim" : 3,				"will_low" : 2,				"will_high" : 3			}, 
+                    {				"health" : 1,				"aim" : 3,				"will_low" : 2,				"will_high" : 3			}, 
+                    {				"health" : 0,				"aim" : 3,				"will_low" : 2,				"will_high" : 3			}, 
+                    {				"health" : 1,				"aim" : 3,				"will_low" : 2,				"will_high" : 3			}
+		        ]		
+	        }
+        }
