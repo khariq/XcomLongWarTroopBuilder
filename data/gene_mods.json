@@ -16,7 +16,8 @@
 						"cash" : 20,
 						"meld" : 12,
 						"time" : 10
-					}
+					},
+					"damage_reduction" : 0
 				},
 				{
 					"id": "smart_macrophages",
@@ -30,7 +31,8 @@
 						"cash" : 15,
 						"meld" : 8,
 						"time" : 4
-					}
+					},
+					"damage_reduction" : 0
 				}
 			]
 		},
@@ -49,7 +51,8 @@
 						"cash" : 10,
 						"meld" : 8,
 						"time" : 4
-					}
+					},
+					"damage_reduction" : 0
 				},
 				{
 					"id": "depth_perception",
@@ -63,7 +66,8 @@
 						"cash" : 10,
 						"meld" : 4,
 						"time" : 3
-					}
+					},
+					"damage_reduction" : 0
 				}
 			]
 		},
@@ -82,7 +86,8 @@
 						"cash" : 30,
 						"meld" : 10,
 						"time" : 10
-					}
+					},
+					"damage_reduction" : 0
 				},
 				{
 					"id": "Adrenal Neurosympathy",
@@ -96,7 +101,8 @@
 						"cash" : 20,
 						"meld" : 10,
 						"time" : 6
-					}
+					},
+					"damage_reduction" : 0
 				}
 			]
 		},
@@ -115,7 +121,8 @@
 						"cash" : 25,
 						"meld" : 10,
 						"time" : 6
-					}
+					},
+					"damage_reduction" : 0
 				},
 				{
 					"id": "Iron Skin",
@@ -149,7 +156,8 @@
 						"cash" : 20,
 						"meld" : 12,
 						"time" : 7
-					}
+					},
+					"damage_reduction" : 0
 				},
 				{
 					"id": "Adaptive Bone Marrow",
@@ -163,7 +171,8 @@
 						"cash" : 30,
 						"meld" : 12,
 						"time" : 7
-					}
+					},
+					"damage_reduction" : 0
 				}
 			]
 		}

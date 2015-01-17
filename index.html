@@ -45,7 +45,16 @@
 							</li>
 						</ul>
 					</li>
-					
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">S.H.I.V. <span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li role="presentation" ng-repeat="item in shivs" ng-class="{ active: isActive(item.id)}">
+							<a href="#{{item.id}}" ng-click="showClass(item.id)">
+								{{item.name}}
+							</a>
+							</li>
+						</ul>
+					</li>
 				</ul>
 			</div><!-- /.navbar-collapse -->
 		</div><!-- /.container-fluid -->
@@ -95,7 +104,7 @@
 					</div>
 
 					<div class="panel-body" ng-show="visibleTab === 'armory'">
-						<div class="row">
+						<div class="row" ng-hide="isClassShiv() === true">
 							<div class="col-sm-5"><span class="pull-right">Armor</span></div>
 							<div class="col-sm-7">
 								<select class="form-control"
@@ -113,7 +122,7 @@
 										ng-options="weapon.name group by weapon.type for weapon in primaryWeapons"></select>
 							</div>
 						</div>
-						<div class="row">
+						<div class="row" ng-hide="isClassShiv() === true">
 							<div class="col-sm-5"><span class="pull-right">Secondary Weapon</span></div>
 							<div class="col-sm-7">
 								<select class="form-control"
@@ -127,7 +136,7 @@
 							<div class="col-sm-5"><span class="pull-right">Equipment</span></div>
 							<div class="col-sm-7">
 								<select class="form-control"
-										ng-change="showVisibleOutput()"
+										ng-change="equipmentChanged()"
 										ng-model="equipmentSlotOne"
 										ng-options="item.name group by item.type for item in equipment"></select>
 							</div>
@@ -136,7 +145,7 @@
 							<div class="col-sm-5"><span class="pull-right">Equipment</span></div>
 							<div class="col-sm-7">
 								<select class="form-control"
-										ng-change="showVisibleOutput()"
+										ng-change="equipmentChanged()"
 										ng-model="equipmentSlotTwo"
 										ng-options="item.name group by item.type for item in equipment"></select>
 							</div>

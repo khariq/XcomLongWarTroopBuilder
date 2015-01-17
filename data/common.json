@@ -1445,7 +1445,6 @@
 				        { "shiv_turrets" : 1 }
 		        ],
 		        "secondary_weapons" : [
-			        { "mec_secondary" : 1}	
 		        ],
 		        "class_limited_items" : [
 		        ],
@@ -1464,7 +1463,6 @@
 				        { "shiv_turrets" : 1 }
 		        ],
 		        "secondary_weapons" : [
-			        { "mec_secondary" : 1}	
 		        ],
 		        "class_limited_items" : [
 		        ],
@@ -1482,7 +1480,6 @@
 				        { "shiv_turrets" : 1 }
 		        ],
 		        "secondary_weapons" : [
-			        { "mec_secondary" : 1}	
 		        ],
 		        "class_limited_items" : [
 		        ],
@@ -2367,7 +2364,7 @@
 		},
 		 {
 			 "type" :  "shiv_turrets",
-			 "weapons" :  {
+			 
 				  "weapons" :  [
 				 {				
 					"id" : "autocannon",
@@ -2439,8 +2436,7 @@
 					"ammo" : 3,
 					"steady" : 1
 				}
-			]
-			 }
+			]			 
 		 },
 		 {
 			"type" :  "mec_primary",
@@ -3714,7 +3710,8 @@
 			"defense" :  0,
 			"will" :  0,
 			"mobility" :  -1,
-			"notes" :  "Grants the Shock-Absorbent Armor perk( 33% damage reduction against attacks within 4 tiles) and + 1 HP.",
+			"notes" :  "Grants the Shock-Absorbent Armor perk (33% damage reduction against attacks within 4 tiles) and + 1 HP.",
+			"perk" : "shock_absorbent_armor",
 			"classes" : "assault"
 		}, 
 		   {
@@ -3902,6 +3899,7 @@
 			"will" :  0,
 			"mobility" :  -1,
 			"notes" :  "Grants the Shredder Ammunition perk.",
+			"perk" : "shredder_ammo",
 			"classes" : "assault"
 		}, 
 		   {
@@ -4038,6 +4036,7 @@
 			"will" :  0,
 			"mobility" :  -1,
 			"notes" :  "Grants the Advanced Fire Control perk, removing the aim penalty on reaction shots.",
+			"perk" : "advanced_fire_control",
 			"classes" : "gunner"
 		},
 			{
@@ -4051,6 +4050,7 @@
 			"will" :  0,
 			"mobility" :  -1,
 			"notes" :  "Grants Squadsight to scouts (useful only when they equip Marksmans or Strike Rifles).",
+			"perk" : "squadsight",
 			"classes" : "scout"
 		},
 			{
@@ -4090,6 +4090,7 @@
 			"will" :  0,
 			"mobility" :  -1,
 			"notes" :  "Grants the Steadfast perk, making the soldier immune to panic and intimidation, except Psi Panic",
+			"perk" : "steadfast",
 			"classes" : ""
 		},
 			{
@@ -4207,6 +4208,7 @@
 			"will" :  0,
 			"mobility" :  -1,
 			"notes" :  "Grants Extra Conditioning perk.",
+			"perk" : "extra_conditioning",
 			"classes" :  "mec, shiv"
 		}, 
 		{
@@ -4220,6 +4222,7 @@
 			"will" :  0,
 			"mobility" :  -1,
 			"notes" :  "Grants HEAT Ammo perk, providing additional damage against mechanized units.",
+			"perk" : "heat_ammo",
 			"classes" :  "shiv"
 		}, 
 		{
@@ -4233,6 +4236,7 @@
 			"will" :  0,
 			"mobility" :  -1,
 			"notes" :  "Grants the Flush ability and provides +5 aim.",
+			"perk" : "flush",
 			"classes" :  "shiv"
 		}, 
 		{
@@ -4246,6 +4250,7 @@
 			"will" :  0,
 			"mobility" :  -1,
 			"notes" :  "Grants Reactive Targeting Sensors perk, allowing the SHIV to return fire.",
+			"perk" : "reactive_targeting_sensors",
 			"classes" :  "shiv"
 		}, 
 		{
@@ -4259,6 +4264,7 @@
 			"will" :  0,
 			"mobility" :  -1,
 			"notes" :  "Grants the Advanced Fire Control perk.",
+			"perk" : "advanced_fire_control",
 			"classes" :  "shiv"
 		}, 
 		{
@@ -4272,6 +4278,7 @@
 			"will" :  0,
 			"mobility" :  -1,
 			"notes" :  "Grants the Damage Control perk, reducing oncoming damage by 1 or 2 for several turns after first being struck.",
+			"perk" : "damage_control",
 			"classes" :  "shiv"
 		}, 
 		{
@@ -4285,6 +4292,7 @@
 			"will" :  0,
 			"mobility" :  -1,
 			"notes" :  "Grants Holo-Targeting perk and provides +5 aim.",
+			"perk" : "holo_targeting",
 			"classes" :  "mec, shiv"
 		}, 
 		{
@@ -4298,6 +4306,7 @@
 			"will" :  0,
 			"mobility" :  -1,
 			"notes" :  "Grants Light 'Em Up perk, allowing a second shot or action after firing the main weapon as the first action.",
+			"perk" : "light_em_up",
 			"classes" :  "shiv"
 		}, 
 		{
@@ -4324,6 +4333,7 @@
 			"will" :  0,
 			"mobility" :  -1,
 			"notes" :  "Grants +2 HP and the Resilience perk, rendering the SHIV immune to Critical Hits.",
+			"perk" : "resilience",
 			"classes" :  "shiv"
 		}, 
 		{
@@ -4337,6 +4347,7 @@
 			"will" :  0,
 			"mobility" :  -1,
 			"notes" :  "Grants Tactical Sense perk, enhancing defense by 5 for every enemy the MEC can see. (Up to a maximum bonus of +20)",
+			"perk" : "tactical_sense",
 			"classes" :  "mec, shiv"
 		}, 
 		{

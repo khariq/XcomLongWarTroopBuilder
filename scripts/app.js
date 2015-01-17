@@ -118,13 +118,15 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
         function (commonJson) { //success
 			$scope.menuItems = commonJson.classes;
 
-			$scope.soliders = commonJson.classes.filter(
-									function (_class) { 
-										return _class.mec === null || _class.mec !== 1 });
-			$scope.mecTroopers = commonJson.classes.filter(function (_class) { return _class.mec !== null && _class.mec === 1 });
+			$scope.soliders = commonJson.classes.filter(function (_class) { return _class.mec !== 1 && _class.shiv !== 1; });
+			$scope.mecTroopers = commonJson.classes.filter(function (_class) { return _class.mec !== null && _class.mec === 1; });
+			$scope.shivs = commonJson.classes.filter(function (_class) { return _class.shiv !== null && _class.shiv === 1; });
+
 			$scope.tabs = commonJson.tabs;
 			$scope.ranks = commonJson.ranks;
 			$scope.armors = commonJson.armors;
+
+			$scope.commonJson = commonJson;
 		}, 
         // failure
         function (commonJson) {
@@ -184,6 +186,46 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 		);
 	}
 
+	$scope.eqSlotOnePerk = null;
+	$scope.eqSlotTwoPerk = null;
+
+	$scope.equipmentChanged = function() {
+		
+		if ($scope.equipmentSlotOne == null) {
+			if ($scope.eqSlotOnePerk != null) {
+
+				$scope.losePerk(-1, $scope.eqSlotOnePerk);
+			}
+		}
+		else if ($scope.equipmentSlotOne.perk != null) {
+			if ($scope.eqSlotOnePerk != null) {
+				$scope.losePerk(-1, $scope.eqSlotOnePerk);
+			}
+
+			var perk = $scope.commonJson.perks.filter(function(p){return p.id === $scope.equipmentSlotOne.perk;})[0];
+
+			$scope.gainPerk(-1, perk);
+			$scope.eqSlotOnePerk = perk;
+		}
+
+		if ($scope.equipmentSlotTwo == null) {
+			if ($scope.eqSlotTwoPerk != null) {
+				$scope.losePerk($scope.eqSlotTwoPerk);
+			}
+		}
+		else if ($scope.equipmentSlotTwo.perk != null) {
+			if ($scope.eqSlotTwoPerk != null) {
+				$scope.losePerk($scope.eqSlotTwoPerk);
+			}
+			var perk = $scope.commonJson.perks.filter(function(p){return p.id === $scope.equipmentSlotTwo.perk;})[0];
+
+			$scope.gainPerk(-1, perk);
+			$scope.eqSlotOnePerk = perk;
+		}
+
+		$scope.showVisibleOutput();
+
+	}
 
 	$scope.showClass = function(id) {
 		$scope.resetBuild();
@@ -259,6 +301,35 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 					}
 				);
 
+				if ($scope.isClassShiv()) {
+					$scope.visibleTab = "armory";
+
+					$scope.build.aim = 70;
+					switch ($scope.class.name)
+					{
+						case "S.H.I.V.": {
+							$scope.build.hp = 8;
+							$scope.build.mobility = 17;
+							$scope.build.defense = 10;
+							$scope.build.damage_reduction = 1.5;
+						}
+						case "Alloy S.H.I.V.":{
+							$scope.build.hp = 22;
+							$scope.build.mobility = 16;
+							$scope.build.defense = 15;
+							$scope.build.damage_reduction = 2.5;
+						}
+						case "Hover S.H.I.V." : {
+							$scope.build.hp = 18;
+							$scope.build.mobility = 20;
+							$scope.build.defense = 20;
+							$scope.build.damage_reduction = 2;
+						}
+					}
+				} else {
+					$scope.visibleTab = "perks";
+				}
+
 				$scope.showOutput($scope.visibleOutput);
 			},
             // failure
@@ -269,49 +340,12 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 		
 	}
 		
-	$scope.choosePerk = function(perk, rank, btnElement) {
-	
-		var stat_mods = $scope.class.spec.stat_progression[rank];
-
-		if ($scope.selectedPerks[rank] != null) {
-			//deselect currently selected perk at this rank
-
-			var currentPerk = $scope.selectedPerks[rank];
-			$scope.build.mod.aim -= currentPerk.aim_bonus;
-			$scope.build.mod.mob -= currentPerk.mobility_bonus;
-			$scope.build.mod.will -= currentPerk.will_bonus;
-
-			$scope.build.rank_ups.aim -= stat_mods.aim;
-			$scope.build.rank_ups.will_low -= stat_mods.will_low;
-			$scope.build.rank_ups.will_high -= stat_mods.will_high;
-			$scope.build.rank_ups.health -= stat_mods.health;
-		
-			$scope.selectedPerks[rank] = null;
-
-			$("input[name='" + rank + "']").each(function(checkbox) { 
-				var chk = $(this);
-				chk.prop("checked", false);
-				chk.parent().removeClass("active");
-			});
-
-			$scope.icons = $scope.icons.filter(
-				function(icon) { 
-					return icon.id !== currentPerk.id; 
-				});
-
-			if (perk.id == currentPerk.id) return;
-
-		}
+	$scope.gainPerk = function(idx, perk) {
 
 		$scope.build.mod.aim += perk.aim_bonus;
 		$scope.build.mod.mob += perk.mobility_bonus;
 		$scope.build.mod.will += perk.will_bonus;
 		$scope.build.damage_bonus += perk.damage_bonus;
-
-		$scope.build.rank_ups.aim += stat_mods.aim;
-		$scope.build.rank_ups.will_low += stat_mods.will_low;
-		$scope.build.rank_ups.will_high += stat_mods.will_high;
-		$scope.build.rank_ups.health += stat_mods.health;
 
 		$scope.icons.push(
 			{
@@ -321,8 +355,73 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 		 		description: perk.description
 		 	}
 		 );
+		
+		if (idx > 0) {
+			$scope.selectedPerks[idx] = perk;
+		}
+		else {
+			$scope.selectedPerks.push(perk);
+		}
+	}
 
-		$scope.selectedPerks[rank] = perk;
+	$scope.losePerk = function(idx, perk) {
+
+		$scope.build.mod.aim -= perk.aim_bonus;
+		$scope.build.mod.mob -= perk.mobility_bonus;
+		$scope.build.mod.will -= perk.will_bonus;
+		$scope.build.damage_bonus -= perk.damage_bonus;
+
+		$scope.icons = $scope.icons.filter(
+			function(icon) { 
+				return icon.id !== perk.id; 
+			});
+
+		if (idx > 0) {
+			$scope.selectedPerks[idx] = null;
+		}
+		else {
+			$scope.selectedPerks = $scope.selectedPerks.filter(function(p) { return p.id !== perk.id; });
+		}
+	}
+
+	$scope.choosePerk = function(perk, rank, btnElement) {
+	
+		var stat_mods = $scope.class.spec.stat_progression[rank];
+
+		if ($scope.selectedPerks[rank] != null) {
+			//deselect currently selected perk at this rank
+
+			var currentPerk = $scope.selectedPerks[rank];
+			
+			$scope.losePerk(rank, currentPerk);
+
+			$scope.build.rank_ups.aim -= stat_mods.aim;
+			$scope.build.rank_ups.will_low -= stat_mods.will_low;
+			$scope.build.rank_ups.will_high -= stat_mods.will_high;
+			$scope.build.rank_ups.health -= stat_mods.health;
+		
+			$("input[name='" + rank + "']").each(function(checkbox) { 
+				var chk = $(this);
+				chk.prop("checked", false);
+				chk.parent().removeClass("active");
+			});
+
+			$scope.selectedPerks[rank] = null;			
+
+			if (perk.id == currentPerk.id) {
+				$scope.showVisibleOutput();
+				return;
+			} 
+
+		}
+
+		$scope.gainPerk(rank, perk);
+
+		$scope.build.rank_ups.aim += stat_mods.aim;
+		$scope.build.rank_ups.will_low += stat_mods.will_low;
+		$scope.build.rank_ups.will_high += stat_mods.will_high;
+		$scope.build.rank_ups.health += stat_mods.health;
+		
 		$scope.showOutput($scope.visibleOutput);
 	}
 	
@@ -610,31 +709,57 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 			markup += $scope.aim() + '|';
 			markup += $scope.mobility() + '\r\n';
 
-			markup += '**Equipment**\r\n';
-
+			markup += '**Equipment**\r\n\r\n';
+			markup += 'Slot|Item|Description\r\n'
+			markup += ':-|:-|:-\r\n';
 			if ($scope.selectedArmor != null) {
-				markup += $scope.selectedArmor.name + '\r\n';
+				markup += 'Armor|';
+				markup += $scope.selectedArmor.name + '|';
+				if ($scope.selectedArmor.notes != null) {
+					markup += $scope.selectedArmor.notes;
+				}
+				markup += '\r\n';
 			}
 
 			if ($scope.selectedPrimaryWeapon != null) {
-				markup += $scope.selectedPrimaryWeapon.name + '\r\n';
+				markup += 'Primary Weapon|';
+				markup += $scope.selectedPrimaryWeapon.name + '|';
+				if ($scope.selectedPrimaryWeapon.notes != null) {
+					markup += $scope.selectedPrimaryWeapon.notes;
+				}
+				markup += '\r\n';
 			}
 
 			if ($scope.selectedSecondaryWeapon != null) {
-				markup += $scope.selectedSecondaryWeapon.name + '\r\n';
+				markup += 'Side Arm|';
+				markup += $scope.selectedSecondaryWeapon.name + '|';
+				if ($scope.selectedSecondaryWeapon.notes != null) {
+					markup += $scope.selectedSecondaryWeapon.notes;
+				}
+				markup += '\r\n';
 			}
 
 			if ($scope.equipmentSlotOne != null) {
-				markup += $scope.equipmentSlotOne.name + '\r\n';
+				markup += 'Equipment (1)|';
+				markup += $scope.equipmentSlotOne.name + '|';
+				if ($scope.equipmentSlotOne.notes != null) {
+					markup += $scope.equipmentSlotOne.notes;
+				}
+				markup += '\r\n';
 			}
 
 			if ($scope.equipmentSlotTwo != null) {
-				markup += $scope.equipmentSlotTwo.name + '\r\n';
+				markup += 'Equipment (2)|';
+				markup += $scope.equipmentSlotTwo.name + '|';
+				if ($scope.equipmentSlotTwo.notes != null) {
+					markup += $scope.equipmentSlotTwo.notes;
+				}
+				markup += '\r\n';
 			}
 
 			markup += '\r\n';
 
-			markup += '**' + $scope.class.name + ' Perks**\r\n';
+			markup += '**' + $scope.class.name + ' Perks**\r\n\r\n';
 			markup += 'Name|Description|Aim|Will|Mobility|Damage Bonus\r\n';
 			markup += ':-|:-|:-|:-|:-\r\n';
 			for (var i = 0; i < $scope.selectedPerks.length; i++) {
@@ -650,7 +775,7 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 			}
 			markup += '\r\n';
 			markup += '\r\n';
-			markup += '**Psi Perks**\r\n';
+			markup += '**Psi Perks**\r\n\r\n';
 			markup += 'Name|Description\r\n';
 			markup += ':-|:-\r\n';
 			if ($scope.selectedPsionicPerks.length > 0) {
@@ -667,7 +792,7 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 			}
 			markup += '\r\n';
 			markup += '\r\n';
-			markup += '**Gene Mods**\r\n';
+			markup += '**Gene Mods**\r\n\r\n';
 			markup += 'Name|Description\r\n';
 			markup += ':-|:-\r\n';
 			if ($scope.selectedGeneMods.length > 0) {

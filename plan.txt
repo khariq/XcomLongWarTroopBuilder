@@ -1,10 +1,6 @@
 Basic
 * mec armor changes equipment and secondary weapon slots
 
-* SHIV as solider type
-
-* perk granting items
-
 Future
 * Interactive research tree
 * Base designer
