@@ -60,13 +60,24 @@
 		</div><!-- /.container-fluid -->
 	</nav>
 
+	<div ng-show="class == null">
+		<div class="alert alert-danger">
+			Known Issues:
+			<ul>
+				<li>Priority High: Equipping MEC-2 or MEC-3 is not changing the available number of secondary weapons.</li>
+				<li>Priority Low: Toggling a perk off directly, without select a sibling perk, removes the perk from all calculations, but leaves the button selected. </li>
+			</ul>
+		</div>
 
-	<div class="alert alert-danger" ng-show="class == null">
-		Known Issues:
-		<ul>
-			<li>Priority High: Equipping MEC-2 or MEC-3 is not changing the available number of secondary weapons.</li>
-			<li>Priority Low: Toggling a perk off directly, without select a sibling perk, removes the perk from all calculations, but leaves the button selected. </li>
-		</ul>
+		<div class="alert alert-info">
+			Future plans:
+			<ul>
+				<li>Interactive tech tree</li>
+				<li>Base designer</li>
+				<li>Resource costs</li>
+				<li>Shortest-path for build</li>
+			</ul>
+		</div>
 	</div>
 
 	<div class="container-fluid" ng-hide="class == null">
