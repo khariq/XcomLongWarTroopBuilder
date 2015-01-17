@@ -260,6 +260,7 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 					}
 				}
 
+				$scope.primaryWeapons = [];
 				var primaryWeapons = Enumerable.From(commonJson.primary_weapons);
 				for (var i = 0; i < classJson.spec.primary_weapons.length; i++) {
 				    var weaponClass = Object.keys(classJson.spec.primary_weapons[i])[0];
@@ -269,6 +270,7 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 				    }
 				}
 
+				$scope.secondaryWeapons = [];
 				var secondaryWeapons = Enumerable.From(commonJson.secondary_weapons);
 				for (var i = 0; i < classJson.spec.secondary_weapons.length; i++) {
 				    var weaponClass = Object.keys(classJson.spec.secondary_weapons[i])[0];
@@ -715,7 +717,7 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 		var markup = '';
 		if ($scope.class != null) {
 			
-			markup += '#' + $scope.class.name + '\r\n\r\n';
+			markup += $scope.class.name + '\r\n\r\n';
 			markup += '**Stats**\r\n\r\n';
 			markup += 'HP|Defense|DR|Will|Aim|Mobility\r\n';
 			markup += ':-|:------|:-|:---|:--|:-------\r\n';

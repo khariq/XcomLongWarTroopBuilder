@@ -2712,7 +2712,7 @@
 				},  {
 					"id" : "plasma_mauler",
 					"type" : "Machine Pistol",
-					"name" : "Machine Pistol",
+					"name" : "Plasma Mauler",
 					"min_damage" : 4,
 					"max_damage" : 8,
 					"crit_chance" : 0,
