@@ -697,7 +697,7 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 		var markup = '';
 		if ($scope.class != null) {
 			
-			markup += $scope.class.name + '\r\n\r\n';
+			markup += '#' + $scope.class.name + '\r\n\r\n';
 			markup += '**Stats**\r\n\r\n';
 			markup += 'HP|Defense|DR|Will|Aim|Mobility\r\n';
 			markup += ':-|:------|:-|:---|:--|:-------\r\n';
