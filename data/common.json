@@ -3175,7 +3175,7 @@
 			"id" : "lock_and_load",
 			"img_src" : "http://ufopaedia.org/images/thumb/9/95/SUPPORT_DEEPPOCKETS.png/32px-SUPPORT_DEEPPOCKETS.png",
 			"title" : "Lock N' Load",
-			"description" : "rimary weapons receive one additional shot or burst before a reload is required, and you may reload your primary weapon as the first action of your turn without ending the turn.",
+			"description" : "Primary weapons receive one additional shot or burst before a reload is required, and you may reload your primary weapon as the first action of your turn without ending the turn.",
 			"aim_bonus" : 0,
 			"will_bonus" : 0,
 			"mobility_bonus" : 0,
