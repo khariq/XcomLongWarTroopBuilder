@@ -1,16 +1,9 @@
 Basic
-* class specific equipment
 * mec armor changes equipment and secondary weapon slots
 
-**MEC BUGS**
-* Flamethrower is missing
-* MECs get Rocket Launchers?
-* MEC item lists are wrong
-
-* Markdown, HTML and text output
 * SHIV as solider type
-* Iron Skin does not grant +1.0 DR
-* Reorganize menu for smaller screens - dropdown?
+
+* perk granting items
 
 Future
 * Interactive research tree

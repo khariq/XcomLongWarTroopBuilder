@@ -129,7 +129,8 @@
 						"cash" : 20,
 						"meld" : 10,
 						"time" : 0
-					}
+					},
+					"damage_reduction" : 1
 				}
 			]
 		},

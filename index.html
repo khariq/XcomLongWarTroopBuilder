@@ -25,11 +25,27 @@
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="navbar-collapse-1">
 				<ul class="nav navbar-nav">
-					<li role="presentation" ng-repeat="item in menuItems" ng-class="{ active: isActive(item.id)}">
-						<a href="#{{item.id}}" ng-click="showClass(item.id)">
-							{{item.name}}
-						</a>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Solider <span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li role="presentation" ng-repeat="item in soliders" ng-class="{ active: isActive(item.id)}">
+							<a href="#{{item.id}}" ng-click="showClass(item.id)">
+								{{item.name}}
+							</a>
+							</li>
+						</ul>
 					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">MEC Trooper <span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li role="presentation" ng-repeat="item in mecTroopers" ng-class="{ active: isActive(item.id)}">
+							<a href="#{{item.id}}" ng-click="showClass(item.id)">
+								{{item.name}}
+							</a>
+							</li>
+						</ul>
+					</li>
+					
 				</ul>
 			</div><!-- /.navbar-collapse -->
 		</div><!-- /.container-fluid -->
@@ -42,7 +58,7 @@
 			<div class="col-md-9">
 				
 				<ul class="nav nav-pills nav-justified">
-					<li role="presentation" ng-class="{active: visibleTab === 'perks'}" ><a href="#" ng-click="showTab('perks')" >{{class.name}} Perks</a></li>
+					<li role="presentation" ng-hide="hideTab('perks')" ng-class="{active: visibleTab === 'perks'}" ><a href="#" ng-click="showTab('perks')" >{{class.name}} Perks</a></li>
 					<li role="presentation" ng-class="{active: visibleTab === 'armory'}"><a href="#" ng-click="showTab('armory')">Armory</a></li>
 					<li role="presentation" ng-hide="hideTab('psionics')" ng-class="{active: visibleTab === 'psionics'}"><a href="#" ng-click="showTab('psionics')">Psionics</a></li>
 					<li role="presentation" ng-hide="hideTab('gene')" ng-class="{active: visibleTab === 'gene'}"><a href="#" ng-click="showTab('gene')">Gene Mods</a></li>
@@ -185,32 +201,36 @@
 						<h3 class="panel-title">Build</h3>
 					</div>
 					<div class="panel-body">
-						<div class="col-lg-4">
+						<div class="row">
+							<div class="col-lg-4">
 
-							<span ng-repeat="icon in icons">
-								<img src="{{icon.img_url}}" alt="{{icon.title}}" style="width: 32px;" ng-mouseover="showDescription(icon.description)" ng-mouseout="hideDescription()" />
-							</span>
+								<span ng-repeat="icon in icons">
+									<img src="{{icon.img_url}}" alt="{{icon.title}}" style="width: 32px;" ng-mouseover="showDescription(icon.description)" ng-mouseout="hideDescription()" />
+								</span>
 
+							</div>
+							<div class="col-lg-8">
+								<table class="table table-condensed table-striped" ng-show="equipmentSlotOne != null || equipmentSlotTwo != null">
+									<tr>
+										<td>{{equipmentSlotOne.name}}</td>
+										<td>{{equipmentSlotOne.notes}}</td>
+									</tr>
+									<tr>
+										<td>{{equipmentSlotTwo.name}}</td>
+										<td>{{equipmentSlotTwo.notes}}</td>
+									</tr>
+								</table>
+							</div>
 						</div>
-						<div class="col-lg-4">
-							<table class="table table-condensed table-striped" ng-show="equipmentSlotOne != null || equipmentSlotTwo != null">
-								<tr>
-									<td>{{equipmentSlotOne.name}}</td>
-									<td>{{equipmentSlotOne.notes}}</td>
-								</tr>
-								<tr>
-									<td>{{equipmentSlotTwo.name}}</td>
-									<td>{{equipmentSlotTwo.notes}}</td>
-								</tr>
-							</table>
-						</div>
-						<div class="col-lg-4">
-							<ul class="nav nav-tabs">
-								<li role="presentation" ng-class="{active: visibleOutput === 'markdown'}"><a href="#" ng-click="showOutput('markdown')">Markdown (reddit)</a></li>
-								<li role="presentation" ng-class="{active: visibleOutput === 'text'}"><a href="#" ng-click="showOutput('text')">Plain Text</a></li>
-							</ul>
-							<div>
-								<pre><code>{{formatted_build}}</code></pre>
+						<div class="row">
+							<div class="col-lg-12">
+								<ul class="nav nav-tabs">
+									<li role="presentation" ng-class="{active: visibleOutput === 'markdown'}"><a href="#" ng-click="showOutput('markdown')">Markdown (reddit)</a></li>
+									<li role="presentation" ng-class="{active: visibleOutput === 'text'}"><a href="#" ng-click="showOutput('text')">Plain Text</a></li>
+								</ul>
+								<div>
+									<pre><code>{{formatted_build}}</code></pre>
+								</div>
 							</div>
 						</div>
 					</div>

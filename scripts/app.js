@@ -107,6 +107,8 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 		$scope.selectedPsionicPerks = [];
 		$scope.selectedPrimaryWeapon = null;
 		$scope.selectedSecondaryWeapon = null;
+		$scope.selectedSecondaryWeapons = [];
+		$scope.selectedEqipment = [];
 		$scope.icons = [];
 
 	}
@@ -115,6 +117,11 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
         // success
         function (commonJson) { //success
 			$scope.menuItems = commonJson.classes;
+
+			$scope.soliders = commonJson.classes.filter(
+									function (_class) { 
+										return _class.mec === null || _class.mec !== 1 });
+			$scope.mecTroopers = commonJson.classes.filter(function (_class) { return _class.mec !== null && _class.mec === 1 });
 			$scope.tabs = commonJson.tabs;
 			$scope.ranks = commonJson.ranks;
 			$scope.armors = commonJson.armors;
@@ -156,13 +163,21 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 				var equipment = Enumerable.From(commonJson.items).ToArray();
 
 				$scope.equipment = equipment.filter(function (item) {
-					return item.classes === '' ||
-							item.classes.indexOf($scope.class.id) >= 0 ||
-							(
-								item.classes.indexOf('psionic') >= 0 &&
-								$scope.selectedPsionicPerks != null &&
-								$scope.selectedPsionicPerks.length > 0
-							);
+					if ($scope.class.mec === 1) {
+						return  item.classes.indexOf('mec') >= 0;
+					}
+					else if ($scope.class.shiv === 1) {
+						return  item.classes.indexOf('shiv') >= 0;	
+					}
+					else {
+						return  item.classes === '' ||
+								item.classes.indexOf($scope.class.id) >= 0 ||
+								(
+									item.classes.indexOf('psionic') >= 0 &&
+									$scope.selectedPsionicPerks != null &&
+									$scope.selectedPsionicPerks.length > 0
+								);
+					}
 				});
 			},
 			function(error){}
@@ -395,14 +410,22 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 
 	$scope.showTab = function(tabName) {
 		$scope.visibleTab = tabName;
+
 	}
 
 	$scope.hideTab = function (tabName) {
-		return (tabName === 'psionics' || tabName === 'gene') && $scope.isClassMec();
+		return (
+			(tabName === 'psionics' || tabName === 'gene') && $scope.isClassMec() ||
+			(tabName === 'psionics' || tabName === 'gene' || tabName === 'perks') && $scope.isClassShiv()
+			);
 	}
 
 	$scope.isClassMec = function () {
 		return $scope.class != null && $scope.class.mec != null && $scope.class.mec === 1;
+	}
+
+	$scope.isClassShiv = function () {
+		return $scope.class != null && $scope.class.shiv != null && $scope.class.shiv === 1;
 	}
 
 	$scope.showDescription = function(description) {
@@ -520,6 +543,13 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 			damage_reduction += $scope.equipmentSlotTwo.damage_reduction;
 		}
 
+		if ($scope.selectedGeneMods != null) {
+			var dr_mods = $scope.selectedGeneMods.filter(function(mod) { return mod.damage_reduction !== null; });
+			for (var i = 0; i < dr_mods.length; i++) {
+				damage_reduction += dr_mods[i].damage_reduction;
+			}
+		}
+
 		return $scope.build.damage_reduction + damage_reduction;
 	}
 
@@ -605,6 +635,97 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 			markup += '\r\n';
 
 			markup += '**' + $scope.class.name + ' Perks**\r\n';
+			markup += 'Name|Description|Aim|Will|Mobility|Damage Bonus\r\n';
+			markup += ':-|:-|:-|:-|:-\r\n';
+			for (var i = 0; i < $scope.selectedPerks.length; i++) {
+				if ($scope.selectedPerks[i] != null) {
+					markup += $scope.selectedPerks[i].title + '|';
+					markup += $scope.selectedPerks[i].description + '|';
+					markup += $scope.selectedPerks[i].aim_bonus + '|';
+					markup += $scope.selectedPerks[i].will_bonus + '|';
+					markup += $scope.selectedPerks[i].mobility_bonus + '|';
+					markup += $scope.selectedPerks[i].damage_bonus;
+					markup += '\r\n';
+				}
+			}
+			markup += '\r\n';
+			markup += '\r\n';
+			markup += '**Psi Perks**\r\n';
+			markup += 'Name|Description\r\n';
+			markup += ':-|:-\r\n';
+			if ($scope.selectedPsionicPerks.length > 0) {
+				for (var i = 0; i < $scope.selectedPsionicPerks.length; i++) {
+					if ($scope.selectedPsionicPerks[i] != null) {
+						markup += $scope.selectedPsionicPerks[i].name + '|';
+						markup += $scope.selectedPsionicPerks[i].description;
+						markup += '\r\n';
+					}
+				}
+			}
+			else {
+				markup += 'None';
+			}
+			markup += '\r\n';
+			markup += '\r\n';
+			markup += '**Gene Mods**\r\n';
+			markup += 'Name|Description\r\n';
+			markup += ':-|:-\r\n';
+			if ($scope.selectedGeneMods.length > 0) {
+				for (var i = 0; i < $scope.selectedGeneMods.length; i++) {
+					if ($scope.selectedGeneMods[i] != null) {
+						markup += $scope.selectedGeneMods[i].name + '|';
+						markup += $scope.selectedGeneMods[i].description;
+						markup += '\r\n';
+					}
+				}
+			}
+			else {
+				markup += 'None';
+			}
+			
+		}
+		return markup;
+	}
+
+
+	$scope.buildTextOutput = function () {
+		var markup = '';
+		if ($scope.class != null) {
+			
+			markup += $scope.class.name + '\r\n\r\n';
+			markup += 'Stats\r\n';
+			markup += 'HP: ' + $scope.baseHealth() + ' + ' + $scope.bonusHealth()+ '\r\n';
+			markup += 'Defense: ' + $scope.defense()+ '\r\n';
+			markup += 'Damage Reduction: ' + $scope.damageReduction()+ '\r\n';
+			markup += 'Will: ' + $scope.lowWill() + ' - ' + $scope.highWill()+ '\r\n';
+			markup += 'Aim: ' + $scope.aim() + '\r\n';
+			markup += 'Mobility: ' + $scope.mobility() + '\r\n';
+
+			markup += 'Equipment\r\n';
+
+			if ($scope.selectedArmor != null) {
+				markup += $scope.selectedArmor.name + '\r\n';
+			}
+
+			if ($scope.selectedPrimaryWeapon != null) {
+				markup += $scope.selectedPrimaryWeapon.name + '\r\n';
+			}
+
+			if ($scope.selectedSecondaryWeapon != null) {
+				markup += $scope.selectedSecondaryWeapon.name + '\r\n';
+			}
+
+			if ($scope.equipmentSlotOne != null) {
+				markup += $scope.equipmentSlotOne.name + '\r\n';
+			}
+
+			if ($scope.equipmentSlotTwo != null) {
+				markup += $scope.equipmentSlotTwo.name + '\r\n';
+			}
+
+			markup += '\r\n';
+
+			markup += $scope.class.name + ' Perks: ';
 
 			for (var i = 0; i < $scope.selectedPerks.length; i++) {
 				if ($scope.selectedPerks[i] != null) {
@@ -614,8 +735,7 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 				}
 			}
 			markup += '\r\n';
-			markup += '\r\n';
-			markup += '**Psi Perks**\r\n';
+			markup += 'Psi Perks: ';
 			if ($scope.selectedPsionicPerks.length > 0) {
 				for (var i = 0; i < $scope.selectedPsionicPerks.length; i++) {
 					if ($scope.selectedPsionicPerks[i] != null) {
@@ -630,7 +750,7 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 			}
 			markup += '\r\n';
 			markup += '\r\n';
-			markup += '**Gene Mods**\r\n';
+			markup += 'Gene Mods: ';
 			if ($scope.selectedGeneMods.length > 0) {
 				for (var i = 0; i < $scope.selectedGeneMods.length; i++) {
 					if ($scope.selectedGeneMods[i] != null) {
@@ -679,6 +799,8 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 	$scope.selectedSecondaryWeapon = null;
 	$scope.equipmentSlotOne = null;
 	$scope.equipmentSlotTwo = null
+	$scope.selectedSecondaryWeapons = [];
+	$scope.selectedEqipment = [];
 	$scope.selectedClass = null;
 	$scope.selectedArmor = null;
 
