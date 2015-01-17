@@ -110,7 +110,7 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 		$scope.selectedSecondaryWeapons = [];
 		$scope.selectedEqipment = [];
 		$scope.icons = [];
-
+		$scope.selectedPerks = [];
 	}
 
 	DataService.getCommonJson().then (
