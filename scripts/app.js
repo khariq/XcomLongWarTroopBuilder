@@ -761,7 +761,7 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 
 			markup += '**' + $scope.class.name + ' Perks**\r\n\r\n';
 			markup += 'Name|Description|Aim|Will|Mobility|Damage Bonus\r\n';
-			markup += ':-|:-|:-|:-|:-\r\n';
+			markup += ':-|:-|:-|:-|:-|:-\r\n';
 			for (var i = 0; i < $scope.selectedPerks.length; i++) {
 				if ($scope.selectedPerks[i] != null) {
 					markup += $scope.selectedPerks[i].title + '|';
