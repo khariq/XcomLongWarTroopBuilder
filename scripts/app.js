@@ -563,6 +563,24 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 
 		if ($scope.selectedArmor != null) {
 			hp += $scope.selectedArmor.hp;
+
+			var perk = $scope.selectedPerks.filter(function(p) { return p.id === "extra_conditioning"; });
+			if (perk.length > 0) {
+				switch ($scope.selectedArmor.extra_conditioning) {
+					case "light" : {
+						hp += 1; 
+						break;
+					}
+					case "medium" : {
+						hp += 2;
+						break;
+					}
+					case "heavy" : {
+						hp += 4;
+						break;
+					}
+				}
+			}
 		}
 
 		if ($scope.equipmentSlotOne != null) {

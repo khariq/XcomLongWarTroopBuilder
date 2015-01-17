@@ -1,0 +1,33 @@
+{
+
+	"techs" : [
+		{
+			"id" : "sectoid_autopsy",
+			"title" : "Sectoid Autopsy",
+			"category" : "Alien Autopsies",
+			"prereq" : "xenobiology",
+			"duration" : 4,
+			"cost" : [
+				{
+					"item" : "corpse_sectoid",
+					"quantity" : 10
+				}
+			],
+			"unlocks" : [
+				{
+					"type" : "item",
+					"id" : "mind_shield"
+				},
+				{
+					"type" : "psi",
+					"id" : "mind_merge"
+				},
+				{
+					"type" : "gene_mod",
+					"id" : "smart_macrophages"
+				}
+			]
+		}
+	]
+
+}
