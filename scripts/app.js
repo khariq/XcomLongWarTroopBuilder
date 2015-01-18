@@ -1,4 +1,3 @@
-
 var xcomApp = angular.module('xcomApp', []);
 
 xcomApp.factory('DataService', function($http, $q) {		
@@ -77,41 +76,6 @@ xcomApp.factory('DataService', function($http, $q) {
 });
 
 xcomApp.controller('xcomController', function($scope, $http, DataService) {
-		
-	$scope.resetBuild = function() {
-		$scope.build  = {
-
-			"hp" : 5,
-			"armor" : 0,
-			"mobility" : 13,
-			"aim" : 65,
-			"will" : 35,
-			"defense" : 0,
-			"damage_reduction" : 0,
-			"mod" : {
-				"aim" : 0,
-				"mob" : 0,
-				"will" : 0
-			},
-			"rank_ups" : {
-				"health" : 0,
-				"aim" : 0,
-				"will_low" : 0,
-				"will_high" : 0	
-			},
-			"damage_bonus" : 0
-		};
-
-		$scope.selectedClass = null;
-		$scope.selectedGeneMods = [];
-		$scope.selectedPsionicPerks = [];
-		$scope.selectedPrimaryWeapon = null;
-		$scope.selectedSecondaryWeapon = null;
-		$scope.selectedSecondaryWeapons = [];
-		$scope.selectedEqipment = [];
-		$scope.icons = [];
-		$scope.selectedPerks = [];
-	}
 
 	DataService.getCommonJson().then (
         // success
@@ -227,6 +191,45 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 
 	}
 
+	
+	$scope.resetBuild = function() {
+		$scope.build  = {
+
+			"hp" : 5,
+			"armor" : 0,
+			"mobility" : 13,
+			"aim" : 65,
+			"will" : 35,
+			"defense" : 0,
+			"damage_reduction" : 0,
+			"mod" : {
+				"aim" : 0,
+				"mob" : 0,
+				"will" : 0
+			},
+			"rank_ups" : {
+				"health" : 0,
+				"aim" : 0,
+				"will_low" : 0,
+				"will_high" : 0	
+			},
+			"damage_bonus" : 0,
+			"secondary_damage_bonus" : 0,
+			"primary_damage_bonus" : 0
+		};
+
+		$scope.selectedClass = null;
+		$scope.selectedGeneMods = [];
+		$scope.selectedPsionicPerks = [];
+		$scope.selectedPrimaryWeapon = null;
+		$scope.selectedSecondaryWeapon = null;
+		$scope.selectedSecondaryWeapons = [];
+		$scope.selectedEqipment = [];
+		$scope.icons = [];
+		$scope.selectedPerks = [];
+
+	}
+
 	$scope.showClass = function(id) {
 		$scope.resetBuild();
 
@@ -239,6 +242,8 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
             	var classJson = DataService.getClassJson(id);
 
             	$scope.class = classJson;
+
+            	$scope.selectedArmor = $scope.commonJson.armors.filter(function(ar) { return ar.name === "Tac Vest" } )[0];
 
 				for (var i = 0; i < classJson.spec.perks.length; i++) {
 					$scope.perks[i] = [];
@@ -269,6 +274,7 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 				    	$scope.primaryWeapons = $scope.primaryWeapons.concat(weapons);
 				    }
 				}
+				$scope.selectedPrimaryWeapon = $scope.primaryWeapons.filter(function(w) { return w.id === $scope.class.default_primary_weapon; })[0];
 
 				$scope.secondaryWeapons = [];
 				var secondaryWeapons = Enumerable.From(commonJson.secondary_weapons);
@@ -279,7 +285,8 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 				    	$scope.secondaryWeapons = $scope.secondaryWeapons.concat(weapons);
 				    }
 				}
-
+				$scope.selectedSecondaryWeapon = $scope.secondaryWeapons.filter(function(w) { return w.id === $scope.class.default_secondary_weapon; })[0];
+				
 				$scope.filterEquipment();
 
 				DataService.getCommonJson().then(
@@ -341,14 +348,48 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 		);
 		
 	}
-		
+
+	$scope.findClassPerk = function(perkId) {
+
+		var classPerk = null;
+
+		for (var i = 0; i < $scope.class.spec.perks.length; i++){
+			for (var j = 0; j < $scope.class.spec.perks[i].perks.length; j++) {
+				if ($scope.class.spec.perks[i].perks[j].id === perkId) {
+					classPerk = $scope.class.spec.perks[i].perks[j];
+					break;
+				}
+			}
+			if (classPerk != null) break;
+		}
+
+		return classPerk;
+	}
+
 	$scope.gainPerk = function(idx, perk) {
 
-		var classPerk = $scope.class.spec.perks.filter(function (p) { return p.id === perk.id });
-		$scope.build.mod.aim += classPerk.aim;
-		$scope.build.mod.mob += classPerk.mobility;
-		$scope.build.mod.will += classPerk.will;
-		$scope.build.damage_bonus += classPerk.damage;
+		var classPerk = $scope.findClassPerk(perk.id);
+
+		if (classPerk != null) {
+			if (classPerk.aim != null) {
+				$scope.build.mod.aim += classPerk.aim;
+			}
+			if (classPerk.mob != null) {
+				$scope.build.mod.mob += classPerk.mobility;
+			}
+			if (classPerk.will != null) {
+				$scope.build.mod.will += classPerk.will;
+			}
+			if (classPerk.damage_bonus != null) {
+				$scope.build.damage_bonus += classPerk.damage;
+			}
+			if (classPerk.primary_damage_bonus != null) {
+				$scope.build.primary_damage_bonus += classPerk.primary_damage_bonus;
+			}
+			if (classPerk.secondary_damage_bonus != null) {
+				$scope.build.secondary_damage_bonus += classPerk.secondary_damage_bonus;	
+			}
+		}
 
 		$scope.icons.push(
 			{
@@ -369,11 +410,28 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 
 	$scope.losePerk = function(idx, perk) {
 
-		var classPerk = $scope.class.spec.perks.filter(function (p) { return p.id === perk.id });
-		$scope.build.mod.aim -= classPerk.aim;
-		$scope.build.mod.mob -= classPerk.mobility;
-		$scope.build.mod.will -= classPerk.will;
-		$scope.build.damage_bonus -= classPerk.damage;
+		var classPerk = $scope.findClassPerk(perk.id);
+
+		if (classPerk != null) {
+			if (classPerk.aim != null) {
+				$scope.build.mod.aim -= classPerk.aim;
+			}
+			if (classPerk.mob != null) {
+				$scope.build.mod.mob -= classPerk.mobility;
+			}
+			if (classPerk.will != null) {
+				$scope.build.mod.will -= classPerk.will;
+			}
+			if (classPerk.damage_bonus != null) {
+				$scope.build.damage_bonus -= classPerk.damage;
+			}
+			if (classPerk.primary_damage_bonus != null) {
+				$scope.build.primary_damage_bonus -= classPerk.primary_damage_bonus;
+			}
+			if (classPerk.secondary_damage_bonus != null) {
+				$scope.build.secondary_damage_bonus -= classPerk.secondary_damage_bonus;	
+			}
+		}
 
 		$scope.icons = $scope.icons.filter(
 			function(icon) { 
@@ -504,6 +562,27 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 
 	$scope.showDetails = function(perk) {
 		$scope.showPerkDetails = true;
+		var classPerk = $scope.findClassPerk(perk.id);
+		if (classPerk != null) {
+			if (classPerk.aim != null) {
+				perk.aim_bonus = classPerk.aim;
+			} else {
+				perk.aim_bonus = 0;
+			}
+
+			if (classPerk.will != null) {
+				perk.will_bonus = classPerk.will;
+			} else {
+				perk.will_bonus = 0;
+			}
+
+			if (classPerk.mobility != null) {
+				perk.mobility_bonus = classPerk.mobility;
+			} else {
+				perk.mobility_bonus = 0;
+			}
+
+		}
 		$scope.perkInDetails = perk;
 	}
 
@@ -691,7 +770,15 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 			aim += $scope.equipmentSlotTwo.aim;
 		}
 
-		return $scope.build.aim + $scope.build.mod.aim + aim;
+		if ($scope.build.mod != null) {
+			aim += $scope.build.mod.aim;
+		}
+
+		if ($scope.build.rank_ups != null) {
+			aim += $scope.build.rank_ups.aim;
+		}
+
+		return $scope.build.aim + aim;
 	}
 
 	$scope.mobility = function () {
