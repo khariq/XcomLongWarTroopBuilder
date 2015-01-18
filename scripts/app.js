@@ -243,7 +243,12 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 
             	$scope.class = classJson;
 
-            	$scope.selectedArmor = $scope.commonJson.armors.filter(function(ar) { return ar.name === "Tac Vest" } )[0];
+            	if ($scope.isClassMec() == false && $scope.isClassShiv() == false) {
+            		$scope.selectedArmor = $scope.commonJson.armors.filter(function (ar) { return ar.name === "Tac Vest" })[0];
+            	} else if ($scope.isClassMec()) {
+            		$scope.selectedArmor = $scope.commonJson.armors.filter(function (ar) { return ar.name === "MEC-1 Warden" })[0];
+            	}
+
 
 				for (var i = 0; i < classJson.spec.perks.length; i++) {
 					$scope.perks[i] = [];
