@@ -801,6 +801,14 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 			mobility += $scope.selectedArmor.mobility;
 		}
 
+		if ($scope.selectedPrimaryWeapon != null) {
+			mobility += $scope.selectedPrimaryWeapon.mobility_mod;
+		}
+
+		if ($scope.selectedSecondaryWeapon != null) {
+			mobility += $scope.selectedSecondaryWeapon.mobility_mod;
+		}
+
 		if ($scope.equipmentSlotOne != null) {
 			mobility += $scope.equipmentSlotOne.mobility;
 		}
