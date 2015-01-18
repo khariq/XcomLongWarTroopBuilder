@@ -105,7 +105,8 @@
 						<div class="row" ng-repeat="perk in perks" style="padding: 2px;">
 							<div class="col-sm-3">
 								<span class="pull-right">
-									{{ranks[$index].name}}
+									{{ranks[$index].name}}<br/>
+									Aim: {{class.stat_progression[$index].aim}}
 								</span>
 							</div>
 							<div class="col-sm-9">

@@ -46,89 +46,79 @@
 					{
 						"rank" : 1,
 						"perks" : [
-							{ "id" : "run_and_gun" }
+							{ "id" : "run_and_gun", 
+								"aim" : 0, "will" : 0, "mobility" : 0,"damage" : 0 }
 						]
 					}, {
 						"rank" : 2,
 						"perks" : [
-							{ "id" : "flush"},
-							{ "id" : "close_combat_specialist"},
-							{ "id" : "steadfast"}
+							{ "id" : "flush", 
+								"aim" : 2, "will" : 0, "mobility" : 0,"damage" : 0 },
+							{ "id" : "close_combat_specialist", 
+								"aim" : 0, "will" : 0, "mobility" : 0,"damage" : 0 },
+							{ "id" : "steadfast", 
+								"aim" : 0, "will" : 5, "mobility" : 0,"damage" : 0 }
 						]
 					}, {
 						"rank" : 3,
 						"perks" : [
-							{ "id" : "gunslinger"},
-							{ "id" : "tactical_sense"},
-							{ "id" : "aggression"}
+							{ "id" : "gunslinger", 
+								"aim" : 1, "will" : 0, "mobility" : 0,"damage" : 0 },
+							{ "id" : "tactical_sense", 
+								"aim" : 0, "will" : 0, "mobility" : 0,"damage" : 0 },
+							{ "id" : "aggression", 
+								"aim" : 0, "will" : 1, "mobility" : 0,"damage" : 0 }
 						]
 					}, {
 						"rank" : 4,
 						"perks" : [
-							{ "id" : "hit_and_run"},
-							{ "id" : "close_encounters"},
-							{ "id" : "rapid_fire"}
+							{ "id" : "hit_and_run", 
+								"aim" : 0, "will" : 0, "mobility" : 0,"damage" : 0 },
+							{ "id" : "close_encounters", 
+								"aim" : 0, "will" : 5, "mobility" : 0,"damage" : 0 },
+							{ "id" : "rapid_fire", 
+								"aim" : 0, "will" : 0, "mobility" : 0,"damage" : 0 }
 						]
 					}, {
 						"rank" : 5,
 						"perks" : [
-						{ "id" : "extra_conditioning"},
-						{ "id" : "killer_instinct"},
-						{ "id" : "ranger"}
+						{ "id" : "extra_conditioning", 
+							"aim" : 2, "will" : 2, "mobility" : 1, "damage" : 0 },
+						{ "id" : "killer_instinct", 
+							"aim" : 0, "will" : 0, "mobility" : 0,"damage" : 0 },
+						{ "id" : "ranger", 
+							"aim" : 2, "will" : 0, "mobility" : 0,"damage" : 1 }
 						]
 					}, {
 						"rank" : 6,
 						"perks" : [
-							{ "id" : "will_to_survive"},
-							{ "id" : "bring_em_on"},
-							{ "id" : "sprinter"}
+							{ "id" : "will_to_survive", 
+								"aim" : 0, "will" : 3, "mobility" : 0,"damage" : 0 },
+							{ "id" : "bring_em_on", 
+								"aim" : 0, "will" : 0, "mobility" : 0,"damage" : 0 },
+							{ "id" : "sprinter", 
+								"aim" : 0, "will" : 0, "mobility" : 0,"damage" : 0 }
 						]
 					}, {
 						"rank" : 7,
 						"perks" : [
-							{ "id" : "vital_point_targeting"},
-							{ "id" : "resilience"},
-							{ "id" : "lightning_reflexes"}
+							{ "id" : "vital_point_targeting", 
+								"aim" : 2, "will" : 0, "mobility" : 0,"damage" : 0 },
+							{ "id" : "resilience", 
+								"aim" : 0, "will" : 0, "mobility" : 0,"damage" : 0 },
+							{ "id" : "lightning_reflexes", 
+								"aim" : 0, "will" : 0, "mobility" : 0,"damage" : 0 }
 						]
 					}
 				],
 				"stat_progression" : [
-					{
-						"health" : 1,
-						"aim" : 3,
-						"will_low" : 5,
-						"will_high" : 6
-					}, {
-						"health" : 0,
-						"aim" : 3,
-						"will_low" : 5,
-						"will_high" : 6
-					}, {
-						"health" : 1,
-						"aim" : 3,
-						"will_low" : 3,
-						"will_high" : 4 
-					}, {
-						"health" : 0,
-						"aim" : 3,
-						"will_low" : 3,
-						"will_high" : 4
-					}, {
-						"health" : 1,
-						"aim" : 3,
-						"will_low" : 3,
-						"will_high" : 4
-					}, {
-						"health" : 0,
-						"aim" : 3,
-						"will_low" : 3,
-						"will_high" : 4
-					}, {
-						"health" : 1,
-						"aim" : 3,
-						"will_low" : 3,
-						"will_high" : 4
-					}
+					{ "health" : 1,						"aim" : 3,						"will_low" : 5,						"will_high" : 6					}, 
+					{ "health" : 0,						"aim" : 3,						"will_low" : 5,						"will_high" : 6					}, 
+					{ "health" : 1,						"aim" : 3,						"will_low" : 3,						"will_high" : 4 				}, 
+					{ "health" : 0,						"aim" : 3,						"will_low" : 3,						"will_high" : 4					}, 
+					{ "health" : 1,						"aim" : 3,						"will_low" : 3,						"will_high" : 4					}, 
+					{ "health" : 0,						"aim" : 3,						"will_low" : 3,						"will_high" : 4					}, 
+					{ "health" : 1,						"aim" : 3,						"will_low" : 3,						"will_high" : 4					}				
 				]		
 			}
 		},

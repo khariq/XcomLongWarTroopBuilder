@@ -344,10 +344,11 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 		
 	$scope.gainPerk = function(idx, perk) {
 
-		$scope.build.mod.aim += perk.aim_bonus;
-		$scope.build.mod.mob += perk.mobility_bonus;
-		$scope.build.mod.will += perk.will_bonus;
-		$scope.build.damage_bonus += perk.damage_bonus;
+		var classPerk = $scope.class.spec.perks.filter(function (p) { return p.id === perk.id });
+		$scope.build.mod.aim += classPerk.aim;
+		$scope.build.mod.mob += classPerk.mobility;
+		$scope.build.mod.will += classPerk.will;
+		$scope.build.damage_bonus += classPerk.damage;
 
 		$scope.icons.push(
 			{
@@ -368,10 +369,11 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 
 	$scope.losePerk = function(idx, perk) {
 
-		$scope.build.mod.aim -= perk.aim_bonus;
-		$scope.build.mod.mob -= perk.mobility_bonus;
-		$scope.build.mod.will -= perk.will_bonus;
-		$scope.build.damage_bonus -= perk.damage_bonus;
+		var classPerk = $scope.class.spec.perks.filter(function (p) { return p.id === perk.id });
+		$scope.build.mod.aim -= classPerk.aim;
+		$scope.build.mod.mob -= classPerk.mobility;
+		$scope.build.mod.will -= classPerk.will;
+		$scope.build.damage_bonus -= classPerk.damage;
 
 		$scope.icons = $scope.icons.filter(
 			function(icon) { 
