@@ -66,6 +66,7 @@
 			New Features
 			<ul>
 				<li>Default armor and weaoons now selected when starting a new build</li>
+				<li>Starting stats are now editable</li>
 			</ul>
 
 			Bug Fixes
@@ -293,6 +294,20 @@
 								
 			</div>            
 			<div class="col-md-3">
+				<h5>Base Stat Values</h5>
+				<div class="row">
+					<div class="col-xs-2">HP</div>
+					<div class="col-xs-4"><input type="number" class="form-control" ng-model="build.hp" /></div>
+					<div class="col-xs-2">Aim</div>
+					<div class="col-xs-4"><input type="number" class="form-control" ng-model="build.aim" /></div>
+				</div>
+				<div class="row">
+					<div class="col-xs-2">Will</div>
+					<div class="col-xs-4"><input type="number" class="form-control" ng-model="build.will" /></div>
+					<div class="col-xs-2">Mob</div>
+					<div class="col-xs-4"><input type="number" class="form-control" ng-model="build.mobility" /></div>
+				</div>
+				<br/>
 				<table class="table table-condensed table-striped">
 					<tr>
 						<td>HP</td>
