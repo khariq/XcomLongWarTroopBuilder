@@ -374,7 +374,7 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 			if (classPerk.aim != null) {
 				$scope.build.mod.aim += classPerk.aim;
 			}
-			if (classPerk.mob != null) {
+			if (classPerk.mobility != null) {
 				$scope.build.mod.mob += classPerk.mobility;
 			}
 			if (classPerk.will != null) {
@@ -416,7 +416,7 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 			if (classPerk.aim != null) {
 				$scope.build.mod.aim -= classPerk.aim;
 			}
-			if (classPerk.mob != null) {
+			if (classPerk.mobility != null) {
 				$scope.build.mod.mob -= classPerk.mobility;
 			}
 			if (classPerk.will != null) {
@@ -690,6 +690,11 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 		if ($scope.equipmentSlotTwo != null) {
 			will += $scope.equipmentSlotTwo.will;
 		}
+
+		if ($scope.build != null && $scope.build.mod != null && $scope.build.mod.will != null) {
+			will += $scope.build.mod.will;
+		}
+
 		return will;
 	}
 
