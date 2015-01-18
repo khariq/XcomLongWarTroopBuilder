@@ -61,6 +61,20 @@
 	</nav>
 
 	<div ng-show="class == null">
+
+		<div class="alert alert-success">
+			New Features
+			<ul>
+				<li>Default armor and weaoons now selected when starting a new build</li>
+			</ul>
+
+			Bug Fixes
+			<ul>
+				<li>Stat increases when ranking up are now calculated correctly</li>
+				<li>Stat increases from perks are now calculated correctly.</li>
+			</ul>
+		</div>
+
 		<div class="alert">
 			Known Issues:
 			<ul>
@@ -68,7 +82,6 @@
 				<li class="bg-warning">Medium: <i>Tactial Rigging</i> is missing as a status flag.  Should come with MEC-2 changes</li>
 				<li class="bg-info">Low: Toggling a perk off directly, without select a sibling perk, removes the perk from all calculations, but leaves the button selected. </li>
 				<li class="bg-info">Low: <i>Neural Dampening</i> not enforced</li>
-				<li class="bg-danger">High: Stat bonuses granted from perk selection are class based, not global.  Requires a redesign of perk data storage.</li>
 				<li class="bg-danger">High: Final stat values are inconsitent in-game observations.  LW devs need to be contacted</li>				
 			</ul>
 		</div>
