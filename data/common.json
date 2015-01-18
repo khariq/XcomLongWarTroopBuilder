@@ -23,6 +23,8 @@
 			"name" : "Assault",
 			"mec_name" : "Marauder",
 			"icon_src" : "http://ufopaedia.org/images/5/57/CLASS_ASSAULT.png",
+			"default_primary_weapon" : "shotgun",
+			"default_secondary_weapon" : "pistol",
 			"spec" :  {
 				"primary_weapons" : [
 					 { "carbines" : 1 },
@@ -46,89 +48,66 @@
 					{
 						"rank" : 1,
 						"perks" : [
-							{ "id" : "run_and_gun" }
+							{ "id" : "run_and_gun"}
 						]
 					}, {
 						"rank" : 2,
 						"perks" : [
-							{ "id" : "flush"},
-							{ "id" : "close_combat_specialist"},
-							{ "id" : "steadfast"}
+							{ "id" : "flush", "aim" : 2, "will" : 0, "mobility" : 0,"damage" : 0 },
+							{ "id" : "close_combat_specialist" },
+							{ "id" : "steadfast" }
 						]
 					}, {
 						"rank" : 3,
 						"perks" : [
-							{ "id" : "gunslinger"},
-							{ "id" : "tactical_sense"},
-							{ "id" : "aggression"}
+							{ "id" : "gunslinger", "aim" : 1, "will" : 0, "mobility" : 0,"damage" : 0, "secondary_damage_bonus" : 1 },
+							{ "id" : "tactical_sense" },
+							{ "id" : "aggression",
+								"aim" : 0, "will" : 1, "mobility" : 0, "damage" : 0 }
 						]
 					}, {
 						"rank" : 4,
 						"perks" : [
-							{ "id" : "hit_and_run"},
-							{ "id" : "close_encounters"},
-							{ "id" : "rapid_fire"}
+							{ "id" : "hit_and_run" },
+							{ "id" : "close_encounters", 
+								"aim" : 0, "will" : 5, "mobility" : 0, "damage" : 0 },
+							{ "id" : "rapid_fire" }
 						]
 					}, {
 						"rank" : 5,
 						"perks" : [
-						{ "id" : "extra_conditioning"},
-						{ "id" : "killer_instinct"},
-						{ "id" : "ranger"}
+						{ "id" : "extra_conditioning", 
+							"aim" : 2, "will" : 2, "mobility" : 1, "damage" : 0 },
+						{ "id" : "killer_instinct" },
+						{ "id" : "ranger", 
+							"aim" : 2, "will" : 0, "mobility" : 0,"damage" : 1 }
 						]
 					}, {
 						"rank" : 6,
 						"perks" : [
-							{ "id" : "will_to_survive"},
-							{ "id" : "bring_em_on"},
-							{ "id" : "sprinter"}
+							{ "id" : "will_to_survive", 
+								"aim" : 0, "will" : 3, "mobility" : 0,"damage" : 0 },
+							{ "id" : "bring_em_on" },
+							{ "id" : "sprinter" }
 						]
 					}, {
 						"rank" : 7,
 						"perks" : [
-							{ "id" : "vital_point_targeting"},
-							{ "id" : "resilience"},
-							{ "id" : "lightning_reflexes"}
+							{ "id" : "vital_point_targeting", 
+								"aim" : 2, "will" : 0, "mobility" : 0, "damage" : 0, "primary_damage_bonus" : 2, "secondary_damage_bonus" : 1 },
+							{ "id" : "resilience"  },
+							{ "id" : "lightning_reflexes" }
 						]
 					}
 				],
 				"stat_progression" : [
-					{
-						"health" : 1,
-						"aim" : 3,
-						"will_low" : 5,
-						"will_high" : 6
-					}, {
-						"health" : 0,
-						"aim" : 3,
-						"will_low" : 5,
-						"will_high" : 6
-					}, {
-						"health" : 1,
-						"aim" : 3,
-						"will_low" : 3,
-						"will_high" : 4 
-					}, {
-						"health" : 0,
-						"aim" : 3,
-						"will_low" : 3,
-						"will_high" : 4
-					}, {
-						"health" : 1,
-						"aim" : 3,
-						"will_low" : 3,
-						"will_high" : 4
-					}, {
-						"health" : 0,
-						"aim" : 3,
-						"will_low" : 3,
-						"will_high" : 4
-					}, {
-						"health" : 1,
-						"aim" : 3,
-						"will_low" : 3,
-						"will_high" : 4
-					}
+					{ "health" : 1,						"aim" : 3,						"will_low" : 5,						"will_high" : 6					}, 
+					{ "health" : 0,						"aim" : 3,						"will_low" : 5,						"will_high" : 6					}, 
+					{ "health" : 1,						"aim" : 3,						"will_low" : 3,						"will_high" : 4 				}, 
+					{ "health" : 0,						"aim" : 3,						"will_low" : 3,						"will_high" : 4					}, 
+					{ "health" : 1,						"aim" : 3,						"will_low" : 3,						"will_high" : 4					}, 
+					{ "health" : 0,						"aim" : 3,						"will_low" : 3,						"will_high" : 4					}, 
+					{ "health" : 1,						"aim" : 3,						"will_low" : 3,						"will_high" : 4					}				
 				]		
 			}
 		},
@@ -137,6 +116,8 @@
 			"name" : "Infantry",
 			"mec_name" : "Valkyrie",
 			"icon_src" : "http://ufopaedia.org/images/5/57/CLASS_ASSAULT.png",
+			"default_primary_weapon" : "assault_rifle",
+			"default_secondary_weapon" : "pistol",
 			"spec" :  {
 				"primary_weapons" : [
 					 { "carbines" : 1 },
@@ -161,9 +142,9 @@
 					}, {
 						"rank" : 2,
 						"perks" : [
-							{ "id" : "steadfast"},
+							{ "id" : "steadfast" , "will" : 5 },
 							{ "id" : "executioner"},
-							{ "id" : "covering_fire"}
+							{ "id" : "covering_fire", "aim" : 3 }
 						]
 					}, {
 						"rank" : 3,
@@ -176,27 +157,27 @@
 						"rank" : 4,
 						"perks" : [
 							{ "id" : "ranger"},
-							{ "id" : "gunslinger"},
+							{ "id" : "gunslinger", "secondary_damage_bonus" : 1},
 							{ "id" : "suppression"}
 						]
 					}, {
 						"rank" : 5,
 						"perks" : [
-						{ "id" : "sharpshooter"},
+						{ "id" : "sharpshooter", "aim" : 4 },
 						{ "id" : "lock_and_load"},
-						{ "id" : "will_to_survive"}
+						{ "id" : "will_to_survive", "will" : 2 }
 						]
 					}, {
 						"rank" : 6,
 						"perks" : [
-							{ "id" : "extra_conditioning"},
+							{ "id" : "extra_conditioning", "aim" : 4, "will" : 4, "mobility" : 1},
 							{ "id" : "bring_em_on"},
 							{ "id" : "sentinel"}
 						]
 					}, {
 						"rank" : 7,
 						"perks" : [
-							{ "id" : "vital_point_targeting"},
+							{ "id" : "vital_point_targeting", "aim" : 2, "will" : 2, "primary_damage_bouns" : 2, "secondary_damage_bonus" : 1 },
 							{ "id" : "resilience"},
 							{ "id" : "rapid_fire"}
 						]
@@ -247,6 +228,8 @@
 			"name" : "Rocketeer",
 			"mec_name" : "Archer",
 			"icon_src" : "http://ufopaedia.org/images/5/57/CLASS_ASSAULT.png",
+			"default_primary_weapon" : "assault_rifle",
+			"default_secondary_weapon" : "rocket_launcher",
 			"spec" :  {
 				"primary_weapons" : [
 					 { "carbines" : 1 },
@@ -270,22 +253,22 @@
 					}, {
 						"rank" : 2,
 						"perks" : [
-							{ "id" : "covering_fire"},
-							{ "id" : "rapid_reaction"},
+							{ "id" : "covering_fire", "aim" : 3},
+							{ "id" : "rapid_reaction", "aim" : 3},
 							{ "id" : "heat_warheads"}			            	
 						]
 					}, {
 						"rank" : 3,
 						"perks" : [
 							{ "id" : "fire_in_the_hole"},
-							{ "id" : "suppression"},
+							{ "id" : "suppression", "aim" : 2},
 							{ "id" : "snapshot"}
 						]
 					}, {
 						"rank" : 4,
 						"perks" : [
-							{ "id" : "opportunist"},
-							{ "id" : "tactical_sense"},
+							{ "id" : "opportunist", "aim" : 3},
+							{ "id" : "tactical_sense", "aim" : 3},
 							{ "id" : "shredder_ammo"}
 						]
 					}, {
@@ -299,14 +282,14 @@
 						"rank" : 6,
 						"perks" : [
 							{ "id" : "danger_zone"},
-							{ "id" : "mayhem"},
+							{ "id" : "mayhem", "secondary_damage_bonus" : 2},
 							{ "id" : "javelin_rockets"}
 						]
 					}, {
 						"rank" : 7,
 						"perks" : [
-							{ "id" : "extra_conditioning"},
-							{ "id" : "sprinter"},
+							{ "id" : "extra_conditioning", "aim" : 5, "will" : 5, "mobility" : 1},
+							{ "id" : "sprinter", "mobility" : 4},
 							{ "id" : "shock_and_awe"}
 						]
 					}
@@ -357,6 +340,8 @@
 			"name" : "Gunner",
 			"mec_name" : "Goliath",
 			"icon_src" : "http://ufopaedia.org/images/5/57/CLASS_ASSAULT.png",
+			"default_primary_weapon" : "lmg",
+			"default_secondary_weapon" : "",
 			"spec" :  {
 				"primary_weapons" : [
 					 { "squad_automatic_weapon" : 1 },
@@ -378,7 +363,7 @@
 					}, {
 						"rank" : 2,
 						"perks" : [
-							{ "id" : "covering_fire"},
+							{ "id" : "covering_fire", "aim" : 3},
 							{ "id" : "flush"},
 							{ "id" : "holo_targeting"}			            	
 						]
@@ -387,19 +372,19 @@
 						"perks" : [
 							{ "id" : "shredder_ammo"},
 							{ "id" : "heat_ammo"},
-							{ "id" : "ranger"}
+							{ "id" : "ranger", "aim" : 2, "will" : 2, "primary_damage_bonus" : 1}
 						]
 					}, {
 						"rank" : 4,
 						"perks" : [
-							{ "id" : "executioner"},
-							{ "id" : "tactical_sense"},
+							{ "id" : "executioner", "will" : 2},
+							{ "id" : "tactical_sense", "aim" : 2},
 							{ "id" : "danger_zone"}
 						]
 					}, {
 						"rank" : 5,
 						"perks" : [
-						{ "id" : "ready_for_anything"},
+						{ "id" : "ready_for_anything", "aim" : 3, "will" : 2},
 						{ "id" : "rapid_fire"},
 						{ "id" : "double_tap"}
 						]
@@ -407,15 +392,15 @@
 						"rank" : 6,
 						"perks" : [
 							{ "id" : "bring_em_on"},
-							{ "id" : "extra_conditioning"},
-							{ "id" : "will_to_survive"}
+							{ "id" : "extra_conditioning", "aim" : 2, "will" : 2, "mobility" : 1},
+							{ "id" : "will_to_survive", "will" : 3}
 						]
 					}, {
 						"rank" : 7,
 						"perks" : [
-							{ "id" : "resilience"},
-							{ "id" : "sentinel"},
-							{ "id" : "mayhem"}
+							{ "id" : "resilience", "will" : 2},
+							{ "id" : "sentinel", "aim" : 3, "will" : 2},
+							{ "id" : "mayhem", "primary_damage_bonus" : 2}
 						]
 					}
 				],
@@ -464,6 +449,8 @@
 			"name" : "Sniper",
 			"mec_name" : "Jaeger",
 			"icon_src" : "http://ufopaedia.org/images/5/57/CLASS_ASSAULT.png",
+			"default_primary_weapon" : "sniper_rifle",
+			"default_secondary_weapon" : "pistol",
 			"spec" :  {
 				"primary_weapons" : [
 					 { "sniper_rifles" : 1 },
@@ -521,7 +508,7 @@
 						"rank" : 7,
 						"perks" : [
 							{ "id" : "in_the_zone"},
-							{ "id" : "mayhem"},
+							{ "id" : "mayhem", "aim" : 3, "will" : 3, "primary_damage_bonus" : 4},
 							{ "id" : "double_tap"}
 						]
 					}
@@ -550,6 +537,8 @@
 			"name" : "Scout",
 			"mec_name" : "Pathfinder",
 			"icon_src" : "http://ufopaedia.org/images/5/57/CLASS_ASSAULT.png",
+			"default_primary_weapon" : "assault_rifle",
+			"default_secondary_weapon" : "pistol",
 			"spec" :  {
 				"primary_weapons" : [
 					 { "battle_rifles" : 1 },
@@ -570,12 +559,12 @@
 					{
 						"rank" : 1,
 						"perks" : [
-							{ "id" : "lightning_reflexes" }
+							{ "id" : "lightning_reflexes", "mobility" : 1 }
 						]
 					}, {
 						"rank" : 2,
 						"perks" : [
-							{ "id" : "rapid_reaction"},
+							{ "id" : "rapid_reaction", "aim" : 2, "will" : 2},
 							{ "id" : "holo_targeting"},
 							{ "id" : "damn_good_ground"}
 						]
@@ -589,7 +578,7 @@
 					}, {
 						"rank" : 4,
 						"perks" : [
-							{ "id" : "sharpshooter"},
+							{ "id" : "sharpshooter", "aim" : 3, "will" : 2},
 							{ "id" : "low_profile"},
 							{ "id" : "sprinter"}
 						]
@@ -598,19 +587,19 @@
 						"perks" : [
 						{ "id" : "aggression"},
 						{ "id" : "tactical_sense"},
-						{ "id" : "ranger"}
+						{ "id" : "ranger", "aim" : 2}
 						]
 					}, {
 						"rank" : 6,
 						"perks" : [
 							{ "id" : "vital_point_targeting"},
-							{ "id" : "resilience"},
+							{ "id" : "resilience", "will" : 2},
 							{ "id" : "smoke_and_mirrors"}
 						]
 					}, {
 						"rank" : 7,
 						"perks" : [
-							{ "id" : "rapid_fire"},
+							{ "id" : "rapid_fire", "aim" : 2},
 							{ "id" : "hit_and_run"},
 							{ "id" : "in_the_zone"}
 						]
@@ -661,6 +650,8 @@
 			"name" : "Medic",
 			"mec_name" : "Guardian",
 			"icon_src" : "http://ufopaedia.org/images/5/57/CLASS_ASSAULT.png",
+			"default_primary_weapon" : "assault_rifle",
+			"default_secondary_weapon" : "pistol",
             "spec" :  {
 				"primary_weapons" : [
 					 { "battle_rifles" : 1 },
@@ -680,35 +671,35 @@
 					{
 						"rank" : 1,
 						"perks" : [
-							{ "id" : "field_medic" }
+							{ "id" : "field_medic", "mobility" : 1 }
 						]
 					}, {
 						"rank" : 2,
 						"perks" : [
-							{ "id" : "covering_fire"},
-							{ "id" : "steadfast"},
+							{ "id" : "covering_fire", "aim" : 3},
+							{ "id" : "steadfast", "will" : 5},
 							{ "id" : "revive"}
 						]
 					}, {
 						"rank" : 3,
 						"perks" : [
-							{ "id" : "opportunist"},
+							{ "id" : "opportunist", "aim" : 2},
 							{ "id" : "smoke_grenade"},
 							{ "id" : "paramedic"}
 						]
 					}, {
 						"rank" : 4,
 						"perks" : [
-							{ "id" : "suppression"},
+							{ "id" : "suppression", "aim" : 3},
 							{ "id" : "smoke_and_mirrors"},
 							{ "id" : "field_surgeon"}
 						]
 					}, {
 						"rank" : 5,
 						"perks" : [
-						{ "id" : "ranger"},
+						{ "id" : "ranger", "ranger" : 3},
 						{ "id" : "dense_smoke"},
-						{ "id" : "combat_drugs"}
+						{ "id" : "combat_drugs", "will" : 3}
 						]
 					}, {
 						"rank" : 6,
@@ -720,7 +711,7 @@
 					}, {
 						"rank" : 7,
 						"perks" : [
-							{ "id" : "sentinel"},
+							{ "id" : "sentinel", "aim" : 2},
 							{ "id" : "packmaster"},
 							{ "id" : "savior"}
 						]
@@ -750,6 +741,8 @@
 			"name" : "Engineer",
 			"mec_name" : "Shogun",
 			"icon_src" : "http://ufopaedia.org/images/5/57/CLASS_ASSAULT.png",
+			"default_primary_weapon" : "assault_rifle",
+			"default_secondary_weapon" : "pistol",
 		 "spec" :  {
 				"primary_weapons" : [
 					 { "battle_rifles" : 1 },
@@ -774,8 +767,8 @@
 					}, {
 						"rank" : 2,
 						"perks" : [
-							{ "id" : "rapid_reaction"},
-							{ "id" : "smoke_grenade"},
+							{ "id" : "rapid_reaction", "aim" : 3},
+							{ "id" : "smoke_grenade", "aim" : 1},
 							{ "id" : "sapper"}
 						]
 					}, {
@@ -783,7 +776,7 @@
 						"perks" : [
 							{ "id" : "heat_warheads"},
 							{ "id" : "smoke_and_mirrors"},
-							{ "id" : "holo_targeting"}
+							{ "id" : "holo_targeting", "aim" : 2}
 						]
 					}, {
 						"rank" : 4,
@@ -795,22 +788,22 @@
 					}, {
 						"rank" : 5,
 						"perks" : [
-						{ "id" : "extra_conditioning"},
+						{ "id" : "extra_conditioning", "aim" : 3, "will" : 3, "mobility" : 1},
 						{ "id" : "dense_smoke"},
 						{ "id" : "battle_scanner"}
 						]
 					}, {
 						"rank" : 6,
 						"perks" : [
-							{ "id" : "will_to_survive"},
-							{ "id" : "ready_for_anything"},
+							{ "id" : "will_to_survive", "will" : 2},
+							{ "id" : "ready_for_anything", "aim" : 2},
 							{ "id" : "packmaster"}
 						]
 					}, {
 						"rank" : 7,
 						"perks" : [
-							{ "id" : "mayhem"},
-							{ "id" : "fire_rocket"},
+							{ "id" : "mayhem", "aim" : 2, "will" : 2},
+							{ "id" : "fire_rocket", "aim" : 4},
 							{ "id" : "bombard"}
 						]
 					}
@@ -839,6 +832,8 @@
 	        "name" : "Marauder",
 	        "mec" : 1,
 	        "icon_src" : "http://ufopaedia.org/images/5/57/CLASS_ASSAULT.png",
+	        "default_primary_weapon" : "minigun",
+			"default_secondary_weapon" : "",
 	        "spec" :  {
 		        "primary_weapons" : [
 				        { "mec_primary" : 1 }
@@ -859,14 +854,14 @@
 				        "perks" : [
 					        { "id" : "aggression"},
 					        { "id" : "ranger"},
-					        { "id" : "body_shield"}
+					        { "id" : "body_shield", "will" : 3, "mobility" : 1}
 				        ]
 			        }, {
 				        "rank" : 3,
 				        "perks" : [
-					        { "id" : "executioner"},
+					        { "id" : "executioner", "aim" : 4, "will" : 2},
 					        { "id" : "close_combat_specialist"},
-					        { "id" : "jetboot_module"}
+					        { "id" : "jetboot_module", "mobility" : 1}
 				        ]
 			        }, {
 				        "rank" : 4,
@@ -878,14 +873,14 @@
 			        }, {
 				        "rank" : 5,
 				        "perks" : [
-				        { "id" : "repair_servos"},
+				        { "id" : "repair_servos", "will" : 1},
 				        { "id" : "bring_em_on"},
-				        { "id" : "reactive_targeting_sensors"}
+				        { "id" : "reactive_targeting_sensors", "aim" : 2}
 				        ]
 			        }, {
 				        "rank" : 6,
 				        "perks" : [
-					        { "id" : "vital_point_targeting"},
+					        { "id" : "vital_point_targeting", "aim" : 2},
 					        { "id" : "close_encounters"},
 					        { "id" : "hit_and_run"}
 				        ]
@@ -914,6 +909,8 @@
 			"name" : "Valkyrie",
 			"mec" : 1,
 			"icon_src" : "http://ufopaedia.org/images/f/f6/CLASS_MECH.png",
+			"default_primary_weapon" : "minigun",
+			"default_secondary_weapon" : "",
 			"spec" :  {
 				"primary_weapons" : [
 						{ "mec_primary" : 1 }
@@ -933,7 +930,7 @@
 						"rank" : 2,
 						"perks" : [
 							{ "id" : "platform_stability"},
-							{ "id" : "body_shield"},
+							{ "id" : "body_shield", "will" : 2},
 							{ "id" : "automated_threat_assessment"}
 						]
 					}, {
@@ -941,14 +938,14 @@
 						"perks" : [
 							{ "id" : "advanced_fire_control"},
 							{ "id" : "damage_control"},
-							{ "id" : "jetboot_module"}
+							{ "id" : "jetboot_module", "mobility" : 1}
 						]
 					}, {
 						"rank" : 4,
 						"perks" : [
 							{ "id" : "shredder_ammo"},
 							{ "id" : "ranger"},
-							{ "id" : "shock_absorbent_armor"}
+							{ "id" : "shock_absorbent_armor", "aim" : 2, "will" : 2}
 						]
 					}, {
 						"rank" : 5,
@@ -967,7 +964,7 @@
 					}, {
 						"rank" : 7,
 						"perks" : [
-							{ "id" : "sentinel"},
+							{ "id" : "sentinel", "aim" : 3},
 							{ "id" : "rapid_fire"},
 							{ "id" : "squadsight"}
 						]
@@ -989,6 +986,8 @@
 			"name" : "Archer",
 			"mec" : 1,
 			"icon_src" : "http://ufopaedia.org/images/f/f6/CLASS_MECH.png",
+			"default_primary_weapon" : "minigun",
+			"default_secondary_weapon" : "",
 			"spec" :  {
 				"primary_weapons" : [
 						{ "mec_primary" : 1 }
@@ -1007,28 +1006,28 @@
 					}, {
 						"rank" : 2,
 						"perks" : [
-							{ "id" : "rapid_reaction"},
-							{ "id" : "automated_threat_assessment"},
-							{ "id" : "platform_stability"}
+							{ "id" : "rapid_reaction", "aim" : 2},
+							{ "id" : "automated_threat_assessment", "will" : 1},
+							{ "id" : "platform_stability", "aim" : 1}
 						]
 					}, {
 						"rank" : 3,
 						"perks" : [
 							{ "id" : "heat_warheads"},
-							{ "id" : "body_shield"},
-							{ "id" : "jetboot_module"}
+							{ "id" : "body_shield", "will" : 2},
+							{ "id" : "jetboot_module", "mobility" : 1}
 						]
 					}, {
 						"rank" : 4,
 						"perks" : [
 							{ "id" : "mayhem"},
-							{ "id" : "agression"},
-							{ "id" : "damage_control"}
+							{ "id" : "agression", "aim" : 2, "will" : 1},
+							{ "id" : "damage_control", "will" : 2}
 						]
 					}, {
 						"rank" : 5,
 						"perks" : [
-						{ "id" : "ranger"},
+						{ "id" : "ranger", "aim" : 3},
 						{ "id" : "packmaster"},
 						{ "id" : "collateral_damage"}
 						]
@@ -1037,14 +1036,14 @@
 						"perks" : [
 							{ "id" : "danger_zone"},
 							{ "id" : "double_tap"},
-							{ "id" : "reactive_targeting_sensors"}
+							{ "id" : "reactive_targeting_sensors", "aim" : 3}
 						]
 					}, {
 						"rank" : 7,
 						"perks" : [
 							{ "id" : "grenadier"},
-							{ "id" : "vital_point_targeting"},
-							{ "id" : "absorption_fields"}
+							{ "id" : "vital_point_targeting", "aim" : 4},
+							{ "id" : "absorption_fields", "will" : 4}
 						]
 					}
 				],
@@ -1065,6 +1064,8 @@
 			"name" : "Goliath",
 			"mec" : 1,
 			"icon_src" : "http://ufopaedia.org/images/f/f6/CLASS_MECH.png",
+			"default_primary_weapon" : "minigun",
+			"default_secondary_weapon" : "",
 			"spec" :  {
 				"primary_weapons" : [
 						{ "mec_primary" : 1 }
@@ -1078,49 +1079,49 @@
 					{
 						"rank" : 1,
 						"perks" : [
-							{ "id" : "absorption_fields_goliath" }
+							{ "id" : "absorption_fields", "mobility" : -1 }
 						]
 					}, {
 						"rank" : 2,
 						"perks" : [
-							{ "id" : "platform_stability"},
+							{ "id" : "body_shield", "will" : 2},
 							{ "id" : "flush"},
 							{ "id" : "automated_threat_assessment"}
 						]
 					}, {
 						"rank" : 3,
 						"perks" : [
-							{ "id" : "ranger"},
+							{ "id" : "ranger", "will" : 1},
 							{ "id" : "reactive_targeting_sensors"},
-							{ "id" : "close_combat_specialist"}
+							{ "id" : "close_combat_specialist", "aim" : 2, "will" : 2}
 						]
 					}, {
 						"rank" : 4,
 						"perks" : [
 							{ "id" : "platform_stability"},
 							{ "id" : "heat_ammo"},
-							{ "id" : "shock_absorbent_armor"}
+							{ "id" : "shock_absorbent_armor", "will" : 2}
 						]
 					}, {
 						"rank" : 5,
 						"perks" : [
 						{ "id" : "collateral_damage"},
-						{ "id" : "advanced_fire_control"},
-						{ "id" : "resilience"}
+						{ "id" : "advanced_fire_control", "aim" : 2},
+						{ "id" : "resilience", "will" : 2}
 						]
 					}, {
 						"rank" : 6,
 						"perks" : [
-							{ "id" : "repair_servos"},
-							{ "id" : "bring_em_on"},
+							{ "id" : "repair_servos", "will" : 2},
+							{ "id" : "bring_em_on", "aim" : 2, "will" : 2},
 							{ "id" : "ready_for_anything"}
 						]
 					}, {
 						"rank" : 7,
 						"perks" : [
 							{ "id" : "packmaster"},
-							{ "id" : "damage_control"},
-							{ "id" : "vital_point_targeting"}
+							{ "id" : "damage_control", "will" : 2},
+							{ "id" : "vital_point_targeting", "aim" : 3}
 						]
 					}
 				],
@@ -1140,6 +1141,8 @@
 			"name" : "Jaeger",
 			"mec" : 1,
 			"icon_src" : "http://ufopaedia.org/images/f/f6/CLASS_MECH.png",
+			"default_primary_weapon" : "minigun",
+			"default_secondary_weapon" : "",
 			"spec" :  {
 				"primary_weapons" : [
 						{ "mec_primary" : 1 }
@@ -1174,20 +1177,20 @@
 						"perks" : [
 							{ "id" : "squadsight"},
 							{ "id" : "ranger"},
-							{ "id" : "jetboot_module"}
+							{ "id" : "jetboot_module", "mobility" : 1}
 						]
 					}, {
 						"rank" : 5,
 						"perks" : [
-						{ "id" : "lone_wolf"},
-						{ "id" : "executioner"},
-						{ "id" : "damage_control"}
+						{ "id" : "lone_wolf", "aim" : 2},
+						{ "id" : "executioner", "aim" : 2},
+						{ "id" : "damage_control", "will" : 2}
 						]
 					}, {
 						"rank" : 6,
 						"perks" : [
-							{ "id" : "advanced_fire_control"},
-							{ "id" : "bring_em_on"},
+							{ "id" : "advanced_fire_control", "aim" : 2, "will" : 3},
+							{ "id" : "bring_em_on", "will" : 2},
 							{ "id" : "shredder_ammo"}
 						]
 					}, {
@@ -1215,6 +1218,8 @@
 	        "name" : "Pathfinder",
 	        "mec" : 1,
 	        "icon_src" : "http://ufopaedia.org/images/f/f6/CLASS_MECH.png",
+	        "default_primary_weapon" : "minigun",
+			"default_secondary_weapon" : "",
 	        "spec" :  {
 		        "primary_weapons" : [
 				        { "mec_primary" : 1 }
@@ -1228,27 +1233,27 @@
 			        {
 				        "rank" : 1,
 				        "perks" : [
-					        { "id" : "jetboot_module" }
+					        { "id" : "jetboot_module", "mobility" : 1 }
 				        ]
 			        }, {
 				        "rank" : 2,
 				        "perks" : [
-					        { "id" : "body_shield"},
+					        { "id" : "body_shield", "aim" : 2},
 					        { "id" : "automated_threat_assessment"},
 					        { "id" : "platform_stability"}
 				        ]
 			        }, {
 				        "rank" : 3,
 				        "perks" : [
-					        { "id" : "damn_good_ground"},
-					        { "id" : "flush"},
-					        { "id" : "advanced_fire_control"}
+					        { "id" : "damn_good_ground" , "aim" : 2, "mobility" : 1},
+					        { "id" : "flush", "mobility" : 1},
+					        { "id" : "advanced_fire_control", "mobility" : 1}
 				        ]
 			        }, {
 				        "rank" : 4,
 				        "perks" : [
 					        { "id" : "lone_wolf"},
-					        { "id" : "executioner"},
+					        { "id" : "executioner", "aim" : 3},
 					        { "id" : "damage_control"}
 				        ]
 			        }, {
@@ -1270,7 +1275,7 @@
 				        "perks" : [
 					        { "id" : "in_the_zone"},
 					        { "id" : "hit_and_run"},
-					        { "id" : "lightning_reflexes"}
+					        { "id" : "lightning_reflexes", "mobility" : 1}
 				        ]
 			        }
 		        ],
@@ -1290,6 +1295,8 @@
 	        "name" : "Guardian",
 	        "mec" : 1,
 	        "icon_src" : "http://ufopaedia.org/images/f/f6/CLASS_MECH.png",
+	        "default_primary_weapon" : "minigun",
+			"default_secondary_weapon" : "",
 	        "spec" :  {
 		        "primary_weapons" : [
 				        { "mec_primary" : 1 }
@@ -1308,21 +1315,21 @@
 			        }, {
 				        "rank" : 2,
 				        "perks" : [
-					        { "id" : "covering_fire"},
+					        { "id" : "covering_fire", "aim" : 3},
 					        { "id" : "automated_threat_assessment"},
-					        { "id" : "steadfast"}
+					        { "id" : "steadfast", "will" : 5}
 				        ]
 			        }, {
 				        "rank" : 3,
 				        "perks" : [
 					        { "id" : "field_medic"},
-					        { "id" : "platform_stability"},
-					        { "id" : "body_shield"}
+					        { "id" : "platform_stability", "aim" : 3, "mobility" : 1},
+					        { "id" : "body_shield", "will" : 2, "mobility" : 1}
 				        ]
 			        }, {
 				        "rank" : 4,
 				        "perks" : [
-					        { "id" : "jetboot_module"},
+					        { "id" : "jetboot_module", "mobility" : 1},
 					        { "id" : "ranger"},
 					        { "id" : "opportunist"}
 				        ]
@@ -1343,8 +1350,8 @@
 			        }, {
 				        "rank" : 7,
 				        "perks" : [
-					        { "id" : "ready_for_anything"},
-					        { "id" : "savior"},
+					        { "id" : "ready_for_anything", "aim" : 3},
+					        { "id" : "savior", "will" : 4},
 					        { "id" : "double_tap"}
 				        ]
 			        }
@@ -1365,6 +1372,8 @@
 	        "name" : "Shogun",
 	        "mec" : 1,
 	        "icon_src" : "http://ufopaedia.org/images/f/f6/CLASS_MECH.png",
+	        "default_primary_weapon" : "minigun",
+			"default_secondary_weapon" : "",
 	        "spec" :  {
 		        "primary_weapons" : [
 				        { "mec_primary" : 1 }
@@ -1383,9 +1392,9 @@
 			        }, {
 				        "rank" : 2,
 				        "perks" : [
-					        { "id" : "body_shield"},
+					        { "id" : "body_shield", "mobility" : 1},
 					        { "id" : "automated_threat_assessment"},
-					        { "id" : "jetboot_module"}
+					        { "id" : "jetboot_module", "will" : 2}
 				        ]
 			        }, {
 				        "rank" : 3,
@@ -1398,13 +1407,13 @@
 				        "rank" : 4,
 				        "perks" : [
 					        { "id" : "heat_ammo"},
-					        { "id" : "repair_servos"},
+					        { "id" : "repair_servos", "will" : 3},
 					        { "id" : "sapper"}
 				        ]
 			        }, {
 				        "rank" : 5,
 				        "perks" : [
-				        { "id" : "damage_control"},
+				        { "id" : "damage_control", "will" : 2},
 				        { "id" : "packmaster"},
 				        { "id" : "ranger"}
 				        ]
@@ -1412,14 +1421,14 @@
 				        "rank" : 6,
 				        "perks" : [
 					        { "id" : "grenadier"},
-					        { "id" : "vital_point_targeting"},
+					        { "id" : "vital_point_targeting", "aim" : 3},
 					        { "id" : "light_em_up"}
 				        ]
 			        }, {
 				        "rank" : 7,
 				        "perks" : [
 					        { "id" : "mayhem"},
-					        { "id" : "reactive_targeting_sensors"},
+					        { "id" : "reactive_targeting_sensors", "aim" : 2, "will" : 2},
 					        { "id" : "absorption_fields"}
 				        ]
 			        }
@@ -1440,6 +1449,8 @@
         	"name" : "S.H.I.V.",
         	"shiv" : 1,
         	"icon_src" : "",
+        	"default_primary_weapon" : "autocannon",
+			"default_secondary_weapon" : "",
         	"spec" : {
 		        "primary_weapons" : [
 				        { "shiv_turrets" : 1 }
@@ -1458,6 +1469,8 @@
         	"name" : "Alloy S.H.I.V.",
         	"shiv" : 1,
         	"icon_src" : "",
+        	"default_primary_weapon" : "autocannon",
+			"default_secondary_weapon" : "",
         	"spec" : {
 		        "primary_weapons" : [
 				        { "shiv_turrets" : 1 }
@@ -1475,6 +1488,8 @@
         	"name" : "Hover S.H.I.V.",
         	"shiv" : 1,
         	"icon_src" : "",
+        	"default_primary_weapon" : "autocannon",
+			"default_secondary_weapon" : "",
         	"spec" : {
 		        "primary_weapons" : [
 				        { "shiv_turrets" : 1 }

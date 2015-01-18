@@ -104,8 +104,11 @@
 
 						<div class="row" ng-repeat="perk in perks" style="padding: 2px;">
 							<div class="col-sm-3">
-								<span class="pull-right">
-									{{ranks[$index].name}}
+								<span class="pull-left">
+									{{ranks[$index].name}}<br/>
+									+{{class.spec.stat_progression[$index].health}} HP
+									+{{class.spec.stat_progression[$index].aim}} Aim
+									+{{class.spec.stat_progression[$index].will_low}} ({{class.spec.stat_progression[$index].will_high}}) Will
 								</span>
 							</div>
 							<div class="col-sm-9">
@@ -316,21 +319,21 @@
 					<tr>
 						<td>Min Damage</td>
 						<td>
-							{{selectedPrimaryWeapon.min_damage + build.damage_bonus}}
+							{{selectedPrimaryWeapon.min_damage + build.damage_bonus + build.primary_damage_bonus}}
 						</td>
 						<td>Max Damage</td>
 						<td>
-							{{selectedPrimaryWeapon.max_damage + build.damage_bonus}}
+							{{selectedPrimaryWeapon.max_damage + build.damage_bonus + build.primary_damage_bonus}}
 						</td>
 					</tr>
 					<tr>
 						<td>Crit Min</td>
 						<td>
-							{{selectedPrimaryWeapon.crit_damage_min + build.damage_bonus}}
+							{{selectedPrimaryWeapon.crit_damage_min + build.damage_bonus + build.primary_damage_bonus}}
 						</td>
 						<td>Crit Max</td>
 						<td>
-							{{selectedPrimaryWeapon.crit_damage_max + build.damage_bonus}}
+							{{selectedPrimaryWeapon.crit_damage_max + build.damage_bonus + build.primary_damage_bonus}}
 						</td>
 					</tr>
 				</table>
@@ -343,21 +346,21 @@
 					<tr>
 						<td>Min Damage</td>
 						<td>
-							{{selectedSecondaryWeapon.min_damage + build.damage_bonus}}
+							{{selectedSecondaryWeapon.min_damage + build.damage_bonus + build.secondary_damage_bonus}}
 						</td>
 						<td>Max Damage</td>
 						<td>
-							{{selectedSecondaryWeapon.max_damage + build.damage_bonus}}
+							{{selectedSecondaryWeapon.max_damage + build.damage_bonus  + build.secondary_damage_bonus}}
 						</td>
 					</tr>
 					<tr>
 						<td>Crit Min</td>
 						<td>
-							{{selectedSecondaryWeapon.crit_damage_min + build.damage_bonus}}
+							{{selectedSecondaryWeapon.crit_damage_min + build.damage_bonus + build.secondary_damage_bonus}}
 						</td>
 						<td>Crit Max</td>
 						<td>
-							{{selectedSecondaryWeapon.crit_damage_max + build.damage_bonus}}
+							{{selectedSecondaryWeapon.crit_damage_max + build.damage_bonus + build.secondary_damage_bonus}}
 						</td>
 					</tr>
 				</table>
