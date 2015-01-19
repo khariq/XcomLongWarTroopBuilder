@@ -3838,6 +3838,7 @@
 			"type" :  "Grenades",
 			"name" :  "Smoke Grenade",
 			"hp" :  0,
+			"aim" : 0,
 			"damage_reduction":  0,
 			"will" :  0,
 			"mobility" :  -1,

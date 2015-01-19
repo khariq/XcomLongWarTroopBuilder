@@ -768,23 +768,23 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 		if ($scope.build == null || $scope.build.rank_ups == null)
 			return 0;
 		var aim = 0
-		if ($scope.selectedPrimaryWeapon != null) {
+		if ($scope.selectedPrimaryWeapon != null && $scope.selectedPrimaryWeapon.aim_mod != null) {
 			aim += $scope.selectedPrimaryWeapon.aim_mod;
 		}
 
-		if ($scope.equipmentSlotOne != null) {
+		if ($scope.equipmentSlotOne != null && $scope.equipmentSlotOne.aim != null) {
 			aim += $scope.equipmentSlotOne.aim;
 		}
 
-		if ($scope.equipmentSlotTwo != null) {
+		if ($scope.equipmentSlotTwo != null && $scope.equipmentSlotTwo.aim != null) {
 			aim += $scope.equipmentSlotTwo.aim;
 		}
 
-		if ($scope.build.mod != null) {
+		if ($scope.build.mod != null  && $scope.build.mod.aim != null) {
 			aim += $scope.build.mod.aim;
 		}
 
-		if ($scope.build.rank_ups != null) {
+		if ($scope.build.rank_ups != null  && $scope.build.rank_ups.aim != null) {
 			aim += $scope.build.rank_ups.aim;
 		}
 
