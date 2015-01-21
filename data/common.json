@@ -80,7 +80,7 @@
 							"aim" : 2, "will" : 2, "mobility" : 1, "damage" : 0 },
 						{ "id" : "killer_instinct" },
 						{ "id" : "ranger", 
-							"aim" : 2, "will" : 0, "mobility" : 0,"damage" : 1 }
+							"aim" : 2, "will" : 0, "mobility" : 0,"damage" : 1, "primary_damage_bonus" : 1 }
 						]
 					}, {
 						"rank" : 6,
@@ -156,7 +156,7 @@
 					}, {
 						"rank" : 4,
 						"perks" : [
-							{ "id" : "ranger"},
+							{ "id" : "ranger", "primary_damage_bonus" : 1},
 							{ "id" : "gunslinger", "secondary_damage_bonus" : 1},
 							{ "id" : "suppression"}
 						]
@@ -177,7 +177,7 @@
 					}, {
 						"rank" : 7,
 						"perks" : [
-							{ "id" : "vital_point_targeting", "aim" : 2, "will" : 2, "primary_damage_bouns" : 2, "secondary_damage_bonus" : 1 },
+							{ "id" : "vital_point_targeting", "aim" : 2, "will" : 2, "primary_damage_bonus" : 2, "secondary_damage_bonus" : 1 },
 							{ "id" : "resilience"},
 							{ "id" : "rapid_fire"}
 						]
@@ -274,7 +274,7 @@
 					}, {
 						"rank" : 5,
 						"perks" : [
-						{ "id" : "ranger"},
+						{ "id" : "ranger", "primary_damage_bonus" : 1},
 						{ "id" : "ready_for_anything"},
 						{ "id" : "will_to_survive"}
 						]
@@ -494,7 +494,7 @@
 						"rank" : 5,
 						"perks" : [
 						{ "id" : "tactical_sense"},
-						{ "id" : "ranger"},
+						{ "id" : "ranger", "primary_damage_bonus" : 1},
 						{ "id" : "sharpshooter"}
 						]
 					}, {
@@ -587,7 +587,7 @@
 						"perks" : [
 						{ "id" : "aggression"},
 						{ "id" : "tactical_sense"},
-						{ "id" : "ranger", "aim" : 2}
+						{ "id" : "ranger", "aim" : 2, "primary_damage_bonus" : 1}
 						]
 					}, {
 						"rank" : 6,
@@ -697,7 +697,7 @@
 					}, {
 						"rank" : 5,
 						"perks" : [
-						{ "id" : "ranger", "ranger" : 3},
+						{ "id" : "ranger", "ranger" : 3, "primary_damage_bonus" : 1},
 						{ "id" : "dense_smoke"},
 						{ "id" : "combat_drugs", "will" : 3}
 						]
@@ -781,7 +781,7 @@
 					}, {
 						"rank" : 4,
 						"perks" : [
-							{ "id" : "ranger"},
+							{ "id" : "ranger", "primary_damage_bonus" : 1},
 							{ "id" : "suppression"},
 							{ "id" : "repair"}
 						]
@@ -853,7 +853,7 @@
 				        "rank" : 2,
 				        "perks" : [
 					        { "id" : "aggression"},
-					        { "id" : "ranger"},
+					        { "id" : "ranger", "primary_damage_bonus" : 1},
 					        { "id" : "body_shield", "will" : 3, "mobility" : 1}
 				        ]
 			        }, {
@@ -944,7 +944,7 @@
 						"rank" : 4,
 						"perks" : [
 							{ "id" : "shredder_ammo"},
-							{ "id" : "ranger"},
+							{ "id" : "ranger", "primary_damage_bonus" : 1},
 							{ "id" : "shock_absorbent_armor", "aim" : 2, "will" : 2}
 						]
 					}, {
@@ -1027,7 +1027,7 @@
 					}, {
 						"rank" : 5,
 						"perks" : [
-						{ "id" : "ranger", "aim" : 3},
+						{ "id" : "ranger", "aim" : 3, "primary_damage_bonus" : 1},
 						{ "id" : "packmaster"},
 						{ "id" : "collateral_damage"}
 						]
@@ -1091,7 +1091,7 @@
 					}, {
 						"rank" : 3,
 						"perks" : [
-							{ "id" : "ranger", "will" : 1},
+							{ "id" : "ranger", "will" : 1, "primary_damage_bonus" : 1},
 							{ "id" : "reactive_targeting_sensors"},
 							{ "id" : "close_combat_specialist", "aim" : 2, "will" : 2}
 						]
@@ -1176,7 +1176,7 @@
 						"rank" : 4,
 						"perks" : [
 							{ "id" : "squadsight"},
-							{ "id" : "ranger"},
+							{ "id" : "ranger", "primary_damage_bonus" : 1},
 							{ "id" : "jetboot_module", "mobility" : 1}
 						]
 					}, {
@@ -1260,7 +1260,7 @@
 				        "rank" : 5,
 				        "perks" : [
 				        { "id" : "reactive_targeting_sensors"},
-				        { "id" : "ranger"},
+				        { "id" : "ranger", "primary_damage_bonus" : 1},
 				        { "id" : "shredder_ammo"}
 				        ]
 			        }, {
@@ -1330,7 +1330,7 @@
 				        "rank" : 4,
 				        "perks" : [
 					        { "id" : "jetboot_module", "mobility" : 1},
-					        { "id" : "ranger"},
+					        { "id" : "ranger", "primary_damage_bonus" : 1},
 					        { "id" : "opportunist"}
 				        ]
 			        }, {
@@ -1415,7 +1415,7 @@
 				        "perks" : [
 				        { "id" : "damage_control", "will" : 2},
 				        { "id" : "packmaster"},
-				        { "id" : "ranger"}
+				        { "id" : "ranger", "primary_damage_bonus" : 1}
 				        ]
 			        }, {
 				        "rank" : 6,
