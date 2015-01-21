@@ -6,6 +6,7 @@ xcomApp.factory('DataService', function($http, $q) {
 		self.commonJson = null;
 		self.psionicsJson = null;
 		self.geneModsJson = null;
+		self.techs = null;
 
 		self.getCommonJson = function() {
 			var deferred = $q.defer();
@@ -60,6 +61,23 @@ xcomApp.factory('DataService', function($http, $q) {
 				$http.get('data/gene_mods.json')
 					.success(function(data) {
 						self.geneModsJson = data;
+						deferred.resolve(data);
+					})
+					.error(function(response) { 
+						deferred.reject(response);
+					});
+			}
+			return deferred.promise;
+		}
+
+		self.getTechs = function() {
+			var deferred = $q.defer();
+			if (self.techs !== null) {
+				deferred.resolve(self.techs);
+			} else {
+				$http.get('data/research/techs.json')
+					.success(function(data) {
+						self.techs = data;
 						deferred.resolve(data);
 					})
 					.error(function(response) { 

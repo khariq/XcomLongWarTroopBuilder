@@ -200,6 +200,38 @@
 					"id" : "muton_corpse"
 				}
 			]
+		},
+
+		{
+			"id" : "alien_materials",
+			"title" : "Alien Materials",
+			"category" : "Materials and Aerospace",
+			"prereq" : [],
+			"duration" : 6,
+			"cost" : [
+				{
+					"item" : "alien_alloys",
+					"quantity" : 2
+				},
+				{
+					"item" : "elerium",
+					"quantity" : 2
+				},
+				{
+					"item" : "weapon_fragments",
+					"quantity" : 5
+				},
+				{
+					"item" : "meld",
+					"quantity" : 1
+				}
+			],
+			"unlocks" : [
+				{
+					"type" : "",
+					"id" : ""
+				}
+			]
 		}
 	]
 

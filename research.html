@@ -13,9 +13,33 @@
 
     
 </head>
-	<body id="researchController" ng-controller="xcomController">
+	<body id="researchController" ng-controller="researchController">
 
-		
+	<div class="container-fluid">
+		Techs
+		<div class="row">
+			<div class="col-md-9">
+				<div class="row" ng-repeat="techLevel in techTree">
+					<div class="col-md-12" >
+						<div class="btn-group btn-group-justified" role="group">
+							<div class="btn-group" data-toggle="buttons" ng-repeat="tech in techLevel.techs">
+								<label class="btn btn-default" ng-mouseover="showDescription(tech)" ng-mouseleave="hideDescription()" 
+									ng-click="">
+									<input type="checkbox" name="tech_{{$parent.$index}}_{{$index}}" id="{{tech.id}}">
+									{{tech.title}}
+								</label>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="alert alert-info">
+					Stuff stuff
+				</div>
+			</div>
+		</div>
+	</div>
 
 	</body>
 
