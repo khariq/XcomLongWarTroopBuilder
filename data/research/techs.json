@@ -1,16 +1,117 @@
 {
 
 	"techs" : [
+
+		{
+			"id" : "xenobiology",
+			"title" : "Xenobiology",
+			"category" : "Xenology",
+			"prereq" : [],
+			"duration" : 6,
+			"cost" : [
+				{
+					"item" : "sectoid_corpse",
+					"quantity" : 5
+				}
+			],
+			"unlocks" : [
+				{
+					"type" : "facility",
+					"id" : "alien_containment"
+				},
+				{
+					"type" : "loadout",
+					"id" : "targeting_module"
+				},
+				{
+					"type" : "council_request",
+					"id" : "sectoid_corpse"
+				}
+			]
+		},
+		{
+			"id" : "xenoneurology",
+			"title" : "Xenoneurology",
+			"category" : "Xenology",
+			"prereq" : ["xenobiology"],
+			"duration" : 8,
+			"cost" : [
+				{
+					"item" : "weapon_fragments",
+					"quantity" : 5
+				},
+				{
+					"item" : "sectoid_corpse",
+					"quantity" : 10
+				}
+			],
+			"unlocks" : [
+				{
+					"type" : "loadoout",
+					"id" : "arc_thrower"
+				},
+				{ 
+					"type" : "loadout",
+					"id" : "arc_rifle"
+				}
+			]
+		},
+		{
+			"id" : "xenogenetics",
+			"title" : "Xenogenetics",
+			"category" : "Xenology",
+			"prereq" : ["xenobiology"],
+			"duration" : 10,
+			"cost" : [
+				{
+					"item" : "meld",
+					"quantity" : 10
+				}
+			],
+			"unlocks" : [
+				{
+					"type" : "facility",
+					"id" : "genetics_lab"
+				},
+				{
+					"type" : "gene_mod",
+					"id" : "depth_perception"
+				},
+				{
+					"type" : "gene_mod",
+					"id" : "hyper_reactive_pupils"
+				}
+			]
+		},
 		{
 			"id" : "sectoid_autopsy",
 			"title" : "Sectoid Autopsy",
 			"category" : "Alien Autopsies",
-			"prereq" : "xenobiology",
+			"prereq" : ["xenobiology"],
 			"duration" : 4,
 			"cost" : [
 				{
 					"item" : "corpse_sectoid",
 					"quantity" : 10
+				}
+			],
+			"unlocks" : [
+				{
+					"type" : "gene_mod",
+					"id" : "smart_macrophages"
+				}
+			]
+		},
+		{
+			"id" : "sectoid_commander_autopsy",
+			"title" : "Sectoid Commander Autopsy",
+			"category" : "Alien Autopsies",
+			"prereq" : ["sectoid_autopsy", "xenobiology"],
+			"duration" : 35,
+			"cost" : [
+				{
+					"item" : "Sectoid Commander",
+					"quantity" : 5
 				}
 			],
 			"unlocks" : [
@@ -23,8 +124,80 @@
 					"id" : "mind_merge"
 				},
 				{
+					"type" : "council_request",
+					"id" : "Alien Entertainment"
+				}
+			]
+		},
+		{
+			"id" : "thin_man_autopsy",
+			"title" : "Thin Man Autopsy",
+			"category" : "Alien Autopsy",
+			"prereq" : ["xenobiology"],
+			"duration" : 6,
+			"cost" : [
+				{
+					"item" : "thin_men",
+					"quantity" : 10
+				}
+			],
+			"unlocks" : [
+				{
+					"type" : "foundry",
+					"id" : "improved_medkit"
+				},
+				{
+					"type" : "loadout",
+					"id" : "chem_grenade"
+				},
+				{
+					"type" : "loadout",
+					"id" : "restorative_mist"
+				},
+				{
 					"type" : "gene_mod",
-					"id" : "smart_macrophages"
+					"id" : "muscle_fiber_density"
+				},
+				{
+					"type" : "council_request",
+					"id" : "thin_men"
+				},
+				{
+					"type" : "",
+					"id" : ""
+				}
+
+			]
+		},
+
+		{
+			"id" : "muton_autopsy",
+			"title" : "Muton Autopsy",
+			"category" : "Alien Autopsy",
+			"prereq" : ["xenobiology"],
+			"duration" : 8,
+			"cost" : [
+				{
+					"item" : "muton_corpse",
+					"quantity" : 10
+				}
+			],
+			"unlocks" : [
+				{
+					"type" : "foundry",
+					"id" : "ammo_conservation"
+				},
+				{
+					"type" : "foundry",
+					"id" : "alien_grenade"
+				},
+				{
+					"type" : "gene_mod",
+					"id" : "adrenal_neurosympathy"
+				},
+				{
+					"type" : "council_request",
+					"id" : "muton_corpse"
 				}
 			]
 		}
