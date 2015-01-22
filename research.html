@@ -18,13 +18,13 @@
 	<div class="container-fluid">
 		Techs
 		<div class="row">
-			<div class="col-md-9">
+			<div class="col-md-8">
 				<div class="row" ng-repeat="techLevel in techTree">
 					<div class="col-md-12" >
-						<div class="btn-group btn-group-justified" role="group">
-							<div class="btn-group" data-toggle="buttons" ng-repeat="tech in techLevel.techs">
-								<label class="btn btn-default" ng-mouseover="showDescription(tech)" ng-mouseleave="hideDescription()" 
-									ng-click="">
+						<div class="btn-group" role="group" ng-repeat="tech in techLevel.techs" style="margin: 5px;">
+							<div class="btn-group" data-toggle="buttons" >
+								<label class="btn" ng-class="{'btn-primary': techIsResearched(tech) == true, 'btn-info': techCanBeResearched(tech) == true, 'btn-danger': techCanBeResearched(tech) == false}" ng-mouseover="showDescription(tech)" ng-mouseleave="hideDescription()" 
+									ng-click="researchTech(tech)">
 									<input type="checkbox" name="tech_{{$parent.$index}}_{{$index}}" id="{{tech.id}}">
 									{{tech.title}}
 								</label>
@@ -33,9 +33,59 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-md-3">
-				<div class="alert alert-info">
-					Stuff stuff
+			<div class="col-md-4">
+				<div class="alert alert-info" ng-show="descriptionVisible">
+					<div class="container">
+						<div class="row">
+							<div class="col-sm-12">{{description.title}}</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-12">Duration: {{description.duration}}</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-12">Cost</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-1">Alien Alloys</div>
+							<div class="col-sm-11">{{description.cost.alien_alloys}}</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-1">Elerium</div>
+							<div class="col-sm-11">{{description.cost.elerium}}</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-1">Weapon Frags</div>
+							<div class="col-sm-11">{{description.cost.weapon_fragments}}</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-1">Meld</div>
+							<div class="col-sm-11">{{description.cost.meld}}</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-1">Other</div>
+							<div class="col-sm-11">{{description.cost.other}}</div>
+							
+						</div>
+						<div class="row">
+							<div class="col-sm-12">Unlocks</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-1">Research</div>
+							<div class="col-sm-11">{{description.child_techs}}
+						</div>
+						<div class="row">
+							<div class="col-sm-1">Foundry</div>
+							<div class="col-sm-11">{{description.foundry}}</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-1">Other</div>
+							<div class="col-sm-11">{{description.other_unlocks}}</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-1">Council Requests</div>
+							<div class="col-sm-11">{{description.council_requests}}</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

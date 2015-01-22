@@ -228,9 +228,30 @@
 			],
 			"unlocks" : [
 				{
-					"type" : "",
-					"id" : ""
+					"type" : "research",
+					"id" : "elerium"
+				},
+				{
+					"type" : "research",
+					"id" : "advanced_Areospace_concepts"
+				},
+				{
+					"type" : "research",
+					"id" : "ufo_analysis"
+				},
+				{
+					"type" : "research",
+					"id" : "alien_biocybernetics"
+				},
+				{
+					"type" : "research",
+					"id" : "improved_body_armor"
+				},
+				{
+					"type" : "research",
+					"id" : "gauss_weapons"
 				}
+
 			]
 		}
 	]
