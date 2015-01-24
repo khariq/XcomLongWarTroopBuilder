@@ -5,45 +5,27 @@ xcomApp.controller('researchController', function($scope, $http, DataService) {
 
 	$scope.researchedTechIds = [];
 
+	$scope.allTechs = [];
+
 	$scope.techTree = [];
 
 	$scope.techJson = null;
 
 	$scope.description = {};
-
-	$scope.addTechArrayToTreeAtLevel = function(level, techs, techJson, seenTechs) {
-
-		for (var i = 0; i < techs.length; i++) {
-			seenTechs.push(techs[i].id);
-		}
-
-		for (var i = 0; i < techs.length; i++) {
-			$scope.addTechsToTreeAtLevel(level + 1, techs[i].id, techJson, seenTechs);
-		}
-
-	}
-
-	$scope.addTechsToTreeAtLevel = function(level, parentTech, techJson, seenTechs) {
-
-		var techs = techJson.techs.filter(function (tech) { 
-			var allPrereqsSatisfied = true;
-			for (var i = 0; i < tech.prereq.length; i++) {
-				if ($.inArray(tech.prereq[i], seenTechs) < 0) {
-					allPrereqsSatisfied = false;
-					break;
-				}
-			};
-
-			return tech.prereq != null && $.inArray(parentTech, tech.prereq) >= 0 && $.inArray(tech.id, seenTechs) == -1  && allPrereqsSatisfied
-		});
-
-		$scope.techTree.push( {"level" : level, "parent" : parentTech, "techs" : techs} );
-
-		$scope.addTechArrayToTreeAtLevel(level + 1, techs, techJson, seenTechs);
-	}
-
+	
 	$scope.researchTech = function(tech) {
+
+		if ($scope.techCanBeResearched(tech) == false) {
+			for (var i = 0; i < tech.prereq.length; i++) {
+				var result = $.grep($scope.allTechs, function (e) { return e.id == tech.prereq[i]; });
+				if (result != null) {
+					$scope.researchTech(result[0]);
+				}
+			}
+		}
+
 		$scope.researchPath.push(tech);
+
 		$scope.researchedTechIds.push(tech.id);
 
 	}
@@ -158,6 +140,42 @@ xcomApp.controller('researchController', function($scope, $http, DataService) {
 		$scope.descriptionVisible = false;
 	}
 
+	$scope.researchPlan = function () {
+		return $scope.researchedTechIds.join(' => ');
+	}
+
+
+	$scope.addTechArrayToTreeAtLevel = function (level, techs, techJson, seenTechs) {
+
+		for (var i = 0; i < techs.length; i++) {
+			seenTechs.push(techs[i].id);
+		}
+
+		for (var i = 0; i < techs.length; i++) {
+			$scope.addTechsToTreeAtLevel(level, techs[i].id, techJson, seenTechs);
+		}
+
+	}
+
+	$scope.addTechsToTreeAtLevel = function (level, parentTech, techJson, seenTechs) {
+
+		var techs = techJson.techs.filter(function (tech) {
+			var allPrereqsSatisfied = true;
+			for (var i = 0; i < tech.prereq.length; i++) {
+				if ($.inArray(tech.prereq[i], seenTechs) < 0) {
+					allPrereqsSatisfied = false;
+					break;
+				}
+			};
+
+			return tech.prereq != null && $.inArray(parentTech, tech.prereq) >= 0 && $.inArray(tech.id, seenTechs) == -1 && allPrereqsSatisfied
+		});
+
+		$scope.techTree.push({ "level": level, "parent": parentTech, "techs": techs });
+
+		$scope.addTechArrayToTreeAtLevel(level + 1, techs, techJson, seenTechs);
+	}
+
 	DataService.getTechs().then (
         // success
         function (techJson) { //success
@@ -167,10 +185,17 @@ xcomApp.controller('researchController', function($scope, $http, DataService) {
 
 			$scope.techTree.push({ "level" : 1, "parent" : null, "techs" : techs });
 
+			$scope.allTechs = techJson.techs;
+
 			$scope.addTechArrayToTreeAtLevel(2, techs, techJson, seenTechs);
 
-			//$scope.researchedTechIds.push('xenobiology');
+			$scope.techTree = $scope.techTree.filter(function (t) { return t.techs.length > 0; });
 
+
+			$scope.techTree = $scope.techTree.sort(function (a, b) {
+				return (parseInt(a.level) - parseInt(b.level));
+			});
+			
 		}, 
         // failure
         function (commonJson) {

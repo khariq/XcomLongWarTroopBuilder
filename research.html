@@ -11,34 +11,52 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
 	<script src="scripts/bootstrap.min.js"></script>
 
+	<style type="text/css">
+		.lite-gray-bg {
+			background-color: #FDF5E6;
+		}
+	</style>
     
 </head>
-	<body id="researchController" ng-controller="researchController">
+
+<body id="researchController" ng-controller="researchController">
+
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">
+					<img src="lw_header.png" alt="XCOM Long War" style="height: 24px;" />
+				</a>
+			</div>
+			
+		</div><!-- /.container-fluid -->
+	</nav>
 
 	<div class="container-fluid">
-		Techs
+
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<h3 class="panel-title">Research Plan</h3>
+			</div>
+			<div class="panel-body">
+				<div class="alert alert-success pull-left" ng-repeat="tech in researchedTechIds" style="margin: 5px;">
+					{{tech}}
+				</div>
+			</div>
+		</div>
 		<div class="row">
 			<div class="col-md-8" id="techDiv">
 
 				<div class="row" ng-repeat="techLevel in techTree">
-					<div class="col-md-12" >
-						<div class="btn-group" role="group" ng-repeat="tech in techLevel.techs" style="margin: 5px;" ng-hide="techIsResearched(tech) == false && techCanBeResearched(tech) == false">
-							<div class="btn-group" data-toggle="buttons" >
-								<label class="btn" 
-									ng-class="techIsResearched(tech) ? 'btn-success' : techCanBeResearched(tech) ? 'btn-info' : 'btn-danger' " 
-									ng-click="researchTech(tech)"
-									data-container="body" 
-									data-toggle="popover" 
-									data-placement="right" 
-									data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
-									data-html="true"
-									data-toggle="hover"
-									data-selector="tectDiv"
-									>
-									<input type="checkbox" name="tech_{{$parent.$index}}_{{$index}}" id="{{tech.id}}">
-									{{tech.name}}
-								</label>
-							</div>
+					<div class="col-md-12">
+						{{techLevel.level}}
+						<div style="margin: 5px;" class="btn-group" data-toggle="buttons" role="group" ng-repeat="tech in techLevel.techs">
+							<label class="btn btn-success" ng-class="techIsResearched(tech) ? 'btn-success' : techCanBeResearched(tech) ? 'btn-info' : 'btn-danger' " ng-click="researchTech(tech)"
+									data-container="body" data-toggle="tooltip" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-html="true" data-selector="tectDiv">
+								<input type="checkbox" name="tech_{{$parent.$index}}_{{$index}}" id="{{tech.id}}" />
+								{{tech.name}}
+							</label>
+
 						</div>
 					</div>
 				</div>
@@ -74,26 +92,28 @@
 						<div class="row">
 							<div class="col-sm-1">Other</div>
 							<div class="col-sm-11">{{description.costs.other}}</div>
-							
+
 						</div>
 						<div class="row">
 							<div class="col-sm-12">Unlocks</div>
 						</div>
 						<div class="row">
 							<div class="col-sm-1">Research</div>
-							<div class="col-sm-11">{{description.child_techs}}
-						</div>
-						<div class="row">
-							<div class="col-sm-1">Foundry</div>
-							<div class="col-sm-11">{{description.foundry}}</div>
-						</div>
-						<div class="row">
-							<div class="col-sm-1">Other</div>
-							<div class="col-sm-11">{{description.other_unlocks}}</div>
-						</div>
-						<div class="row">
-							<div class="col-sm-1">Council Requests</div>
-							<div class="col-sm-11">{{description.council_requests}}</div>
+							<div class="col-sm-11">
+								{{description.child_techs}}
+							</div>
+							<div class="row">
+								<div class="col-sm-1">Foundry</div>
+								<div class="col-sm-11">{{description.foundry}}</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-1">Other</div>
+								<div class="col-sm-11">{{description.other_unlocks}}</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-1">Council Requests</div>
+								<div class="col-sm-11">{{description.council_requests}}</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -101,7 +121,19 @@
 		</div>
 	</div>
 
-	</body>
+	<nav class="navbar navbar-default navbar-fixed-bottom">
+		<div class="container-fluid">
+			<div class="collapse navbar-collapse">
+				<p class="navbar-text navbar-left">
+					All images and text Copyright Firaxis Games.
+				</p>
+				<p class="navbar-text navbar-right">
+					Michael Pickens, http://www.reddit.com/u/khariq
+				</p>
+			</div>
+		</div>
+	</nav>
+</body>
 
 	<script src="scripts/app.js" type="text/javascript"></script>
 	<script src="scripts/data_service.js" type="text/javascript"></script>
@@ -110,7 +142,7 @@
 
 	<script type="text/javascript">
 		$(function () {
-		  $('[data-toggle="popover"]').popover()
+			$('[data-toggle="tooltip"]').tooltip()
 		})
 	</script>
 </html>
