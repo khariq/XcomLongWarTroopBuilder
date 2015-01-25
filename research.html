@@ -13,8 +13,28 @@
 
 	<style type="text/css">
 		.lite-gray-bg {
-			background-color: #FDF5E6;
+			/*background-color: #FDF5E6;*/
 		}
+
+		.popout-menu {
+			background-color: #eee;
+			
+			border: 1px solid black;
+			border-top-left-radius: 10px;
+			border-bottom-left-radius: 10px;
+			
+			width: 25%;
+			height: 75%;
+
+			position: fixed;
+			top: 10;
+			right: 0;
+			z-index: 500;
+
+			padding: 10px;
+
+		}
+
 	</style>
     
 </head>
@@ -32,89 +52,127 @@
 		</div><!-- /.container-fluid -->
 	</nav>
 
+	<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#filterMenu" aria-expanded="false" aria-controls="filterMenu">
+	  Button with data-target
+	</button>
+
+	<div class="popout-menu collapse" id="filterMenu">
+		Filters
+	</div>
+
 	<div class="container-fluid">
-
-		<div class="panel panel-primary">
-			<div class="panel-heading">
-				<h3 class="panel-title">Research Plan</h3>
-			</div>
-			<div class="panel-body">
-				<div class="alert alert-success pull-left" ng-repeat="tech in researchedTechIds" style="margin: 5px;">
-					{{tech}}
-				</div>
-			</div>
-		</div>
 		<div class="row">
-			<div class="col-md-8" id="techDiv">
-
-				<div class="row" ng-repeat="techLevel in techTree">
-					<div class="col-md-12">
-						{{techLevel.level}}
-						<div style="margin: 5px;" class="btn-group" data-toggle="buttons" role="group" ng-repeat="tech in techLevel.techs">
-							<label class="btn btn-success" ng-class="techIsResearched(tech) ? 'btn-success' : techCanBeResearched(tech) ? 'btn-info' : 'btn-danger' " ng-click="researchTech(tech)"
-									data-container="body" data-toggle="tooltip" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-html="true" data-selector="tectDiv">
-								<input type="checkbox" name="tech_{{$parent.$index}}_{{$index}}" id="{{tech.id}}" />
-								{{tech.name}}
-							</label>
-
+			<div class="col-lg-8">
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						<h3 class="panel-title">Research Plan</h3>
+					</div>
+					<div class="panel-body">
+						<div class="alert alert-success pull-left" ng-repeat="tech in researchPath" style="margin: 5px;">
+							{{tech.name}}
 						</div>
 					</div>
 				</div>
 			</div>
+			<div class="col-lg-4">
+
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-8" id="techDiv">
+				<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+					<div class="panel panel-default" ng-repeat="techLevel in techTree" >
+						<div class="panel-heading" role="tab" id="heading{{$index}}">
+						  <h4 class="panel-title">
+						    <a data-toggle="collapse" data-parent="#accordion" href="#collapse{{$index}}" aria-expanded="true" aria-controls="collapse{{$index}}">
+						      Tech Level {{$index + 1}}
+						    </a>
+						  </h4>
+						</div>
+						<div id="collapse{{$index}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading{{$index}}">
+						  <div class="panel-body">
+						    <div style="margin: 5px;" class="btn-group" data-toggle="buttons" role="group" ng-repeat="tech in techLevel.techs">
+								<label class="btn btn-success" 
+								ng-class="techIsResearched(tech) ? 'btn-success' : techCanBeResearched(tech) ? 'btn-info' : 'btn-danger' " 
+								ng-click="researchTech(tech)"
+								ng-mouseover="showDescription(tech)"
+								ng-mouseout="hideDescription()"
+										data-container="body" data-toggle="tooltip" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-html="true" data-selector="tectDiv">
+									<input type="checkbox" name="tech_{{$parent.$index}}_{{$index}}" id="{{tech.id}}" />
+									{{tech.name}}
+								</label>
+							</div>
+						  </div>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
 			<div class="col-md-4">
 				<div class="alert alert-info" ng-show="descriptionVisible">
-					<div class="container">
+					<div class="container-fluid">
 						<div class="row">
-							<div class="col-sm-12">{{description.name}}</div>
-						</div>
-						<div class="row">
-							<div class="col-sm-12">Duration: {{description.duration}}</div>
+							<div class="col-sm-12">
+								<span class="pull-left">{{description.name}}</span>
+								<span class="pull-right">Duration: {{description.duration}}</span>
+							</div>
 						</div>
 						<div class="row">
 							<div class="col-sm-12">Cost</div>
 						</div>
 						<div class="row">
-							<div class="col-sm-1">Alien Alloys</div>
-							<div class="col-sm-11">{{description.costs.alien_alloys}}</div>
+							<div class="col-sm-4">Alien Alloys</div>
+							<div class="col-sm-8">{{description.costs.alien_alloys}}</div>
 						</div>
 						<div class="row">
-							<div class="col-sm-1">Elerium</div>
-							<div class="col-sm-11">{{description.costs.elerium}}</div>
+							<div class="col-sm-4">Elerium</div>
+							<div class="col-sm-8">{{description.costs.elerium}}</div>
 						</div>
 						<div class="row">
-							<div class="col-sm-1">Weapon Frags</div>
-							<div class="col-sm-11">{{description.costs.weapon_fragments}}</div>
+							<div class="col-sm-4">Weapon Frags</div>
+							<div class="col-sm-8">{{description.costs.weapon_fragments}}</div>
 						</div>
 						<div class="row">
-							<div class="col-sm-1">Meld</div>
-							<div class="col-sm-11">{{description.costs.meld}}</div>
+							<div class="col-sm-4">Meld</div>
+							<div class="col-sm-8">{{description.costs.meld}}</div>
 						</div>
 						<div class="row">
-							<div class="col-sm-1">Other</div>
-							<div class="col-sm-11">{{description.costs.other}}</div>
+							<div class="col-sm-4">Other</div>
+							<div class="col-sm-8">{{description.costs.other}}</div>
 
 						</div>
 						<div class="row">
 							<div class="col-sm-12">Unlocks</div>
 						</div>
 						<div class="row">
-							<div class="col-sm-1">Research</div>
-							<div class="col-sm-11">
+							<div class="col-sm-4">Research</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-12">
 								{{description.child_techs}}
 							</div>
-							<div class="row">
-								<div class="col-sm-1">Foundry</div>
-								<div class="col-sm-11">{{description.foundry}}</div>
-							</div>
-							<div class="row">
-								<div class="col-sm-1">Other</div>
-								<div class="col-sm-11">{{description.other_unlocks}}</div>
-							</div>
-							<div class="row">
-								<div class="col-sm-1">Council Requests</div>
-								<div class="col-sm-11">{{description.council_requests}}</div>
-							</div>
 						</div>
+						<div class="row">
+							<div class="col-sm-12">Foundry</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-12">{{description.foundry}}</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-12">Other</div>
+							</div>
+						<div class="row">
+							<div class="col-sm-12">{{description.other_unlocks}}</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-12">Council Requests</div>
+							</div>
+						<div class="row">
+							<div class="col-sm-12">{{description.council_requests}}</div>
+						</div>
+						
 					</div>
 				</div>
 			</div>
@@ -145,4 +203,6 @@
 			$('[data-toggle="tooltip"]').tooltip()
 		})
 	</script>
+
+
 </html>

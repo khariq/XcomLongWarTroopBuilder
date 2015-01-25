@@ -45,6 +45,26 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 		return ($scope.class != null && $scope.class.id === id);
 	}
 
+	$scope.isClassMec = function () {
+		return $scope.class != null && $scope.class.mec != null && $scope.class.mec === 1;
+	}
+
+	$scope.isClassShiv = function () {
+		return $scope.class != null && $scope.class.shiv != null && $scope.class.shiv === 1;
+	}
+
+	$scope.showTab = function(tabName) {
+		$scope.visibleTab = tabName;
+
+	}
+
+	$scope.hideTab = function (tabName) {
+		return (
+			(tabName === 'psionics' || tabName === 'gene') && $scope.isClassMec() ||
+			(tabName === 'psionics' || tabName === 'gene' || tabName === 'perks') && $scope.isClassShiv()
+			);
+	}
+
 	$scope.filterEquipment = function () {
 		DataService.getCommonJson().then(
 			// success
@@ -112,9 +132,7 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 		}
 
 		$scope.showVisibleOutput();
-
 	}
-
 	
 	$scope.resetBuild = function() {
 		$scope.build  = {
@@ -151,7 +169,6 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 		$scope.selectedEqipment = [];
 		$scope.icons = [];
 		$scope.selectedPerks = [];
-
 	}
 
 	$scope.showClass = function(id) {
@@ -270,7 +287,6 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 
 			}
 		);
-		
 	}
 
 	$scope.findClassPerk = function(perkId) {
@@ -484,6 +500,10 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 		$scope.showOutput($scope.visibleOutput);
 	}
 
+	////////////////////////////////////////////////
+	// evetns fired when a perk is hovered
+
+	// show handler for a class perl
 	$scope.showDetails = function(perk) {
 		$scope.showPerkDetails = true;
 		var classPerk = $scope.findClassPerk(perk.id);
@@ -514,26 +534,8 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 		$scope.showPerkDetails = false;
 	}
 
-	$scope.showTab = function(tabName) {
-		$scope.visibleTab = tabName;
-
-	}
-
-	$scope.hideTab = function (tabName) {
-		return (
-			(tabName === 'psionics' || tabName === 'gene') && $scope.isClassMec() ||
-			(tabName === 'psionics' || tabName === 'gene' || tabName === 'perks') && $scope.isClassShiv()
-			);
-	}
-
-	$scope.isClassMec = function () {
-		return $scope.class != null && $scope.class.mec != null && $scope.class.mec === 1;
-	}
-
-	$scope.isClassShiv = function () {
-		return $scope.class != null && $scope.class.shiv != null && $scope.class.shiv === 1;
-	}
-
+	// show handler for a psi perk or a gene mod
+	
 	$scope.showDescription = function(description) {
 		$scope.description = description;
 		$scope.displayDescription = true;
@@ -542,22 +544,10 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 	$scope.hideDescription = function() {
 		$scope.displayDescription = false;
 	}
+	////////////////////////////////////////////////
 
-	$scope.showVisibleOutput = function () {
-		$scope.showOutput($scope.visibleOutput);
-	}
-
-	$scope.showOutput = function (type) {
-		$scope.visibleOutput = type;
-
-		switch (type) {
-			case 'html': { $scope.formatted_build = $scope.buildHTMLOutput(); break; }
-			case 'text': { $scope.formatted_build = $scope.buildTextOutput(); break; }
-			case 'markdown': { $scope.formatted_build = $scope.buildMarkdownOutput(); break; }
-		} 
-
-	}
-
+	////////////////////////////////////////////////
+	// solider stat calculations
 	$scope.baseHealth = function () {
 		if ($scope.build == null || $scope.build.rank_ups == null)
 			return 0;
@@ -599,7 +589,6 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 		}
 
 		return hp;
-
 	}
 
 	$scope.bonusWill = function () {
@@ -729,6 +718,24 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 		}
 
 		return $scope.build.mobility + $scope.build.mod.mob + mobility;
+	}
+	////////////////////////////////////////////////
+
+	////////////////////////////////////////////////
+	// Build exporting
+	$scope.showVisibleOutput = function () {
+		$scope.showOutput($scope.visibleOutput);
+	}
+
+	$scope.showOutput = function (type) {
+		$scope.visibleOutput = type;
+
+		switch (type) {
+			case 'html': { $scope.formatted_build = $scope.buildHTMLOutput(); break; }
+			case 'text': { $scope.formatted_build = $scope.buildTextOutput(); break; }
+			case 'markdown': { $scope.formatted_build = $scope.buildMarkdownOutput(); break; }
+		} 
+
 	}
 
 	$scope.buildMarkdownOutput = function () {
@@ -930,7 +937,10 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 		}
 		return markup;
 	}
+	////////////////////////////////////////////////
 
+	////////////////////////////////////////////////
+	// Member properties
 	$scope.menuItems = [];
 	$scope.tabs = [];
 
@@ -949,7 +959,6 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 	$scope.visibleTab = "perks";
 	$scope.icons = [];
 	$scope.description = '';
-	$scope.displayDescription = false;
 
 	$scope.psionicsPerks = [];
 
@@ -966,8 +975,9 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 	$scope.selectedEqipment = [];
 	$scope.selectedClass = null;
 	$scope.selectedArmor = null;
+	$scope.displayDescription = false;
 
-	$scope.linkText = '';
 	$scope.formatted_build = $scope.buildMarkdownOutput();
 	$scope.visibleOutput = 'markdown';
+	////////////////////////////////////////////////
 });

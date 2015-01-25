@@ -24,7 +24,10 @@ xcomApp.controller('researchController', function($scope, $http, DataService) {
 			}
 		}
 
-		$scope.researchPath.push(tech);
+		var result = $.grep($scope.researchPath, function (e) { return e.id == tech.id; } );
+		if (result == null || result.length == 0) {
+			$scope.researchPath.push(tech);
+		}
 
 		$scope.researchedTechIds.push(tech.id);
 
@@ -58,7 +61,7 @@ xcomApp.controller('researchController', function($scope, $http, DataService) {
 	$scope.showDescription = function(tech) {
 
 		$scope.descriptionVisible = true;
-		$scope.description.title = tech.title;
+		$scope.description.name = tech.name;
 		$scope.description.duration = $scope.duration(tech);
 
 		$scope.description.costs = {
@@ -94,7 +97,7 @@ xcomApp.controller('researchController', function($scope, $http, DataService) {
 
 					default: {
 						other.push(
-							tech.costs[i].quantity + " " + tech.costs[i].item 
+							tech.costs[i].quantity + " " + tech.costs[i].id 
 						);
 					}
 				}
@@ -110,7 +113,7 @@ xcomApp.controller('researchController', function($scope, $http, DataService) {
 				titles.push(arr[i].id);
 			}
 
-			$scope.description.child_techs = titles.join(',');
+			$scope.description.child_techs = titles.join('\n');
 
 			arr = tech.unlocks.filter(function(t) { return t.type == "foundry" } )
 			titles = [];
@@ -191,10 +194,23 @@ xcomApp.controller('researchController', function($scope, $http, DataService) {
 
 			$scope.techTree = $scope.techTree.filter(function (t) { return t.techs.length > 0; });
 
+			var levels = [];
+			levels.push( $scope.techTree.filter(function (l) { return l.level == 1; } ) );
+			levels.push( $scope.techTree.filter(function (l) { return l.level == 2; } ) );
+			levels.push( $scope.techTree.filter(function (l) { return l.level == 3; } ) );
+			levels.push( $scope.techTree.filter(function (l) { return l.level == 4; } ) );
+			levels.push( $scope.techTree.filter(function (l) { return l.level == 5; } ) );
+			levels.push( $scope.techTree.filter(function (l) { return l.level == 6; } ) );
 
-			$scope.techTree = $scope.techTree.sort(function (a, b) {
-				return (parseInt(a.level) - parseInt(b.level));
-			});
+			for (var i = 0; i < levels.length; i++){
+				var l = [];
+				for (var j = 0; j < levels[i].length; j++) {
+					l = l.concat(levels[i][j].techs);
+				}
+				levels[i] = { "level" : i, "techs" : l };
+			}
+
+			$scope.techTree = levels;
 			
 		}, 
         // failure

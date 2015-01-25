@@ -8,21 +8,30 @@ xcomApp.factory('DataService', function($http, $q) {
 		self.geneModsJson = null;
 		self.techs = null;
 
+		// self.getCommonJson = function() {
+		// 	var deferred = $q.defer();
+		// 	if (self.commonJson !== null) {
+		// 		deferred.resolve(self.commonJson);
+		// 	} else {
+		// 		$http.get('data/common.json')
+		// 			.success(function(data) {
+		// 				self.commonJson = data;
+		// 				deferred.resolve(data);
+		// 			})
+		// 			.error(function(response) { 
+		// 				deferred.reject(response);
+		// 			});
+		// 	}
+		// 	return deferred.promise;
+		// }
+
 		self.getCommonJson = function() {
-			var deferred = $q.defer();
-			if (self.commonJson !== null) {
-				deferred.resolve(self.commonJson);
-			} else {
-				$http.get('data/common.json')
-					.success(function(data) {
-						self.commonJson = data;
-						deferred.resolve(data);
-					})
-					.error(function(response) { 
-						deferred.reject(response);
-					});
+			if (!self.commonJson) {
+				self.commonJson = $http.get('data/common.json');
 			}
-			return deferred.promise;
+			return self.commonJson.then(function(response){
+				return response.data;
+			});
 		}
 		
 		var classJson = [];
