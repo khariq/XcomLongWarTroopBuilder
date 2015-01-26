@@ -14,7 +14,22 @@ xcomApp.controller('researchController', function($scope, $http, DataService) {
 	$scope.techJson = null;
 
 	$scope.description = {};
+
+	$scope.baseSettings = {
+		'scientists' : 10,
+		'labs' : 0,
+		'adjacencies' : 0
+	}
 	
+	$scope.bom = {
+		"duration" : 0,
+		"alien_alloys" : 0,
+		"other" : "",
+		"elerium" : 0,
+		"weapon_fragments" : 0,
+		"meld" : 0
+	}
+
 	$scope.researchTech = function(tech) {
 
 		if ($scope.techCanBeResearched(tech) == false) {
@@ -32,6 +47,35 @@ xcomApp.controller('researchController', function($scope, $http, DataService) {
 		}
 
 		$scope.researchedTechIds.push(tech.id);
+
+		$scope.bom.duration += $scope.duration(tech);
+		
+		var query = tech.costs.filter(function(c) { return c.id == "alien_alloys" });
+		if (query.length > 0) {
+			$scope.bom.alien_alloys += query[0].quantity;
+		}
+
+		query = tech.costs.filter(function(c) { return c.id == "elerium" });
+		if (query.length > 0) {
+			$scope.bom.elerium += query[0].quantity;
+		}
+
+		query = tech.costs.filter(function(c) { return c.id == "weapon_fragments" });
+		if (query.length > 0) {
+			$scope.bom.weapon_fragments += query[0].quantity;
+		}
+
+		query = tech.costs.filter(function(c) { return c.id == "meld" });
+		if (query.length > 0) {
+			$scope.bom.meld += query[0].quantity;
+		}
+
+		query = tech.costs.filter(function(c) { return c.id != "meld" && c.id != "weapon_fragments" && c.id != "elerium" && c.id != "alien_alloys" });
+		if (query.length > 0) {
+			for (var i = 0; i < query.length; i++) {
+				$scope.bom.other = $scope.bom.other + ", " + query[i].quantity + " " + query[i].id;
+			}
+		}
 
 	}
 
@@ -81,7 +125,7 @@ xcomApp.controller('researchController', function($scope, $http, DataService) {
 		var techs = ($scope.techTree.filter(function (t) { return t.level == level; }))[0].techs;
 		var i = 0;
 		for (var j = 0; j < techs.length; j++) {
-			if (!$scope.techCanBeResearched(techs[j])) {
+			if (!$scope.techCanBeResearched(techs[j]) && $scope.techIsResearched(techs[j]) == false ) {
 				i++;
 			}
 		}
@@ -89,7 +133,16 @@ xcomApp.controller('researchController', function($scope, $http, DataService) {
 	}
 
 	$scope.duration = function(tech) {
-		return tech.duration;
+
+		var multiplier = 30 / $scope.baseSettings.scientists;
+		var d = tech.duration;
+		d *= multiplier;
+
+		multiplier = (0.2 * $scope.baseSettings.labs) + (0.1 * $scope.baseSettings.adjacencies);
+
+		d *= (1 - multiplier);
+
+		return d;
 	}
 
 	$scope.descriptionVisible = false;

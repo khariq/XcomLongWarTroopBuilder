@@ -47,15 +47,44 @@
 						<h3 class="panel-title">Research Plan</h3>
 					</div>
 					<div class="panel-body">
+						<table class="table table-condensed">
+							<tr>
+								<th>Bill of Materials</th>
+								<th>Research Time</th>
+								<td>{{bom.duration}} days</td>
+								<th>Alien Alloys</th>
+								<td>{{bom.alien_alloys}}</td>
+								<th>Weapon Fragments</td>
+								<td>{{bom.weapon_fragments}}</td>
+								<th>Elerium</th>
+								<td>{{bom.elerium}}</td>
+								<th>Meld</th>
+								<td>{{bom.meld}}</td>
+							</tr>
+							<tr>
+								<th>Other</th>
+								<td colspan="10">
+									{{bom.other}}
+								</td>
+							</tr>
+						</table>
+					
 						<div class="alert alert-success pull-left" ng-repeat="tech in researchPath" style="margin: 5px;">
 							{{tech.name}}
 						</div>
 					</div>
 				</div>
-				<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#filterMenu" aria-expanded="false" aria-controls="filterMenu">
-					Filter Technologies
-				</button>
 
+				<form class="form-inline">
+					<div class="form-group">
+						<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#filterMenu" aria-expanded="false" aria-controls="filterMenu">
+							Filter Technologies
+						</button>
+						<span>Scientists</span> <input class="form-control" type="number" ng-model="baseSettings.scientists" >
+						<span>Labs</span> <input class="form-control" type="number" ng-model="baseSettings.labs" >
+						<span>Adjacenies</span> <input class="form-control" type="number" ng-model="baseSettings.adjacencies" >
+					</div>
+				</form>
 				<div class="collapse" id="filterMenu">
 					<div class="panel panel-default">
 						
