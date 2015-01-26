@@ -7,6 +7,8 @@ xcomApp.controller('researchController', function($scope, $http, DataService) {
 
 	$scope.allTechs = [];
 
+	$scope.allUnlocks = [];
+
 	$scope.techTree = [];
 
 	$scope.techJson = null;
@@ -52,6 +54,39 @@ xcomApp.controller('researchController', function($scope, $http, DataService) {
 		return allPrereqsSatisfied && !$scope.techIsResearched(tech);
 
 	};
+
+	$scope.researchedAtLevel = function (level) {
+		var techs = ($scope.techTree.filter(function (t) { return t.level == level; }))[0].techs;
+		var i = 0;
+		for (var j = 0; j < techs.length; j++) {
+			if ($scope.techIsResearched(techs[j])) {
+				i++;
+			}
+		}
+		return i;
+	}
+
+	$scope.availableAtLevel = function (level) {
+		var techs = ($scope.techTree.filter(function (t) { return t.level == level; }))[0].techs;
+		var i = 0;
+		for (var j = 0; j < techs.length; j++) {
+			if ($scope.techCanBeResearched(techs[j]) && !$scope.techIsResearched(techs[j])) {
+				i++;
+			}
+		}
+		return i;
+	}
+
+	$scope.unavailableAtLevel = function (level) {
+		var techs = ($scope.techTree.filter(function (t) { return t.level == level; }))[0].techs;
+		var i = 0;
+		for (var j = 0; j < techs.length; j++) {
+			if (!$scope.techCanBeResearched(techs[j])) {
+				i++;
+			}
+		}
+		return i;
+	}
 
 	$scope.duration = function(tech) {
 		return tech.duration;
@@ -212,6 +247,20 @@ xcomApp.controller('researchController', function($scope, $http, DataService) {
 
 			$scope.techTree = levels;
 			
+			
+			for (var i = 0; i < $scope.allTechs.length; i++) {
+				if ($scope.allTechs[i].unlocks != null) {
+					for (var j = 0; j < $scope.allTechs[i].unlocks.length; j++) {
+						if ($scope.allTechs[i].unlocks[j] != '-' && $scope.allTechs[i].unlocks[j].type != 'research') {
+							var dupe = $scope.allUnlocks.filter(function (u) { return u.id == $scope.allTechs[i].unlocks[j].id });
+							if (dupe == null || dupe.length == 0) {
+								$scope.allUnlocks.push({ 'tech': $scope.allTechs[i].name, 'type': $scope.allTechs[i].unlocks[j].type, 'id': $scope.allTechs[i].unlocks[j].id, 'opt': $scope.allTechs[i].unlocks[j].id + ' => ' + $scope.allTechs[i].name });
+							}
+						}
+					}
+				}
+			}
+
 		}, 
         // failure
         function (commonJson) {
