@@ -132,15 +132,24 @@ xcomApp.controller('researchController', function($scope, $http, DataService) {
 		return i;
 	}
 
+	$scope.durationLabMultipler = function () {
+		return 1 - (multiplier = (0.2 * $scope.baseSettings.labs) + (0.1 * $scope.baseSettings.adjacencies));
+	}
+
+	$scope.scientistDurtionMultiplier = function () {
+		return multiplier = 30 / $scope.baseSettings.scientists;
+	}
+
 	$scope.duration = function(tech) {
 
-		var multiplier = 30 / $scope.baseSettings.scientists;
+		var multipler =  $scope.scientistDurtionMultiplier();
+
 		var d = tech.duration;
 		d *= multiplier;
 
 		multiplier = (0.2 * $scope.baseSettings.labs) + (0.1 * $scope.baseSettings.adjacencies);
 
-		d *= (1 - multiplier);
+		d *= $scope.durationLabMultipler();
 
 		return d;
 	}
