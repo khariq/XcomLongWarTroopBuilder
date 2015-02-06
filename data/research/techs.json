@@ -1746,24 +1746,16 @@
         "id": "alien_biocybernetics"
       },
       {
-        "type": "foundry",
-        "id": "-"
-      },
-      {
         "type": "loadout",
         "id": "smartgun_kit"
       },
       {
-        "type": "loadout",
+        "type": "facility",
         "id": "satellite_nexus"
       },
       {
         "type": "other",
         "id": "ufo_flight_computers"
-      },
-      {
-        "type": "other",
-        "id": "soldiers_/_scientists)"
       }
     ],
     "credit": "-",

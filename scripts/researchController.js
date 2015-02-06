@@ -5,6 +5,8 @@ xcomApp.controller('researchController', function($scope, $http, DataService) {
 
 	$scope.researchedTechIds = [];
 
+	$scope.availableTechs = [];
+
 	$scope.allTechs = [];
 
 	$scope.allUnlocks = [];
@@ -14,6 +16,80 @@ xcomApp.controller('researchController', function($scope, $http, DataService) {
 	$scope.techJson = null;
 
 	$scope.description = {};
+
+	$scope.filter_autopsies = false;
+	$scope.filter_interrogations = false;
+	$scope.filter_ufo = false;
+	$scope.filter_xenology = true;
+	$scope.filter_materials = true;
+	$scope.filter_armor = true;
+	$scope.filter_laser = true;
+	$scope.filter_plasma = true;
+	$scope.filter_name_search = "";
+	$scope.filter_unlocks_item_search = "";
+	
+	$scope.applyFilters = function (array) {
+
+		if ($scope.filter_name_search != "") {
+
+			array = $scope.allTechs.filter(function (tech) { return tech.name.toLowerCase().indexOf($scope.filter_name_search.toLowerCase()) > -1; });
+
+		} else if ($scope.filter_unlocks_item_search != "") {
+
+			array = $scope.allTechs.filter(function (tech) {
+				if (tech.unlocks != null) {
+					var a = $.grep(tech.unlocks, function (unlock) { return unlock.id.toLowerCase().indexOf($scope.filter_unlocks_item_search.toLowerCase()) >= 0; });
+					if (a != null && a.length > 0) {
+						return true;
+					}
+				} else {
+					return false;
+				}
+				return false;
+			});
+
+		} else if ($scope.filter_unlocks_item_search != "") {
+
+			array = $scope.allTechs.filter(function (tech) { return tech.name.toLowerCase().indexOf($scope.filter_name_search.toLowerCase()) > -1; });
+
+		} else {
+
+			if ($scope.filter_autopsies == false) {
+				array = array.filter(function (tech) { return tech.type != "Alien Autopsies" });
+			}
+
+			if ($scope.filter_interrogations == false) {
+				array = array.filter(function (tech) { return tech.type != "Alien Interrogations" });
+			}
+
+			if ($scope.filter_ufo == false) {
+				array = array.filter(function (tech) { return tech.type != "UFO Analysis" });
+			}
+
+			if ($scope.filter_xenology == false) {
+				array = array.filter(function (tech) { return tech.type != "Xenology" });
+			}
+
+			if ($scope.filter_materials == false) {
+				array = array.filter(function (tech) { return tech.type != "Materials and Aerospace" });
+			}
+
+			if ($scope.filter_armor == false) {
+				array = array.filter(function (tech) { return tech.type != "Armor and SHIVs" });
+			}
+
+			if ($scope.filter_laser == false) {
+				array = array.filter(function (tech) { return tech.type != "Laser and Gauss Weapons" });
+			}
+
+			if ($scope.filter_plasma == false) {
+				array = array.filter(function (tech) { return tech.type != "Plasma Weapons" });
+			}
+		}
+
+		return array;
+
+	}
 
 	$scope.baseSettings = {
 		'scientists' : 10,
@@ -48,6 +124,15 @@ xcomApp.controller('researchController', function($scope, $http, DataService) {
 
 		$scope.researchedTechIds.push(tech.id);
 
+		$scope.availableTechs = [];
+
+		for (var i = 0; i < $scope.allTechs.length; i++) {
+			var next_tech = $scope.allTechs[i];
+			if ($scope.techIsResearched(next_tech) == false && $scope.techCanBeResearched(next_tech)) {
+				$scope.availableTechs.push(next_tech);
+			}
+		}
+
 		$scope.bom.duration += $scope.duration(tech);
 		
 		var query = tech.costs.filter(function(c) { return c.id == "alien_alloys" });
@@ -73,9 +158,16 @@ xcomApp.controller('researchController', function($scope, $http, DataService) {
 		query = tech.costs.filter(function(c) { return c.id != "meld" && c.id != "weapon_fragments" && c.id != "elerium" && c.id != "alien_alloys" });
 		if (query.length > 0) {
 			for (var i = 0; i < query.length; i++) {
-				$scope.bom.other = $scope.bom.other + ", " + query[i].quantity + " " + query[i].id;
+				if ($scope.bom.other != null && $scope.bom.other.length > 0) {
+					$scope.bom.other += ", ";
+				}
+				$scope.bom.other += +query[i].quantity + " " + query[i].id;
 			}
 		}
+		$scope.filter_name_search = ""
+	}
+
+	$scope.removeTech = function (tech) {
 
 	}
 
@@ -91,6 +183,8 @@ xcomApp.controller('researchController', function($scope, $http, DataService) {
 		var allPrereqsSatisfied = true;
 		for (var i = 0; i < tech.prereq.length; i++) {
 			if ($.inArray(tech.prereq[i], $scope.researchedTechIds) <0) {
+				if (tech.prereq[i] == $scope.hoverTech)
+					continue;
 				allPrereqsSatisfied = false;
 				break;
 			}
@@ -137,12 +231,12 @@ xcomApp.controller('researchController', function($scope, $http, DataService) {
 	}
 
 	$scope.scientistDurtionMultiplier = function () {
-		return multiplier = 30 / $scope.baseSettings.scientists;
+		return 30 / $scope.baseSettings.scientists;
 	}
 
 	$scope.duration = function(tech) {
 
-		var multipler =  $scope.scientistDurtionMultiplier();
+		var multiplier =  $scope.scientistDurtionMultiplier();
 
 		var d = tech.duration;
 		d *= multiplier;
@@ -151,13 +245,14 @@ xcomApp.controller('researchController', function($scope, $http, DataService) {
 
 		d *= $scope.durationLabMultipler();
 
-		return d;
+		return Math.round(d);
 	}
 
 	$scope.descriptionVisible = false;
 	$scope.showDescription = function(tech) {
 
 		$scope.descriptionVisible = true;
+		$scope.hoverTech = tech.id;
 		$scope.description.name = tech.name;
 		$scope.description.duration = $scope.duration(tech);
 
@@ -234,17 +329,33 @@ xcomApp.controller('researchController', function($scope, $http, DataService) {
 			$scope.description.council_requests = titles.join(', ');
 		}
 
+		$scope.unlockedTechs = [];
+		var ids = tech.unlocks.filter(function (u) { return u.type == "research" });
+		$scope.unlockedTechs = $scope.allTechs.filter(function (t) {
+			for (var i = 0; i < ids.length; i++) {
+				if (ids[i].id == t.id) {
+					return true;
+				}
+			}
+			return false;
+		});
+
+		$scope.unlockedFoundry = tech.unlocks.filter(function (f) { return f.type == "foundry"; });
+		$scope.unlockedLoadout = tech.unlocks.filter(function (f) { return f.type == "loadout"; });
+		$scope.unlockedFacility = tech.unlocks.filter(function (f) { return f.type == "facility"; });
+		$scope.unlockedOther = tech.unlocks.filter(function (f) { return f.type == "other"; });
 	}
 
 	$scope.hideDescription = function() {
 		$scope.descriptionVisible = false;
+		$scope.unlockedTechs = [];
+		$scope.unlockedFoundry = [];
 	}
 
 	$scope.researchPlan = function () {
 		return $scope.researchedTechIds.join(' => ');
 	}
-
-
+	
 	$scope.addTechArrayToTreeAtLevel = function (level, techs, techJson, seenTechs) {
 
 		for (var i = 0; i < techs.length; i++) {
@@ -282,6 +393,8 @@ xcomApp.controller('researchController', function($scope, $http, DataService) {
 			
 			var techs = techJson.techs.filter(function (tech) { return tech.prereq == null || tech.prereq.length == 0 });
 			var seenTechs = [];
+
+			$scope.availableTechs = techs;
 
 			$scope.techTree.push({ "level" : 1, "parent" : null, "techs" : techs });
 
