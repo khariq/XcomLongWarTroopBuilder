@@ -27,6 +27,7 @@ xcomApp.controller('researchController', function($scope, $http, DataService) {
 	$scope.filter_plasma = true;
 	$scope.filter_name_search = "";
 	$scope.filter_unlocks_item_search = "";
+	$scope.filter_input_item_search = "";
 	
 	$scope.applyFilters = function (array) {
 
@@ -48,10 +49,19 @@ xcomApp.controller('researchController', function($scope, $http, DataService) {
 				return false;
 			});
 
-		} else if ($scope.filter_unlocks_item_search != "") {
+		} else if ($scope.filter_input_item_search != "") {
 
-			array = $scope.allTechs.filter(function (tech) { return tech.name.toLowerCase().indexOf($scope.filter_name_search.toLowerCase()) > -1; });
-
+			array = $scope.allTechs.filter(function (tech) {
+				if (tech.costs != null) {
+					var a = $.grep(tech.costs, function (cost) { return cost.id.toLowerCase().indexOf($scope.filter_input_item_search.toLowerCase()) >= 0; });
+					if (a != null && a.length > 0) {
+						return true;
+					}
+				} else {
+					return false;
+				}
+				return false;
+			});
 		} else {
 
 			if ($scope.filter_autopsies == false) {
@@ -104,6 +114,17 @@ xcomApp.controller('researchController', function($scope, $http, DataService) {
 		"elerium" : 0,
 		"weapon_fragments" : 0,
 		"meld" : 0
+	}
+
+	$scope.resetBillOfMaterials = function() {
+		$scope.bom = {
+			"duration" : 0,
+			"alien_alloys" : 0,
+			"other" : "",
+			"elerium" : 0,
+			"weapon_fragments" : 0,
+			"meld" : 0
+		};
 	}
 
 	$scope.researchTech = function(tech) {
@@ -198,28 +219,6 @@ xcomApp.controller('researchController', function($scope, $http, DataService) {
 		var i = 0;
 		for (var j = 0; j < techs.length; j++) {
 			if ($scope.techIsResearched(techs[j])) {
-				i++;
-			}
-		}
-		return i;
-	}
-
-	$scope.availableAtLevel = function (level) {
-		var techs = ($scope.techTree.filter(function (t) { return t.level == level; }))[0].techs;
-		var i = 0;
-		for (var j = 0; j < techs.length; j++) {
-			if ($scope.techCanBeResearched(techs[j]) && !$scope.techIsResearched(techs[j])) {
-				i++;
-			}
-		}
-		return i;
-	}
-
-	$scope.unavailableAtLevel = function (level) {
-		var techs = ($scope.techTree.filter(function (t) { return t.level == level; }))[0].techs;
-		var i = 0;
-		for (var j = 0; j < techs.length; j++) {
-			if (!$scope.techCanBeResearched(techs[j]) && $scope.techIsResearched(techs[j]) == false ) {
 				i++;
 			}
 		}

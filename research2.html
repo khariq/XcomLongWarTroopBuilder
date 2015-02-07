@@ -34,9 +34,91 @@
 					<div class="panel-heading">
 						<h3 class="panel-title">Research Plan</h4>
 					</div>
-					<div class="panel-body">
-						<div class="alert alert-success pull-left" ng-repeat="tech in researchPath" style="margin: 5px;" ng-click="removeTech(tech)">
-							{{tech.name}} <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+					<div class="panel-body container-fluid">
+						<div class="row">
+							<div class="col-md-8">
+								<div class="alert alert-success pull-left" ng-repeat="tech in researchPath" style="margin: 5px;" ng-click="removeTech(tech)">
+									{{tech.name}} <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+								</div>
+							</div>
+							<div class="col-lg-4">
+								<button class="btn btn-info btn-sm" style="width: 100%;" type="button" data-toggle="collapse" data-target="#baseSettings" aria-expanded="false" aria-controls="baseSettings">Change Base Settings</button>
+								<div class="collapse" id="baseSettings" >
+	  								<div class="well">
+										<form class="form-inline">
+									<div class="form-group">
+										<div class="row">
+											<div class="col-md-3">
+												<span>Scientists</span> 
+											</div>
+
+											<div class="col-md-9">
+												<input class="form-control" type="number" ng-model="baseSettings.scientists">
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-3">
+												<span>Labs</span> 	
+											</div>
+
+											<div class="col-md-9">
+												<input class="form-control" type="number" ng-model="baseSettings.labs">
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-3">
+												<span>Adjacenies</span>
+											</div>
+
+											<div class="col-md-9">
+												<input class="form-control" type="number" ng-model="baseSettings.adjacencies">
+											</div>
+										</div>
+									</div>
+										</form>
+									</div>
+									<p>
+										<span><b>Scientist Discount:</b> {{scientistDurtionMultiplier() * 100}} %</span><br />
+										<span><b>Lab Discount:</b> {{(1 - durationLabMultipler()) * 100}} % </span>
+									</p>
+								</div>
+								<div style="margin: 2px">
+								</div>
+								<button class="btn btn-info btn-sm" style="width: 100%;" type="button" data-toggle="collapse" data-target="#billOfMaterials" aria-expanded="false" aria-controls="billOfMaterials">View Bill of Materials</button>
+								<div class="collapse" id="billOfMaterials">
+									<table class="table table-condensed">
+										<tr>
+											<th colspan="3">Bill of Materials</th>
+											<th>
+												<button class="btn btn-success btn-sm pull-right" ng-click="resetBillOfMaterials()">Reset</button>
+											</th>
+										</tr>
+										<tr>
+											<th>Research Time</th>
+											<td>{{bom.duration}} days</td>
+											<th>Alien Alloys</th>
+											<td>{{bom.alien_alloys}}</td>
+										</tr>
+										<tr>
+											<th>Weapon Fragments</td>
+											<td>{{bom.weapon_fragments}}</td>
+											<th>Elerium</th>
+											<td>{{bom.elerium}}</td>
+										</tr>
+										<tr>
+											<th>Meld</th>
+											<td colspan="3">{{bom.meld}}</td>
+										</tr>
+										<tr>
+											<th>Other</th>
+											<td colspan="3">
+												{{bom.other}}
+											</td>
+										</tr>
+										
+									</table>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -47,7 +129,7 @@
 					<div class="panel panel-success">
 						<div class="panel-heading"><h3 class="panel-title">Available Technologies</h4></div>
 						<div class="panel-body">
-							<div class="dropdown">
+							<div class="dropdown" style="margin-top: 2px;">
 								<button class="btn btn-sm btn-success dropdown-toggle" style="width: 100%;" type="button" id="fastForwardDropdown" data-toggle="dropdown" aria-expanded="true">Fast Forward <span class="caret"></span> </button>
 								<ul class="dropdown-menu" role="menu" aria-labelledby="fastForwardDropdown" id="fastForward">
 									<li role="presentation" ng-repeat="tech in applyFilters(allTechs)"><a role="menuitem" tabindex="-1" href="#" ng-click="researchTech(tech)" ng-mouseover="showDescription(tech)" ng-mouseout="hideDescription()">{{tech.name}}</a></li>
