@@ -37,12 +37,13 @@ xcomApp.factory('DataService', function($http, $q) {
 		var classJson = [];
 		
 		self.getClassJson = function(className) {
-			this.getCommonJson();
-			for (var i = 0; i < this.commonJson.classes.length; i++) {
-				if (this.commonJson.classes[i].id === className) {
-					return this.commonJson.classes[i];
+			this.getCommonJson().then(function (json) {
+				for (var i = 0; i < json.classes.length; i++) {
+					if (json.classes[i].id === className) {
+						return json.classes[i];
+					}
 				}
-			}
+			});
 		}
 
 		self.getPsionics = function() {

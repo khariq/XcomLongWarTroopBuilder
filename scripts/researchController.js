@@ -442,4 +442,25 @@ xcomApp.controller('researchController', function($scope, $http, DataService) {
 		}
 	);
 
+	DataService.getCommonJson().then(
+        // success
+        function (commonJson) { //success
+        	$scope.menuItems = commonJson.classes;
+
+        	$scope.soliders = commonJson.classes.filter(function (_class) { return _class.mec !== 1 && _class.shiv !== 1; });
+        	$scope.mecTroopers = commonJson.classes.filter(function (_class) { return _class.mec !== null && _class.mec === 1; });
+        	$scope.shivs = commonJson.classes.filter(function (_class) { return _class.shiv !== null && _class.shiv === 1; });
+
+        	$scope.tabs = commonJson.tabs;
+        	$scope.ranks = commonJson.ranks;
+        	$scope.armors = commonJson.armors;
+
+        	$scope.commonJson = commonJson;
+        },
+        // failure
+        function (commonJson) {
+
+        }
+	);
+
 });

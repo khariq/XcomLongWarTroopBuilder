@@ -180,8 +180,14 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
             // success
             function (commonJson) {
 				
-            	var classJson = DataService.getClassJson(id);
+            	var classJson = {};
 
+            	for (var i = 0; i < commonJson.classes.length; i++) {
+            		if (commonJson.classes[i].id === id) {
+            			classJson = commonJson.classes[i];
+            			break;
+            		}
+            	}
             	$scope.class = classJson;
 
             	$scope.selectedArmor = $scope.commonJson.armors.filter(function(ar) { return ar.name === "Tac Vest" } )[0];
