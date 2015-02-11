@@ -94,46 +94,10 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 		);
 	}
 
-	$scope.eqSlotOnePerk = null;
-	$scope.eqSlotTwoPerk = null;
-
-	$scope.equipmentChanged = function() {
-		
-		if ($scope.equipmentSlotOne == null) {
-			if ($scope.eqSlotOnePerk != null) {
-
-				$scope.losePerk(-1, $scope.eqSlotOnePerk);
-			}
-		}
-		else if ($scope.equipmentSlotOne.perk != null) {
-			if ($scope.eqSlotOnePerk != null) {
-				$scope.losePerk(-1, $scope.eqSlotOnePerk);
-			}
-
-			var perk = $scope.commonJson.perks.filter(function(p){return p.id === $scope.equipmentSlotOne.perk;})[0];
-
-			$scope.gainPerk(-1, perk);
-			$scope.eqSlotOnePerk = perk;
-		}
-
-		if ($scope.equipmentSlotTwo == null) {
-			if ($scope.eqSlotTwoPerk != null) {
-				$scope.losePerk($scope.eqSlotTwoPerk);
-			}
-		}
-		else if ($scope.equipmentSlotTwo.perk != null) {
-			if ($scope.eqSlotTwoPerk != null) {
-				$scope.losePerk($scope.eqSlotTwoPerk);
-			}
-			var perk = $scope.commonJson.perks.filter(function(p){return p.id === $scope.equipmentSlotTwo.perk;})[0];
-
-			$scope.gainPerk(-1, perk);
-			$scope.eqSlotOnePerk = perk;
-		}
-
-		$scope.showVisibleOutput();
+	$scope.addSelectedEquipment = function() {
+		$scope.equipedItems.push($scope.selectedEquipment);
 	}
-	
+
 	$scope.resetBuild = function() {
 		$scope.build  = {
 
@@ -586,12 +550,10 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 			}
 		}
 
-		if ($scope.equipmentSlotOne != null) {
-			hp += $scope.equipmentSlotOne.hp;
-		}
-
-		if ($scope.equipmentSlotTwo != null) {
-			hp += $scope.equipmentSlotTwo.hp;
+		if ($scope.equipedItems.length > 0) {
+			for (var i = 0; i < $scope.equipedItems.length; i++) {
+				hp += $scope.equipedItems[i].hp;
+			}
 		}
 
 		return hp;
@@ -602,12 +564,11 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 		if ($scope.selectedArmor != null) {
 			will += $scope.selectedArmor.will;
 		}
-		if ($scope.equipmentSlotOne != null) {
-			will += $scope.equipmentSlotOne.will;
-		}
 
-		if ($scope.equipmentSlotTwo != null) {
-			will += $scope.equipmentSlotTwo.will;
+		if ($scope.equipedItems.length > 0) {
+			for (var i = 0; i < $scope.equipedItems.length; i++) {
+				will += $scope.equipedItems[i].will;
+			}
 		}
 
 		if ($scope.build != null && $scope.build.mod != null && $scope.build.mod.will != null) {
@@ -639,13 +600,12 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 			defense += $scope.selectedArmor.defense;
 		}
 
-		if ($scope.equipmentSlotOne != null && $scope.equipmentSlotOne.defense != null) {
-			defense += $scope.equipmentSlotOne.defense;
+		if ($scope.equipedItems.length > 0) {
+			for (var i = 0; i < $scope.equipedItems.length; i++) {
+				defense += $scope.equipedItems[i].defense;
+			}
 		}
 
-		if ($scope.equipmentSlotTwo != null && $scope.equipmentSlotTwo.defense != null) {
-			defense += $scope.equipmentSlotTwo.defense;
-		}
 		return $scope.build.defense + defense;
 	}
 	
@@ -659,12 +619,10 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 			damage_reduction += $scope.selectedArmor.damage_reduction;
 		}
 
-		if ($scope.equipmentSlotOne != null) {
-			damage_reduction += $scope.equipmentSlotOne.damage_reduction;
-		}
-
-		if ($scope.equipmentSlotTwo != null) {
-			damage_reduction += $scope.equipmentSlotTwo.damage_reduction;
+		if ($scope.equipedItems.length > 0) {
+			for (var i = 0; i < $scope.equipedItems.length; i++) {
+				damage_reduction += $scope.equipedItems[i].damage_reduction;
+			}
 		}
 
 		if ($scope.selectedGeneMods != null) {
@@ -686,12 +644,10 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 			aim += $scope.selectedPrimaryWeapon.aim_mod;
 		}
 
-		if ($scope.equipmentSlotOne != null) {
-			aim += $scope.equipmentSlotOne.aim;
-		}
-
-		if ($scope.equipmentSlotTwo != null) {
-			aim += $scope.equipmentSlotTwo.aim;
+		if ($scope.equipedItems.length > 0) {
+			for (var i = 0; i < $scope.equipedItems.length; i++) {
+				aim += $scope.equipedItems[i].aim;
+			}
 		}
 
 		if ($scope.build.mod != null) {
@@ -715,12 +671,10 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 			mobility += $scope.selectedArmor.mobility;
 		}
 
-		if ($scope.equipmentSlotOne != null) {
-			mobility += $scope.equipmentSlotOne.mobility;
-		}
-
-		if ($scope.equipmentSlotTwo != null) {
-			mobility += $scope.equipmentSlotTwo.mobility;
+		if ($scope.equipedItems.length > 0) {
+			for (var i = 0; i < $scope.equipedItems.length; i++) {
+				mobility += $scope.equipedItems[i].mobility;
+			}
 		}
 
 		return $scope.build.mobility + $scope.build.mod.mob + mobility;
@@ -790,22 +744,16 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 				markup += '\r\n';
 			}
 
-			if ($scope.equipmentSlotOne != null) {
-				markup += 'Equipment (1)|';
-				markup += $scope.equipmentSlotOne.name + '|';
-				if ($scope.equipmentSlotOne.notes != null) {
-					markup += $scope.equipmentSlotOne.notes;
-				}
-				markup += '\r\n';
-			}
 
-			if ($scope.equipmentSlotTwo != null) {
-				markup += 'Equipment (2)|';
-				markup += $scope.equipmentSlotTwo.name + '|';
-				if ($scope.equipmentSlotTwo.notes != null) {
-					markup += $scope.equipmentSlotTwo.notes;
+			if ($scope.equipedItems.length > 0) {
+				for (var i = 0; i < $scope.equipedItems.length; i++) {
+					markup += 'Equipment (' + i + ')|';
+					markup += $scope.equipedItems[i].name + '|';
+					if ($scope.equipedItems[i].notes != null) {
+						markup += $scope.equipedItems[i].notes;
+					}
+					markup += '\r\n';
 				}
-				markup += '\r\n';
 			}
 
 			markup += '\r\n';
@@ -891,12 +839,12 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 				markup += $scope.selectedSecondaryWeapon.name + '\r\n';
 			}
 
-			if ($scope.equipmentSlotOne != null) {
-				markup += $scope.equipmentSlotOne.name + '\r\n';
-			}
 
-			if ($scope.equipmentSlotTwo != null) {
-				markup += $scope.equipmentSlotTwo.name + '\r\n';
+
+			if ($scope.equipedItems.length > 0) {
+				for (var i = 0; i < $scope.equipedItems.length; i++) {
+					markup += $scope.equipedItems[i].name + '\r\n';
+				}
 			}
 
 			markup += '\r\n';
@@ -961,7 +909,7 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 	$scope.armors = [];
 	$scope.primaryWeapons = [];
 	$scope.secondaryWeapons = [];
-	$scope.equipment = [];
+	$scope.equipedItems = [];
 	$scope.visibleTab = "perks";
 	$scope.icons = [];
 	$scope.description = '';
@@ -975,10 +923,10 @@ xcomApp.controller('xcomController', function($scope, $http, DataService) {
 	$scope.selectedPsionicPerks = [];
 	$scope.selectedPrimaryWeapon = null;
 	$scope.selectedSecondaryWeapon = null;
-	$scope.equipmentSlotOne = null;
-	$scope.equipmentSlotTwo = null
+	$scope.equipment = [];
+	
 	$scope.selectedSecondaryWeapons = [];
-	$scope.selectedEqipment = [];
+	$scope.selectedEquipment = [];
 	$scope.selectedClass = null;
 	$scope.selectedArmor = null;
 	$scope.displayDescription = false;

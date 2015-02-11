@@ -182,19 +182,15 @@
 						<div class="row">
 							<div class="col-sm-5"><span class="pull-right">Equipment</span></div>
 							<div class="col-sm-7">
-								<select class="form-control"
-										ng-change="equipmentChanged()"
-										ng-model="equipmentSlotOne"
+								<div class="input-group">
+									<select class="form-control"
+										ng-model="selectedEquipment"
 										ng-options="item.name group by item.type for item in equipment"></select>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-sm-5"><span class="pull-right">Equipment</span></div>
-							<div class="col-sm-7">
-								<select class="form-control"
-										ng-change="equipmentChanged()"
-										ng-model="equipmentSlotTwo"
-										ng-options="item.name group by item.type for item in equipment"></select>
+									<span class="input-group-btn">
+										<button class="btn btn-default" type="button" ng-click="addSelectedEquipment()" ><span class="glyphicon glyphicon-plus"></span></button>
+									</span>
+								</div>
+								
 							</div>
 						</div>
 					</div>
@@ -266,14 +262,10 @@
 
 							</div>
 							<div class="col-lg-8">
-								<table class="table table-condensed table-striped" ng-show="equipmentSlotOne != null || equipmentSlotTwo != null">
-									<tr>
-										<td>{{equipmentSlotOne.name}}</td>
-										<td>{{equipmentSlotOne.notes}}</td>
-									</tr>
-									<tr>
-										<td>{{equipmentSlotTwo.name}}</td>
-										<td>{{equipmentSlotTwo.notes}}</td>
+								<table class="table table-condensed table-striped">
+									<tr ng-repeat="item in equipedItems">
+										<td>{{item.name}}</td>
+										<td>{{item.notes}}</td>
 									</tr>
 								</table>
 							</div>
