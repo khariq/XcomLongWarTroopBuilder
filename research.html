@@ -1,0 +1,270 @@
+﻿<!DOCTYPE html>
+<html ng-app="xcomApp">
+	<head>
+		<title>XCOM: Long War - Troop Builder</title>
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+		<script src="scripts/linq.min.js" type="text/javascript"></script>
+		<script src="scripts/jquery-2.1.1.min.js" type="text/javascript"></script>
+
+		<script src="scripts/angular.min.js" type="text/javascript"></script>
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+		<script src="scripts/app.js" type="text/javascript"></script>
+		<script src="scripts/data_service.js" type="text/javascript"></script>
+
+		<script src="scripts/researchController.js" type="text/javascript"></script>
+
+		<style type="text/css">
+			#filterMenu {
+			}
+		</style>
+
+	</head>
+
+	<body id="researchController" ng-controller="researchController">
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="/">
+						<img src="lw_header.png" alt="XCOM Long War" style="height: 24px;" />
+					</a>
+				</div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Soldier <span class="caret"></span></a>
+							<ul class="dropdown-menu" role="menu">
+								<li role="presentation" ng-repeat="item in soliders" ng-class="{ active: isActive(item.id)}">
+									<a href="#{{item.id}}" ng-click="showClass(item.id)">
+										{{item.name}}
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">MEC Trooper <span class="caret"></span></a>
+							<ul class="dropdown-menu" role="menu">
+								<li role="presentation" ng-repeat="item in mecTroopers" ng-class="{ active: isActive(item.id)}">
+									<a href="#{{item.id}}" ng-click="showClass(item.id)">
+										{{item.name}}
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">S.H.I.V. <span class="caret"></span></a>
+							<ul class="dropdown-menu" role="menu">
+								<li role="presentation" ng-repeat="item in shivs" ng-class="{ active: isActive(item.id)}">
+									<a href="#{{item.id}}" ng-click="showClass(item.id)">
+										{{item.name}}
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li><a href="research.html">Research Planner</a></li>
+
+					</ul>
+				</div><!-- /.navbar-collapse -->
+			</div><!-- /.container-fluid -->
+		</nav>
+		<div class="container">
+
+			<div class="panel">
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						<h3 class="panel-title">Research Plan</h4>
+					</div>
+					<div class="panel-body container-fluid">
+						<div class="row">
+							<div class="col-md-8">
+								<div class="alert alert-success pull-left" ng-repeat="tech in researchPath" style="margin: 5px;" ng-click="removeTech(tech)">
+									{{tech.name}} <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+								</div>
+							</div>
+							<div class="col-lg-4">
+								<button class="btn btn-info btn-sm" style="width: 100%;" type="button" data-toggle="collapse" data-target="#baseSettings" aria-expanded="false" aria-controls="baseSettings">Change Base Settings</button>
+								<div class="collapse" id="baseSettings" >
+	  								<div class="well">
+										<form class="form-inline">
+									<div class="form-group">
+										<div class="row">
+											<div class="col-md-3">
+												<span>Scientists</span> 
+											</div>
+
+											<div class="col-md-9">
+												<input class="form-control" type="number" ng-model="baseSettings.scientists">
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-3">
+												<span>Labs</span> 	
+											</div>
+
+											<div class="col-md-9">
+												<input class="form-control" type="number" ng-model="baseSettings.labs">
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-3">
+												<span>Adjacenies</span>
+											</div>
+
+											<div class="col-md-9">
+												<input class="form-control" type="number" ng-model="baseSettings.adjacencies">
+											</div>
+										</div>
+									</div>
+										</form>
+									</div>
+									<p>
+										<span><b>Scientist Discount:</b> {{scientistDurtionMultiplier() * 100}} %</span><br />
+										<span><b>Lab Discount:</b> {{(1 - durationLabMultipler()) * 100}} % </span>
+									</p>
+								</div>
+								<div style="margin: 2px">
+								</div>
+								<button class="btn btn-info btn-sm" style="width: 100%;" type="button" data-toggle="collapse" data-target="#billOfMaterials" aria-expanded="false" aria-controls="billOfMaterials">View Bill of Materials</button>
+								<div class="collapse" id="billOfMaterials">
+									<table class="table table-condensed">
+										<tr>
+											<th colspan="3">Bill of Materials</th>
+											<th>
+												<button class="btn btn-success btn-sm pull-right" ng-click="resetBillOfMaterials()">Reset</button>
+											</th>
+										</tr>
+										<tr>
+											<th>Research Time</th>
+											<td>{{bom.duration}} days</td>
+											<th>Alien Alloys</th>
+											<td>{{bom.alien_alloys}}</td>
+										</tr>
+										<tr>
+											<th>Weapon Fragments</td>
+											<td>{{bom.weapon_fragments}}</td>
+											<th>Elerium</th>
+											<td>{{bom.elerium}}</td>
+										</tr>
+										<tr>
+											<th>Meld</th>
+											<td colspan="3">{{bom.meld}}</td>
+										</tr>
+										<tr>
+											<th>Other</th>
+											<td colspan="3">
+												{{bom.other}}
+											</td>
+										</tr>
+										
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-lg-4">
+					<div class="panel panel-success">
+						<div class="panel-heading"><h3 class="panel-title">Available Technologies</h4></div>
+						<div class="panel-body">
+							<div class="dropdown" style="margin-top: 2px;">
+								<button class="btn btn-sm btn-success dropdown-toggle" style="width: 100%;" type="button" id="fastForwardDropdown" data-toggle="dropdown" aria-expanded="true">Fast Forward <span class="caret"></span> </button>
+								<ul class="dropdown-menu" role="menu" aria-labelledby="fastForwardDropdown" id="fastForward">
+									<li role="presentation" ng-repeat="tech in applyFilters(allTechs)"><a role="menuitem" tabindex="-1" href="#" ng-click="researchTech(tech)" ng-mouseover="showDescription(tech)" ng-mouseout="hideDescription()">{{tech.name}}</a></li>
+								</ul>
+							</div>
+							
+							<hr/>
+							<div style="width: 50%; padding: 5px; display: inline-block;" ng-repeat="tech in applyFilters(availableTechs)">
+								<button class="btn btn-default" style="width: 100%;" ng-click="researchTech(tech)" ng-mouseover="showDescription(tech)" ng-mouseout="hideDescription()">{{tech.name}}</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-8">
+					<div class="panel panel-default" ng-show="descriptionVisible">
+						<div class="panel-heading">
+							<h4 class="panel-title">Unlocks</h4>
+						</div>
+						<div class="panel-body">
+							<p class="bg-info" style="padding: 5px;">Can be researched</p>
+							<p class="bg-danger" style="padding: 5px;">Has other prerequistes</p>
+							<h4>Research</h4>
+							<div style="width: 33%; padding: 5px; display: inline-block;" ng-repeat="tech in unlockedTechs">
+								<button class="btn" ng-class="techCanBeResearched(tech) ? 'btn-info' : 'btn-danger' " style="width: 100%;">{{tech.name}}</button>
+							</div>
+							<h4>Armory</h4>
+							<div style="width: 33%; padding: 5px; display: inline-block;" ng-repeat="project in unlockedLoadout">
+								<button class="btn btn-success" style="width: 100%;">{{project.id}}</button>
+							</div>
+							<h4>Foundry</h4>
+							<div style="width: 33%; padding: 5px; display: inline-block;" ng-repeat="project in unlockedFoundry">
+								<button class="btn btn-success" style="width: 100%;">{{project.id}}</button>
+							</div>
+							<h4>Facility</h4>
+							<div style="width: 33%; padding: 5px; display: inline-block;" ng-repeat="tech in unlockedFacility">
+								<button class="btn" style="width: 100%;">{{tech.id}}</button>
+							</div>
+							<h4>Other</h4>
+							<div style="width: 33%; padding: 5px; display: inline-block;" ng-repeat="tech in unlockedOther">
+								<button class="btn" style="width: 100%;">{{tech.id}}</button>
+							</div>
+						</div>
+					</div>
+					<div class="panel panel-default" ng-hide="descriptionVisible">
+						<div class="panel-heading"><h4 class="panel-title">Filters</h4></div>
+						<div class="panel-body">
+							<input type="text" class="form-control" placeholder="Search by name" ng-model="filter_name_search" /><br/>
+							<input type="text" class="form-control" placeholder="Input Material (e.g. Flight Computers)" ng-model="filter_input_item_search" /><br/>
+							<input type="text" class="form-control" placeholder="Unlocks (e.g. Alien Containment or Arc Thrower)" ng-model="filter_unlocks_item_search" /><br />
+							<h5>Filter by Category</h5>
+							<div class="row">
+								<div class="col-sm-4"><input type="checkbox" ng-model="filter_materials" /> Materials and Aerospace</div>
+								<div class="col-sm-4"><input type="checkbox" ng-model="filter_armor" /> Armor and SHIVs</div>
+								<div class="col-sm-4"><input type="checkbox" ng-model="filter_xenology" /> Xenology</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-4"><input type="checkbox" ng-model="filter_laser" /> Laser and Gauss Weapons</div>
+								<div class="col-sm-4"><input type="checkbox" ng-model="filter_plasma" /> Plasma Weapons</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-4"><input type="checkbox" ng-model="filter_autopsies" /> Alien Autopsies</div>
+								<div class="col-sm-4"><input type="checkbox" ng-model="filter_interrogations" /> Alien Interrogations</div>
+								<div class="col-sm-4"><input type="checkbox" ng-model="filter_ufo" /> UFO Analysis</div>
+
+							</div>
+
+							<h5></h5>
+
+						</div>
+					</div>
+				</div>
+
+		</div>
+	</div>
+
+		<nav class="navbar navbar-default navbar-fixed-bottom">
+			<div class="container-fluid">
+				<div class="collapse navbar-collapse">
+					<p class="navbar-text navbar-left">
+						All images and text Copyright Firaxis Games.
+					</p>
+					<p class="navbar-text navbar-right">
+						Michael Pickens, http://www.reddit.com/u/khariq
+					</p>
+				</div>
+			</div>
+		</nav>
+
+</body>
+
+</html>

@@ -1,33 +1,3197 @@
-{
-
-	"techs" : [
-		{
-			"id" : "sectoid_autopsy",
-			"title" : "Sectoid Autopsy",
-			"category" : "Alien Autopsies",
-			"prereq" : "xenobiology",
-			"duration" : 4,
-			"cost" : [
-				{
-					"item" : "corpse_sectoid",
-					"quantity" : 10
-				}
-			],
-			"unlocks" : [
-				{
-					"type" : "item",
-					"id" : "mind_shield"
-				},
-				{
-					"type" : "psi",
-					"id" : "mind_merge"
-				},
-				{
-					"type" : "gene_mod",
-					"id" : "smart_macrophages"
-				}
-			]
-		}
-	]
-
+{ "techs" : [
+  {
+    "id": "sectoid_autopsy",
+    "name": "Sectoid Autopsy",
+    "type": "Alien Autopsies",
+    "prereq": [
+      "xenobiology"
+    ],
+    "costs": [
+      {
+        "id": "sectoid_corpse",
+        "quantity": 10
+      }
+    ],
+    "duration": 4,
+    "unlocks": [
+      {
+        "type": "research",
+        "id": "sectoid_commander_autopsy"
+      },
+      {
+        "type": "research",
+        "id": "mechtoid_autopsy"
+      },
+      {
+        "type": "research",
+        "id": "sectoid_interrogation"
+      },
+      {
+        "type": "research",
+        "id": "xenopsionics"
+      },
+      {
+        "type": "other",
+        "id": "smart_macrophages"
+      }
+    ],
+    "credit": null,
+    "grants_credit": null
+  },
+  {
+    "id": "sectoid_commander_autopsy",
+    "name": "Sectoid Commander Autopsy",
+    "type": "Alien Autopsies",
+    "prereq": [
+      "sectoid_autopsy",
+      "xenogenetics"
+    ],
+    "costs": [
+      {
+        "id": "sectoid_commander_corpse",
+        "quantity": 5
+      }
+    ],
+    "duration": 35,
+    "unlocks": [
+      {
+        "type": "research",
+        "id": "sectoid_commander_interrogation"
+      },
+      {
+        "type": "loadout",
+        "id": "mind_shield"
+      },
+      {
+        "type": "other",
+        "id": "mind_merge"
+      },
+      {
+        "type": "council_requests",
+        "id": "sectoid_commander_corpses"
+      },
+      {
+        "type": "council_requests",
+        "id": "alien_entertainment"
+      }
+    ],
+    "credit": null,
+    "grants_credit": null
+  },
+  {
+    "id": "thin_man_autopsy",
+    "name": "Thin Man Autopsy",
+    "type": "Alien Autopsies",
+    "prereq": [
+      "xenobiology"
+    ],
+    "costs": [
+      {
+        "id": "thin_men_corpse",
+        "quantity": 10
+      }
+    ],
+    "duration": 6,
+    "unlocks": [
+      {
+        "type": "research",
+        "id": "thin_man_interrogation"
+      },
+      {
+        "type": "foundry",
+        "id": "improved_medikit"
+      },
+      {
+        "type": "loadout",
+        "id": "chem_grenade"
+      },
+      {
+        "type": "loadout",
+        "id": "restorative_mist"
+      },
+      {
+        "type": "other",
+        "id": "muscle_fiber_density"
+      },
+      {
+        "type": "council_requests",
+        "id": "thin_man_corpses"
+      }
+    ],
+    "credit": null,
+    "grants_credit": null
+  },
+  {
+    "id": "floater_autopsy",
+    "name": "Floater Autopsy",
+    "type": "Alien Autopsies",
+    "prereq": [
+      "alien_biocybernetics"
+    ],
+    "costs": [
+      {
+        "id": "floater_corpse",
+        "quantity": 10
+      }
+    ],
+    "duration": 5,
+    "unlocks": [
+      {
+        "type": "research",
+        "id": "heavy_floater_autopsy"
+      },
+      {
+        "type": "research",
+        "id": "floater_interrogation"
+      },
+      {
+        "type": "foundry",
+        "id": "shaped_armor"
+      },
+      {
+        "type": "loadout",
+        "id": "kinetic_strike_module"
+      },
+      {
+        "type": "other",
+        "id": "uplink_targeting_module"
+      },
+      {
+        "type": "council_requests",
+        "id": "floater_corpses"
+      }
+    ],
+    "credit": null,
+    "grants_credit": null
+  },
+  {
+    "id": "heavy_floater_autopsy",
+    "name": "Heavy Floater Autopsy",
+    "type": "Alien Autopsies",
+    "prereq": [
+      "floater_autopsy"
+    ],
+    "costs": [
+      {
+        "id": "heavy_floater_corpse",
+        "quantity": 5
+      }
+    ],
+    "duration": 10,
+    "unlocks": [
+      {
+        "type": "research",
+        "id": "heavy_floater_interrogation"
+      },
+      {
+        "type": "foundry",
+        "id": "advanced_repair"
+      },
+      {
+        "type": "loadout",
+        "id": "alloy_carbide_plating"
+      },
+      {
+        "type": "council_requests",
+        "id": "heavy_floater_corpses"
+      }
+    ],
+    "credit": null,
+    "grants_credit": null
+  },
+  {
+    "id": "muton_autopsy",
+    "name": "Muton Autopsy",
+    "type": "Alien Autopsies",
+    "prereq": [
+      "xenobiology"
+    ],
+    "costs": [
+      {
+        "id": "muton_corpse",
+        "quantity": 10
+      }
+    ],
+    "duration": 8,
+    "unlocks": [
+      {
+        "type": "research",
+        "id": "muton_elite_autopsy"
+      },
+      {
+        "type": "research",
+        "id": "berserker_autopsy"
+      },
+      {
+        "type": "research",
+        "id": "muton_interrogation"
+      },
+      {
+        "type": "foundry",
+        "id": "ammo_conservation"
+      },
+      {
+        "type": "foundry",
+        "id": "alien_grenades"
+      },
+      {
+        "type": "other",
+        "id": "adrenal_neurosympathy"
+      },
+      {
+        "type": "council_requests",
+        "id": "muton_corpses"
+      }
+    ],
+    "credit": null,
+    "grants_credit": null
+  },
+  {
+    "id": "muton_elite_autopsy",
+    "name": "Muton Elite Autopsy",
+    "type": "Alien Autopsies",
+    "prereq": [
+      "muton_autopsy"
+    ],
+    "costs": [
+      {
+        "id": "muton_elite_corpse",
+        "quantity": 5
+      }
+    ],
+    "duration": 10,
+    "unlocks": [
+      {
+        "type": "research",
+        "id": "muton_elite_interrogation"
+      },
+      {
+        "type": "foundry",
+        "id": "tactical_rigging"
+      },
+      {
+        "type": "other",
+        "id": "secondary_heart"
+      },
+      {
+        "type": "council_requests",
+        "id": "muton_elite_corpses"
+      }
+    ],
+    "credit": null,
+    "grants_credit": null
+  },
+  {
+    "id": "berserker_autopsy",
+    "name": "Berserker Autopsy",
+    "type": "Alien Autopsies",
+    "prereq": [
+      "muton_autopsy",
+      "xenoneurology"
+    ],
+    "costs": [
+      {
+        "id": "berserker_corpse",
+        "quantity": 5
+      }
+    ],
+    "duration": 10,
+    "unlocks": [
+      {
+        "type": "research",
+        "id": "berserker_interrogation"
+      },
+      {
+        "type": "foundry",
+        "id": "mec_close_combat"
+      },
+      {
+        "type": "loadout",
+        "id": "combat_stims"
+      },
+      {
+        "type": "other",
+        "id": "neural_dampening"
+      },
+      {
+        "type": "council_requests",
+        "id": "berserker_corpses"
+      }
+    ],
+    "credit": null,
+    "grants_credit": null
+  },
+  {
+    "id": "ethereal_autopsy",
+    "name": "Ethereal Autopsy",
+    "type": "Alien Autopsies",
+    "prereq": [
+      "xenopsionics"
+    ],
+    "costs": [
+      {
+        "id": "ethereal_corpse",
+        "quantity": 3
+      }
+    ],
+    "duration": 50,
+    "unlocks": [
+      {
+        "type": "research",
+        "id": "ethereal_interrogation"
+      },
+      {
+        "type": "other",
+        "id": "telekinetic_field"
+      },
+      {
+        "type": "council_requests",
+        "id": "ethereal_corpses"
+      }
+    ],
+    "credit": null,
+    "grants_credit": null
+  },
+  {
+    "id": "chryssalid_autopsy",
+    "name": "Chryssalid Autopsy",
+    "type": "Alien Autopsies",
+    "prereq": [
+      "xenogenetics"
+    ],
+    "costs": [
+      {
+        "id": "chryssalid_corpse",
+        "quantity": 5
+      }
+    ],
+    "duration": 9,
+    "unlocks": [
+      {
+        "type": "loadout",
+        "id": "chitin_plating"
+      },
+      {
+        "type": "other",
+        "id": "adaptive_bone_marrow"
+      },
+      {
+        "type": "council_requests",
+        "id": "chryssalid_carcasses"
+      }
+    ],
+    "credit": null,
+    "grants_credit": null
+  },
+  {
+    "id": "drone_autopsy",
+    "name": "Drone Autopsy",
+    "type": "Alien Autopsies",
+    "prereq": [
+      "alien_computers"
+    ],
+    "costs": [
+      {
+        "id": "drone_corpse",
+        "quantity": 5
+      }
+    ],
+    "duration": 3,
+    "unlocks": [
+      {
+        "type": "foundry",
+        "id": "shiv_repair"
+      },
+      {
+        "type": "loadout",
+        "id": "holo-targeter"
+      },
+      {
+        "type": "council_requests",
+        "id": "drone_wrecks"
+      }
+    ],
+    "credit": null,
+    "grants_credit": null
+  },
+  {
+    "id": "seeker_autopsy",
+    "name": "Seeker Autopsy",
+    "type": "Alien Autopsies",
+    "prereq": [
+      "alien_computers"
+    ],
+    "costs": [
+      {
+        "id": "seeker_corpse",
+        "quantity": 5
+      }
+    ],
+    "duration": 6,
+    "unlocks": [
+      {
+        "type": "foundry",
+        "id": "ufo_countermeasures"
+      },
+      {
+        "type": "loadout",
+        "id": "respirator_implant"
+      },
+      {
+        "type": "loadout",
+        "id": "chameleon_suit"
+      },
+      {
+        "type": "loadout",
+        "id": "ghost_grenade"
+      },
+      {
+        "type": "other",
+        "id": "biolelectric_skin"
+      },
+      {
+        "type": "council_requests",
+        "id": "seeker_wrecks"
+      }
+    ],
+    "credit": null,
+    "grants_credit": null
+  },
+  {
+    "id": "sectopod_autopsy",
+    "name": "Sectopod Autopsy",
+    "type": "Alien Autopsies",
+    "prereq": [
+      "alien_computers"
+    ],
+    "costs": [
+      {
+        "id": "sectopod_corpse",
+        "quantity": 3
+      }
+    ],
+    "duration": 25,
+    "unlocks": [
+      {
+        "type": "loadout",
+        "id": "reflex_cannon"
+      },
+      {
+        "type": "loadout",
+        "id": "battle_computer"
+      },
+      {
+        "type": "loadout",
+        "id": "weapon_supercooler"
+      },
+      {
+        "type": "council_requests",
+        "id": "sectopod_wrecks"
+      }
+    ],
+    "credit": null,
+    "grants_credit": null
+  },
+  {
+    "id": "cyberdisc_autopsy",
+    "name": "Cyberdisc Autopsy",
+    "type": "Alien Autopsies",
+    "prereq": [
+      "alien_biocybernetics"
+    ],
+    "costs": [
+      {
+        "id": "cyberdisc_corpse",
+        "quantity": 3
+      }
+    ],
+    "duration": 7,
+    "unlocks": [
+      {
+        "type": "foundry",
+        "id": "sentinel_drone"
+      },
+      {
+        "type": "loadout",
+        "id": "autosentry_turret"
+      },
+      {
+        "type": "other",
+        "id": "iron_skin"
+      },
+      {
+        "type": "other",
+        "id": "defensive_matrix"
+      },
+      {
+        "type": "council_requests",
+        "id": "cyberdisc_wrecks"
+      }
+    ],
+    "credit": null,
+    "grants_credit": null
+  },
+  {
+    "id": "mechtoid_autopsy",
+    "name": "Mechtoid Autopsy",
+    "type": "Alien Autopsies",
+    "prereq": [
+      "sectoid_autopsy",
+      "alien_biocybernetics"
+    ],
+    "costs": [
+      {
+        "id": "mechtoid_corpse",
+        "quantity": 3
+      }
+    ],
+    "duration": 18,
+    "unlocks": [
+      {
+        "type": "foundry",
+        "id": "advanced_servomotors"
+      },
+      {
+        "type": "loadout",
+        "id": "psi_screen"
+      },
+      {
+        "type": "loadout",
+        "id": "tactical_sensors"
+      },
+      {
+        "type": "loadout",
+        "id": "counterfire_pod"
+      },
+      {
+        "type": "council_requests",
+        "id": "mechtoid_cores"
+      }
+    ],
+    "credit": null,
+    "grants_credit": null
+  },
+  {
+    "id": "sectoid_interrogation",
+    "name": "Sectoid Interrogation",
+    "type": "Alien Interrogations",
+    "prereq": [
+      "sectoid_autopsy"
+    ],
+    "costs": [
+      {
+        "id": "sectoid",
+        "quantity": 1
+      }
+    ],
+    "duration": 9,
+    "unlocks": [
+      {
+        "type": "research",
+        "id": "alien_operations"
+      },
+      {
+        "type": "other",
+        "id": "mind_fray"
+      },
+      {
+        "type": "council_request",
+        "id": "sectoid_captive"
+      }
+    ],
+    "credit": null,
+    "grants_credit": [
+      "xenogenetics",
+      "alien_biocybernetics",
+      "advanced_repair",
+      "advanced_servomotors",
+      "advanced_surgery",
+      "drone_capture",
+      "improved_medikit",
+      "jellied_elerium",
+      "mec_close_combat",
+      "mec_warfare_systems"
+    ]
+  },
+  {
+    "id": "sectoid_commander_interrogation",
+    "name": "Sectoid Commander Interrogation",
+    "type": "Alien Interrogations",
+    "prereq": [
+      "sectoid_commander_autopsy"
+    ],
+    "costs": [
+      {
+        "id": "sectoid_commander",
+        "quantity": 1
+      }
+    ],
+    "duration": 35,
+    "unlocks": [
+      {
+        "type": "research",
+        "id": "alien_operations"
+      },
+      {
+        "type": "other",
+        "id": "psi_shadow"
+      },
+      {
+        "type": "council_request",
+        "id": "sectoid_commander_captive"
+      },
+      {
+        "type": "council_request",
+        "id": "soldiers_/_scientists)"
+      }
+    ],
+    "credit": null,
+    "grants_credit": [
+      "xenopsionics",
+      "alien_operations",
+      "alien_command_and_control",
+      "mind_and_machine",
+      "psi_warfare_systems"
+    ]
+  },
+  {
+    "id": "thin_man_interrogation",
+    "name": "Thin Man Interrogation",
+    "type": "Alien Interrogations",
+    "prereq": [
+      "thin_man_autopsy"
+    ],
+    "costs": [
+      {
+        "id": "thin_man",
+        "quantity": 1
+      }
+    ],
+    "duration": 10,
+    "unlocks": [
+      {
+        "type": "research",
+        "id": "alien_operations"
+      },
+      {
+        "type": "other",
+        "id": "regen_biofield"
+      },
+      {
+        "type": "council_request",
+        "id": "thin_man_captive"
+      }
+    ],
+    "credit": null,
+    "grants_credit": [
+      "beam_lasers",
+      "advanced_beam_lasers",
+      "pulse_lasers",
+      "advanced_pulse_lasers",
+      "aircraft_boosters",
+      "enhanced_lasers",
+      "supercapacitators"
+    ]
+  },
+  {
+    "id": "floater_interrogation",
+    "name": "Floater Interrogation",
+    "type": "Alien Interrogations",
+    "prereq": [
+      "floater_autopsy"
+    ],
+    "costs": [
+      {
+        "id": "floater",
+        "quantity": 1
+      }
+    ],
+    "duration": 9,
+    "unlocks": [
+      {
+        "type": "research",
+        "id": "alien_operations"
+      },
+      {
+        "type": "other",
+        "id": "neural_feedback"
+      },
+      {
+        "type": "council_request",
+        "id": "floater_captive"
+      }
+    ],
+    "credit": null,
+    "grants_credit": [
+      "ufo_analysis:",
+      "advanced_aerospace_concepts",
+      "alien_propulsion",
+      "antigrav_systems",
+      "advanced_flight",
+      "aircraft_boosters",
+      "armored_fighters",
+      "elerium_afterburners",
+      "improved_avionics",
+      "penetrator_weapons",
+      "super_skyranger",
+      "ufo_countermeasures",
+      "ufo_tracking",
+      "wingtip_sparrowhawks"
+    ]
+  },
+  {
+    "id": "heavy_floater_interrogation",
+    "name": "Heavy Floater Interrogation",
+    "type": "Alien Interrogations",
+    "prereq": [
+      "heavy_floater_autopsy"
+    ],
+    "costs": [
+      {
+        "id": "heavy_floater",
+        "quantity": 1
+      }
+    ],
+    "duration": 18,
+    "unlocks": [
+      {
+        "type": "research",
+        "id": "alien_operations"
+      },
+      {
+        "type": "other",
+        "id": "psychokinetic_strike"
+      },
+      {
+        "type": "council_request",
+        "id": "heavy_floater_captive"
+      }
+    ],
+    "credit": null,
+    "grants_credit": [
+      "plasma_weapons",
+      "advanced_plasma_weapons",
+      "compact_plasma_weapons",
+      "heavy_plasma_weapons",
+      "precision_plasma_weapons",
+      "vehicular_plasma_weapons",
+      "enhanced_plasma",
+      "reflex_pistols"
+    ]
+  },
+  {
+    "id": "muton_interrogation",
+    "name": "Muton Interrogation",
+    "type": "Alien Interrogations",
+    "prereq": [
+      "muton_autopsy"
+    ],
+    "costs": [
+      {
+        "id": "muton",
+        "quantity": 1
+      }
+    ],
+    "duration": 14,
+    "unlocks": [
+      {
+        "type": "research",
+        "id": "alien_operations"
+      },
+      {
+        "type": "other",
+        "id": "distortion_field"
+      },
+      {
+        "type": "council_request",
+        "id": "muton_captive"
+      },
+      {
+        "type": "council_request",
+        "id": "scientists)"
+      }
+    ],
+    "credit": null,
+    "grants_credit": [
+      "gauss_weapons",
+      "advanced_gauss_weapons",
+      "mag_pistols",
+      "rail_pistols",
+      "wingtip_sparrowhawks"
+    ]
+  },
+  {
+    "id": "muton_elite_interrogation",
+    "name": "Muton Elite Interrogation",
+    "type": "Alien Interrogations",
+    "prereq": [
+      "muton_elite_autopsy"
+    ],
+    "costs": [
+      {
+        "id": "muton_elite",
+        "quantity": 1
+      }
+    ],
+    "duration": 25,
+    "unlocks": [
+      {
+        "type": "research",
+        "id": "alien_operations"
+      },
+      {
+        "type": "council_request",
+        "id": "muton_elite_captive"
+      },
+      {
+        "type": "council_request",
+        "id": "scientists)"
+      }
+    ],
+    "credit": null,
+    "grants_credit": [
+      "all_laser_weapon_research",
+      "all_gauss_weapon_research",
+      "all_plasma_weapon_research",
+      "alien_weaponry",
+      "emp_weapons",
+      "fusion_weapons",
+      "all_laser_weapon_projects",
+      "all_gauss_weapon_projects",
+      "all_plasma_weapon_projects",
+      "ammo_conservation",
+      "enhanced_ballistics",
+      "scope_upgrade",
+      "shiv_suppression"
+    ]
+  },
+  {
+    "id": "berserker_interrogation",
+    "name": "Berserker Interrogation",
+    "type": "Alien Interrogations",
+    "prereq": [
+      "berserker_autopsy"
+    ],
+    "costs": [
+      {
+        "id": "berserker",
+        "quantity": 1
+      }
+    ],
+    "duration": 20,
+    "unlocks": [
+      {
+        "type": "research",
+        "id": "alien_operations"
+      },
+      {
+        "type": "other",
+        "id": "psi_panic"
+      },
+      {
+        "type": "council_request",
+        "id": "berserker_captive"
+      }
+    ],
+    "credit": null,
+    "grants_credit": [
+      "improved_body_armor",
+      "advanced_body_armor",
+      "mobile_power_armor",
+      "advanced_power_armor",
+      "armored_fighters",
+      "shaped_armor",
+      "shiv_defenses",
+      "tactical_rigging"
+    ]
+  },
+  {
+    "id": "ethereal_interrogation",
+    "name": "Ethereal Interrogation",
+    "type": "Alien Interrogations",
+    "prereq": [
+      "ethereal_autopsy"
+    ],
+    "costs": [
+      {
+        "id": "ethereal",
+        "quantity": 1
+      }
+    ],
+    "duration": 50,
+    "unlocks": [
+      {
+        "type": "research",
+        "id": "alien_operations"
+      },
+      {
+        "type": "research",
+        "id": "alien_command_and_control"
+      },
+      {
+        "type": "other",
+        "id": "mind_control"
+      },
+      {
+        "type": "other",
+        "id": "rift"
+      }
+    ],
+    "credit": null,
+    "grants_credit": []
+  },
+  {
+    "id": "ufo_analysis:_scout",
+    "name": "UFO Analysis: Scout",
+    "type": "UFO Analysis",
+    "prereq": [
+      "alien_materials"
+    ],
+    "costs": null,
+    "duration": 0,
+    "unlocks": null,
+    "credit": null,
+    "grants_credit": null
+  },
+  {
+    "id": "ufo_analysis:_fighter",
+    "name": "UFO Analysis: Fighter",
+    "type": "UFO Analysis",
+    "prereq": [
+      "alien_materials"
+    ],
+    "costs": null,
+    "duration": 0,
+    "unlocks": null,
+    "credit": null,
+    "grants_credit": null
+  },
+  {
+    "id": "ufo_analysis:_raider",
+    "name": "UFO Analysis: Raider",
+    "type": "UFO Analysis",
+    "prereq": [
+      "alien_materials"
+    ],
+    "costs": null,
+    "duration": 0,
+    "unlocks": null,
+    "credit": null,
+    "grants_credit": null
+  },
+  {
+    "id": "ufo_analysis:_destroyer",
+    "name": "UFO Analysis: Destroyer",
+    "type": "UFO Analysis",
+    "prereq": [
+      "alien_materials"
+    ],
+    "costs": null,
+    "duration": 0,
+    "unlocks": null,
+    "credit": null,
+    "grants_credit": null
+  },
+  {
+    "id": "ufo_analysis:_abductor",
+    "name": "UFO Analysis: Abductor",
+    "type": "UFO Analysis",
+    "prereq": [
+      "alien_materials"
+    ],
+    "costs": null,
+    "duration": 0,
+    "unlocks": null,
+    "credit": null,
+    "grants_credit": null
+  },
+  {
+    "id": "ufo_analysis:_harvester",
+    "name": "UFO Analysis: Harvester",
+    "type": "UFO Analysis",
+    "prereq": [
+      "alien_materials"
+    ],
+    "costs": null,
+    "duration": 0,
+    "unlocks": null,
+    "credit": null,
+    "grants_credit": null
+  },
+  {
+    "id": "ufo_analysis:_transport",
+    "name": "UFO Analysis: Transport",
+    "type": "UFO Analysis",
+    "prereq": [
+      "alien_materials"
+    ],
+    "costs": null,
+    "duration": 0,
+    "unlocks": null,
+    "credit": null,
+    "grants_credit": null
+  },
+  {
+    "id": "ufo_analysis:_terror_ship",
+    "name": "UFO Analysis: Terror Ship",
+    "type": "UFO Analysis",
+    "prereq": [
+      "alien_materials"
+    ],
+    "costs": null,
+    "duration": 0,
+    "unlocks": null,
+    "credit": null,
+    "grants_credit": null
+  },
+  {
+    "id": "ufo_analysis:_assault_carrier",
+    "name": "UFO Analysis: Assault Carrier",
+    "type": "UFO Analysis",
+    "prereq": [
+      "alien_materials"
+    ],
+    "costs": null,
+    "duration": 0,
+    "unlocks": null,
+    "credit": null,
+    "grants_credit": null
+  },
+  {
+    "id": "ufo_analysis:_battleship",
+    "name": "UFO Analysis: Battleship",
+    "type": "UFO Analysis",
+    "prereq": [
+      "alien_materials"
+    ],
+    "costs": null,
+    "duration": 0,
+    "unlocks": null,
+    "credit": null,
+    "grants_credit": null
+  },
+  {
+    "id": "ufo_analysis:_overseer",
+    "name": "UFO Analysis: Overseer",
+    "type": "UFO Analysis",
+    "prereq": [
+      "alien_materials"
+    ],
+    "costs": null,
+    "duration": 0,
+    "unlocks": null,
+    "credit": null,
+    "grants_credit": null
+  },
+  {
+    "id": "xenobiology",
+    "name": "Xenobiology",
+    "type": "Xenology",
+    "prereq": [],
+    "costs": [
+      {
+        "id": "sectoid_corpse",
+        "quantity": 5
+      },
+      {
+        "id": "alien_alloys",
+        "quantity": 0
+      },
+      {
+        "id": "elerium",
+        "quantity": 0
+      },
+      {
+        "id": "weapon_fragments",
+        "quantity": 0
+      },
+      {
+        "id": "meld",
+        "quantity": 0
+      }
+    ],
+    "duration": 6,
+    "unlocks": [
+      {
+        "type": "research",
+        "id": "xenoneurology"
+      },
+      {
+        "type": "research",
+        "id": "xenogenetics"
+      },
+      {
+        "type": "research",
+        "id": "sectoid_autopsy"
+      },
+      {
+        "type": "research",
+        "id": "thin_man_autopsy"
+      },
+      {
+        "type": "research",
+        "id": "muton_autopsy"
+      },
+      {
+        "type": "facility",
+        "id": "alien_containment"
+      },
+      {
+        "type": "loadout",
+        "id": "targeting_module"
+      },
+      {
+        "type": "other",
+        "id": "sectoid_corpses"
+      },
+      {
+        "type": "other",
+        "id": "for_scientists)"
+      }
+    ],
+    "credit": "-",
+    "grants_credit": null
+  },
+  {
+    "id": "xenoneurology",
+    "name": "Xenoneurology",
+    "type": "Xenology",
+    "prereq": [
+      "xenobiology"
+    ],
+    "costs": [
+      {
+        "id": "sectoid_corpse",
+        "quantity": 10
+      },
+      {
+        "id": "alien_alloys",
+        "quantity": 0
+      },
+      {
+        "id": "elerium",
+        "quantity": 0
+      },
+      {
+        "id": "weapon_fragments",
+        "quantity": 5
+      },
+      {
+        "id": "meld",
+        "quantity": 0
+      }
+    ],
+    "duration": 8,
+    "unlocks": [
+      {
+        "type": "research",
+        "id": "xenopsionics"
+      },
+      {
+        "type": "research",
+        "id": "alien_communications"
+      },
+      {
+        "type": "research",
+        "id": "berserker_autopsy"
+      },
+      {
+        "type": "loadout",
+        "id": "arc_thrower"
+      },
+      {
+        "type": "loadout",
+        "id": "arc_rifle"
+      },
+      {
+        "type": "other",
+        "id": "-"
+      }
+    ],
+    "credit": "-",
+    "grants_credit": null
+  },
+  {
+    "id": "xenogenetics",
+    "name": "Xenogenetics",
+    "type": "Xenology",
+    "prereq": [
+      "xenobiology"
+    ],
+    "costs": [
+      {
+        "id": "alien_alloys",
+        "quantity": 0
+      },
+      {
+        "id": "elerium",
+        "quantity": 0
+      },
+      {
+        "id": "weapon_fragments",
+        "quantity": 0
+      },
+      {
+        "id": "meld",
+        "quantity": 10
+      }
+    ],
+    "duration": 10,
+    "unlocks": [
+      {
+        "type": "research",
+        "id": "xenopsionics"
+      },
+      {
+        "type": "research",
+        "id": "alien_biocybernetics"
+      },
+      {
+        "type": "research",
+        "id": "sectoid_commander_autopsy"
+      },
+      {
+        "type": "research",
+        "id": "chryssalid_autopsy"
+      },
+      {
+        "type": "facility",
+        "id": "genetics_lab"
+      },
+      {
+        "type": "other",
+        "id": "depth_perception"
+      },
+      {
+        "type": "other",
+        "id": "hyper-reactive_pupils"
+      }
+    ],
+    "credit": "Cybernetics",
+    "grants_credit": null
+  },
+  {
+    "id": "xenopsionics",
+    "name": "Xenopsionics",
+    "type": "Xenology",
+    "prereq": [
+      "xenoneurology",
+      "xenogenetics",
+      "sectoid_autopsy"
+    ],
+    "costs": [
+      {
+        "id": "alien_alloys",
+        "quantity": 0
+      },
+      {
+        "id": "elerium",
+        "quantity": 0
+      },
+      {
+        "id": "weapon_fragments",
+        "quantity": 0
+      },
+      {
+        "id": "meld",
+        "quantity": 15
+      }
+    ],
+    "duration": 14,
+    "unlocks": [
+      {
+        "type": "research",
+        "id": "alien_operations"
+      },
+      {
+        "type": "research",
+        "id": "ethereal_autopsy"
+      },
+      {
+        "type": "facility",
+        "id": "psionic_labs"
+      },
+      {
+        "type": "other",
+        "id": "psi_inspiration"
+      },
+      {
+        "type": "other",
+        "id": "psi_warfare_systems"
+      }
+    ],
+    "credit": "Psionics",
+    "grants_credit": null
+  },
+  {
+    "id": "alien_biocybernetics",
+    "name": "Alien Biocybernetics",
+    "type": "Xenology",
+    "prereq": [
+      "xenogenetics",
+      "alien_materials",
+      "alien_computers"
+    ],
+    "costs": [
+      {
+        "id": "alien_alloys",
+        "quantity": 10
+      },
+      {
+        "id": "elerium",
+        "quantity": 10
+      },
+      {
+        "id": "weapon_fragments",
+        "quantity": 10
+      },
+      {
+        "id": "meld",
+        "quantity": 20
+      }
+    ],
+    "duration": 18,
+    "unlocks": [
+      {
+        "type": "research",
+        "id": "floater_autopsy"
+      },
+      {
+        "type": "research",
+        "id": "cyberdisc_autopsy"
+      },
+      {
+        "type": "research",
+        "id": "mechtoid_autopsy"
+      },
+      {
+        "type": "research",
+        "id": "mind_and_machine"
+      },
+      {
+        "type": "research",
+        "id": "plasma_weapons"
+      },
+      {
+        "type": "facility",
+        "id": "cybernetics_lab"
+      },
+      {
+        "type": "loadout",
+        "id": "neural_gunlink"
+      },
+      {
+        "type": "loadout",
+        "id": "mec-1_warden"
+      },
+      {
+        "type": "other",
+        "id": "advanced_surgery"
+      },
+      {
+        "type": "other",
+        "id": "mec_warfare_systems"
+      }
+    ],
+    "credit": "Cybernetics",
+    "grants_credit": null
+  },
+  {
+    "id": "alien_operations",
+    "name": "Alien Operations",
+    "type": "Xenology",
+    "prereq": [
+      "xenopsionics",
+      "any_interrogation",
+      "outsider_shard"
+    ],
+    "costs": [
+      {
+        "id": "alien_alloys",
+        "quantity": 0
+      },
+      {
+        "id": "elerium",
+        "quantity": 0
+      },
+      {
+        "id": "weapon_fragments",
+        "quantity": 0
+      },
+      {
+        "id": "meld",
+        "quantity": 0
+      }
+    ],
+    "duration": 20,
+    "unlocks": [
+      {
+        "type": "other",
+        "id": "skeleton_key"
+      }
+    ],
+    "credit": "Psionics",
+    "grants_credit": null
+  },
+  {
+    "id": "alien_communications",
+    "name": "Alien Communications",
+    "type": "Xenology",
+    "prereq": [
+      "xenoneurology",
+      "alien_base_assault",
+      "mission_completed"
+    ],
+    "costs": [
+      {
+        "id": "alien_alloys",
+        "quantity": 0
+      },
+      {
+        "id": "elerium",
+        "quantity": 50
+      },
+      {
+        "id": "weapon_fragments",
+        "quantity": 0
+      },
+      {
+        "id": "meld",
+        "quantity": 0
+      }
+    ],
+    "duration": 60,
+    "unlocks": [
+      {
+        "type": "research",
+        "id": "stealth_systems"
+      },
+      {
+        "type": "facility",
+        "id": "hyperwave_relay"
+      },
+      {
+        "type": "loadout",
+        "id": "mimic_beacon"
+      },
+      {
+        "type": "other",
+        "id": "-"
+      }
+    ],
+    "credit": "-",
+    "grants_credit": null
+  },
+  {
+    "id": "alien_command_and_control",
+    "name": "Alien Command and Control",
+    "type": "Xenology",
+    "prereq": [
+      "ethereal_interrogation",
+      "ethereal_device"
+    ],
+    "costs": [
+      {
+        "id": "alien_alloys",
+        "quantity": 0
+      },
+      {
+        "id": "elerium",
+        "quantity": 50
+      },
+      {
+        "id": "weapon_fragments",
+        "quantity": 0
+      },
+      {
+        "id": "meld",
+        "quantity": 0
+      }
+    ],
+    "duration": 150,
+    "unlocks": [
+      {
+        "type": "research",
+        "id": "mind_and_machine"
+      },
+      {
+        "type": "facility",
+        "id": "gollop_chamber"
+      },
+      {
+        "type": "other",
+        "id": "-"
+      }
+    ],
+    "credit": "Psionics",
+    "grants_credit": null
+  },
+  {
+    "id": "alien_materials",
+    "name": "Alien Materials",
+    "type": "Materials and Aerospace",
+    "prereq": [],
+    "costs": [
+      {
+        "id": "alien_alloys",
+        "quantity": 2
+      },
+      {
+        "id": "elerium",
+        "quantity": 2
+      },
+      {
+        "id": "weapon_fragments",
+        "quantity": 5
+      },
+      {
+        "id": "meld",
+        "quantity": 1
+      }
+    ],
+    "duration": 6,
+    "unlocks": [
+      {
+        "type": "research",
+        "id": "elerium"
+      },
+      {
+        "type": "research",
+        "id": "advanced_aerospace_concepts"
+      },
+      {
+        "type": "research",
+        "id": "ufo_analysis:"
+      },
+      {
+        "type": "research",
+        "id": "alien_biocybernetics"
+      },
+      {
+        "type": "research",
+        "id": "improved_body_armor"
+      },
+      {
+        "type": "research",
+        "id": "gauss_weapons"
+      },
+      {
+        "type": "foundry",
+        "id": "alien_metallurgy"
+      },
+      {
+        "type": "foundry",
+        "id": "improved_salvage"
+      },
+      {
+        "type": "foundry",
+        "id": "enhanced_ballistics"
+      },
+      {
+        "type": "foundry",
+        "id": "aircraft_boosters"
+      },
+      {
+        "type": "loadout",
+        "id": "alloy_plating"
+      },
+      {
+        "type": "loadout",
+        "id": "breaching_ammo"
+      },
+      {
+        "type": "loadout",
+        "id": "shredder_ammo"
+      },
+      {
+        "type": "loadout",
+        "id": "alloy_bipod"
+      },
+      {
+        "type": "loadout",
+        "id": "alloy_belt"
+      },
+      {
+        "type": "loadout",
+        "id": "heat_ammo"
+      },
+      {
+        "type": "other",
+        "id": "alien_alloys"
+      },
+      {
+        "type": "other",
+        "id": "elerium"
+      },
+      {
+        "type": "other",
+        "id": "meld"
+      }
+    ],
+    "credit": "-",
+    "grants_credit": null
+  },
+  {
+    "id": "alien_weaponry",
+    "name": "Alien Weaponry",
+    "type": "Materials and Aerospace",
+    "prereq": [],
+    "costs": [
+      {
+        "id": "alien_alloys",
+        "quantity": 0
+      },
+      {
+        "id": "elerium",
+        "quantity": 0
+      },
+      {
+        "id": "weapon_fragments",
+        "quantity": 5
+      },
+      {
+        "id": "meld",
+        "quantity": 0
+      }
+    ],
+    "duration": 6,
+    "unlocks": [
+      {
+        "type": "research",
+        "id": "experimental_warfare"
+      },
+      {
+        "type": "research",
+        "id": "beam_lasers"
+      },
+      {
+        "type": "research",
+        "id": "plasma_weapons"
+      },
+      {
+        "type": "foundry",
+        "id": "mag_pistols"
+      },
+      {
+        "type": "foundry",
+        "id": "shiv_suppression"
+      },
+      {
+        "type": "loadout",
+        "id": "scope"
+      },
+      {
+        "type": "loadout",
+        "id": "marksman's_scope"
+      },
+      {
+        "type": "loadout",
+        "id": "weapon_gyrostabilizer"
+      },
+      {
+        "type": "other",
+        "id": "weapon_fragments"
+      }
+    ],
+    "credit": "Weapons",
+    "grants_credit": null
+  },
+  {
+    "id": "alien_computers",
+    "name": "Alien Computers",
+    "type": "Materials and Aerospace",
+    "prereq": [],
+    "costs": [
+      {
+        "id": "ufoflightcomputer",
+        "quantity": 4
+      },
+      {
+        "id": "alien_alloys",
+        "quantity": 0
+      },
+      {
+        "id": "elerium",
+        "quantity": 0
+      },
+      {
+        "id": "weapon_fragments",
+        "quantity": 0
+      },
+      {
+        "id": "meld",
+        "quantity": 0
+      }
+    ],
+    "duration": 10,
+    "unlocks": [
+      {
+        "type": "research",
+        "id": "alien_power_systems"
+      },
+      {
+        "type": "research",
+        "id": "drone_autopsy"
+      },
+      {
+        "type": "research",
+        "id": "seeker_autopsy"
+      },
+      {
+        "type": "research",
+        "id": "sectopod_autopsy"
+      },
+      {
+        "type": "research",
+        "id": "alien_biocybernetics"
+      },
+      {
+        "type": "loadout",
+        "id": "smartgun_kit"
+      },
+      {
+        "type": "facility",
+        "id": "satellite_nexus"
+      },
+      {
+        "type": "other",
+        "id": "ufo_flight_computers"
+      }
+    ],
+    "credit": "-",
+    "grants_credit": null
+  },
+  {
+    "id": "elerium",
+    "name": "Elerium",
+    "type": "Materials and Aerospace",
+    "prereq": [
+      "alien_materials"
+    ],
+    "costs": [
+      {
+        "id": "alien_alloys",
+        "quantity": 0
+      },
+      {
+        "id": "elerium",
+        "quantity": 35
+      },
+      {
+        "id": "weapon_fragments",
+        "quantity": 0
+      },
+      {
+        "id": "meld",
+        "quantity": 0
+      }
+    ],
+    "duration": 30,
+    "unlocks": [
+      {
+        "type": "research",
+        "id": "alien_power_systems"
+      },
+      {
+        "type": "research",
+        "id": "mobile_power_armor"
+      },
+      {
+        "type": "foundry",
+        "id": "jellied_elerium"
+      },
+      {
+        "type": "loadout",
+        "id": "elerium_turbos"
+      },
+      {
+        "type": "other",
+        "id": "-"
+      }
+    ],
+    "credit": "-",
+    "grants_credit": null
+  },
+  {
+    "id": "experimental_warfare",
+    "name": "Experimental Warfare",
+    "type": "Materials and Aerospace",
+    "prereq": [
+      "alien_weaponry"
+    ],
+    "costs": [
+      {
+        "id": "alien_alloys",
+        "quantity": 0
+      },
+      {
+        "id": "elerium",
+        "quantity": 0
+      },
+      {
+        "id": "weapon_fragments",
+        "quantity": 10
+      },
+      {
+        "id": "meld",
+        "quantity": 0
+      }
+    ],
+    "duration": 8,
+    "unlocks": [
+      {
+        "type": "research",
+        "id": "advanced_aerospace_concepts"
+      },
+      {
+        "type": "research",
+        "id": "gauss_weapons"
+      },
+      {
+        "type": "foundry",
+        "id": "scope_upgrade"
+      },
+      {
+        "type": "foundry",
+        "id": "new_combat_systems"
+      },
+      {
+        "type": "loadout",
+        "id": "smartshell_pod"
+      },
+      {
+        "type": "loadout",
+        "id": "adaptive_tracking_pod"
+      },
+      {
+        "type": "other",
+        "id": "-"
+      }
+    ],
+    "credit": "-",
+    "grants_credit": null
+  },
+  {
+    "id": "alien_power_systems",
+    "name": "Alien Power Systems",
+    "type": "Materials and Aerospace",
+    "prereq": [
+      "alien_computers",
+      "elerium"
+    ],
+    "costs": [
+      {
+        "id": "ufopowersource",
+        "quantity": 6
+      },
+      {
+        "id": "alien_alloys",
+        "quantity": 0
+      },
+      {
+        "id": "elerium",
+        "quantity": 30
+      },
+      {
+        "id": "weapon_fragments",
+        "quantity": 0
+      },
+      {
+        "id": "meld",
+        "quantity": 0
+      }
+    ],
+    "duration": 40,
+    "unlocks": [
+      {
+        "type": "research",
+        "id": "alien_propulsion"
+      },
+      {
+        "type": "research",
+        "id": "advanced_power_armor"
+      },
+      {
+        "type": "research",
+        "id": "pulse_lasers"
+      },
+      {
+        "type": "research",
+        "id": "plasma_weapons"
+      },
+      {
+        "type": "foundry",
+        "id": "alien_nucleonics"
+      },
+      {
+        "type": "foundry",
+        "id": "improved_arc_thrower"
+      },
+      {
+        "type": "foundry",
+        "id": "ufo_tracking"
+      },
+      {
+        "type": "loadout",
+        "id": "elerium_generator"
+      },
+      {
+        "type": "other",
+        "id": "ufo_power_sources"
+      },
+      {
+        "type": "other",
+        "id": "soldiers_/_scientists_/_engineers)"
+      }
+    ],
+    "credit": "-",
+    "grants_credit": null
+  },
+  {
+    "id": "advanced_aerospace_concepts",
+    "name": "Advanced Aerospace Concepts",
+    "type": "Materials and Aerospace",
+    "prereq": [
+      "alien_materials",
+      "experimental_warfare"
+    ],
+    "costs": [
+      {
+        "id": "alien_alloys",
+        "quantity": 10
+      },
+      {
+        "id": "elerium",
+        "quantity": 0
+      },
+      {
+        "id": "weapon_fragments",
+        "quantity": 20
+      },
+      {
+        "id": "meld",
+        "quantity": 0
+      }
+    ],
+    "duration": 22,
+    "unlocks": [
+      {
+        "type": "research",
+        "id": "alien_propulsion"
+      },
+      {
+        "type": "foundry",
+        "id": "super_skyranger"
+      },
+      {
+        "type": "foundry",
+        "id": "armored_fighters"
+      },
+      {
+        "type": "foundry",
+        "id": "improved_avionics"
+      },
+      {
+        "type": "foundry",
+        "id": "penetrator_weapons"
+      },
+      {
+        "type": "foundry",
+        "id": "wingtip_sparrowhawks"
+      },
+      {
+        "type": "other",
+        "id": "-"
+      }
+    ],
+    "credit": "Aerospace",
+    "grants_credit": null
+  },
+  {
+    "id": "alien_propulsion",
+    "name": "Alien Propulsion",
+    "type": "Materials and Aerospace",
+    "prereq": [
+      "alien_power_systems",
+      "advanced_aerospace_concepts"
+    ],
+    "costs": [
+      {
+        "id": "alien_alloys",
+        "quantity": 20
+      },
+      {
+        "id": "elerium",
+        "quantity": 50
+      },
+      {
+        "id": "weapon_fragments",
+        "quantity": 80
+      },
+      {
+        "id": "meld",
+        "quantity": 0
+      }
+    ],
+    "duration": 92,
+    "unlocks": [
+      {
+        "type": "research",
+        "id": "antigrav_systems"
+      },
+      {
+        "type": "foundry",
+        "id": "elerium_afterburners"
+      },
+      {
+        "type": "loadout",
+        "id": "firestorm"
+      },
+      {
+        "type": "other",
+        "id": "-"
+      }
+    ],
+    "credit": "Aerospace",
+    "grants_credit": null
+  },
+  {
+    "id": "improved_body_armor",
+    "name": "Improved Body Armor",
+    "type": "Armor and SHIVs",
+    "prereq": [
+      "alien_materials"
+    ],
+    "costs": [
+      {
+        "id": "alien_alloys",
+        "quantity": 8
+      },
+      {
+        "id": "elerium",
+        "quantity": 0
+      },
+      {
+        "id": "meld",
+        "quantity": 0
+      }
+    ],
+    "duration": 8,
+    "unlocks": [
+      {
+        "type": "research",
+        "id": "advanced_body_armor"
+      },
+      {
+        "type": "foundry",
+        "id": "security_training:_armor"
+      },
+      {
+        "type": "loadout",
+        "id": "phalanx_armor"
+      },
+      {
+        "type": "loadout",
+        "id": "aurora_armor"
+      },
+      {
+        "type": "loadout",
+        "id": "reinforced_armor"
+      },
+      {
+        "type": "loadout",
+        "id": "armor_piercing_ammo"
+      },
+      {
+        "type": "other",
+        "id": "alloy_shiv"
+      }
+    ],
+    "credit": "Armor",
+    "grants_credit": null
+  },
+  {
+    "id": "advanced_body_armor",
+    "name": "Advanced Body Armor",
+    "type": "Armor and SHIVs",
+    "prereq": [
+      "improved_body_armor"
+    ],
+    "costs": [
+      {
+        "id": "alien_alloys",
+        "quantity": 15
+      },
+      {
+        "id": "elerium",
+        "quantity": 0
+      },
+      {
+        "id": "meld",
+        "quantity": 0
+      }
+    ],
+    "duration": 20,
+    "unlocks": [
+      {
+        "type": "research",
+        "id": "mobile_power_armor"
+      },
+      {
+        "type": "loadout",
+        "id": "kestrel_armor"
+      },
+      {
+        "type": "loadout",
+        "id": "carapace_armor"
+      },
+      {
+        "type": "other",
+        "id": "-"
+      }
+    ],
+    "credit": "Armor",
+    "grants_credit": null
+  },
+  {
+    "id": "mobile_power_armor",
+    "name": "Mobile Power Armor",
+    "type": "Armor and SHIVs",
+    "prereq": [
+      "advanced_body_armor",
+      "elerium"
+    ],
+    "costs": [
+      {
+        "id": "alien_alloys",
+        "quantity": 20
+      },
+      {
+        "id": "elerium",
+        "quantity": 10
+      },
+      {
+        "id": "meld",
+        "quantity": 0
+      }
+    ],
+    "duration": 40,
+    "unlocks": [
+      {
+        "type": "research",
+        "id": "advanced_power_armor"
+      },
+      {
+        "type": "foundry",
+        "id": "shiv_defenses"
+      },
+      {
+        "type": "loadout",
+        "id": "banshee_armor"
+      },
+      {
+        "type": "loadout",
+        "id": "aegis_armor"
+      },
+      {
+        "type": "loadout",
+        "id": "impact_vest"
+      },
+      {
+        "type": "loadout",
+        "id": "mec-2_sentinel"
+      },
+      {
+        "type": "other",
+        "id": "-"
+      }
+    ],
+    "credit": "Armor",
+    "grants_credit": null
+  },
+  {
+    "id": "advanced_power_armor",
+    "name": "Advanced Power Armor",
+    "type": "Armor and SHIVs",
+    "prereq": [
+      "mobile_power_armor",
+      "alien_power_systems"
+    ],
+    "costs": [
+      {
+        "id": "alien_alloys",
+        "quantity": 20
+      },
+      {
+        "id": "elerium",
+        "quantity": 20
+      },
+      {
+        "id": "meld",
+        "quantity": 0
+      }
+    ],
+    "duration": 68,
+    "unlocks": [
+      {
+        "type": "research",
+        "id": "antigrav_systems"
+      },
+      {
+        "type": "research",
+        "id": "stealth_systems"
+      },
+      {
+        "type": "loadout",
+        "id": "corsair_armor"
+      },
+      {
+        "type": "loadout",
+        "id": "titan_armor"
+      },
+      {
+        "type": "loadout",
+        "id": "walker_servos"
+      },
+      {
+        "type": "loadout",
+        "id": "mec-3_paladin"
+      },
+      {
+        "type": "other",
+        "id": "-"
+      }
+    ],
+    "credit": "Armor",
+    "grants_credit": null
+  },
+  {
+    "id": "antigrav_systems",
+    "name": "Antigrav Systems",
+    "type": "Armor and SHIVs",
+    "prereq": [
+      "advanced_power_armor",
+      "alien_propulsion"
+    ],
+    "costs": [
+      {
+        "id": "alien_alloys",
+        "quantity": 15
+      },
+      {
+        "id": "elerium",
+        "quantity": 50
+      },
+      {
+        "id": "meld",
+        "quantity": 0
+      }
+    ],
+    "duration": 70,
+    "unlocks": [
+      {
+        "type": "foundry",
+        "id": "advanced_flight"
+      },
+      {
+        "type": "loadout",
+        "id": "seraphim_armor"
+      },
+      {
+        "type": "loadout",
+        "id": "archangel_armor"
+      },
+      {
+        "type": "loadout",
+        "id": "fuel_cell"
+      },
+      {
+        "type": "loadout",
+        "id": "the_thumper"
+      },
+      {
+        "type": "other",
+        "id": "hover_shiv"
+      }
+    ],
+    "credit": "Aerospace",
+    "grants_credit": null
+  },
+  {
+    "id": "stealth_systems",
+    "name": "Stealth Systems",
+    "type": "Armor and SHIVs",
+    "prereq": [
+      "advanced_power_armor",
+      "alien_communications"
+    ],
+    "costs": [
+      {
+        "id": "alien_alloys",
+        "quantity": 15
+      },
+      {
+        "id": "elerium",
+        "quantity": 50
+      },
+      {
+        "id": "meld",
+        "quantity": 0
+      }
+    ],
+    "duration": 80,
+    "unlocks": [
+      {
+        "type": "foundry",
+        "id": "stealth_satellites"
+      },
+      {
+        "type": "loadout",
+        "id": "shadow_armor"
+      },
+      {
+        "type": "other",
+        "id": "-"
+      }
+    ],
+    "credit": "-",
+    "grants_credit": null
+  },
+  {
+    "id": "mind_and_machine",
+    "name": "Mind and Machine",
+    "type": "Armor and SHIVs",
+    "prereq": [
+      "alien_biocybernetics",
+      "alien_command_and_control"
+    ],
+    "costs": [
+      {
+        "id": "alien_alloys",
+        "quantity": 15
+      },
+      {
+        "id": "elerium",
+        "quantity": 50
+      },
+      {
+        "id": "meld",
+        "quantity": 5
+      }
+    ],
+    "duration": 150,
+    "unlocks": [
+      {
+        "type": "loadout",
+        "id": "vortex_armor"
+      },
+      {
+        "type": "other",
+        "id": "-"
+      }
+    ],
+    "credit": "Psionics",
+    "grants_credit": null
+  },
+  {
+    "id": "beam_lasers",
+    "name": "Beam Lasers",
+    "type": "Laser and Gauss Weapons",
+    "prereq": [
+      "alien_weaponry"
+    ],
+    "costs": [
+      {
+        "id": "alien_alloys",
+        "quantity": 10
+      },
+      {
+        "id": "elerium",
+        "quantity": 0
+      },
+      {
+        "id": "weapon_fragments",
+        "quantity": 25
+      },
+      {
+        "id": "meld",
+        "quantity": 0
+      }
+    ],
+    "duration": 8,
+    "unlocks": [
+      {
+        "type": "research",
+        "id": "advanced_beam_lasers"
+      },
+      {
+        "type": "foundry",
+        "id": "security_training:_weapons"
+      },
+      {
+        "type": "loadout",
+        "id": "laser_shatterray"
+      },
+      {
+        "type": "loadout",
+        "id": "laser_carbine"
+      },
+      {
+        "type": "loadout",
+        "id": "laser_rifle"
+      },
+      {
+        "type": "loadout",
+        "id": "autolaser"
+      },
+      {
+        "type": "loadout",
+        "id": "gatling_laser"
+      },
+      {
+        "type": "loadout",
+        "id": "laser_pistol"
+      },
+      {
+        "type": "loadout",
+        "id": "heater"
+      },
+      {
+        "type": "other",
+        "id": "laser_rifles"
+      },
+      {
+        "type": "other",
+        "id": "for_soldiers)"
+      }
+    ],
+    "credit": "Laser Weapons",
+    "grants_credit": null
+  },
+  {
+    "id": "advanced_beam_lasers",
+    "name": "Advanced Beam Lasers",
+    "type": "Laser and Gauss Weapons",
+    "prereq": [
+      "beam_lasers"
+    ],
+    "costs": [
+      {
+        "id": "alien_alloys",
+        "quantity": 15
+      },
+      {
+        "id": "elerium",
+        "quantity": 0
+      },
+      {
+        "id": "weapon_fragments",
+        "quantity": 25
+      },
+      {
+        "id": "meld",
+        "quantity": 0
+      }
+    ],
+    "duration": 12,
+    "unlocks": [
+      {
+        "type": "research",
+        "id": "pulse_lasers"
+      },
+      {
+        "type": "foundry",
+        "id": "enhanced_lasers"
+      },
+      {
+        "type": "loadout",
+        "id": "heavy_laser_rifle"
+      },
+      {
+        "type": "loadout",
+        "id": "scatter_laser"
+      },
+      {
+        "type": "loadout",
+        "id": "laser_strike_rifle"
+      },
+      {
+        "type": "loadout",
+        "id": "laser_sniper_rifle"
+      },
+      {
+        "type": "loadout",
+        "id": "laser_lance"
+      },
+      {
+        "type": "loadout",
+        "id": "superheavy_laser"
+      },
+      {
+        "type": "other",
+        "id": "laser_cannon"
+      }
+    ],
+    "credit": "Laser Weapons",
+    "grants_credit": null
+  },
+  {
+    "id": "gauss_weapons",
+    "name": "Gauss Weapons",
+    "type": "Laser and Gauss Weapons",
+    "prereq": [
+      "alien_materials",
+      "experimental_warfare"
+    ],
+    "costs": [
+      {
+        "id": "alien_alloys",
+        "quantity": 30
+      },
+      {
+        "id": "elerium",
+        "quantity": 5
+      },
+      {
+        "id": "weapon_fragments",
+        "quantity": 50
+      },
+      {
+        "id": "meld",
+        "quantity": 0
+      }
+    ],
+    "duration": 28,
+    "unlocks": [
+      {
+        "type": "research",
+        "id": "advanced_gauss_weapons"
+      },
+      {
+        "type": "foundry",
+        "id": "rail_pistols"
+      },
+      {
+        "type": "loadout",
+        "id": "gauss_stuttergun"
+      },
+      {
+        "type": "loadout",
+        "id": "gauss_carbine"
+      },
+      {
+        "type": "loadout",
+        "id": "gauss_rifle"
+      },
+      {
+        "type": "loadout",
+        "id": "gauss_autorifle"
+      },
+      {
+        "type": "loadout",
+        "id": "gauss_machine_gun"
+      },
+      {
+        "type": "loadout",
+        "id": "gauss_autopistol"
+      },
+      {
+        "type": "loadout",
+        "id": "grenade_launcher"
+      },
+      {
+        "type": "loadout",
+        "id": "sentry_gun"
+      },
+      {
+        "type": "other",
+        "id": "pheonix_coilgun"
+      }
+    ],
+    "credit": "Gauss Weapons",
+    "grants_credit": null
+  },
+  {
+    "id": "advanced_gauss_weapons",
+    "name": "Advanced Gauss Weapons",
+    "type": "Laser and Gauss Weapons",
+    "prereq": [
+      "gauss_weapons"
+    ],
+    "costs": [
+      {
+        "id": "alien_alloys",
+        "quantity": 30
+      },
+      {
+        "id": "elerium",
+        "quantity": 5
+      },
+      {
+        "id": "weapon_fragments",
+        "quantity": 50
+      },
+      {
+        "id": "meld",
+        "quantity": 0
+      }
+    ],
+    "duration": 30,
+    "unlocks": [
+      {
+        "type": "research",
+        "id": "emp_weapons"
+      },
+      {
+        "type": "loadout",
+        "id": "heavy_gauss_rifle"
+      },
+      {
+        "type": "loadout",
+        "id": "alloy_cannon"
+      },
+      {
+        "type": "loadout",
+        "id": "alloy_strike_rifle"
+      },
+      {
+        "type": "loadout",
+        "id": "gauss_long_rifle"
+      },
+      {
+        "type": "loadout",
+        "id": "recoilless_rifle"
+      },
+      {
+        "type": "loadout",
+        "id": "railgun"
+      },
+      {
+        "type": "loadout",
+        "id": "proximity_mine_launcher"
+      },
+      {
+        "type": "other",
+        "id": "-"
+      }
+    ],
+    "credit": "Gauss Weapons",
+    "grants_credit": null
+  },
+  {
+    "id": "pulse_lasers",
+    "name": "Pulse Lasers",
+    "type": "Laser and Gauss Weapons",
+    "prereq": [
+      "advanced_beam_lasers",
+      "alien_power_systems"
+    ],
+    "costs": [
+      {
+        "id": "alien_alloys",
+        "quantity": 30
+      },
+      {
+        "id": "elerium",
+        "quantity": 30
+      },
+      {
+        "id": "weapon_fragments",
+        "quantity": 65
+      },
+      {
+        "id": "meld",
+        "quantity": 0
+      }
+    ],
+    "duration": 50,
+    "unlocks": [
+      {
+        "type": "research",
+        "id": "advanced_pulse_lasers"
+      },
+      {
+        "type": "loadout",
+        "id": "pulse_stengun"
+      },
+      {
+        "type": "loadout",
+        "id": "pulse_carbine"
+      },
+      {
+        "type": "loadout",
+        "id": "pulse_rifle"
+      },
+      {
+        "type": "loadout",
+        "id": "pulse_autoblaster"
+      },
+      {
+        "type": "loadout",
+        "id": "gatling_pulser"
+      },
+      {
+        "type": "loadout",
+        "id": "blaster"
+      },
+      {
+        "type": "loadout",
+        "id": "superheavy_pulser"
+      },
+      {
+        "type": "other",
+        "id": "-"
+      }
+    ],
+    "credit": "Laser Weapons",
+    "grants_credit": null
+  },
+  {
+    "id": "advanced_pulse_lasers",
+    "name": "Advanced Pulse Lasers",
+    "type": "Laser and Gauss Weapons",
+    "prereq": [
+      "pulse_lasers"
+    ],
+    "costs": [
+      {
+        "id": "alien_alloys",
+        "quantity": 30
+      },
+      {
+        "id": "elerium",
+        "quantity": 30
+      },
+      {
+        "id": "weapon_fragments",
+        "quantity": 65
+      },
+      {
+        "id": "meld",
+        "quantity": 0
+      }
+    ],
+    "duration": 55,
+    "unlocks": [
+      {
+        "type": "research",
+        "id": "emp_weapons"
+      },
+      {
+        "type": "foundry",
+        "id": "supercapacitors"
+      },
+      {
+        "type": "loadout",
+        "id": "heavy_pulse_rifle"
+      },
+      {
+        "type": "loadout",
+        "id": "scatter_blaster"
+      },
+      {
+        "type": "loadout",
+        "id": "blaster_rifle"
+      },
+      {
+        "type": "loadout",
+        "id": "pulse_sniper_rifle"
+      },
+      {
+        "type": "loadout",
+        "id": "pulse_lance"
+      },
+      {
+        "type": "other",
+        "id": "-"
+      }
+    ],
+    "credit": "Laser Weapons",
+    "grants_credit": null
+  },
+  {
+    "id": "emp_weapons",
+    "name": "EMP Weapons",
+    "type": "Laser and Gauss Weapons",
+    "prereq": [
+      "advanced_gauss_weapons",
+      "advanced_pulse_lasers"
+    ],
+    "costs": [
+      {
+        "id": "alien_alloys",
+        "quantity": 0
+      },
+      {
+        "id": "elerium",
+        "quantity": 100
+      },
+      {
+        "id": "weapon_fragments",
+        "quantity": 100
+      },
+      {
+        "id": "meld",
+        "quantity": 40
+      }
+    ],
+    "duration": 95,
+    "unlocks": [
+      {
+        "type": "research",
+        "id": "fusion_weapons"
+      },
+      {
+        "type": "foundry",
+        "id": "drone_capture"
+      },
+      {
+        "type": "loadout",
+        "id": "electropulse"
+      },
+      {
+        "type": "other",
+        "id": "emp_cannon"
+      }
+    ],
+    "credit": "Weapons",
+    "grants_credit": null
+  },
+  {
+    "id": "plasma_weapons",
+    "name": "Plasma Weapons",
+    "type": "Plasma Weapons",
+    "prereq": [
+      "alien_weaponry",
+      "alien_power_systems",
+      "alien_biocybernetics"
+    ],
+    "costs": [
+      {
+        "id": "carbine",
+        "quantity": 5
+      },
+      {
+        "id": "alien_alloys",
+        "quantity": 35
+      },
+      {
+        "id": "elerium",
+        "quantity": 35
+      },
+      {
+        "id": "weapon_fragments",
+        "quantity": 75
+      }
+    ],
+    "duration": 80,
+    "unlocks": [
+      {
+        "type": "research",
+        "id": "advanced_plasma_weapons"
+      },
+      {
+        "type": "research",
+        "id": "compact_plasma_weapons"
+      },
+      {
+        "type": "loadout",
+        "id": "plasma_stormgun"
+      },
+      {
+        "type": "loadout",
+        "id": "plasma_carbine"
+      },
+      {
+        "type": "other",
+        "id": "alien_carbines"
+      },
+      {
+        "type": "other",
+        "id": "for_soldiers_/_scientists)"
+      }
+    ],
+    "credit": "Plasma WeaponsWeapons",
+    "grants_credit": null
+  },
+  {
+    "id": "advanced_plasma_weapons",
+    "name": "Advanced Plasma Weapons",
+    "type": "Plasma Weapons",
+    "prereq": [
+      "plasma_weapons"
+    ],
+    "costs": [
+      {
+        "id": "rifle",
+        "quantity": 3
+      },
+      {
+        "id": "alien_alloys",
+        "quantity": 35
+      },
+      {
+        "id": "elerium",
+        "quantity": 40
+      },
+      {
+        "id": "weapon_fragments",
+        "quantity": 80
+      }
+    ],
+    "duration": 85,
+    "unlocks": [
+      {
+        "type": "research",
+        "id": "heavy_plasma_weapons"
+      },
+      {
+        "type": "research",
+        "id": "precision_plasma_weapons"
+      },
+      {
+        "type": "research",
+        "id": "vehicular_plasma_weapons"
+      },
+      {
+        "type": "loadout",
+        "id": "plasma_rifle"
+      },
+      {
+        "type": "loadout",
+        "id": "plasma_novagun"
+      },
+      {
+        "type": "other",
+        "id": "alien_rifle"
+      },
+      {
+        "type": "other",
+        "id": "for_soldiers_/_scientists)"
+      }
+    ],
+    "credit": "Plasma WeaponsWeapons",
+    "grants_credit": null
+  },
+  {
+    "id": "compact_plasma_weapons",
+    "name": "Compact Plasma Weapons",
+    "type": "Plasma Weapons",
+    "prereq": [
+      "plasma_weapons"
+    ],
+    "costs": [
+      {
+        "id": "pistol",
+        "quantity": 2
+      },
+      {
+        "id": "alien_alloys",
+        "quantity": 15
+      },
+      {
+        "id": "elerium",
+        "quantity": 20
+      },
+      {
+        "id": "weapon_fragments",
+        "quantity": 50
+      }
+    ],
+    "duration": 75,
+    "unlocks": [
+      {
+        "type": "foundry",
+        "id": "reflex_pistols"
+      },
+      {
+        "type": "loadout",
+        "id": "plasma_pistol"
+      },
+      {
+        "type": "loadout",
+        "id": "plasma_mauler"
+      },
+      {
+        "type": "other",
+        "id": "alien_pistols"
+      },
+      {
+        "type": "other",
+        "id": "for_soldiers_/_scientists)"
+      }
+    ],
+    "credit": "Plasma WeaponsWeapons",
+    "grants_credit": null
+  },
+  {
+    "id": "heavy_plasma_weapons",
+    "name": "Heavy Plasma Weapons",
+    "type": "Plasma Weapons",
+    "prereq": [
+      "advanced_plasma_weapons"
+    ],
+    "costs": [
+      {
+        "id": "heavy_weapon",
+        "quantity": 2
+      },
+      {
+        "id": "alien_alloys",
+        "quantity": 35
+      },
+      {
+        "id": "elerium",
+        "quantity": 45
+      },
+      {
+        "id": "weapon_fragments",
+        "quantity": 85
+      }
+    ],
+    "duration": 85,
+    "unlocks": [
+      {
+        "type": "research",
+        "id": "fusion_weapons"
+      },
+      {
+        "type": "loadout",
+        "id": "heavy_plasma_rifle"
+      },
+      {
+        "type": "loadout",
+        "id": "plasma_dragon"
+      },
+      {
+        "type": "loadout",
+        "id": "particle_cannon"
+      },
+      {
+        "type": "other",
+        "id": "-"
+      }
+    ],
+    "credit": "Plasma WeaponsWeapons",
+    "grants_credit": null
+  },
+  {
+    "id": "precision_plasma_weapons",
+    "name": "Precision Plasma Weapons",
+    "type": "Plasma Weapons",
+    "prereq": [
+      "advanced_plasma_weapons"
+    ],
+    "costs": [
+      {
+        "id": "alien_alloys",
+        "quantity": 35
+      },
+      {
+        "id": "elerium",
+        "quantity": 45
+      },
+      {
+        "id": "weapon_fragments",
+        "quantity": 80
+      }
+    ],
+    "duration": 85,
+    "unlocks": [
+      {
+        "type": "foundry",
+        "id": "enhanced_plasma"
+      },
+      {
+        "type": "loadout",
+        "id": "reflex_rifle"
+      },
+      {
+        "type": "loadout",
+        "id": "plasma_sniper_rifle"
+      },
+      {
+        "type": "other",
+        "id": "-"
+      }
+    ],
+    "credit": "Plasma WeaponsWeapons",
+    "grants_credit": null
+  },
+  {
+    "id": "vehicular_plasma_weapons",
+    "name": "Vehicular Plasma Weapons",
+    "type": "Plasma Weapons",
+    "prereq": [
+      "advanced_plasma_weapons"
+    ],
+    "costs": [
+      {
+        "id": "alien_alloys",
+        "quantity": 35
+      },
+      {
+        "id": "elerium",
+        "quantity": 45
+      },
+      {
+        "id": "weapon_fragments",
+        "quantity": 80
+      }
+    ],
+    "duration": 90,
+    "unlocks": [
+      {
+        "type": "loadout",
+        "id": "zevatron_booster"
+      },
+      {
+        "type": "loadout",
+        "id": "superheavy_plasma"
+      },
+      {
+        "type": "other",
+        "id": "plasma_cannon"
+      }
+    ],
+    "credit": "Plasma WeaponsWeapons",
+    "grants_credit": null
+  },
+  {
+    "id": "fusion_weapons",
+    "name": "Fusion Weapons",
+    "type": "Plasma Weapons",
+    "prereq": [
+      "heavy_plasma_weapons",
+      "emp_weapons"
+    ],
+    "costs": [
+      {
+        "id": "alien_alloys",
+        "quantity": 30
+      },
+      {
+        "id": "elerium",
+        "quantity": 100
+      },
+      {
+        "id": "weapon_fragments",
+        "quantity": 100
+      }
+    ],
+    "duration": 120,
+    "unlocks": [
+      {
+        "type": "loadout",
+        "id": "blaster_launcher"
+      },
+      {
+        "type": "other",
+        "id": "fusion_lance"
+      }
+    ],
+    "credit": "Weapons",
+    "grants_credit": null
+  }
+]
 }
