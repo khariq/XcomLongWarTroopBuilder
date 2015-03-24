@@ -53,60 +53,54 @@
 					}, {
 						"rank" : 2,
 						"perks" : [
-							{ "id" : "flush", "aim" : 2, "will" : 0, "mobility" : 0,"damage" : 0 },
+							{ "id" : "flush"},
 							{ "id" : "close_combat_specialist" },
-							{ "id" : "steadfast" }
+							{ "id" : "steadfast", "will": 5 }
 						]
 					}, {
 						"rank" : 3,
 						"perks" : [
-							{ "id" : "gunslinger", "aim" : 1, "will" : 0, "mobility" : 0,"damage" : 0, "secondary_damage_bonus" : 1 },
-							{ "id" : "tactical_sense" },
-							{ "id" : "aggression",
-								"aim" : 0, "will" : 1, "mobility" : 0, "damage" : 0 }
+							{ "id" : "gunslinger", "secondary_damage_bonus" : 1 },
+							{ "id" : "will_to_survive", "will" : 3 },
+							{ "id" : "aggression" }
 						]
 					}, {
 						"rank" : 4,
 						"perks" : [
 							{ "id" : "hit_and_run" },
-							{ "id" : "close_encounters", 
-								"aim" : 0, "will" : 5, "mobility" : 0, "damage" : 0 },
+							{ "id" : "close_encounters",  "aim" : 0, "will" : 5, "mobility" : 0, "damage" : 0 },
 							{ "id" : "rapid_fire" }
 						]
 					}, {
 						"rank" : 5,
 						"perks" : [
-						{ "id" : "extra_conditioning", 
-							"aim" : 2, "will" : 2, "mobility" : 1, "damage" : 0 },
-						{ "id" : "killer_instinct" },
-						{ "id" : "ranger", 
-							"aim" : 2, "will" : 0, "mobility" : 0,"damage" : 1 }
+							{ "id" : "resilience" },
+							{ "id" : "killer_instinct" },
+							{ "id" : "ranger",  "aim" : 2, "will" : 0, "mobility" : 0,"damage" : 1 }
 						]
 					}, {
 						"rank" : 6,
 						"perks" : [
-							{ "id" : "will_to_survive", 
-								"aim" : 0, "will" : 3, "mobility" : 0,"damage" : 0 },
+							{ "id" : "tactical_sense" },
 							{ "id" : "bring_em_on" },
 							{ "id" : "sprinter" }
 						]
 					}, {
 						"rank" : 7,
 						"perks" : [
-							{ "id" : "vital_point_targeting", 
-								"aim" : 2, "will" : 0, "mobility" : 0, "damage" : 0, "primary_damage_bonus" : 2, "secondary_damage_bonus" : 1 },
-							{ "id" : "resilience"  },
+							{ "id" : "vital_point_targeting", "aim" : 2, "will" : 0, "mobility" : 0, "damage" : 0, "primary_damage_bonus" : 2, "secondary_damage_bonus" : 1 },
+							{ "id" : "extra_conditioning", "aim" : 3, "will" : 4, "mobility" : 1  },
 							{ "id" : "lightning_reflexes" }
 						]
 					}
 				],
 				"stat_progression" : [
 					{ "health" : 1,						"aim" : 3,						"will_low" : 5,						"will_high" : 6					}, 
-					{ "health" : 0,						"aim" : 3,						"will_low" : 5,						"will_high" : 6					}, 
+					{ "health" : 0,						"aim" : 2,						"will_low" : 5,						"will_high" : 6					}, 
 					{ "health" : 1,						"aim" : 3,						"will_low" : 3,						"will_high" : 4 				}, 
-					{ "health" : 0,						"aim" : 3,						"will_low" : 3,						"will_high" : 4					}, 
+					{ "health" : 0,						"aim" : 2,						"will_low" : 3,						"will_high" : 4					}, 
 					{ "health" : 1,						"aim" : 3,						"will_low" : 3,						"will_high" : 4					}, 
-					{ "health" : 0,						"aim" : 3,						"will_low" : 3,						"will_high" : 4					}, 
+					{ "health" : 0,						"aim" : 2,						"will_low" : 3,						"will_high" : 4					}, 
 					{ "health" : 1,						"aim" : 3,						"will_low" : 3,						"will_high" : 4					}				
 				]		
 			}
@@ -144,81 +138,60 @@
 						"perks" : [
 							{ "id" : "steadfast" , "will" : 5 },
 							{ "id" : "executioner"},
-							{ "id" : "covering_fire", "aim" : 3 }
+							{ "id" : "covering_fire" }
 						]
 					}, {
 						"rank" : 3,
 						"perks" : [
 							{ "id" : "agression"},
-							{ "id" : "tactical_sense"},
+							{ "id" : "will_to_survive", "will" : 3 },
 							{ "id" : "opportunist"}
 						]
 					}, {
 						"rank" : 4,
 						"perks" : [
-							{ "id" : "ranger"},
-							{ "id" : "gunslinger", "secondary_damage_bonus" : 1},
+							{ "id" : "deadeye" },
+							{ "id" : "ranger", "primary_damage_bonus" : 1},
 							{ "id" : "suppression"}
 						]
 					}, {
 						"rank" : 5,
 						"perks" : [
-						{ "id" : "sharpshooter", "aim" : 4 },
+						{ "id" : "sharpshooter", "aim" : 2 },
 						{ "id" : "lock_and_load"},
-						{ "id" : "will_to_survive", "will" : 2 }
+						{ "id" : "tactical_sense" }
 						]
 					}, {
 						"rank" : 6,
 						"perks" : [
-							{ "id" : "extra_conditioning", "aim" : 4, "will" : 4, "mobility" : 1},
+							{ "id" : "resilience"},
 							{ "id" : "bring_em_on"},
 							{ "id" : "sentinel"}
 						]
 					}, {
 						"rank" : 7,
 						"perks" : [
-							{ "id" : "vital_point_targeting", "aim" : 2, "will" : 2, "primary_damage_bouns" : 2, "secondary_damage_bonus" : 1 },
-							{ "id" : "resilience"},
+							{ "id" : "vital_point_targeting", "aim" : 2, "will" : 2, "primary_damage_bonus" : 2, "secondary_damage_bonus" : 1 },
+							{ "id" : "extra_conditioning", "aim" : 4, "will" : 4, "mobility" : 1},
 							{ "id" : "rapid_fire"}
 						]
 					}
 				],
 				"stat_progression" : [
 					{
-						"health" : 1,
-						"aim" : 4,
-						"will_low" : 5,
-						"will_high" : 6
+						"health" : 1, "aim" : 3, "will_low" : 5, "will_high" : 6
 					}, {
-						"health" : 0,
-						"aim" : 4,
-						"will_low" : 5,
-						"will_high" : 6
+						"health" : 0, "aim" : 3, "will_low" : 5, "will_high" : 6
 					}, {
-						"health" : 0,
-						"aim" : 4,
-						"will_low" : 3,
-						"will_high" : 4 
+						"health" : 0, "aim" : 3, "will_low" : 3, "will_high" : 4 
 					}, {
-						"health" : 1,
-						"aim" : 4,
-						"will_low" : 3,
-						"will_high" : 4
+						"health" : 1, "aim" : 3, "will_low" : 3, "will_high" : 4
 					}, {
-						"health" : 0,
-						"aim" : 3,
-						"will_low" : 3,
-						"will_high" : 4
+						"health" : 0, "aim" : 3, "will_low" : 3, "will_high" : 4
 					}, {
-						"health" : 0,
-						"aim" : 3,
-						"will_low" : 3,
-						"will_high" : 4
+						"health" : 0, "aim" : 3, "will_low" : 3, "will_high" : 4
 					}, {
-						"health" : 1,
-						"aim" : 3,
-						"will_low" : 3,
-						"will_high" : 4
+						"health" : 1, "aim" : 3, "will_low" : 3, "will_high" : 4
 					}
 				]		
 			}
@@ -253,83 +226,62 @@
 					}, {
 						"rank" : 2,
 						"perks" : [
-							{ "id" : "covering_fire", "aim" : 3},
-							{ "id" : "rapid_reaction", "aim" : 3},
+							{ "id" : "will_to_survive", "will" : 3},
+							{ "id" : "ranger", "primary_damage_bonus" : 1},
 							{ "id" : "heat_warheads"}			            	
 						]
 					}, {
 						"rank" : 3,
 						"perks" : [
-							{ "id" : "fire_in_the_hole"},
-							{ "id" : "suppression", "aim" : 2},
-							{ "id" : "snapshot"}
+							{ "id" : "rapid_reaction", "aim" : 2},
+							{ "id" : "fire_in_the_hole" },
+							{ "id" : "snapshot" }
 						]
 					}, {
 						"rank" : 4,
 						"perks" : [
-							{ "id" : "opportunist", "aim" : 3},
-							{ "id" : "tactical_sense", "aim" : 3},
+							{ "id" : "suppression" },
+							{ "id" : "platform_stability" },
 							{ "id" : "shredder_ammo"}
 						]
 					}, {
 						"rank" : 5,
 						"perks" : [
-						{ "id" : "ranger"},
-						{ "id" : "ready_for_anything"},
-						{ "id" : "will_to_survive"}
+						{ "id" : "tactical_sense"},
+						{ "id" : "opportunist"},
+						{ "id" : "mayhem", "secondary_damage_bonus" : 2},
 						]
 					}, {
 						"rank" : 6,
 						"perks" : [
-							{ "id" : "danger_zone"},
-							{ "id" : "mayhem", "secondary_damage_bonus" : 2},
-							{ "id" : "javelin_rockets"}
+							{ "id" : "extra_conditioning", "aim" : 3, "will" : 3, "mobility" : 1},
+							{ "id" : "double_tap" },
+							{ "id" : "shock_and_awe" }
 						]
 					}, {
 						"rank" : 7,
 						"perks" : [
-							{ "id" : "extra_conditioning", "aim" : 5, "will" : 5, "mobility" : 1},
-							{ "id" : "sprinter", "mobility" : 4},
-							{ "id" : "shock_and_awe"}
+							{ "id" : "tandem_warheads" },
+							{ "id" : "javelin_rockets" },
+							{ "id" : "danger_zone" }
 						]
 					}
 				],
 				"stat_progression" : [
 					{
-						"health" : 1,
-						"aim" : 4,
-						"will_low" : 5,
-						"will_high" : 6
+						"health" : 1, "aim" : 3,"will_low" : 5,"will_high" : 6
 					}, {
-						"health" : 0,
-						"aim" : 4,
-						"will_low" : 5,
-						"will_high" : 6
+						"health" : 0,"aim" : 3,"will_low" : 5,"will_high" : 6
 					}, {
-						"health" : 0,
-						"aim" : 4,
-						"will_low" : 3,
-						"will_high" : 4 
+						"health" : 0,"aim" : 3,"will_low" : 3,"will_high" : 4 
 					}, {
-						"health" : 1,
-						"aim" : 4,
-						"will_low" : 3,
-						"will_high" : 4
+						"health" : 1,"aim" : 3,"will_low" : 3,"will_high" : 4
 					}, {
-						"health" : 0,
-						"aim" : 3,
-						"will_low" : 3,
-						"will_high" : 4
+						"health" : 0,"aim" : 3,"will_low" : 3,"will_high" : 4
 					}, {
-						"health" : 0,
-						"aim" : 2,
-						"will_low" : 3,
-						"will_high" : 4
+						"health" : 0,"aim" : 3,"will_low" : 3,"will_high" : 4
 					}, {
-						"health" : 1,
-						"aim" : 2,
-						"will_low" : 3,
-						"will_high" : 4
+						"health" : 1,"aim" : 3,"will_low" : 3,"will_high" : 4
 					}
 				]	
 				
@@ -363,7 +315,7 @@
 					}, {
 						"rank" : 2,
 						"perks" : [
-							{ "id" : "covering_fire", "aim" : 3},
+							{ "id" : "covering_fire" },
 							{ "id" : "flush"},
 							{ "id" : "holo_targeting"}			            	
 						]
@@ -372,34 +324,34 @@
 						"perks" : [
 							{ "id" : "shredder_ammo"},
 							{ "id" : "heat_ammo"},
-							{ "id" : "ranger", "aim" : 2, "will" : 2, "primary_damage_bonus" : 1}
+							{ "id" : "advanced_fire_control" }
 						]
 					}, {
 						"rank" : 4,
 						"perks" : [
-							{ "id" : "executioner", "will" : 2},
-							{ "id" : "tactical_sense", "aim" : 2},
-							{ "id" : "danger_zone"}
+							{ "id" : "executioner" },
+							{ "id" : "will_to_survive", "will" : 3},
+							{ "id" : "ranger", "primary_damage_bonus" : 1 }
 						]
 					}, {
 						"rank" : 5,
 						"perks" : [
-						{ "id" : "ready_for_anything", "aim" : 3, "will" : 2},
+						{ "id" : "ready_for_anything" },
 						{ "id" : "rapid_fire"},
 						{ "id" : "double_tap"}
 						]
 					}, {
 						"rank" : 6,
 						"perks" : [
-							{ "id" : "bring_em_on"},
-							{ "id" : "extra_conditioning", "aim" : 2, "will" : 2, "mobility" : 1},
-							{ "id" : "will_to_survive", "will" : 3}
+							{ "id" : "resilience"},
+							{ "id" : "platform_stability" },
+							{ "id" : "danger_zone" }
 						]
 					}, {
 						"rank" : 7,
 						"perks" : [
-							{ "id" : "resilience", "will" : 2},
-							{ "id" : "sentinel", "aim" : 3, "will" : 2},
+							{ "id" : "extra_conditioning", "mobility" : 1, "aim" : 4, "will" : 4 },
+							{ "id" : "sentinel" },
 							{ "id" : "mayhem", "primary_damage_bonus" : 2}
 						]
 					}
@@ -412,7 +364,7 @@
 						"will_high" : 6
 					}, {
 						"health" : 0,
-						"aim" : 3,
+						"aim" : 2,
 						"will_low" : 5,
 						"will_high" : 6
 					}, {
@@ -422,7 +374,7 @@
 						"will_high" : 4 
 					}, {
 						"health" : 0,
-						"aim" : 3,
+						"aim" : 2,
 						"will_low" : 3,
 						"will_high" : 4
 					}, {
@@ -432,7 +384,7 @@
 						"will_high" : 4
 					}, {
 						"health" : 0,
-						"aim" : 3,
+						"aim" : 2,
 						"will_low" : 3,
 						"will_high" : 4
 					}, {
@@ -473,7 +425,7 @@
 						"rank" : 2,
 						"perks" : [
 							{ "id" : "low_profile"},
-							{ "id" : "gunslinger"},
+							{ "id" : "gunslinger", "secondary_damage_bonus" : 1},
 							{ "id" : "lone_wolf"}
 						]
 					}, {
@@ -486,42 +438,42 @@
 					}, {
 						"rank" : 4,
 						"perks" : [
-							{ "id" : "executioner"},
-							{ "id" : "agression"},
+							{ "id" : "sharpshooter"},
+							{ "id" : "ranger", "primary_damage_bonus" : 1},
 							{ "id" : "damn_good_ground"}
 						]
 					}, {
 						"rank" : 5,
 						"perks" : [
-						{ "id" : "tactical_sense"},
-						{ "id" : "ranger"},
-						{ "id" : "sharpshooter"}
+						{ "id" : "platform_stability"},
+						{ "id" : "vital_point_targeting"},
+						{ "id" : "executioner"}
 						]
 					}, {
 						"rank" : 6,
 						"perks" : [
 							{ "id" : "lock_and_load"},
 							{ "id" : "bring_em_on"},
-							{ "id" : "vital_point_targeting"}
+							{ "id" : "tactical_sense"}
 						]
 					}, {
 						"rank" : 7,
 						"perks" : [
 							{ "id" : "in_the_zone"},
-							{ "id" : "mayhem", "aim" : 3, "will" : 3, "primary_damage_bonus" : 4},
+							{ "id" : "mayhem", "aim" : 2},
 							{ "id" : "double_tap"}
 						]
 					}
 				],
 				"stat_progression" : [
 					{
-						"health" : 0,						"aim" : 5,						"will_low" : 5,						"will_high" : 6
+						"health" : 0,						"aim" : 4,						"will_low" : 5,						"will_high" : 6
 					}, {
-						"health" : 0,						"aim" : 5,						"will_low" : 5,						"will_high" : 6
+						"health" : 0,						"aim" : 4,						"will_low" : 5,						"will_high" : 6
 					}, {
-						"health" : 1,						"aim" : 5,						"will_low" : 3,						"will_high" : 4 
+						"health" : 1,						"aim" : 4,						"will_low" : 3,						"will_high" : 4 
 					}, {
-						"health" : 0,						"aim" : 5,						"will_low" : 3,						"will_high" : 4
+						"health" : 0,						"aim" : 4,						"will_low" : 3,						"will_high" : 4
 					}, {
 						"health" : 0,						"aim" : 4,						"will_low" : 3,						"will_high" : 4
 					}, {
@@ -564,42 +516,42 @@
 					}, {
 						"rank" : 2,
 						"perks" : [
-							{ "id" : "rapid_reaction", "aim" : 2, "will" : 2},
+							{ "id" : "gunslinger", "secondary_damage_bonus" : 1},
 							{ "id" : "holo_targeting"},
-							{ "id" : "damn_good_ground"}
+							{ "id" : "lone_wolf" }
 						]
 					}, {
 						"rank" : 3,
 						"perks" : [
-							{ "id" : "battle_scanner"},
-							{ "id" : "flush"},
-							{ "id" : "lone_wolf"}
+							{ "id" : "damn_good_ground"},
+							{ "id" : "ranger"},
+							{ "id" : "deadeye"}
 						]
 					}, {
 						"rank" : 4,
 						"perks" : [
-							{ "id" : "sharpshooter", "aim" : 3, "will" : 2},
-							{ "id" : "low_profile"},
-							{ "id" : "sprinter"}
+							{ "id" : "flush" },
+							{ "id" : "low_profile" },
+							{ "id" : "battle_scanner" }
 						]
 					}, {
 						"rank" : 5,
 						"perks" : [
-						{ "id" : "aggression"},
 						{ "id" : "tactical_sense"},
-						{ "id" : "ranger", "aim" : 2}
+						{ "id" : "agression"},
+						{ "id" : "sprinter" }
 						]
 					}, {
 						"rank" : 6,
 						"perks" : [
 							{ "id" : "vital_point_targeting"},
-							{ "id" : "resilience", "will" : 2},
+							{ "id" : "extra_conditioning", "aim" : 3, "will" : 3, "mobility" : 1},
 							{ "id" : "smoke_and_mirrors"}
 						]
 					}, {
 						"rank" : 7,
 						"perks" : [
-							{ "id" : "rapid_fire", "aim" : 2},
+							{ "id" : "concealment" },
 							{ "id" : "hit_and_run"},
 							{ "id" : "in_the_zone"}
 						]
@@ -613,12 +565,12 @@
 						"will_high" : 6
 					}, {
 						"health" : 0,
-						"aim" : 4,
+						"aim" : 3,
 						"will_low" : 5,
 						"will_high" : 6
 					}, {
 						"health" : 1,
-						"aim" : 4,
+						"aim" : 3,
 						"will_low" : 3,
 						"will_high" : 4 
 					}, {
@@ -638,7 +590,7 @@
 						"will_high" : 4
 					}, {
 						"health" : 0,
-						"aim" : 3,
+						"aim" : 4,
 						"will_low" : 3,
 						"will_high" : 4
 					}
@@ -676,62 +628,62 @@
 					}, {
 						"rank" : 2,
 						"perks" : [
-							{ "id" : "covering_fire", "aim" : 3},
+							{ "id" : "suppression" },
 							{ "id" : "steadfast", "will" : 5},
-							{ "id" : "revive"}
+							{ "id" : "field_surgeon"}
 						]
 					}, {
 						"rank" : 3,
 						"perks" : [
-							{ "id" : "opportunist", "aim" : 2},
-							{ "id" : "smoke_grenade"},
-							{ "id" : "paramedic"}
+							{ "id" : "rapid_reaction", "aim" : 3},
+							{ "id" : "smoke_and_mirrors"},
+							{ "id" : "revive", "will" : 2}
 						]
 					}, {
 						"rank" : 4,
 						"perks" : [
-							{ "id" : "suppression", "aim" : 3},
-							{ "id" : "smoke_and_mirrors"},
-							{ "id" : "field_surgeon"}
+							{ "id" : "ready_for_anything" },
+							{ "id" : "smoke_grenade" },
+							{ "id" : "paramedic" }
 						]
 					}, {
 						"rank" : 5,
 						"perks" : [
-						{ "id" : "ranger", "ranger" : 3},
+						{ "id" : "opportunist" },
 						{ "id" : "dense_smoke"},
-						{ "id" : "combat_drugs", "will" : 3}
+						{ "id" : "combat_drugs" }
 						]
 					}, {
 						"rank" : 6,
 						"perks" : [
-							{ "id" : "ready_for_anything"},
-							{ "id" : "vital_point_targeting"},
+							{ "id" : "lock_and_load" },
+							{ "id" : "bombard"},
 							{ "id" : "sprinter"}
 						]
 					}, {
 						"rank" : 7,
 						"perks" : [
-							{ "id" : "sentinel", "aim" : 2},
-							{ "id" : "packmaster"},
-							{ "id" : "savior"}
+							{ "id" : "extra_conditioning", "aim" : 4, "will" : 4, "mobility" : 1},
+							{ "id" : "packmaster" },
+							{ "id" : "savior" }
 						]
 					}
 				],
 				"stat_progression" : [
 					{
-						"health" : 1,						"aim" : 2,						"will_low" : 6,						"will_high" : 7
+						"health" : 1,						"aim" : 3,						"will_low" : 6,						"will_high" : 7
 					}, {
 						"health" : 0,						"aim" : 2,						"will_low" : 6,						"will_high" : 7
 					}, {
-						"health" : 0,						"aim" : 2,						"will_low" : 3,						"will_high" : 4 
+						"health" : 0,						"aim" : 3,						"will_low" : 3,						"will_high" : 4 
 					}, {
 						"health" : 1,						"aim" : 2,						"will_low" : 3,						"will_high" : 4
 					}, {
-						"health" : 0,						"aim" : 2,						"will_low" : 3,						"will_high" : 4
+						"health" : 0,						"aim" : 3,						"will_low" : 3,						"will_high" : 4
 					}, {
 						"health" : 0,						"aim" : 2,						"will_low" : 3,						"will_high" : 4
 					}, {
-						"health" : 1,						"aim" : 2,						"will_low" : 3,						"will_high" : 4
+						"health" : 1,						"aim" : 3,						"will_low" : 3,						"will_high" : 4
 					}
 				]		
 		    }

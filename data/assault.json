@@ -39,7 +39,7 @@
 				"rank" : 3,
 				"perks" : [
 					{ "id" : "gunslinger"},
-					{ "id" : "tactical_sense"},
+					{ "id" : "will_to_survive"},
 					{ "id" : "aggression"}
 				]
 			}, {
@@ -52,14 +52,14 @@
 			}, {
 				"rank" : 5,
 				"perks" : [
-				{ "id" : "extra_conditioning"},
+				{ "id" : "resilience"},
 				{ "id" : "killer_instinct"},
 				{ "id" : "ranger"}
 				]
 			}, {
 				"rank" : 6,
 				"perks" : [
-					{ "id" : "will_to_survive"},
+					{ "id" : "tactical_sense"},
 					{ "id" : "bring_em_on"},
 					{ "id" : "sprinter"}
 				]
@@ -67,47 +67,26 @@
 				"rank" : 7,
 				"perks" : [
 					{ "id" : "vital_point_targeting"},
-					{ "id" : "resilience"},
+					{ "id" : "extra_conditioning"},
 					{ "id" : "lightning_reflexes"}
 				]
 			}
 		],
 		"stat_progression" : [
 			{
-				"health" : 1,
-				"aim" : 3,
-				"will_low" : 5,
-				"will_high" : 6
+				"health" : 1,"aim" : 3,"will_low" : 5,"will_high" : 6
 			}, {
-				"health" : 0,
-				"aim" : 3,
-				"will_low" : 5,
-				"will_high" : 6
+				"health" : 0,"aim" : 2,"will_low" : 5,"will_high" : 6
 			}, {
-				"health" : 1,
-				"aim" : 3,
-				"will_low" : 3,
-				"will_high" : 4 
+				"health" : 1,"aim" : 3,"will_low" : 3,"will_high" : 4 
 			}, {
-				"health" : 0,
-				"aim" : 3,
-				"will_low" : 3,
-				"will_high" : 4
+				"health" : 0,"aim" : 2,"will_low" : 3,"will_high" : 4
 			}, {
-				"health" : 1,
-				"aim" : 3,
-				"will_low" : 3,
-				"will_high" : 4
+				"health" : 1,"aim" : 3,"will_low" : 3,"will_high" : 4
 			}, {
-				"health" : 0,
-				"aim" : 3,
-				"will_low" : 3,
-				"will_high" : 4
+				"health" : 0,"aim" : 2,"will_low" : 3,"will_high" : 4
 			}, {
-				"health" : 1,
-				"aim" : 3,
-				"will_low" : 3,
-				"will_high" : 4
+				"health" : 1,"aim" : 3,"will_low" : 3,"will_high" : 4
 			}
 		]		
 	}
